@@ -7,7 +7,12 @@
 //
 
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
-    
+#include "util/Header.h"
+int main(int argc, const char * argv[])
+{
+    CoreLog *pLog=new CoreLog;
+    CoreLogSingleton::SetInstance(pLog);
+    LOG("123");
+    LOG1("%d",45);
+    std::cout<<CoreTime::GetTimeSinceNow(60*60).GetTime().data()<<std::endl;
 }
