@@ -7,6 +7,7 @@
 //
 
 #include "Oberserver.h"
+#include "Constant.h"
 class Func
 {
     
@@ -18,5 +19,6 @@ public:
 };
 void CoreObManage::PostOberserver(void *pObj, const char *name, void *oldValue, void *newValue)
 {
-    
+	char szName[TEXT_SIZE] = { 0 };
+
 }
