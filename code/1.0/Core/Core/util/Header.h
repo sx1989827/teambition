@@ -10,4 +10,5 @@
 #define Core_Header_h
 #include "Log.h"
 #include "Time.h"
+#include "Oberserver.h"
 #endif

@@ -13,18 +13,38 @@
 #include<map>
 #include<string>
 #include "Singleton.h"
+#include "Constant.h"
+#define  OBINSTANCE CoreObManageSingleton::GetInstance()
+class CoreFuncBase
+{
+public:
+	virtual void operator() (void *pObj, const char *name, void* oldValue, void* newValue) = 0;
+	virtual int GetID() = 0;
+	virtual ~CoreFuncBase()
+	{
+
+	}
+};
 template<class T1,class T2>
-class CoreObFunc
+class CoreObFunc :public CoreFuncBase
 {
 private:
     T1 m_pObj;
     T2 m_func;
 public:
-    CoreObFunc(T1 pObj,T2 pFunc);
+	CoreObFunc(T1 pObj, T2 pFunc)
+	{
+		m_pObj = pObj;
+		m_func = pFunc;
+	}
     void operator() (void *pObj,const char *name,void* oldValue,void* newValue)
     {
-        (m_pObj->*m_func)(pObj,oldValue,newValue);
+        (m_pObj->*m_func)(pObj,name,oldValue,newValue);
     }
+	int GetID()
+	{
+		return (int)m_pObj;
+	}
 };
 
 class CoreObManage
@@ -34,15 +54,34 @@ public:
     template<class T1,class T2>
     void AddOberserver(void *pObj,const char* name,T1 pObj1,T2 func)
     {
-        
+		char szName[TEXT_SIZE] = { 0 };
+		sprintf(szName, "%d#%s", (long)pObj, name);
+		CoreFuncBase *pOb = new CoreObFunc<T1, T2>(pObj1, func);
+		m_Map.insert(std::make_pair(szName, pOb));
     }
-    template<class T1,class T2>
-    void RemoveOberserver(void *pObj,const char* name,T1 pObj1,T2 func)
+    void RemoveOberserver(void *pObj,const char* name,void* pObj1)
     {
-        
+		char szName[TEXT_SIZE] = { 0 };
+		sprintf(szName, "%d#%s", (long)pObj, name);
+		auto pos = m_Map.equal_range(szName);
+		while (pos.first != pos.second)
+		{
+			if (pos.first->second->GetID() == (int)pObj1)
+			{
+				CoreFuncBase* pOb = pos.first->second;
+				pos.first=m_Map.erase(pos.first);
+				delete pOb;
+			}
+			else
+			{
+				++pos.first;
+			}
+		}
+
+		
     }
 private:
-    std::map<std::string, void*> m_Map;
+	std::multimap<std::string, CoreFuncBase*> m_Map;
 };
 class CoreObManageSingleton:public CoreSingleton<CoreObManage>
 {
