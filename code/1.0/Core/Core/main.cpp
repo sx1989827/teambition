@@ -57,7 +57,7 @@ public:
 		std::cout << name << " " << *(long*)oldValue << " " << *(long*)newValue << std::endl;
 	}
 };
-long main(long argc, const char * argv[])
+int main(int argc, const char * argv[])
 {
 
     CoreLog *pLog=new CoreLog;
