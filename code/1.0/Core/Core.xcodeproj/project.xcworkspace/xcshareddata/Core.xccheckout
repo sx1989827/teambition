@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3E2DC75D-20C2-4D9C-99DC-4E8FAE3AC86D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Core</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>63EF1B46EB593EB12E8A1D8560E38DA9B7E2C3C6</key>
+		<string>https://github.com/sx1989827/teambition.git</string>
+		<key>84A0B08507D8875DC776E169EED837539E516661</key>
+		<string>https://github.com/sx1989827/me.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>code/1.0/Core/Core.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>63EF1B46EB593EB12E8A1D8560E38DA9B7E2C3C6</key>
+		<string>../../../../..</string>
+		<key>84A0B08507D8875DC776E169EED837539E516661</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sx1989827/teambition.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>63EF1B46EB593EB12E8A1D8560E38DA9B7E2C3C6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>84A0B08507D8875DC776E169EED837539E516661</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>63EF1B46EB593EB12E8A1D8560E38DA9B7E2C3C6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>teambition</string>
+		</dict>
+	</array>
+</dict>
+</plist>
