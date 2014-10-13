@@ -27,11 +27,6 @@ public:
     }
 };
 
-class CoreOb
-{
-    
-};
-
 class CoreObManage
 {
 public:
@@ -46,6 +41,8 @@ public:
     {
         
     }
+private:
+    std::map<std::string, void*> m_Map;
 };
 class CoreObManageSingleton:public CoreSingleton<CoreObManage>
 {

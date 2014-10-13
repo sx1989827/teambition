@@ -7,6 +7,15 @@
 //
 
 #include "Oberserver.h"
+class Func
+{
+    
+public:
+    void operator() (void *pObj,const char *name,void* oldValue,void* newValue)
+    {
+        
+    }
+};
 void CoreObManage::PostOberserver(void *pObj, const char *name, void *oldValue, void *newValue)
 {
     
