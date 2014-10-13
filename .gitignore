@@ -7,3 +7,5 @@
 *.pdb
 *.ilk
 *.sdf
+
+*.xcuserstate
