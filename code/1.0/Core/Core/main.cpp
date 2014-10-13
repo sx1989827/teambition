@@ -15,13 +15,13 @@ public:
 	{
 		a = 0;
 	}
-	void SetA(int v)
+	void SetA(long v)
 	{
 		OBINSTANCE->PostOberserver(this, "a", &a, &v);
 		a = v;
 	}
 private:
-	int a;
+	long a;
 };
 class B
 {
@@ -37,7 +37,7 @@ public:
 	}
 	void p(void *pObj, const char *name, void *oldValue, void *newValue)
 	{
-		std::cout << name << " " << *(int*)oldValue << " " << *(int*)newValue << std::endl;
+		std::cout << name << " " << *(long*)oldValue << " " << *(long*)newValue << std::endl;
 	}
 };
 class C
@@ -54,10 +54,10 @@ public:
 	}
 	void p1(void *pObj, const char *name, void *oldValue, void *newValue)
 	{
-		std::cout << name << " " << *(int*)oldValue << " " << *(int*)newValue << std::endl;
+		std::cout << name << " " << *(long*)oldValue << " " << *(long*)newValue << std::endl;
 	}
 };
-int main(int argc, const char * argv[])
+long main(long argc, const char * argv[])
 {
 
     CoreLog *pLog=new CoreLog;

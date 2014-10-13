@@ -35,7 +35,7 @@ std::string CoreTime::GetCurrentMoment()
     return std::string(szTime);
 }
 
-CoreTime CoreTime::GetTimeSinceNow(int sec)
+CoreTime CoreTime::GetTimeSinceNow(long sec)
 {
 	time_t  lTime = time(0);
 	time_t newTime = lTime + sec;
@@ -73,7 +73,7 @@ std::string CoreTime::GetMoment()
     return std::string(szTime);
 }
 
-CoreTime CoreTime::GetTimeSince(int sec)
+CoreTime CoreTime::GetTimeSince(long sec)
 {
     time_t newTime=m_lTime+sec;
     CoreTime obj;

@@ -19,7 +19,7 @@ class CoreFuncBase
 {
 public:
 	virtual void operator() (void *pObj, const char *name, void* oldValue, void* newValue) = 0;
-	virtual int GetID() = 0;
+	virtual long GetID() = 0;
 	virtual ~CoreFuncBase()
 	{
 
@@ -41,9 +41,9 @@ public:
     {
         (m_pObj->*m_func)(pObj,name,oldValue,newValue);
     }
-	int GetID()
+	long GetID()
 	{
-		return (int)m_pObj;
+		return (long)m_pObj;
 	}
 };
 
@@ -66,7 +66,7 @@ public:
 		auto pos = m_Map.equal_range(szName);
 		while (pos.first != pos.second)
 		{
-			if (pos.first->second->GetID() == (int)pObj1)
+			if (pos.first->second->GetID() == (long)pObj1)
 			{
 				CoreFuncBase* pOb = pos.first->second;
 				pos.first=m_Map.erase(pos.first);

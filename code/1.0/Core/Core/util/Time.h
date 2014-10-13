@@ -16,12 +16,12 @@ public:
     static std::string GetCurrentTime();
     static std::string GetCurrentDate();
     static std::string GetCurrentMoment();
-    static CoreTime GetTimeSinceNow(int sec);
+    static CoreTime GetTimeSinceNow(long sec);
     CoreTime();
     std::string GetTime();
     std::string GetDate();
     std::string GetMoment();
-    CoreTime GetTimeSince(int sec);
+    CoreTime GetTimeSince(long sec);
 private:
     time_t m_lTime;
     
