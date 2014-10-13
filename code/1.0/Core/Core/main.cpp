@@ -10,6 +10,7 @@
 #include "util/Header.h"
 int main(int argc, const char * argv[])
 {
+
     CoreLog *pLog=new CoreLog;
     CoreLogSingleton::SetInstance(pLog);
     LOG("123");

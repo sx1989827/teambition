@@ -9,6 +9,7 @@
 #ifndef __Core__Time__
 #define __Core__Time__
 #include <string>
+#include <time.h>
 class CoreTime
 {
 public:
@@ -22,7 +23,7 @@ public:
     std::string GetMoment();
     CoreTime GetTimeSince(int sec);
 private:
-    long m_lTime;
+    time_t m_lTime;
     
 };
 

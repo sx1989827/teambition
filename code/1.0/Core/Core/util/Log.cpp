@@ -8,6 +8,7 @@
 
 #include "Log.h"
 #include <assert.h>
+#include <stdarg.h>
 void CoreLog::Out(const char *str,...)
 {
     va_list args;
