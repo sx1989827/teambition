@@ -16,6 +16,7 @@
 #define LOG1(STR,...) CoreLogSingleton::GetInstance()->Out(STR,__VA_ARGS__)
 #define LOGF(FILE,STR) CoreLogSingleton::GetInstance()->OutFile(FILE,STR)
 #define LOGF1(STR,...) CoreLogSingleton::GetInstance()->OutFile(STR,__VA_ARGS__)
+#define SETLOGF(path) CoreLogSingleton::GetInstance()->SetFile(path)
 class CoreLog
 {
 private:

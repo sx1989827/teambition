@@ -11,4 +11,6 @@
 #include "Log.h"
 #include "Time.h"
 #include "Oberserver.h"
+#include "Constant.h"
+#include "Serializ.h"
 #endif

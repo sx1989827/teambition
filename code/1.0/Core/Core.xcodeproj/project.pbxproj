@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614019ED0DBD00B618EB /* Notify.cpp */; };
+		B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614319ED0E4400B618EB /* Serializ.cpp */; };
 		B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730BB19EB75A100CF6A51 /* main.cpp */; };
 		B5E730C419EB768B00CF6A51 /* Singleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730C219EB768B00CF6A51 /* Singleton.cpp */; };
 		B5E730C819EB865300CF6A51 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730C619EB865300CF6A51 /* Log.cpp */; };
@@ -28,6 +30,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B50C614019ED0DBD00B618EB /* Notify.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Notify.cpp; sourceTree = "<group>"; };
+		B50C614119ED0DBD00B618EB /* Notify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notify.h; sourceTree = "<group>"; };
+		B50C614319ED0E4400B618EB /* Serializ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Serializ.cpp; sourceTree = "<group>"; };
+		B50C614419ED0E4400B618EB /* Serializ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serializ.h; sourceTree = "<group>"; };
 		B5E730B819EB75A100CF6A51 /* Core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Core; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E730BB19EB75A100CF6A51 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B5E730C219EB768B00CF6A51 /* Singleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Singleton.cpp; sourceTree = "<group>"; };
@@ -54,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B50C613F19ED0DA000B618EB /* notify */ = {
+			isa = PBXGroup;
+			children = (
+				B50C614019ED0DBD00B618EB /* Notify.cpp */,
+				B50C614119ED0DBD00B618EB /* Notify.h */,
+			);
+			path = notify;
+			sourceTree = "<group>";
+		};
 		B5E730AD19EB754C00CF6A51 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +98,7 @@
 		B5E730C019EB762700CF6A51 /* logic */ = {
 			isa = PBXGroup;
 			children = (
+				B50C613F19ED0DA000B618EB /* notify */,
 			);
 			path = logic;
 			sourceTree = "<group>";
@@ -101,6 +117,8 @@
 				B5E730CD19EBB90500CF6A51 /* Constant.h */,
 				B5E730CF19EBE25200CF6A51 /* Oberserver.cpp */,
 				B5E730D019EBE25200CF6A51 /* Oberserver.h */,
+				B50C614319ED0E4400B618EB /* Serializ.cpp */,
+				B50C614419ED0E4400B618EB /* Serializ.h */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -160,9 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */,
 				B5E730CB19EBB10200CF6A51 /* Time.cpp in Sources */,
 				B5E730C819EB865300CF6A51 /* Log.cpp in Sources */,
 				B5E730CE19EBB90500CF6A51 /* Constant.cpp in Sources */,
+				B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */,
 				B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */,
 				B5E730D119EBE25200CF6A51 /* Oberserver.cpp in Sources */,
 				B5E730C419EB768B00CF6A51 /* Singleton.cpp in Sources */,

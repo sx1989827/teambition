@@ -18,10 +18,10 @@ public:
     static std::string GetCurrentMoment();
     static CoreTime GetTimeSinceNow(long sec);
     CoreTime();
-    std::string GetTime();
-    std::string GetDate();
-    std::string GetMoment();
-    CoreTime GetTimeSince(long sec);
+    std::string GetTime() const;
+    std::string GetDate() const;
+    std::string GetMoment() const;
+    CoreTime GetTimeSince(long sec) const;
 private:
     time_t m_lTime;
     
