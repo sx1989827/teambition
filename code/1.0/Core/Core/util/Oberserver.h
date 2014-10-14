@@ -15,6 +15,11 @@
 #include "Singleton.h"
 #include "Constant.h"
 #define  OBINSTANCE CoreObManageSingleton::GetInstance()
+#define OBMETHEDBEGIN(name,param)  \
+void Set_##name(decltype(name) param) \
+{\
+    OBINSTANCE->PostOberserver(this, #name, &name, &param);
+#define OBMETHEDEND }
 class CoreFuncBase
 {
 public:
@@ -55,14 +60,14 @@ public:
     void AddOberserver(void *pObj,const char* name,T1 pObj1,T2 func)
     {
 		char szName[TEXT_SIZE] = { 0 };
-		sprintf(szName, "%d#%s", (long)pObj, name);
+		sprintf(szName, "%ld#%s", (long)pObj, name);
 		CoreFuncBase *pOb = new CoreObFunc<T1, T2>(pObj1, func);
 		m_Map.insert(std::make_pair(szName, pOb));
     }
     void RemoveOberserver(void *pObj,const char* name,void* pObj1)
     {
 		char szName[TEXT_SIZE] = { 0 };
-		sprintf(szName, "%d#%s", (long)pObj, name);
+		sprintf(szName, "%ld#%s", (long)pObj, name);
 		auto pos = m_Map.equal_range(szName);
 		while (pos.first != pos.second)
 		{

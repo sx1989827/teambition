@@ -14,14 +14,22 @@ public:
 	A()
 	{
 		a = 0;
-	}
-	void SetA(long v)
-	{
-		OBINSTANCE->PostOberserver(this, "a", &a, &v);
-		a = v;
+        b=1;
 	}
 private:
-	long a;
+    long a;
+    int b;
+public:
+    OBMETHEDBEGIN(a, v)
+    {
+        a=v;
+    }
+    OBMETHEDEND
+    OBMETHEDBEGIN(b, v)
+    {
+        b=v;
+    }
+    OBMETHEDEND
 };
 class B
 {
@@ -45,16 +53,16 @@ class C
 public:
 	C(A *a)
 	{
-		OBINSTANCE->AddOberserver(a, "a", this, &C::p1);
+		OBINSTANCE->AddOberserver(a, "b", this, &C::p1);
 
 	}
 	void Remove(A *a)
 	{
-		OBINSTANCE->RemoveOberserver(a, "a", this);
+		OBINSTANCE->RemoveOberserver(a, "b", this);
 	}
 	void p1(void *pObj, const char *name, void *oldValue, void *newValue)
 	{
-		std::cout << name << " " << *(long*)oldValue << " " << *(long*)newValue << std::endl;
+		std::cout << name << " " << *(int*)oldValue << " " << *(int*)newValue << std::endl;
 	}
 };
 int main(int argc, const char * argv[])
@@ -70,7 +78,8 @@ int main(int argc, const char * argv[])
 	A a;
 	B b(&a);
 	C c(&a);
-	a.SetA(10);
+	a.Set_a(10);
+    a.Set_b(12);
 	b.Remove(&a);
 	c.Remove(&a);
 }

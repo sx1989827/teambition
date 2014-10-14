@@ -279,6 +279,7 @@
 				B5E730BF19EB75A100CF6A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
