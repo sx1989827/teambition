@@ -14,12 +14,13 @@
 #include <string>
 #include <list>
 #include "Header.h"
+#define  NOTIFYCENTER CoreNotifySingleton::GetInstance()
 struct sNotify
 {
     enum TYPE {CALL,DATEEND,ARDERIOI,WORKIOI,WORKMEET};
     long id;
     long sec;
-    std::string str;
+    char szText[100];
     TYPE type;
     bool bEnabled;
     long flag;
@@ -30,16 +31,25 @@ public:
     CoreNotify();
     ~CoreNotify();
     long CreateNotify(sNotify* pNotify);
-    void RemoveNotify(long id);
-    void QueryOverdueNotify(std::list<sNotify> *map,long sec) const;
+    void GetLastNotify(sNotify *pNotify) const;
+    void PopNotify();
     void ClearAllNotify();
-protected:
-    void Serializ(std::map<std::string, std::string> *map);
-    void UnSerializ(std::map<std::string, std::string> *map);
+    void Serializ(FILE* out);
+    void UnSerializ(FILE* in);
 private:
     std::queue<sNotify> m_Queue;
     static char cID[100];
     static long pos;
+};
+
+class CoreNotifySingleton:public CoreSingleton<CoreNotify>
+{
+private:
+    CoreNotifySingleton();
+    CoreNotifySingleton(const CoreNotifySingleton&);
+    ~CoreNotifySingleton();
+    CoreNotifySingleton &operator=(const CoreNotifySingleton&);
+    
 };
 #endif /* defined(__Core__Notify__) */
 

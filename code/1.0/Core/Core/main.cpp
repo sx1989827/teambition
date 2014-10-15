@@ -8,78 +8,30 @@
 
 #include <iostream>
 #include "util/Header.h"
-class A
-{
-public:
-	A()
-	{
-		a = 0;
-        b=1;
-	}
-private:
-    long a;
-    int b;
-public:
-    OBMETHEDBEGIN(a, v)
-    {
-        a=v;
-    }
-    OBMETHEDEND
-    OBMETHEDBEGIN(b, v)
-    {
-        b=v;
-    }
-    OBMETHEDEND
-};
-class B
-{
-public:
-	B(A *a)
-	{
-		OBINSTANCE->AddOberserver(a, "a", this, &B::p);
-
-	}
-	void Remove(A *a)
-	{
-		OBINSTANCE->RemoveOberserver(a, "a",this);
-	}
-	void p(void *pObj, const char *name, void *oldValue, void *newValue)
-	{
-		std::cout << name << " " << *(long*)oldValue << " " << *(long*)newValue << std::endl;
-	}
-};
-class C
-{
-public:
-	C(A *a)
-	{
-		OBINSTANCE->AddOberserver(a, "b", this, &C::p1);
-
-	}
-	void Remove(A *a)
-	{
-		OBINSTANCE->RemoveOberserver(a, "b", this);
-	}
-	void p1(void *pObj, const char *name, void *oldValue, void *newValue)
-	{
-		std::cout << name << " " << *(int*)oldValue << " " << *(int*)newValue << std::endl;
-	}
-};
+#include "logic/notify/Notify.h"
 int main(int argc, const char * argv[])
 {
-
-    CoreLog *pLog=new CoreLog;
-    CoreLogSingleton::SetInstance(pLog);
-	CoreObManage *pOb = new CoreObManage;
-	CoreObManageSingleton::SetInstance(pOb);
-    LOG("123");
-    LOG1("%d",45);
-    std::cout<<CoreTime::GetTimeSinceNow(60*60).GetTime().data()<<std::endl;
-	A a;
-	B b(&a);
-	C c(&a);
-	a.Set_a(10);
-    a.Set_b(12);
-	b.Remove(&a);
-	c.Remove(&a);
+    
+    CoreNotify *notiobj=new CoreNotify;
+    CoreNotifySingleton::SetInstance(notiobj);
+    sNotify noti;
+    noti.sec=1000;
+    strcpy(noti.szText,"二维饿飞翁rrer");
+    noti.type=sNotify::WORKIOI;
+    noti.bEnabled=true;
+    noti.flag=222;
+    NOTIFYCENTER->CreateNotify(&noti);
+    FILE *f1= fopen("/Users/sunxin/me/teambition/code/1.0/Core/data.txt","wb");
+    NOTIFYCENTER->Serializ(f1);
+    fclose(f1);
+    FILE *f2= fopen("/Users/sunxin/me/teambition/code/1.0/Core/data.txt","rb");
+    NOTIFYCENTER->UnSerializ(f2);
+    fclose(f2);
 }
+
+
+
+
+
+
+

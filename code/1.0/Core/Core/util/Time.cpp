@@ -49,7 +49,7 @@ CoreTime::CoreTime()
     m_lTime=time(0);
 }
 
-std::string CoreTime::GetTime()
+std::string CoreTime::GetTime() const
 {
     tm *pTime= localtime((const time_t*)&m_lTime);
     char szTime[TEXT_SIZE]={0};
@@ -57,7 +57,7 @@ std::string CoreTime::GetTime()
     return std::string(szTime);
 }
 
-std::string CoreTime::GetDate()
+std::string CoreTime::GetDate() const
 {
     tm *pTime= localtime((const time_t*)&m_lTime);
     char szTime[TEXT_SIZE]={0};
@@ -65,7 +65,7 @@ std::string CoreTime::GetDate()
     return std::string(szTime);
 }
 
-std::string CoreTime::GetMoment()
+std::string CoreTime::GetMoment() const
 {
     tm *pTime= localtime((const time_t*)&m_lTime);
     char szTime[TEXT_SIZE]={0};
@@ -73,7 +73,7 @@ std::string CoreTime::GetMoment()
     return std::string(szTime);
 }
 
-CoreTime CoreTime::GetTimeSince(long sec)
+CoreTime CoreTime::GetTimeSince(long sec) const
 {
     time_t newTime=m_lTime+sec;
     CoreTime obj;

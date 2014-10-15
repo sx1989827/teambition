@@ -10,11 +10,10 @@
 #define __Core__Serializ__
 
 #include <stdio.h>
-#include <map>
 class CoreSerializ
 {
-protected:
-    virtual void Serializ(std::map<std::string, std::string> &map)=0;
-    virtual void UnSerializ(std::map<std::string, std::string> &map)=0;
+public:
+    virtual void Serializ(FILE* out)=0;
+    virtual void UnSerializ(FILE* in)=0;
 };
 #endif /* defined(__Core__Serializ__) */
