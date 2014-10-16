@@ -65,6 +65,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\logic\notify\Notify.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\util\Constant.cpp" />
     <ClCompile Include="..\util\Log.cpp" />
@@ -73,6 +74,7 @@
     <ClCompile Include="..\util\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\logic\notify\Notify.h" />
     <ClInclude Include="..\util\Constant.h" />
     <ClInclude Include="..\util\Header.h" />
     <ClInclude Include="..\util\Log.h" />

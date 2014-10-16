@@ -33,6 +33,9 @@
     <ClCompile Include="..\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\logic\notify\Notify.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\util\Constant.h">
@@ -51,6 +54,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\util\Time.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\logic\notify\Notify.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
