@@ -10,3 +10,5 @@
 *.xcuserstate
 
 code/1.0/Core/Core.xcodeproj/project.xcworkspace/xcuserdata/sunxin.xcuserdatad/UserInterfaceState.xcuserstate
+
+*.xcbkptlist
