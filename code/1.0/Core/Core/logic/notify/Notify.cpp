@@ -105,19 +105,23 @@ void CoreNotify::UnSerializ(node* in)
         cID[i]=1;
     }
     node *posNode=NotiNode->getnodebyname("pos")->item(0);
-    pos=atoi(posNode->gettext().data());
+    pos=posNode?atoi(posNode->gettext().data()):0;
     node *sizeNode=NotiNode->getnodebyname("size")->item(0);
-    nodecollect *itemCollect=sizeNode->getnodebyname("item");
-    for(long i=0;i<itemCollect->getcount();i++)
+    if(sizeNode!=0)
     {
-        sNotify noti;
-        noti.id=atoi(itemCollect->item(i)->getattr("id").data());
-        noti.sec=atoi(itemCollect->item(i)->getattr("sec").data());
-        strcpy(noti.szText,itemCollect->item(i)->getattr("szText").data());
-        noti.type=(sNotify::TYPE)atoi(itemCollect->item(i)->getattr("type").data());
-        noti.bEnabled=atoi(itemCollect->item(i)->getattr("bEnabled").data());
-        noti.flag=atoi(itemCollect->item(i)->getattr("flag").data());
-        m_Queue.push(noti);
+        nodecollect *itemCollect=sizeNode->getnodebyname("item");
+        for(long i=0;i<itemCollect->getcount();i++)
+        {
+            sNotify noti;
+            noti.id=atol(itemCollect->item(i)->getattr("id").data());
+            noti.sec=atol(itemCollect->item(i)->getattr("sec").data());
+            strcpy(noti.szText,itemCollect->item(i)->getattr("szText").data());
+            noti.type=(sNotify::TYPE)atol(itemCollect->item(i)->getattr("type").data());
+            noti.bEnabled=atol(itemCollect->item(i)->getattr("bEnabled").data());
+            noti.flag=atol(itemCollect->item(i)->getattr("flag").data());
+            m_Queue.push(noti);
+        }
+        
     }
 }
 

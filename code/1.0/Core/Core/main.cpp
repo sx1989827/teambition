@@ -29,7 +29,6 @@ int main(int argc, const char * argv[])
     CoreSaveSingleton::SetInstance(save);
     SAVEINSTANCE->Save();
     SAVEINSTANCE->UnSave();
-
 }
 
 
