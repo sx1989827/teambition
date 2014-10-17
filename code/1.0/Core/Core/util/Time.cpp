@@ -8,7 +8,7 @@
 #include "Time.h"
 
 #include "Constant.h"
-std::string CoreTime::GetCurrentTime()
+std::string CoreTime::GetCurTime()
 {
 	time_t lTime = time(0);
     tm *pTime= localtime((const time_t*)&lTime);

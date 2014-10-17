@@ -10,7 +10,7 @@
 			0
 		</pos>
 		<size>
-			<item id="0" sec="1000" szText="都是都是 drrer" type="3" bEnabled="1" flag="222"/>
+			<item id="0" sec="1000" szText="都是都f�?drrer" type="3" bEnabled="1" flag="222"/>
 		</size>
 	</Notify>
 </root>

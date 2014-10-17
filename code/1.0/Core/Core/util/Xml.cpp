@@ -7,7 +7,6 @@
 //
 
 #include "Xml.h"
-#include "xml.h"
 xml::xml(){
     root=0;
     count=0;

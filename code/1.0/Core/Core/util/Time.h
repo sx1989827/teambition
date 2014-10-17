@@ -13,7 +13,7 @@
 class CoreTime
 {
 public:
-    static std::string GetCurrentTime();
+	static std::string GetCurTime();
     static std::string GetCurrentDate();
     static std::string GetCurrentMoment();
     static CoreTime GetTimeSinceNow(long sec);

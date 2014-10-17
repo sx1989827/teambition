@@ -11,7 +11,11 @@
 #ifdef XCODE
 #define SAVEFILE  "data.txt"
 #elif defined(VS)
+#include <windows.h>
+#include <string>
 #define SAVEFILE "data.txt"
+std::wstring UTF8ToUnicode(const std::string& str);
+std::string UnicodeToANSI(const std::wstring& str);
 #endif
 #define TEXT_SIZE 255
 
