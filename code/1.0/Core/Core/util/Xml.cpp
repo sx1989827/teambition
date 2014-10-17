@@ -705,24 +705,38 @@ node *xml::createtextnode(string s){
     return n;
 }
 void xml::loadfile(string s){
-    if(root)
-    {
-        release(root);
-        root=0;
-    }
-    text.clear();
-    FILE *f=fopen(s.data(),"rb");
-    char buf[2048]={0};
-    fread(buf,1,2040,f);
-        text=buf;
-        while(!feof(f)){
-            memset(buf,0,2048);
-            fread(buf,1,2047,f);
-            text+=buf;
-        }
-    fclose(f);
-    
-    loadstring(text);
+	if (root)
+	{
+		release(root);
+		root = 0;
+	}
+	text.clear();
+	FILE *f = fopen(s.data(), "rb");
+	char buf[2048] = { 0 };
+	fread(buf, 1, 2040, f);
+
+	if (buf[0] == '\xff' && buf[1] == '\xfe'){
+
+	}
+	else if (buf[0] == '\xef' && buf[1] == '\xbb' &&  buf[2] == '\xbf'){
+		text = (buf + 3);
+		while (!feof(f)){
+			memset(buf, 0, 2048);
+			fread(buf, 1, 2047, f);
+			text = text + buf;
+		}
+	}
+	else{
+		text = buf;
+		while (!feof(f)){
+			memset(buf, 0, 2048);
+			fread(buf, 1, 2047, f);
+			text += buf;
+		}
+	}
+	fclose(f);
+
+	loadstring(text);
 }
 void xml::savefile(string s,long mode){
     flush();
@@ -732,7 +746,8 @@ void xml::savefile(string s,long mode){
     }else if(mode==unicode){
        
     }else if(mode==utf8){
-        
+		fwrite("\xef\xbb\xbf", 1, 3, f);
+		fwrite(text.data(), 1, text.length(), f);
     }
     fclose(f);
 }

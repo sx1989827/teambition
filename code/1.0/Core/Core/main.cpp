@@ -15,7 +15,7 @@ int main(int argc, const char * argv[])
     CoreApplication app;
     sNotify noti;
     noti.sec=1000;
-    strcpy(noti.szText,"我的饭 drrer");
+    strcpy(noti.szText,"都是都是 drrer");
     noti.type=sNotify::WORKIOI;
     noti.bEnabled=true;
     noti.flag=222;

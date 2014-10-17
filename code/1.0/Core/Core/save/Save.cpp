@@ -16,14 +16,14 @@ void CoreSave::Save()
 {
     xml x;
     node *n=x.insertpi();
-    n->setattr("encoding","gb2312");
+    n->setattr("encoding","utf-8");
     node * n1=x.createnode("root");
     x.append(n1);
     for(long i=0;i<m_Vec.size();i++)
     {
         m_Vec[i]->Serializ(n1);
     }
-    x.savefile(SAVEFILE);
+    x.savefile(SAVEFILE,xml::utf8);
 }
 
 void CoreSave::UnSave()
