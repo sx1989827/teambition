@@ -7,26 +7,19 @@
 //
 
 #include <iostream>
-#include "util/Header.h"
-#include "logic/notify/Notify.h"
+#include "Application.h"
 int main(int argc, const char * argv[])
 {
-    
-    CoreNotify *notiobj=new CoreNotify;
-    CoreNotifySingleton::SetInstance(notiobj);
+    CoreApplication app;
     sNotify noti;
     noti.sec=1000;
-    strcpy(noti.szText,"二维饿飞翁rrer");
+    strcpy(noti.szText,"第三方 drrer");
     noti.type=sNotify::WORKIOI;
     noti.bEnabled=true;
     noti.flag=222;
     NOTIFYCENTER->CreateNotify(&noti);
-    FILE *f1= fopen("/Users/sunxin/me/teambition/code/1.0/Core/data.txt","wb");
-    NOTIFYCENTER->Serializ(f1);
-    fclose(f1);
-    FILE *f2= fopen("/Users/sunxin/me/teambition/code/1.0/Core/data.txt","rb");
-    NOTIFYCENTER->UnSerializ(f2);
-    fclose(f2);
+    SAVEINSTANCE->Save();
+    SAVEINSTANCE->UnSave();
 }
 
 

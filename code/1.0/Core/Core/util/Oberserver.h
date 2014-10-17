@@ -24,6 +24,7 @@ class CoreFuncBase
 {
 public:
 	virtual void operator() (void *pObj, const char *name, void* oldValue, void* newValue) = 0;
+    virtual void operator() (void *pObj, const char *name, void* value) = 0;
 	virtual long GetID() = 0;
 	virtual ~CoreFuncBase()
 	{
@@ -46,6 +47,10 @@ public:
     {
         (m_pObj->*m_func)(pObj,name,oldValue,newValue);
     }
+    void operator() (void *pObj, const char *name, void* value)
+    {
+        (m_pObj->*m_func)(pObj,name,value);
+    }
 	long GetID()
 	{
 		return (long)m_pObj;
@@ -56,6 +61,7 @@ class CoreObManage
 {
 public:
     void PostOberserver(void *pObj,const char *name,void* oldValue,void * newValue);
+    void PostOberserver(void *pObj,const char *name,void* value);
     template<class T1,class T2>
     void AddOberserver(void *pObj,const char* name,T1 pObj1,T2 func)
     {

@@ -61,42 +61,67 @@ void CoreNotify::ClearAllNotify()
     std::queue<sNotify> temp;
     m_Queue.swap(temp);
 }
-void CoreNotify::Serializ(FILE* out)
+void CoreNotify::Serializ(node* out)
 {
-    fwrite(cID,1,100*sizeof(char),out);
-    fwrite(&pos,sizeof(pos),1,out);
-    long size=m_Queue.size();
-    fwrite(&size,sizeof(size),1,out);
+    node* NotiNode=out->getXml()->createnode("Notify");
+    node* cIDNode=out->getXml()->createnode("cID");
+    for(long i=0;i<100;i++)
+    {
+        if(cID[i]!=0)
+        {
+            node* used=out->getXml()->createnode("used");
+            used->puttext(i);
+            cIDNode->appned(used);
+        }
+    }
+    NotiNode->appned(cIDNode);
+    WriteXml(NotiNode, pos, "pos");
+    node* QueueNode= NotiNode->getXml()->createnode("size");
+    NotiNode->appned(QueueNode);
     std::queue<sNotify> queue=m_Queue;
     while(!queue.empty())
     {
         sNotify noti=queue.front();
-        fwrite(&noti.id,sizeof(noti.id),1,out);
-        fwrite(&noti.sec,sizeof(noti.sec),1,out);
-        fwrite(&noti.szText,1,100*sizeof(char),out);
-        fwrite(&noti.type,sizeof(noti.type),1,out);
-        fwrite(&noti.bEnabled,sizeof(noti.bEnabled),1,out);
-        fwrite(&noti.flag,sizeof(noti.flag),1,out);
+        node *NotifyNode=QueueNode->getXml()->createnode("item");
+        NotifyNode->setattr("id", noti.id);
+        NotifyNode->setattr("sec", noti.sec);
+        NotifyNode->setattr("szText", noti.szText);
+        NotifyNode->setattr("type", (long)noti.type);
+        NotifyNode->setattr("bEnabled", noti.bEnabled);
+        NotifyNode->setattr("flag", noti.flag);
+        QueueNode->appned(NotifyNode);
         queue.pop();
     }
+    out->appned(NotiNode);
 }
-void CoreNotify::UnSerializ(FILE* in)
+void CoreNotify::UnSerializ(node* in)
 {
     ClearAllNotify();
-    fread(cID, 1,100*sizeof(char),in);
-    fread(&pos,sizeof(pos),1,in);
-    long count;
-    fread(&count,sizeof(count),1,in);
-    while(count-->0)
+    memset(cID, 0, 100);
+    node* NotiNode=in->select("/Notify")->item(0);
+    nodecollect *cIDCollect=NotiNode->getnodebyname("cID");
+    for(long i=0;i<cIDCollect->getcount();i++)
     {
-        sNotify noti;
-        fread(&noti.id,sizeof(noti.id),1,in);
-        fread(&noti.sec,sizeof(noti.sec),1,in);
-        fread(&noti.szText,1,100*sizeof(char),in);
-        fread(&noti.type,sizeof(noti.type),1,in);
-        fread(&noti.bEnabled,sizeof(noti.bEnabled),1,in);
-        fread(&noti.flag,sizeof(noti.flag),1,in);
-        m_Queue.push(noti);
+        cID[i]=1;
+    }
+    node *posNode=NotiNode->getnodebyname("pos")->item(0);
+    pos=posNode?atoi(posNode->gettext().data()):0;
+    node *sizeNode=NotiNode->getnodebyname("size")->item(0);
+    if(sizeNode!=0)
+    {
+        nodecollect *itemCollect=sizeNode->getnodebyname("item");
+        for(long i=0;i<itemCollect->getcount();i++)
+        {
+            sNotify noti;
+            noti.id=atol(itemCollect->item(i)->getattr("id").data());
+            noti.sec=atol(itemCollect->item(i)->getattr("sec").data());
+            strcpy(noti.szText,itemCollect->item(i)->getattr("szText").data());
+            noti.type=(sNotify::TYPE)atol(itemCollect->item(i)->getattr("type").data());
+            noti.bEnabled=atol(itemCollect->item(i)->getattr("bEnabled").data());
+            noti.flag=atol(itemCollect->item(i)->getattr("flag").data());
+            m_Queue.push(noti);
+        }
+        
     }
 }
 

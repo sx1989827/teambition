@@ -13,4 +13,5 @@
 #include "Oberserver.h"
 #include "Constant.h"
 #include "Serializ.h"
+#include "Xml.h"
 #endif
