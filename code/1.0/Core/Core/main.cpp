@@ -9,6 +9,7 @@
 #include <iostream>
 #include "util/Header.h"
 #include "logic/notify/Notify.h"
+#include "save/Save.h"
 int main(int argc, const char * argv[])
 {
     
@@ -21,12 +22,13 @@ int main(int argc, const char * argv[])
     noti.bEnabled=true;
     noti.flag=222;
     NOTIFYCENTER->CreateNotify(&noti);
-    FILE *f1= fopen("/Users/sunxin/me/teambition/code/1.0/Core/data.txt","wb");
-    NOTIFYCENTER->Serializ(f1);
-    fclose(f1);
-    FILE *f2= fopen("/Users/sunxin/me/teambition/code/1.0/Core/data.txt","rb");
-    NOTIFYCENTER->UnSerializ(f2);
-    fclose(f2);
+    CoreSave *save=new CoreSave;
+    std::vector<CoreSerializ*> vec;
+    vec.push_back(NOTIFYCENTER);
+    save->SetSaveObj(&vec);
+    CoreSaveSingleton::SetInstance(save);
+    SAVEINSTANCE->Save();
+    SAVEINSTANCE->UnSave();
 }
 
 

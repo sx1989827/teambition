@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B504E3D919F0AF0E00767625 /* Save.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B504E3D719F0AF0E00767625 /* Save.cpp */; };
 		B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614019ED0DBD00B618EB /* Notify.cpp */; };
 		B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614319ED0E4400B618EB /* Serializ.cpp */; };
 		B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730BB19EB75A100CF6A51 /* main.cpp */; };
@@ -30,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B504E3D719F0AF0E00767625 /* Save.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Save.cpp; sourceTree = "<group>"; };
+		B504E3D819F0AF0E00767625 /* Save.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Save.h; sourceTree = "<group>"; };
 		B50C614019ED0DBD00B618EB /* Notify.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Notify.cpp; sourceTree = "<group>"; };
 		B50C614119ED0DBD00B618EB /* Notify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notify.h; sourceTree = "<group>"; };
 		B50C614319ED0E4400B618EB /* Serializ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Serializ.cpp; sourceTree = "<group>"; };
@@ -60,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B504E3D619F0AEF500767625 /* save */ = {
+			isa = PBXGroup;
+			children = (
+				B504E3D719F0AF0E00767625 /* Save.cpp */,
+				B504E3D819F0AF0E00767625 /* Save.h */,
+			);
+			path = save;
+			sourceTree = "<group>";
+		};
 		B50C613F19ED0DA000B618EB /* notify */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B5E730BB19EB75A100CF6A51 /* main.cpp */,
+				B504E3D619F0AEF500767625 /* save */,
 				B5E730C019EB762700CF6A51 /* logic */,
 				B5E730C119EB762700CF6A51 /* util */,
 			);
@@ -178,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B504E3D919F0AF0E00767625 /* Save.cpp in Sources */,
 				B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */,
 				B5E730CB19EBB10200CF6A51 /* Time.cpp in Sources */,
 				B5E730C819EB865300CF6A51 /* Log.cpp in Sources */,
@@ -230,6 +244,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = XCODE;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
