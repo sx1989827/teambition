@@ -7,12 +7,12 @@
 //
 
 #include <iostream>
+#include <sys/time.h>
 #include "util/Header.h"
 #include "logic/notify/Notify.h"
 #include "save/Save.h"
 int main(int argc, const char * argv[])
 {
-    
     CoreNotify *notiobj=new CoreNotify;
     CoreNotifySingleton::SetInstance(notiobj);
     sNotify noti;
@@ -29,6 +29,7 @@ int main(int argc, const char * argv[])
     CoreSaveSingleton::SetInstance(save);
     SAVEINSTANCE->Save();
     SAVEINSTANCE->UnSave();
+
 }
 
 
