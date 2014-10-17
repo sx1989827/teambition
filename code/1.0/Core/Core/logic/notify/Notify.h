@@ -34,8 +34,8 @@ public:
     void GetLastNotify(sNotify *pNotify) const;
     void PopNotify();
     void ClearAllNotify();
-    void Serializ(FILE* out);
-    void UnSerializ(FILE* in);
+    void Serializ(node* out);
+    void UnSerializ(node* in);
 private:
     std::queue<sNotify> m_Queue;
     static char cID[100];

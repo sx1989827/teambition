@@ -9,24 +9,27 @@
 #include "Save.h"
 void CoreSave::Save()
 {
-    FILE *file=fopen(SAVEFILE, "wb");
-    assert(file!=0);
+    xml x;
+    node *n=x.insertpi();
+    n->setattr("encoding","gb2312");
+    node * n1=x.createnode("root");
+    x.append(n1);
     for(long i=0;i<m_Vec.size();i++)
     {
-        m_Vec[i]->Serializ(file);
+        m_Vec[i]->Serializ(n1);
     }
-    fclose(file);
+    x.savefile(SAVEFILE);
 }
 
 void CoreSave::UnSave()
 {
-    FILE *file=fopen(SAVEFILE, "rb");
-    assert(file!=0);
+    xml x;
+    x.loadfile(SAVEFILE);
+    node *n1=x.getnodebyname("root")->item(0);
     for(long i=0;i<m_Vec.size();i++)
     {
-        m_Vec[i]->UnSerializ(file);
+        m_Vec[i]->UnSerializ(n1);
     }
-    fclose(file);
 }
 
 void CoreSave::SetSaveObj(std::vector<CoreSerializ*> *pObj)
