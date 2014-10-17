@@ -3,7 +3,7 @@
 //  Core
 //
 
-//  Created by 孙昕 on 14-10-13.
+//  Created by ������ on 14-10-13.
 
 //
 //
@@ -15,14 +15,14 @@ int main(int argc, const char * argv[])
     CoreApplication app;
     sNotify noti;
     noti.sec=1000;
-    strcpy(noti.szText,"你你 drrer");
+    strcpy(noti.szText,"我的饭 drrer");
     noti.type=sNotify::WORKIOI;
     noti.bEnabled=true;
     noti.flag=222;
     NOTIFYCENTER->CreateNotify(&noti);
     SAVEINSTANCE->Save();
     SAVEINSTANCE->UnSave();
-	printf("%s", "的冯绍峰的 ");
+	printf("%s", "啊实打实的 ");
 }
 
 
