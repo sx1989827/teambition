@@ -10,7 +10,7 @@
 			0
 		</pos>
 		<size>
-			<item id="0" sec="1000" szText="二维饿飞翁rrer" type="3" bEnabled="1" flag="222"/>
+			<item id="0" sec="1000" szText="第三方 drrer" type="3" bEnabled="1" flag="222"/>
 		</size>
 	</Notify>
 </root>

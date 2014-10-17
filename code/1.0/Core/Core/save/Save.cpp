@@ -6,6 +6,11 @@
 //
 //
 #include <assert.h>
+#ifdef XCODE
+#include <unistd.h>
+#elif defined(VS)
+#include <io.h>
+#endif
 #include "Save.h"
 void CoreSave::Save()
 {
@@ -23,6 +28,10 @@ void CoreSave::Save()
 
 void CoreSave::UnSave()
 {
+    if(access(SAVEFILE, 0)==-1)
+    {
+        return;
+    }
     xml x;
     x.loadfile(SAVEFILE);
     node *n1=x.getnodebyname("root")->item(0);
