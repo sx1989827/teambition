@@ -45,6 +45,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);VS</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -65,22 +66,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Application.cpp" />
     <ClCompile Include="..\logic\notify\Notify.cpp" />
     <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\save\Save.cpp" />
     <ClCompile Include="..\util\Constant.cpp" />
     <ClCompile Include="..\util\Log.cpp" />
     <ClCompile Include="..\util\Oberserver.cpp" />
     <ClCompile Include="..\util\Singleton.cpp" />
     <ClCompile Include="..\util\Time.cpp" />
+    <ClCompile Include="..\util\Xml.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Application.h" />
     <ClInclude Include="..\logic\notify\Notify.h" />
+    <ClInclude Include="..\save\Save.h" />
     <ClInclude Include="..\util\Constant.h" />
     <ClInclude Include="..\util\Header.h" />
     <ClInclude Include="..\util\Log.h" />
     <ClInclude Include="..\util\Oberserver.h" />
     <ClInclude Include="..\util\Singleton.h" />
     <ClInclude Include="..\util\Time.h" />
+    <ClInclude Include="..\util\Xml.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

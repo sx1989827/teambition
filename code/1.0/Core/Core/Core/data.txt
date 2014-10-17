@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root>
+	<Notify>
+		<cID>
+			<used>
+				0
+			</used>
+		</cID>
+		<pos>
+			0
+		</pos>
+		<size>
+			<item id="0" sec="1000" szText="的的范德萨发 drrer" type="3" bEnabled="1" flag="222"/>
+		</size>
+	</Notify>
+</root>
