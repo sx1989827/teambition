@@ -2,7 +2,9 @@
 //  main.cpp
 //  Core
 //
-//  Created by  on 14-10-13.
+
+//  Created by 孙昕 on 14-10-13.
+
 //
 //
 
@@ -20,6 +22,7 @@ int main(int argc, const char * argv[])
     NOTIFYCENTER->CreateNotify(&noti);
     SAVEINSTANCE->Save();
     SAVEINSTANCE->UnSave();
+	printf("%s", "的冯绍峰的 ");
 }
 
 
