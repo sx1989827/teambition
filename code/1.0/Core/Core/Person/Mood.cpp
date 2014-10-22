@@ -7,3 +7,11 @@
 //
 
 #include "Mood.h"
+void CoreMood::Serializ(node* out)
+{
+    
+}
+void CoreMood::UnSerializ(node* in)
+{
+    
+}

@@ -16,9 +16,11 @@ CoreApplication::CoreApplication()
     CoreNotifySingleton::SetInstance(m_pNotify);
     m_pObManage=new CoreObManage;
     CoreObManageSingleton::SetInstance(m_pObManage);
-    m_pSave=new CoreSave;
     std::vector<CoreSerializ*> vec;
+    m_pSave=new CoreSave;
     vec.push_back(NOTIFYCENTER);
+    m_pGirl=new CoreGirl;
+    vec.push_back(m_pGirl);
     m_pSave->SetSaveObj(&vec);
     CoreSaveSingleton::SetInstance(m_pSave);
     
@@ -26,6 +28,7 @@ CoreApplication::CoreApplication()
 
 CoreApplication::~CoreApplication()
 {
+    delete m_pGirl;
     CoreSaveSingleton::Release();
     CoreObManageSingleton::Release();
     CoreNotifySingleton::Release();
@@ -36,7 +39,10 @@ CoreApplication::~CoreApplication()
     delete m_pLog;
 }
 
-
+CoreGirl* CoreApplication::GetGirl()
+{
+    return m_pGirl;
+}
 
 
 

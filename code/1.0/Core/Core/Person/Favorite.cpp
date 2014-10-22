@@ -36,12 +36,28 @@ void CoreFavorite::Serializ(node* out)
 }
 void CoreFavorite::UnSerializ(node* in)
 {
+    std::vector<sFavItem>().swap(m_VecLike);
+    std::vector<sFavItem>().swap(m_VecDisLike);
     node* root=in->select("/Favorite")->item(0);
     nodecollect *like=root->select("/like/item");
     for(long i=0;i<like->getcount();i++)
     {
-        
+        sFavItem item;
+        item.type=like->item(i)->getattr("type");
+        item.name=like->item(i)->getattr("name");
+        item.flag=atol(like->item(i)->getattr("flag").data());
+        m_VecLike.push_back(item);
     }
+    nodecollect *dislike=root->select("/dislike/item");
+    for(long i=0;i<dislike->getcount();i++)
+    {
+        sFavItem item;
+        item.type=dislike->item(i)->getattr("type");
+        item.name=dislike->item(i)->getattr("name");
+        item.flag=atol(dislike->item(i)->getattr("flag").data());
+        m_VecDisLike.push_back(item);
+    }
+    
 }
 bool CoreFavorite::QueryLike(const sFavItem* str)
 {

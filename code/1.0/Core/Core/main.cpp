@@ -9,6 +9,7 @@
 int main(int argc, const char * argv[])
 {
     CoreApplication app;
+    app.GetGirl()->BuildFavorite();
     sNotify noti;
     noti.sec=1000;
     strcpy(noti.szText,"都是都f是 drrer");
@@ -18,8 +19,7 @@ int main(int argc, const char * argv[])
     NOTIFYCENTER->CreateNotify(&noti);
     SAVEINSTANCE->Save();
     SAVEINSTANCE->UnSave();
-    CoreFavorite f;
-    f.Build(FAVFILE);
+    
 }
 
 

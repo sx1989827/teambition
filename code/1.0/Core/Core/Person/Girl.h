@@ -12,10 +12,13 @@
 #include "PersonBase.h"
 #include "Mood.h"
 #include "Favorite.h"
-class CoreGirl
+class CoreGirl:public CorePersonBase
 {
 public:
     enum TYPE {LOLI,MAID,QUEEN};
+    CoreGirl();
+    ~CoreGirl();
+    void BuildFavorite();
     void Serializ(node* out);
     void UnSerializ(node* in);
 private:
