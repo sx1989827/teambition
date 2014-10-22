@@ -9,6 +9,9 @@
 #ifndef __Core__Status__
 #define __Core__Status__
 
-#include <stdio.h>
+class CoreStatus
+{
+    
+};
 
 #endif /* defined(__Core__Status__) */

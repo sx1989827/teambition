@@ -9,6 +9,9 @@
 #ifndef __Core__StatusController__
 #define __Core__StatusController__
 
-#include <stdio.h>
+class CoreStatusController
+{
+    
+};
 
 #endif /* defined(__Core__StatusController__) */

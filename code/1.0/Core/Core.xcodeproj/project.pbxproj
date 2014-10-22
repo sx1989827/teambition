@@ -14,6 +14,10 @@
 		B57F64AB19F750C000F88FB2 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64A919F750C000F88FB2 /* Status.cpp */; };
 		B57F64AE19F750DB00F88FB2 /* StatusController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64AC19F750DB00F88FB2 /* StatusController.cpp */; };
 		B57F64B119F7512700F88FB2 /* Interaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64AF19F7512700F88FB2 /* Interaction.cpp */; };
+		B57F64BA19F753E000F88FB2 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64B819F753E000F88FB2 /* Player.cpp */; };
+		B57F64BD19F753EC00F88FB2 /* Girl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64BB19F753EC00F88FB2 /* Girl.cpp */; };
+		B57F64C019F7542400F88FB2 /* Mood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64BE19F7542400F88FB2 /* Mood.cpp */; };
+		B57F64C319F7545800F88FB2 /* Favorite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64C119F7545800F88FB2 /* Favorite.cpp */; };
 		B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5B4016D19F688D10009CAC2 /* PersonBase.cpp */; };
 		B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E04CF119F0CB6A00CCFD10 /* Xml.cpp */; };
 		B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730BB19EB75A100CF6A51 /* main.cpp */; };
@@ -51,6 +55,14 @@
 		B57F64AD19F750DB00F88FB2 /* StatusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusController.h; sourceTree = "<group>"; };
 		B57F64AF19F7512700F88FB2 /* Interaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interaction.cpp; sourceTree = "<group>"; };
 		B57F64B019F7512700F88FB2 /* Interaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interaction.h; sourceTree = "<group>"; };
+		B57F64B819F753E000F88FB2 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		B57F64B919F753E000F88FB2 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		B57F64BB19F753EC00F88FB2 /* Girl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Girl.cpp; sourceTree = "<group>"; };
+		B57F64BC19F753EC00F88FB2 /* Girl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Girl.h; sourceTree = "<group>"; };
+		B57F64BE19F7542400F88FB2 /* Mood.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mood.cpp; sourceTree = "<group>"; };
+		B57F64BF19F7542400F88FB2 /* Mood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mood.h; sourceTree = "<group>"; };
+		B57F64C119F7545800F88FB2 /* Favorite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Favorite.cpp; sourceTree = "<group>"; };
+		B57F64C219F7545800F88FB2 /* Favorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
 		B5B4016D19F688D10009CAC2 /* PersonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PersonBase.cpp; sourceTree = "<group>"; };
 		B5B4016E19F688D10009CAC2 /* PersonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonBase.h; sourceTree = "<group>"; };
 		B5E04CF119F0CB6A00CCFD10 /* Xml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Xml.cpp; sourceTree = "<group>"; };
@@ -124,6 +136,14 @@
 			children = (
 				B5B4016D19F688D10009CAC2 /* PersonBase.cpp */,
 				B5B4016E19F688D10009CAC2 /* PersonBase.h */,
+				B57F64B819F753E000F88FB2 /* Player.cpp */,
+				B57F64B919F753E000F88FB2 /* Player.h */,
+				B57F64BB19F753EC00F88FB2 /* Girl.cpp */,
+				B57F64BC19F753EC00F88FB2 /* Girl.h */,
+				B57F64BE19F7542400F88FB2 /* Mood.cpp */,
+				B57F64BF19F7542400F88FB2 /* Mood.h */,
+				B57F64C119F7545800F88FB2 /* Favorite.cpp */,
+				B57F64C219F7545800F88FB2 /* Favorite.h */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -245,15 +265,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57F64C019F7542400F88FB2 /* Mood.cpp in Sources */,
 				B504E3D919F0AF0E00767625 /* Save.cpp in Sources */,
 				B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */,
 				B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */,
 				B5530CE919F0F9000020A5AB /* Application.cpp in Sources */,
 				B5E730CB19EBB10200CF6A51 /* Time.cpp in Sources */,
+				B57F64C319F7545800F88FB2 /* Favorite.cpp in Sources */,
 				B5E730C819EB865300CF6A51 /* Log.cpp in Sources */,
 				B5E730CE19EBB90500CF6A51 /* Constant.cpp in Sources */,
 				B57F64AE19F750DB00F88FB2 /* StatusController.cpp in Sources */,
+				B57F64BA19F753E000F88FB2 /* Player.cpp in Sources */,
 				B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */,
+				B57F64BD19F753EC00F88FB2 /* Girl.cpp in Sources */,
 				B57F64AB19F750C000F88FB2 /* Status.cpp in Sources */,
 				B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */,
 				B57F64B119F7512700F88FB2 /* Interaction.cpp in Sources */,

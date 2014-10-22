@@ -10,8 +10,10 @@
 #define __Core__PersonBase__
 
 #include "../util/Serializ.h"
+#include "../Status/StatusController.h"
 class CorePersonBase:public CoreSerializ
 {
-    
+protected:
+    CoreStatusController * m_pStatusController;
 };
 #endif /* defined(__Core__PersonBase__) */
