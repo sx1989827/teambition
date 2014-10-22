@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include "Application.h"
+#include "Favorite.h"
 int main(int argc, const char * argv[])
 {
     CoreApplication app;
@@ -17,6 +18,8 @@ int main(int argc, const char * argv[])
     NOTIFYCENTER->CreateNotify(&noti);
     SAVEINSTANCE->Save();
     SAVEINSTANCE->UnSave();
+    CoreFavorite f;
+    f.Build(FAVFILE);
 }
 
 

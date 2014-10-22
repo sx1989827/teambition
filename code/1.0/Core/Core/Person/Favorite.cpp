@@ -7,3 +7,99 @@
 //
 
 #include "Favorite.h"
+#include "../util/Constant.h"
+#include <algorithm>
+void CoreFavorite::Serializ(node* out)
+{
+    
+}
+void CoreFavorite::UnSerializ(node* in)
+{
+    
+}
+bool CoreFavorite::QueryLike(const sFavItem* str)
+{
+    for(int i=0;i<m_VecLike.size();i++)
+    {
+        if(m_VecLike[i].type==str->type && m_VecLike[i].name==str->name)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+bool CoreFavorite::QueryDisLike(const sFavItem* str)
+{
+    for(int i=0;i<m_VecDisLike.size();i++)
+    {
+        if(m_VecDisLike[i].type==str->type && m_VecDisLike[i].name==str->name)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+void CoreFavorite::Build(const std::string& str)
+{
+    xml x;
+    x.loadfile(str);
+    node* root=x.getnodebyname("root")->item(0)->getchild(0);
+    do{
+        std::string tag=root->gettag();
+        vector<sFavItem> vec;
+        nodecollect *col= root->select("/item");
+        for(int i=0;i<col->getcount();i++)
+        {
+            sFavItem item;
+            item.type=tag;
+            item.name=col->item(i)->gettext();
+            if(tag=="gift")
+            {
+                item.flag=atol(col->item(i)->getattr("price").data());
+            }
+            else
+            {
+                item.flag=0;
+            }
+            vec.push_back(item);
+        }
+        if(vec.size()>0)
+        {
+            long i=2;
+            while (i-- && !vec.empty()) {
+                long rnd=random()%vec.size();
+                m_VecLike.push_back(vec[rnd]);
+                vec.erase(vec.begin()+rnd);
+            }
+            if(tag!="gift")
+            {
+                i=2;
+                while (i-- && !vec.empty()) {
+                    long rnd=random()%vec.size();
+                    m_VecDisLike.push_back(vec[rnd]);
+                    vec.erase(vec.begin()+rnd);
+                }
+            }
+            
+        }
+
+    }while ((root=root->getnext())!=0) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

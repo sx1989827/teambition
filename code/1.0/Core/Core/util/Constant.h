@@ -10,6 +10,7 @@
 #define __Core__Constant__
 #ifdef XCODE
 #define SAVEFILE  "data.txt"
+#define FAVFILE    "/Users/sunxin/me/teambition/code/1.0/Core/like"
 #elif defined(VS)
 #include <windows.h>
 #include <string>

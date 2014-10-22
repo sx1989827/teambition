@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<dish>
+	<item>川菜</item>
+	<item>徽菜</item>
+	<item>粤菜</item>
+	<item>西餐</item>
+	<item>湘菜</item>
+</dish>
+<film>
+	<item>喜剧片</item>
+	<item>爱情片</item>
+	<item>动作片</item>
+	<item>恐怖片</item>
+	<item>悬疑片</item>
+</film>
+<sports>
+	<item>跑步</item>
+	<item>游泳</item>
+	<item>羽毛球</item>
+	<item>散步</item>
+	<item>骑车</item>
+</sports>
+<gift>
+	<item price="50">书籍</item>
+	<item price="600">电子产品</item>
+	<item price="300">相册</item>
+	<item price="100">鲜花</item>
+	<item price="1000">钻石</item>
+</gift>
+</root>

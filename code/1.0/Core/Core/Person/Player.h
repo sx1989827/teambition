@@ -9,6 +9,15 @@
 #ifndef __Core__Player__
 #define __Core__Player__
 
-#include <stdio.h>
+#include "PersonBase.h"
+class CorePlayer:public CorePersonBase
+{
+public:
+    void Serializ(node* out);
+    void UnSerializ(node* in);
+private:
+    long m_lPhysical;
+    long m_lMoney;
+};
 
 #endif /* defined(__Core__Player__) */

@@ -9,6 +9,7 @@
 #include "Application.h"
 CoreApplication::CoreApplication()
 {
+    srandom((unsigned)time(0));
     m_pLog=new CoreLog;
     CoreLogSingleton::SetInstance(m_pLog);
     m_pNotify=new CoreNotify;
