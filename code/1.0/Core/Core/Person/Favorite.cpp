@@ -11,11 +11,37 @@
 #include <algorithm>
 void CoreFavorite::Serializ(node* out)
 {
-    
+    node *root=out->getXml()->createnode("Favorite");
+    node *like=out->getXml()->createnode("like");
+    for(int i=0;i<m_VecLike.size();i++)
+    {
+        node *item=out->getXml()->createnode("item");
+        item->setattr("type", m_VecLike[i].type);
+        item->setattr("name", m_VecLike[i].name);
+        item->setattr("flag", m_VecLike[i].flag);
+        like->appned(item);
+    }
+    root->appned(like);
+    node *dislike=out->getXml()->createnode("dislike");
+    for(int i=0;i<m_VecDisLike.size();i++)
+    {
+        node *item=out->getXml()->createnode("item");
+        item->setattr("type", m_VecLike[i].type);
+        item->setattr("name", m_VecLike[i].name);
+        item->setattr("flag", m_VecLike[i].flag);
+        dislike->appned(item);
+    }
+    root->appned(dislike);
+    out->appned(root);
 }
 void CoreFavorite::UnSerializ(node* in)
 {
-    
+    node* root=in->select("/Favorite")->item(0);
+    nodecollect *like=root->select("/like/item");
+    for(long i=0;i<like->getcount();i++)
+    {
+        
+    }
 }
 bool CoreFavorite::QueryLike(const sFavItem* str)
 {
