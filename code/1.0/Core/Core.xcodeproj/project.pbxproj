@@ -11,6 +11,7 @@
 		B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614019ED0DBD00B618EB /* Notify.cpp */; };
 		B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614319ED0E4400B618EB /* Serializ.cpp */; };
 		B5530CE919F0F9000020A5AB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5530CE719F0F9000020A5AB /* Application.cpp */; };
+		B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5B4016D19F688D10009CAC2 /* PersonBase.cpp */; };
 		B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E04CF119F0CB6A00CCFD10 /* Xml.cpp */; };
 		B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730BB19EB75A100CF6A51 /* main.cpp */; };
 		B5E730C419EB768B00CF6A51 /* Singleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730C219EB768B00CF6A51 /* Singleton.cpp */; };
@@ -41,6 +42,8 @@
 		B50C614419ED0E4400B618EB /* Serializ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serializ.h; sourceTree = "<group>"; };
 		B5530CE719F0F9000020A5AB /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		B5530CE819F0F9000020A5AB /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		B5B4016D19F688D10009CAC2 /* PersonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PersonBase.cpp; sourceTree = "<group>"; };
+		B5B4016E19F688D10009CAC2 /* PersonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonBase.h; sourceTree = "<group>"; };
 		B5E04CF119F0CB6A00CCFD10 /* Xml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Xml.cpp; sourceTree = "<group>"; };
 		B5E04CF219F0CB6A00CCFD10 /* Xml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xml.h; sourceTree = "<group>"; };
 		B5E730B819EB75A100CF6A51 /* Core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Core; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +90,15 @@
 			path = notify;
 			sourceTree = "<group>";
 		};
+		B5B4016C19F688B70009CAC2 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				B5B4016D19F688D10009CAC2 /* PersonBase.cpp */,
+				B5B4016E19F688D10009CAC2 /* PersonBase.h */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
 		B5E730AD19EB754C00CF6A51 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +121,7 @@
 				B5530CE719F0F9000020A5AB /* Application.cpp */,
 				B5530CE819F0F9000020A5AB /* Application.h */,
 				B5E730BB19EB75A100CF6A51 /* main.cpp */,
+				B5B4016C19F688B70009CAC2 /* Person */,
 				B504E3D619F0AEF500767625 /* save */,
 				B5E730C019EB762700CF6A51 /* logic */,
 				B5E730C119EB762700CF6A51 /* util */,
@@ -202,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B504E3D919F0AF0E00767625 /* Save.cpp in Sources */,
+				B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */,
 				B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */,
 				B5530CE919F0F9000020A5AB /* Application.cpp in Sources */,
 				B5E730CB19EBB10200CF6A51 /* Time.cpp in Sources */,
