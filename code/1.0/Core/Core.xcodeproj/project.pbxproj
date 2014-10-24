@@ -20,6 +20,9 @@
 		B57F64C319F7545800F88FB2 /* Favorite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64C119F7545800F88FB2 /* Favorite.cpp */; };
 		B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5B4016D19F688D10009CAC2 /* PersonBase.cpp */; };
 		B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E04CF119F0CB6A00CCFD10 /* Xml.cpp */; };
+		B5E146B719FA3C6F00AED87E /* StatusLeisure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E146B519FA3C6F00AED87E /* StatusLeisure.cpp */; };
+		B5E146BA19FA3CCE00AED87E /* StatusSleep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E146B819FA3CCE00AED87E /* StatusSleep.cpp */; };
+		B5E146BD19FA3CE600AED87E /* StatusWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E146BB19FA3CE600AED87E /* StatusWork.cpp */; };
 		B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730BB19EB75A100CF6A51 /* main.cpp */; };
 		B5E730C419EB768B00CF6A51 /* Singleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730C219EB768B00CF6A51 /* Singleton.cpp */; };
 		B5E730C819EB865300CF6A51 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E730C619EB865300CF6A51 /* Log.cpp */; };
@@ -67,6 +70,12 @@
 		B5B4016E19F688D10009CAC2 /* PersonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonBase.h; sourceTree = "<group>"; };
 		B5E04CF119F0CB6A00CCFD10 /* Xml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Xml.cpp; sourceTree = "<group>"; };
 		B5E04CF219F0CB6A00CCFD10 /* Xml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xml.h; sourceTree = "<group>"; };
+		B5E146B519FA3C6F00AED87E /* StatusLeisure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusLeisure.cpp; sourceTree = "<group>"; };
+		B5E146B619FA3C6F00AED87E /* StatusLeisure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusLeisure.h; sourceTree = "<group>"; };
+		B5E146B819FA3CCE00AED87E /* StatusSleep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusSleep.cpp; sourceTree = "<group>"; };
+		B5E146B919FA3CCE00AED87E /* StatusSleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusSleep.h; sourceTree = "<group>"; };
+		B5E146BB19FA3CE600AED87E /* StatusWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusWork.cpp; sourceTree = "<group>"; };
+		B5E146BC19FA3CE600AED87E /* StatusWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusWork.h; sourceTree = "<group>"; };
 		B5E730B819EB75A100CF6A51 /* Core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Core; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E730BB19EB75A100CF6A51 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B5E730C219EB768B00CF6A51 /* Singleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Singleton.cpp; sourceTree = "<group>"; };
@@ -127,6 +136,12 @@
 				B57F64AA19F750C000F88FB2 /* Status.h */,
 				B57F64AC19F750DB00F88FB2 /* StatusController.cpp */,
 				B57F64AD19F750DB00F88FB2 /* StatusController.h */,
+				B5E146B519FA3C6F00AED87E /* StatusLeisure.cpp */,
+				B5E146B619FA3C6F00AED87E /* StatusLeisure.h */,
+				B5E146B819FA3CCE00AED87E /* StatusSleep.cpp */,
+				B5E146B919FA3CCE00AED87E /* StatusSleep.h */,
+				B5E146BB19FA3CE600AED87E /* StatusWork.cpp */,
+				B5E146BC19FA3CE600AED87E /* StatusWork.h */,
 			);
 			path = Status;
 			sourceTree = "<group>";
@@ -269,6 +284,7 @@
 				B504E3D919F0AF0E00767625 /* Save.cpp in Sources */,
 				B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */,
 				B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */,
+				B5E146BD19FA3CE600AED87E /* StatusWork.cpp in Sources */,
 				B5530CE919F0F9000020A5AB /* Application.cpp in Sources */,
 				B5E730CB19EBB10200CF6A51 /* Time.cpp in Sources */,
 				B57F64C319F7545800F88FB2 /* Favorite.cpp in Sources */,
@@ -276,10 +292,12 @@
 				B5E730CE19EBB90500CF6A51 /* Constant.cpp in Sources */,
 				B57F64AE19F750DB00F88FB2 /* StatusController.cpp in Sources */,
 				B57F64BA19F753E000F88FB2 /* Player.cpp in Sources */,
+				B5E146B719FA3C6F00AED87E /* StatusLeisure.cpp in Sources */,
 				B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */,
 				B57F64BD19F753EC00F88FB2 /* Girl.cpp in Sources */,
 				B57F64AB19F750C000F88FB2 /* Status.cpp in Sources */,
 				B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */,
+				B5E146BA19FA3CCE00AED87E /* StatusSleep.cpp in Sources */,
 				B57F64B119F7512700F88FB2 /* Interaction.cpp in Sources */,
 				B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */,
 				B5E730D119EBE25200CF6A51 /* Oberserver.cpp in Sources */,

@@ -9,12 +9,12 @@
 #ifndef __Core__Constant__
 #define __Core__Constant__
 #ifdef XCODE
-#define SAVEFILE  "data.txt"
-#define FAVFILE    "/Users/sunxin/code/teambition/code/1.0/Core/like"
+#define SAVEFILE  "save"
+#define FAVFILE    "like"
 #elif defined(VS)
 #include <windows.h>
 #include <string>
-#define SAVEFILE "data.txt"
+#define SAVEFILE "save"
 std::wstring UTF8ToUnicode(const std::string& str);
 std::string UnicodeToANSI(const std::wstring& str);
 #endif
