@@ -9,6 +9,10 @@
 #ifndef __Core__StatusSleep__
 #define __Core__StatusSleep__
 
-#include <stdio.h>
+#include "Status.h"
+class CoreStatusSleep:public CoreStatus
+{
+    
+};
 
 #endif /* defined(__Core__StatusSleep__) */

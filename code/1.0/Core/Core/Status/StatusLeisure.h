@@ -8,7 +8,10 @@
 
 #ifndef __Core__StatusLeisure__
 #define __Core__StatusLeisure__
-
-#include <stdio.h>
+#include "Status.h"
+class CoreStatusLeisure:public CoreStatus
+{
+    
+};
 
 #endif /* defined(__Core__StatusLeisure__) */

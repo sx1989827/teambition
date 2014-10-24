@@ -9,6 +9,10 @@
 #ifndef __Core__StatusWork__
 #define __Core__StatusWork__
 
-#include <stdio.h>
+#include "Status.h"
+class CoreStatusWork:public CoreStatus
+{
+    
+};
 
 #endif /* defined(__Core__StatusWork__) */
