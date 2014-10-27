@@ -8,8 +8,8 @@
 
 #ifndef __Core__Status__
 #define __Core__Status__
-#include "../Person/Player.h"
 #include "../util/Header.h"
+class CorePlayer;
 class CoreStatus
 {
 public:

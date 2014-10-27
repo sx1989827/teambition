@@ -19,11 +19,13 @@ CoreApplication::CoreApplication()
     std::vector<CoreSerializ*> vec;
     m_pSave=new CoreSave;
     vec.push_back(NOTIFYCENTER);
+    m_pPlayer=new CorePlayer;
+    vec.push_back(m_pPlayer);
     m_pGirl=new CoreGirl;
     vec.push_back(m_pGirl);
     m_pSave->SetSaveObj(&vec);
     CoreSaveSingleton::SetInstance(m_pSave);
-    
+    m_pStatusController->ChangeStatus(CoreStatus::LEISURE);
 }
 
 CoreApplication::~CoreApplication()
@@ -44,6 +46,10 @@ CoreGirl* CoreApplication::GetGirl()
     return m_pGirl;
 }
 
+CorePlayer* CoreApplication::GetPlayer()
+{
+    return m_pPlayer;
+}
 
 
 

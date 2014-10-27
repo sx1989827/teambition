@@ -10,16 +10,21 @@
 #define __Core__Player__
 
 #include "PersonBase.h"
+#include "../Status/Status.h"
 class CorePlayer:public CorePersonBase
 {
 public:
     CorePlayer();
     ~CorePlayer();
+    PERSONTYPE GetType();
     void Serializ(node* out);
     void UnSerializ(node* in);
+    void ChangeStatus(CoreStatus::TYPE type);
+    CoreStatusController* GetStatusController();
 private:
     long m_lPhysical;
     long m_lMoney;
+    bool  m_bLove;
     CoreStatusController *m_pStatusController;
 };
 

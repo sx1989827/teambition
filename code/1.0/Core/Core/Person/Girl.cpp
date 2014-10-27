@@ -45,7 +45,10 @@ void CoreGirl::BuildFavorite()
     m_pFavorite->Build(FAVFILE);
 }
 
-
+CorePersonBase::PERSONTYPE CoreGirl::GetType()
+{
+    return GIRL;
+}
 
 
 

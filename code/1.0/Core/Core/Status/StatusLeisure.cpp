@@ -7,9 +7,10 @@
 //
 
 #include "StatusLeisure.h"
+#include "../util/Header.h"
 void CoreStatusLeisure::OnEnter(CorePlayer *pPlayer)
 {
-
+    
 }
 void CoreStatusLeisure::OnUpdate(CorePlayer *pPlayer)
 {

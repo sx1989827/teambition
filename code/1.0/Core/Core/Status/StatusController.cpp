@@ -57,6 +57,7 @@ void CoreStatusController::Rollback()
 }
 void CoreStatusController::ChangeStatus(CoreStatus::TYPE type)
 {
+    assert(m_pPlayer!=0);
     if(m_pStatus!=0 && m_pStatus->GetType()==type)
     {
         return;

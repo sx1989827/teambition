@@ -19,6 +19,7 @@ public:
     CoreGirl();
     ~CoreGirl();
     void BuildFavorite();
+    PERSONTYPE GetType();
     void Serializ(node* out);
     void UnSerializ(node* in);
 private:

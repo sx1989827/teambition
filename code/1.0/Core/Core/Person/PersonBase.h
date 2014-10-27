@@ -13,6 +13,8 @@
 class CoreStatusController;
 class CorePersonBase:public CoreSerializ
 {
-
+public:
+    enum PERSONTYPE {PLAYER,GIRL};
+    virtual PERSONTYPE GetType();
 };
 #endif /* defined(__Core__PersonBase__) */
