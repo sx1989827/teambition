@@ -11,7 +11,11 @@
 #include "Status.h"
 class CoreStatusLeisure:public CoreStatus
 {
-    
+public:
+    void OnEnter(CorePlayer *pPlayer);
+    void OnUpdate(CorePlayer *pPlayer);
+    void OnExit(CorePlayer* pPlayer);
+    TYPE GetType();
 };
 
 #endif /* defined(__Core__StatusLeisure__) */

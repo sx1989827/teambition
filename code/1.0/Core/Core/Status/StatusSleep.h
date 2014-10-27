@@ -12,7 +12,11 @@
 #include "Status.h"
 class CoreStatusSleep:public CoreStatus
 {
-    
+public:
+    void OnEnter(CorePlayer *pPlayer);
+    void OnUpdate(CorePlayer *pPlayer);
+    void OnExit(CorePlayer* pPlayer);
+    TYPE GetType();
 };
 
 #endif /* defined(__Core__StatusSleep__) */

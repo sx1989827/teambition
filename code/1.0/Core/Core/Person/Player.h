@@ -13,11 +13,14 @@
 class CorePlayer:public CorePersonBase
 {
 public:
+    CorePlayer();
+    ~CorePlayer();
     void Serializ(node* out);
     void UnSerializ(node* in);
 private:
     long m_lPhysical;
     long m_lMoney;
+    CoreStatusController *m_pStatusController;
 };
 
 #endif /* defined(__Core__Player__) */

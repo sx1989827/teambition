@@ -7,3 +7,20 @@
 //
 
 #include "StatusSleep.h"
+void CoreStatusSleep::OnEnter(CorePlayer *pPlayer)
+{
+    
+}
+void CoreStatusSleep::OnUpdate(CorePlayer *pPlayer)
+{
+    
+}
+void CoreStatusSleep::OnExit(CorePlayer* pPlayer)
+{
+    
+}
+
+CoreStatus::TYPE CoreStatusSleep::GetType()
+{
+    return SLEEP;
+}

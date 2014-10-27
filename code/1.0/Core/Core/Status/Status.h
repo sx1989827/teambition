@@ -9,6 +9,7 @@
 #ifndef __Core__Status__
 #define __Core__Status__
 #include "../Person/Player.h"
+#include "../util/Header.h"
 class CoreStatus
 {
 public:
@@ -16,7 +17,9 @@ public:
     virtual void OnEnter(CorePlayer *pPlayer);
     virtual void OnUpdate(CorePlayer *pPlayer);
     virtual void OnExit(CorePlayer* pPlayer);
-    virtual void ChangeStatus(CorePlayer* pPlayer,TYPE type);
+    virtual TYPE GetType();
+protected:
+    CoreTime m_StartTime;
 };
 
 #endif /* defined(__Core__Status__) */

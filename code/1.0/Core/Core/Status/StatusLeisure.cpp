@@ -7,3 +7,19 @@
 //
 
 #include "StatusLeisure.h"
+void CoreStatusLeisure::OnEnter(CorePlayer *pPlayer)
+{
+
+}
+void CoreStatusLeisure::OnUpdate(CorePlayer *pPlayer)
+{
+    
+}
+void CoreStatusLeisure::OnExit(CorePlayer* pPlayer)
+{
+    
+}
+CoreStatus::TYPE CoreStatusLeisure::GetType()
+{
+    return LEISURE;
+}
