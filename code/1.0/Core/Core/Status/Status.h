@@ -14,10 +14,11 @@ class CoreStatus
 {
 public:
     enum TYPE {LEISURE,SLEEP,WORK};
-    virtual void OnEnter(CorePlayer *pPlayer);
-    virtual void OnUpdate(CorePlayer *pPlayer);
-    virtual void OnExit(CorePlayer* pPlayer);
-    virtual TYPE GetType();
+    virtual ~CoreStatus(){}
+    virtual void OnEnter(CorePlayer *pPlayer)=0;
+    virtual void OnUpdate(CorePlayer *pPlayer)=0;
+    virtual void OnExit(CorePlayer* pPlayer)=0;
+    virtual TYPE GetType()=0;
 protected:
     CoreTime m_StartTime;
 };

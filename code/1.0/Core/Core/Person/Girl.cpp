@@ -8,16 +8,35 @@
 
 #include "Girl.h"
 #include "../util/Constant.h"
+#include "../util/Oberserver.h"
 CoreGirl::CoreGirl()
 {
     m_lIOI=0;
     m_Type=CoreGirl::LOLI;
     m_pMood=new CoreMood;
     m_pFavorite=new CoreFavorite;
+    OBINSTANCE->AddOberserver(MSG_LEISUREENTER, this, &CoreGirl::OnStatusChange);
+    OBINSTANCE->AddOberserver(MSG_LEISUREUPDATE, this, &CoreGirl::OnStatusChange);
+    OBINSTANCE->AddOberserver(MSG_LEISUREEXIT, this, &CoreGirl::OnStatusChange);
+    OBINSTANCE->AddOberserver(MSG_SLEEPENTER, this, &CoreGirl::OnStatusChange);
+    OBINSTANCE->AddOberserver(MSG_SLEEPUPDATE, this, &CoreGirl::OnStatusChange);
+    OBINSTANCE->AddOberserver(MSG_SLEEPEXIT, this, &CoreGirl::OnStatusChange);
+    OBINSTANCE->AddOberserver(MSG_WORKENTER, this, &CoreGirl::OnStatusChange);
+    OBINSTANCE->AddOberserver(MSG_WORKUPDATE, this, &CoreGirl::OnStatusChange);
+    OBINSTANCE->AddOberserver(MSG_SLEEPEXIT, this, &CoreGirl::OnStatusChange);
 }
 
 CoreGirl::~CoreGirl()
 {
+    OBINSTANCE->RemoveOberserver(MSG_LEISUREENTER, this);
+    OBINSTANCE->RemoveOberserver(MSG_LEISUREUPDATE, this);
+    OBINSTANCE->RemoveOberserver(MSG_LEISUREEXIT, this);
+    OBINSTANCE->RemoveOberserver(MSG_SLEEPENTER, this);
+    OBINSTANCE->RemoveOberserver(MSG_SLEEPUPDATE, this);
+    OBINSTANCE->RemoveOberserver(MSG_SLEEPEXIT, this);
+    OBINSTANCE->RemoveOberserver(MSG_WORKENTER, this);
+    OBINSTANCE->RemoveOberserver(MSG_WORKUPDATE, this);
+    OBINSTANCE->RemoveOberserver(MSG_SLEEPEXIT, this);
     delete m_pFavorite;
     delete m_pMood;
 }
@@ -49,6 +68,19 @@ CorePersonBase::PERSONTYPE CoreGirl::GetType()
 {
     return GIRL;
 }
+
+void CoreGirl::OnStatusChange(void *pObj, const char *name, void* value)
+{
+    
+}
+
+
+
+
+
+
+
+
 
 
 

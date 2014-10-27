@@ -80,7 +80,10 @@ void CoreStatusController::ChangeStatus(CoreStatus::TYPE type)
     {
         pStatus=new CoreStatusWork;
     }
-    m_pStatus->OnExit(m_pPlayer);
+    if(m_pStatus)
+    {
+            m_pStatus->OnExit(m_pPlayer);
+    }
     m_pPreStatus=m_pStatus;
     m_pStatus=pStatus;
     m_pStatus->OnEnter(m_pPlayer);

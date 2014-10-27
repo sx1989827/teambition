@@ -7,6 +7,7 @@
 //
 
 #include "Application.h"
+
 CoreApplication::CoreApplication()
 {
     srandom((unsigned)time(0));
@@ -25,12 +26,13 @@ CoreApplication::CoreApplication()
     vec.push_back(m_pGirl);
     m_pSave->SetSaveObj(&vec);
     CoreSaveSingleton::SetInstance(m_pSave);
-    m_pStatusController->ChangeStatus(CoreStatus::LEISURE);
+    m_pPlayer->GetStatusController()->ChangeStatus(CoreStatus::LEISURE);
 }
 
 CoreApplication::~CoreApplication()
 {
     delete m_pGirl;
+    delete m_pPlayer;
     CoreSaveSingleton::Release();
     CoreObManageSingleton::Release();
     CoreNotifySingleton::Release();

@@ -24,11 +24,19 @@ CorePlayer::~CorePlayer()
 
 void CorePlayer::Serializ(node* out)
 {
-    
+    node* root=out->getXml()->createnode("Player");
+    WriteXml(root, m_bLove, "love");
+    WriteXml(root, m_lPhysical, "physical");
+    WriteXml(root, m_lMoney, "money");
+    out->appned(root);
+
 }
 void CorePlayer::UnSerializ(node* in)
 {
-    
+    node* root=in->select("/Player")->item(0);
+    m_bLove=(bool)atol(root->select("/love")->item(0)->gettext().data());
+    m_lPhysical=atol(root->select("/physical")->item(0)->gettext().data());
+    m_lMoney=atol(root->select("/money")->item(0)->gettext().data());
 }
 
 CorePersonBase::PERSONTYPE CorePlayer::GetType()

@@ -23,7 +23,6 @@ void Set_##name(decltype(name) param) \
 class CoreFuncBase
 {
 public:
-	virtual void operator() (void *pObj, const char *name, void* oldValue, void* newValue) = 0;
     virtual void operator() (void *pObj, const char *name, void* value) = 0;
 	virtual long GetID() = 0;
 	virtual ~CoreFuncBase()
@@ -43,10 +42,6 @@ public:
 		m_pObj = pObj;
 		m_func = pFunc;
 	}
-    void operator() (void *pObj,const char *name,void* oldValue,void* newValue)
-    {
-        (m_pObj->*m_func)(pObj,name,oldValue,newValue);
-    }
     void operator() (void *pObj, const char *name, void* value)
     {
         (m_pObj->*m_func)(pObj,name,value);
@@ -60,7 +55,6 @@ public:
 class CoreObManage
 {
 public:
-    void PostOberserver(void *pObj,const char *name,void* oldValue,void * newValue);
     void PostOberserver(void *pObj,const char *name,void* value);
     template<class T1,class T2>
     void AddOberserver(void *pObj,const char* name,T1 pObj1,T2 func)
@@ -69,6 +63,14 @@ public:
 		sprintf(szName, "%ld#%s", (long)pObj, name);
 		CoreFuncBase *pOb = new CoreObFunc<T1, T2>(pObj1, func);
 		m_Map.insert(std::make_pair(szName, pOb));
+    }
+    template<class T1,class T2>
+    void AddOberserver(const char* name,T1 pObj1,T2 func)
+    {
+        char szName[TEXT_SIZE] = { 0 };
+        sprintf(szName, "%s", name);
+        CoreFuncBase *pOb = new CoreObFunc<T1, T2>(pObj1, func);
+        m_Map.insert(std::make_pair(szName, pOb));
     }
     void RemoveOberserver(void *pObj,const char* name,void* pObj1)
     {
@@ -88,9 +90,27 @@ public:
 				++pos.first;
 			}
 		}
-
-		
     }
+    void RemoveOberserver(const char* name,void* pObj1)
+    {
+        char szName[TEXT_SIZE] = { 0 };
+        sprintf(szName, "%s", name);
+        auto pos = m_Map.equal_range(szName);
+        while (pos.first != pos.second)
+        {
+            if (pos.first->second->GetID() == (long)pObj1)
+            {
+                CoreFuncBase* pOb = pos.first->second;
+                pos.first=m_Map.erase(pos.first);
+                delete pOb;
+            }
+            else
+            {
+                ++pos.first;
+            }
+        }
+    }
+
 private:
 	std::multimap<std::string, CoreFuncBase*> m_Map;
 };

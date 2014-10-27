@@ -15,6 +15,7 @@ class CorePersonBase:public CoreSerializ
 {
 public:
     enum PERSONTYPE {PLAYER,GIRL};
-    virtual PERSONTYPE GetType();
+    virtual ~CorePersonBase(){}
+    virtual PERSONTYPE GetType()=0;
 };
 #endif /* defined(__Core__PersonBase__) */

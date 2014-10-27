@@ -13,6 +13,8 @@
 #include "logic/notify/Notify.h"
 #include "Person/Girl.h"
 #include "Person/Player.h"
+#include "Status/Status.h"
+#include "Status/StatusController.h"
 class CoreApplication
 {
 public:
