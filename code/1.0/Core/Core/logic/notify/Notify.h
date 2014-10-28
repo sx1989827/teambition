@@ -17,7 +17,7 @@
 #define  NOTIFYCENTER CoreNotifySingleton::GetInstance()
 struct sNotify
 {
-    enum TYPE {CALL,DATEEND,ARDERIOI,WORKIOI,WORKMEET};
+    enum TYPE {CALL,DATEEND};
     long id;
     long sec;
     char szText[100];
