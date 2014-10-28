@@ -49,6 +49,10 @@ CoreStatusController* CorePlayer::GetStatusController()
     return m_pStatusController;
 }
 
+void CorePlayer::ChangeStatus(CoreStatus::TYPE type)
+{
+    m_pStatusController->ChangeStatus(type);
+}
 
 
 

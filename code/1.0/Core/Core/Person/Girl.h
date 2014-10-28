@@ -28,9 +28,5 @@ private:
     TYPE m_Type;
     CoreFavorite *m_pFavorite;
     void OnStatusChange(void *pObj, const char *name, void* value);
-//    void OnStatusChange(void *pObj, const char *name, void* oldValue, void* newValue)
-//    {
-//        
-//    }
 };
 #endif /* defined(__Core__Girl__) */

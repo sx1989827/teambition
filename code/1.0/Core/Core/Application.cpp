@@ -26,7 +26,7 @@ CoreApplication::CoreApplication()
     vec.push_back(m_pGirl);
     m_pSave->SetSaveObj(&vec);
     CoreSaveSingleton::SetInstance(m_pSave);
-    m_pPlayer->GetStatusController()->ChangeStatus(CoreStatus::LEISURE);
+    m_pPlayer->ChangeStatus(CoreStatus::LEISURE);
 }
 
 CoreApplication::~CoreApplication()
