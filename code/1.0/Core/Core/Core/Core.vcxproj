@@ -67,9 +67,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Application.cpp" />
+    <ClCompile Include="..\Interaction\Interaction.cpp" />
     <ClCompile Include="..\logic\notify\Notify.cpp" />
     <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\Person\Favorite.cpp" />
+    <ClCompile Include="..\Person\Girl.cpp" />
+    <ClCompile Include="..\Person\Mood.cpp" />
+    <ClCompile Include="..\Person\PersonBase.cpp" />
+    <ClCompile Include="..\Person\Player.cpp" />
     <ClCompile Include="..\save\Save.cpp" />
+    <ClCompile Include="..\Status\Status.cpp" />
+    <ClCompile Include="..\Status\StatusController.cpp" />
+    <ClCompile Include="..\Status\StatusLeisure.cpp" />
+    <ClCompile Include="..\Status\StatusSleep.cpp" />
+    <ClCompile Include="..\Status\StatusWork.cpp" />
     <ClCompile Include="..\util\Constant.cpp" />
     <ClCompile Include="..\util\Log.cpp" />
     <ClCompile Include="..\util\Oberserver.cpp" />
@@ -79,8 +90,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Application.h" />
+    <ClInclude Include="..\Interaction\Interaction.h" />
     <ClInclude Include="..\logic\notify\Notify.h" />
+    <ClInclude Include="..\Person\Favorite.h" />
+    <ClInclude Include="..\Person\Girl.h" />
+    <ClInclude Include="..\Person\Mood.h" />
+    <ClInclude Include="..\Person\PersonBase.h" />
+    <ClInclude Include="..\Person\Player.h" />
     <ClInclude Include="..\save\Save.h" />
+    <ClInclude Include="..\Status\Status.h" />
+    <ClInclude Include="..\Status\StatusController.h" />
+    <ClInclude Include="..\Status\StatusLeisure.h" />
+    <ClInclude Include="..\Status\StatusSleep.h" />
+    <ClInclude Include="..\Status\StatusWork.h" />
     <ClInclude Include="..\util\Constant.h" />
     <ClInclude Include="..\util\Header.h" />
     <ClInclude Include="..\util\Log.h" />

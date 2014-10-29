@@ -5,7 +5,6 @@
 //  Created by 孙昕 on 14-10-17.
 //
 //
-
 #include "Application.h"
 
 CoreApplication::CoreApplication()

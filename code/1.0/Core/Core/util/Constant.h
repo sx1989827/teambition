@@ -15,6 +15,7 @@
 #include <windows.h>
 #include <string>
 #define SAVEFILE "save"
+#define FAVFILE    "like"
 std::wstring UTF8ToUnicode(const std::string& str);
 std::string UnicodeToANSI(const std::wstring& str);
 #endif

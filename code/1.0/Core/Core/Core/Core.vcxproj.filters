@@ -45,6 +45,39 @@
     <ClCompile Include="..\Application.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\Interaction\Interaction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Person\Favorite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Person\Girl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Person\Mood.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Person\PersonBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Person\Player.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Status\Status.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Status\StatusController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Status\StatusLeisure.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Status\StatusSleep.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Status\StatusWork.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\util\Constant.h">
@@ -75,6 +108,39 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\Application.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interaction\Interaction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Person\Favorite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Person\Girl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Person\Mood.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Person\PersonBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Person\Player.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Status\Status.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Status\StatusController.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Status\StatusLeisure.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Status\StatusSleep.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Status\StatusWork.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
