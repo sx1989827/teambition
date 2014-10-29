@@ -10,19 +10,17 @@
 #define __Core__Notify__
 
 #include <stdio.h>
-#include <queue>
+#include <vector>
 #include <string>
 #include <list>
 #include "../../util/Header.h"
 #define  NOTIFYCENTER CoreNotifySingleton::GetInstance()
 struct sNotify
 {
-    enum TYPE {CALL,DATEEND};
+    enum TYPE {CALL,DATEEND,WORKIOI,WORKMEET,WORKHELP,LEISUREIOI,LEISUREDATE,WORKEVENT,LEISUREEVENT,NONE};
     long id;
     long sec;
-    char szText[100];
     TYPE type;
-    bool bEnabled;
     long flag;
 };
 class CoreNotify:public CoreSerializ
@@ -30,14 +28,16 @@ class CoreNotify:public CoreSerializ
 public:
     CoreNotify();
     ~CoreNotify();
-    long CreateNotify(sNotify* pNotify);
-    void GetLastNotify(sNotify *pNotify) const;
-    void PopNotify();
-    void ClearAllNotify();
+    void Reset(bool bLove);
+    long CreateNotify(sNotify* pNotify,long lStatus);//0:leisure,1:sleep,2:work
+    sNotify AdjustNotify();
+    sNotify::TYPE GetAvailableNotify(long lStatus);
     void Serializ(node* out);
     void UnSerializ(node* in);
 private:
-    std::queue<sNotify> m_Queue;
+    std::vector<sNotify> m_Vector;
+    std::vector<sNotify::TYPE> m_AvailableWorkVec;
+    std::vector<sNotify::TYPE> m_AvailableLeisureVec;
     static char cID[100];
     static long pos;
 };

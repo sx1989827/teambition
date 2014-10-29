@@ -44,6 +44,11 @@ CoreTime CoreTime::GetTimeSinceNow(long sec)
     return obj;
 }
 
+long CoreTime::DiffNowTime(time_t sec)
+{
+    return  difftime(time(0), sec);
+}
+
 CoreTime::CoreTime()
 {
     m_lTime=time(0);

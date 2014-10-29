@@ -17,6 +17,7 @@ public:
     static std::string GetCurrentDate();
     static std::string GetCurrentMoment();
     static CoreTime GetTimeSinceNow(long sec);
+    static long DiffNowTime(time_t sec);
     CoreTime();
     std::string GetTime() const;
     std::string GetDate() const;

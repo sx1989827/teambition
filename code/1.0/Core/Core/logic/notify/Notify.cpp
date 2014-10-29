@@ -18,7 +18,7 @@ CoreNotify::~CoreNotify()
 {
     
 }
-long CoreNotify::CreateNotify(sNotify* pNotify)
+long CoreNotify::CreateNotify(sNotify* pNotify,long lStatus)
 {
     int count=0;
     while (cID[pos]!=0) {
@@ -35,95 +35,157 @@ long CoreNotify::CreateNotify(sNotify* pNotify)
     }
     pNotify->id=pos;
     cID[pos]=1;
-    m_Queue.push(*pNotify);
+    m_Vector.push_back(*pNotify);
+    if(lStatus==2)
+    {
+        auto it=std::find(m_AvailableWorkVec.begin(), m_AvailableWorkVec.end(), pNotify->type);
+        if(it!=m_AvailableWorkVec.end())
+        {
+            m_AvailableWorkVec.erase(it);
+        }
+    }
+    else if(lStatus==0)
+    {
+        auto it=std::find(m_AvailableLeisureVec.begin(), m_AvailableLeisureVec.end(), pNotify->type);
+        if(it!=m_AvailableLeisureVec.end())
+        {
+            m_AvailableLeisureVec.erase(it);
+        }
+    }
     return pos;
 }
-void CoreNotify::GetLastNotify(sNotify *pNotify) const
+
+
+sNotify CoreNotify::AdjustNotify()
 {
-    if(m_Queue.empty())
+    std::vector<sNotify> vec;
+    for(auto it=m_Vector.begin();it!=m_Vector.end();)
     {
-        pNotify->id=-1;
-        return;
+        if(CoreTime::DiffNowTime(it->sec)>=0)
+        {
+            vec.push_back(*it);
+            it=vec.erase(it);
+        }
+        else
+        {
+            it++;
+        }
     }
-    *pNotify=m_Queue.front();
+    sNotify noti;
+    noti.sec=0;
+    for(auto it=vec.begin();it!=vec.end();it++)
+    {
+        if(it->type==sNotify::CALL)
+        {
+            return *it;
+        }
+        else if (it->type==sNotify::DATEEND)
+        {
+            return *it;
+        }
+        else if(it->type!=sNotify::WORKEVENT && it->type!=sNotify::LEISUREEVENT)
+        {
+            if(it->sec>=noti.sec)
+            {
+                noti=*it;
+            }
+        }
+    }
+    return noti;
 }
 
-void CoreNotify::PopNotify()
+sNotify::TYPE CoreNotify::GetAvailableNotify(long lStatus)
 {
-    if(!m_Queue.empty())
+    sNotify::TYPE type;
+    if(lStatus==0 && m_AvailableLeisureVec.size()>0)
     {
-        m_Queue.pop();
+        type=m_AvailableLeisureVec[random()%m_AvailableLeisureVec.size()];
     }
+    else if (lStatus==2 && m_AvailableWorkVec.size()>0)
+    {
+        type=m_AvailableWorkVec[random()%m_AvailableWorkVec.size()];
+    }
+    else
+    {
+        type=sNotify::NONE;
+    }
+    return type;
 }
 
-void CoreNotify::ClearAllNotify()
-{
-    std::queue<sNotify> temp;
-    m_Queue.swap(temp);
-}
 void CoreNotify::Serializ(node* out)
 {
     node* NotiNode=out->getXml()->createnode("Notify");
-    node* cIDNode=out->getXml()->createnode("cID");
-    for(long i=0;i<100;i++)
+    node* work=NotiNode->getXml()->createnode("work");
+    for(int i=0;i<m_AvailableWorkVec.size();i++)
     {
-        if(cID[i]!=0)
-        {
-            node* used=out->getXml()->createnode("used");
-            used->puttext(i);
-            cIDNode->appned(used);
-        }
+        node* item=NotiNode->getXml()->createnode("item");
+        item->setattr("type", (long)m_AvailableWorkVec[i]);
+        work->appned(item);
     }
-    NotiNode->appned(cIDNode);
-    WriteXml(NotiNode, pos, "pos");
-    node* QueueNode= NotiNode->getXml()->createnode("size");
-    NotiNode->appned(QueueNode);
-    std::queue<sNotify> queue=m_Queue;
-    while(!queue.empty())
+    NotiNode->appned(work);
+    node* leisure=NotiNode->getXml()->createnode("leisure");
+    for(int i=0;i<m_AvailableLeisureVec.size();i++)
     {
-        sNotify noti=queue.front();
-        node *NotifyNode=QueueNode->getXml()->createnode("item");
-        NotifyNode->setattr("id", noti.id);
-        NotifyNode->setattr("sec", noti.sec);
-        NotifyNode->setattr("szText", noti.szText);
-        NotifyNode->setattr("type", (long)noti.type);
-        NotifyNode->setattr("bEnabled", noti.bEnabled);
-        NotifyNode->setattr("flag", noti.flag);
-        QueueNode->appned(NotifyNode);
-        queue.pop();
+        node* item=NotiNode->getXml()->createnode("item");
+        item->setattr("type", (long)m_AvailableLeisureVec[i]);
+        leisure->appned(item);
     }
+    NotiNode->appned(leisure);
     out->appned(NotiNode);
 }
 void CoreNotify::UnSerializ(node* in)
 {
-    ClearAllNotify();
-    memset(cID, 0, 100);
     node* NotiNode=in->select("/Notify")->item(0);
-    nodecollect *cIDCollect=NotiNode->getnodebyname("cID");
-    for(long i=0;i<cIDCollect->getcount();i++)
+    nodecollect *col=NotiNode->select("/work/item");
+    for(int i=0;i<col->getcount();i++)
     {
-        cID[i]=1;
+        m_AvailableWorkVec.push_back((sNotify::TYPE)atol(col->item(i)->getattr("type").data()));
     }
-    node *posNode=NotiNode->getnodebyname("pos")->item(0);
-    pos=posNode?atoi(posNode->gettext().data()):0;
-    node *sizeNode=NotiNode->getnodebyname("size")->item(0);
-    if(sizeNode!=0)
+    col=NotiNode->select("/leisure/item");
+    for(int i=0;i<col->getcount();i++)
     {
-        nodecollect *itemCollect=sizeNode->getnodebyname("item");
-        for(long i=0;i<itemCollect->getcount();i++)
-        {
-            sNotify noti;
-            noti.id=atol(itemCollect->item(i)->getattr("id").data());
-            noti.sec=atol(itemCollect->item(i)->getattr("sec").data());
-            strcpy(noti.szText,itemCollect->item(i)->getattr("szText").data());
-            noti.type=(sNotify::TYPE)atol(itemCollect->item(i)->getattr("type").data());
-            noti.bEnabled=atol(itemCollect->item(i)->getattr("bEnabled").data());
-            noti.flag=atol(itemCollect->item(i)->getattr("flag").data());
-            m_Queue.push(noti);
-        }
-        
+        m_AvailableLeisureVec.push_back((sNotify::TYPE)atol(col->item(i)->getattr("type").data()));
     }
 }
+
+void CoreNotify::Reset(bool bLove)
+{
+    std::vector<sNotify::TYPE>().swap(m_AvailableLeisureVec);
+    std::vector<sNotify::TYPE>().swap(m_AvailableWorkVec);
+    if(bLove)
+    {
+        m_AvailableWorkVec.push_back(sNotify::WORKIOI);
+        m_AvailableWorkVec.push_back(sNotify::WORKIOI);
+        m_AvailableWorkVec.push_back(sNotify::WORKHELP);
+        m_AvailableWorkVec.push_back(sNotify::WORKEVENT);
+        m_AvailableLeisureVec.push_back(sNotify::LEISUREIOI);
+        m_AvailableLeisureVec.push_back(sNotify::LEISUREIOI);
+        m_AvailableLeisureVec.push_back(sNotify::LEISUREDATE);
+        m_AvailableLeisureVec.push_back(sNotify::LEISUREDATE);
+        m_AvailableLeisureVec.push_back(sNotify::LEISUREEVENT);
+    }
+    else
+    {
+        m_AvailableWorkVec.push_back(sNotify::WORKHELP);
+        m_AvailableWorkVec.push_back(sNotify::WORKIOI);
+        m_AvailableWorkVec.push_back(sNotify::WORKMEET);
+        m_AvailableWorkVec.push_back(sNotify::WORKEVENT);
+        m_AvailableLeisureVec.push_back(sNotify::LEISUREEVENT);
+        m_AvailableLeisureVec.push_back(sNotify::LEISUREIOI);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
