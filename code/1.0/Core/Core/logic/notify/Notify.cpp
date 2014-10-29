@@ -7,7 +7,6 @@
 //
 
 #include "Notify.h"
-#include <string.h>
 char CoreNotify::cID[100];
 long CoreNotify::pos=0;
 CoreNotify::CoreNotify()
@@ -64,7 +63,7 @@ sNotify CoreNotify::AdjustNotify()
         if(CoreTime::DiffNowTime(it->sec)>=0)
         {
             vec.push_back(*it);
-            it=vec.erase(it);
+            it=m_Vector.erase(it);
         }
         else
         {
