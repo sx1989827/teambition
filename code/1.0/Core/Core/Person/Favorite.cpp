@@ -38,7 +38,8 @@ void CoreFavorite::UnSerializ(node* in)
 {
     std::vector<sFavItem>().swap(m_VecLike);
     std::vector<sFavItem>().swap(m_VecDisLike);
-    node* root=in->select("/Favorite")->item(0);
+    nodecollect *nc=in->select("/Favorite");
+    node* root=nc->item(0);
     nodecollect *like=root->select("/like/item");
     for(long i=0;i<like->getcount();i++)
     {
@@ -48,6 +49,7 @@ void CoreFavorite::UnSerializ(node* in)
         item.flag=atol(like->item(i)->getattr("flag").data());
         m_VecLike.push_back(item);
     }
+    delete like;
     nodecollect *dislike=root->select("/dislike/item");
     for(long i=0;i<dislike->getcount();i++)
     {
@@ -57,7 +59,8 @@ void CoreFavorite::UnSerializ(node* in)
         item.flag=atol(dislike->item(i)->getattr("flag").data());
         m_VecDisLike.push_back(item);
     }
-    
+    delete dislike;
+    delete nc;
 }
 bool CoreFavorite::QueryLike(const sFavItem* str)
 {
@@ -81,11 +84,10 @@ bool CoreFavorite::QueryDisLike(const sFavItem* str)
     }
     return false;
 }
-void CoreFavorite::Build(const std::string& str)
+void CoreFavorite::Build(node* pNode)
 {
-    xml x;
-    x.loadfile(str);
-    node* root=x.getnodebyname("root")->item(0)->getchild(0);
+    nodecollect *nc=pNode->select("/favorite");
+    node* root=nc->item(0)->getchild(0);
     do{
         std::string tag=root->gettag();
         vector<sFavItem> vec;
@@ -105,6 +107,7 @@ void CoreFavorite::Build(const std::string& str)
             }
             vec.push_back(item);
         }
+        delete col;
         if(vec.size()>0)
         {
             long i=2;
@@ -126,6 +129,7 @@ void CoreFavorite::Build(const std::string& str)
         }
 
     }while ((root=root->getnext())!=0) ;
+    delete nc;
 }
 
 

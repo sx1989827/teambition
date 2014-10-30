@@ -10,12 +10,12 @@
 #define __Core__Constant__
 #ifdef XCODE
 #define SAVEFILE  "save"
-#define FAVFILE    "like"
+#define INITFILE    "init"
 #elif defined(VS)
 #include <windows.h>
 #include <string>
 #define SAVEFILE "save"
-#define FAVFILE    "like"
+#define INITFILE    "init"
 std::wstring UTF8ToUnicode(const std::string& str);
 std::string UnicodeToANSI(const std::wstring& str);
 #endif

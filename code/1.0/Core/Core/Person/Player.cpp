@@ -33,10 +33,18 @@ void CorePlayer::Serializ(node* out)
 }
 void CorePlayer::UnSerializ(node* in)
 {
-    node* root=in->select("/Player")->item(0);
-    m_bLove=(bool)atol(root->select("/love")->item(0)->gettext().data());
-    m_lPhysical=atol(root->select("/physical")->item(0)->gettext().data());
-    m_lMoney=atol(root->select("/money")->item(0)->gettext().data());
+    nodecollect *nc=in->select("/Player");
+    node* root=nc->item(0);
+    nodecollect *nc1=root->select("/love");
+    m_bLove=(bool)atol(nc1->item(0)->gettext().data());
+    nodecollect *nc2=root->select("/physical");
+    m_lPhysical=atol(nc2->item(0)->gettext().data());
+    nodecollect *nc3=root->select("/money");
+    m_lMoney=atol(nc3->item(0)->gettext().data());
+    delete nc3;
+    delete nc2;
+    delete nc1;
+    delete nc;
 }
 
 CorePersonBase::PERSONTYPE CorePlayer::GetType()
@@ -53,6 +61,41 @@ void CorePlayer::ChangeStatus(CoreStatus::TYPE type)
 {
     m_pStatusController->ChangeStatus(type);
 }
+
+long CorePlayer::GetPhysical()
+{
+    return m_lPhysical;
+}
+void CorePlayer::SetPhysical(long val)
+{
+    m_lPhysical=val;
+}
+long CorePlayer::GetMoney()
+{
+    return m_lMoney;
+}
+void CorePlayer::SetMoney(long val)
+{
+    m_lMoney=val;
+}
+bool CorePlayer::GetLove()
+{
+    return m_bLove;
+}
+void CorePlayer::SetLove(bool bLove)
+{
+    m_bLove=bLove;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

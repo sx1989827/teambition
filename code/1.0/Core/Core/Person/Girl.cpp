@@ -52,16 +52,22 @@ void CoreGirl::Serializ(node* out)
 }
 void CoreGirl::UnSerializ(node* in)
 {
-     node* root=in->select("/Girl")->item(0);
-    m_Type=(CoreGirl::TYPE)atol(root->select("/type")->item(0)->gettext().data());
-    m_lIOI=atol(root->select("/ioi")->item(0)->gettext().data());
+    nodecollect *nc=in->select("/Girl");
+     node* root=nc->item(0);
+    nodecollect * ncType=root->select("/type");
+    m_Type=(CoreGirl::TYPE)atol(ncType->item(0)->gettext().data());
+    nodecollect *ncIOI=root->select("/ioi");
+    m_lIOI=atol(ncIOI->item(0)->gettext().data());
     m_pMood->UnSerializ(root);
     m_pFavorite->UnSerializ(root);
+    delete ncIOI;
+    delete ncType;
+    delete nc;
 }
 
-void CoreGirl::BuildFavorite()
+void CoreGirl::BuildFavorite(node* pNode)
 {
-    m_pFavorite->Build(FAVFILE);
+    m_pFavorite->Build(pNode);
 }
 
 CorePersonBase::PERSONTYPE CoreGirl::GetType()
@@ -74,7 +80,30 @@ void CoreGirl::OnStatusChange(void *pObj, const char *name, void* value)
     
 }
 
-
+CoreMood *CoreGirl::GetMood()
+{
+    return m_pMood;
+}
+long CoreGirl::GetIOI()
+{
+    return m_lIOI;
+}
+void CoreGirl::SetIOI(long lIOI)
+{
+    m_lIOI=lIOI;
+}
+CoreGirl::TYPE CoreGirl::GetGirlType()
+{
+    return m_Type;
+}
+void CoreGirl::SetGirlType(CoreGirl::TYPE type)
+{
+    m_Type=type;
+}
+CoreFavorite* CoreGirl::GetFavorite()
+{
+    return m_pFavorite;
+}
 
 
 

@@ -124,10 +124,18 @@ void CoreMood::Serializ(node* out)
 }
 void CoreMood::UnSerializ(node* in)
 {
-    node* root=in->select("/Mood")->item(0);
-    m_strCurMood=root->select("/curmood")->item(0)->gettext();
-    m_lCurMood=atol(root->select("/curvalue")->item(0)->gettext().data());
-    m_strDescription=root->select("/des")->item(0)->gettext();
+    nodecollect *nc=in->select("/Mood");
+    node* root=nc->item(0);
+    nodecollect *nc1=root->select("/curmood");
+    m_strCurMood=nc1->item(0)->gettext();
+    nodecollect *nc2=root->select("/curvalue");
+    m_lCurMood=atol(nc2->item(0)->gettext().data());
+    nodecollect *nc3=root->select("/des");
+    m_strDescription=nc3->item(0)->gettext();
+    delete nc3;
+    delete nc2;
+    delete nc1;
+    delete nc;
 }
 
 

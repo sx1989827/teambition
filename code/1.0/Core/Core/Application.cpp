@@ -52,6 +52,24 @@ CorePlayer* CoreApplication::GetPlayer()
     return m_pPlayer;
 }
 
+void CoreApplication::Reset()
+{
+    xml  x;
+    x.loadfile(INITFILE);
+    nodecollect *nc=x.getnodebyname("root");
+    node *n1=nc->item(0);
+    m_pGirl->BuildFavorite(n1);
+    delete nc;
+}
+
+
+
+
+
+
+
+
+
 
 
 

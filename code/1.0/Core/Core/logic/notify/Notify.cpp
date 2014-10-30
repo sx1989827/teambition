@@ -134,17 +134,21 @@ void CoreNotify::Serializ(node* out)
 }
 void CoreNotify::UnSerializ(node* in)
 {
-    node* NotiNode=in->select("/Notify")->item(0);
+    nodecollect *nc=in->select("/Notify");
+    node* NotiNode=nc->item(0);
     nodecollect *col=NotiNode->select("/work/item");
     for(int i=0;i<col->getcount();i++)
     {
         m_AvailableWorkVec.push_back((sNotify::TYPE)atol(col->item(i)->getattr("type").data()));
     }
+    delete col;
     col=NotiNode->select("/leisure/item");
     for(int i=0;i<col->getcount();i++)
     {
         m_AvailableLeisureVec.push_back((sNotify::TYPE)atol(col->item(i)->getattr("type").data()));
     }
+    delete col;
+    delete nc;
 }
 
 void CoreNotify::Reset(bool bLove)

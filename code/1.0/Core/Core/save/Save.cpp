@@ -34,11 +34,13 @@ void CoreSave::UnSave()
     }
     xml x;
     x.loadfile(SAVEFILE);
-    node *n1=x.getnodebyname("root")->item(0);
+    nodecollect *nc=x.getnodebyname("root");
+    node *n1=nc->item(0);
     for(long i=0;i<m_Vec.size();i++)
     {
         m_Vec[i]->UnSerializ(n1);
     }
+    delete nc;
 }
 
 void CoreSave::SetSaveObj(std::vector<CoreSerializ*> *pObj)

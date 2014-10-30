@@ -11,6 +11,7 @@
 #include "../util/Serializ.h"
 #include <vector>
 #include <string>
+class node;
 struct sFavItem
 {
     std::string type;
@@ -24,7 +25,7 @@ public:
     void UnSerializ(node* in);
     bool QueryLike(const sFavItem* str);
     bool QueryDisLike(const sFavItem* str);
-    void Build(const std::string& str);
+    void Build(node* pNode);
 private:
     std::vector<sFavItem> m_VecLike;
     std::vector<sFavItem> m_VecDisLike;

@@ -9,7 +9,7 @@
 int main(int argc, const char * argv[])
 {
     CoreApplication app;
-    app.GetGirl()->BuildFavorite();
+    app.Reset();
     sNotify noti;
     noti.sec=1000;
     noti.type=sNotify::DATEEND;
