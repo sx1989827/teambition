@@ -22,10 +22,11 @@ class CoreMood:public CoreSerializ
 public:
     CoreMood();
     ~CoreMood();
-    void Reset();
+    void Adjust();
     void Transfer(sMood* pMood);
     void Serializ(node* out);
     void UnSerializ(node* in);
+    void Reset(node* pNode);
 private:
     std::map<std::string, long> m_MoodMap;
     std::string m_strCurMood;

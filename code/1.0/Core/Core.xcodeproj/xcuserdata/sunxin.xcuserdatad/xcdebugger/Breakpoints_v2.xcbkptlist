@@ -171,7 +171,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "CoreFavorite::Build(xml *pXml)"
+            landmarkName = "CoreFavorite::Reset(node* pNode)"
             landmarkType = "5">
             <Locations>
                <Location
@@ -273,7 +273,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
             endingLineNumber = "89"
-            landmarkName = "CoreFavorite::Build(node* pNode)"
+            landmarkName = "CoreFavorite::Reset(node* pNode)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -289,7 +289,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "CoreFavorite::Build(xml *pXml)"
+            landmarkName = "CoreFavorite::Reset(node* pNode)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -353,7 +353,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
             endingLineNumber = "92"
-            landmarkName = "CoreFavorite::Build(xml *pXml)"
+            landmarkName = "CoreFavorite::Reset(node* pNode)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -402,6 +402,22 @@
             startingLineNumber = "83"
             endingLineNumber = "83"
             landmarkName = "CoreNotify::AdjustNotify()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Core/Person/Mood.cpp"
+            timestampString = "436345815.807997"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "CoreMood::Reset(node* pNode)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

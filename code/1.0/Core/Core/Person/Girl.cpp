@@ -65,10 +65,6 @@ void CoreGirl::UnSerializ(node* in)
     delete nc;
 }
 
-void CoreGirl::BuildFavorite(node* pNode)
-{
-    m_pFavorite->Build(pNode);
-}
 
 CorePersonBase::PERSONTYPE CoreGirl::GetType()
 {
@@ -105,7 +101,30 @@ CoreFavorite* CoreGirl::GetFavorite()
     return m_pFavorite;
 }
 
-
+void CoreGirl::Reset(node* pNode,CoreGirl::TYPE type)
+{
+    nodecollect* nc=pNode->select("/girl");
+    node* root=nc->item(0);
+    std::string strType;
+    if(type==LOLI)
+    {
+        strType="loli";
+    }
+    else if (type==MAID)
+    {
+        strType="maid";
+    }
+    else if (type==QUEEN)
+    {
+        strType="queen";
+    }
+    nodecollect *ncIOI=root->select("/"+strType+"/ioi");
+    m_lIOI=atol(ncIOI->item(0)->gettext().data());
+    m_pMood->Reset(root);
+    m_pFavorite->Reset(root);
+    delete ncIOI;
+    delete nc;
+}
 
 
 

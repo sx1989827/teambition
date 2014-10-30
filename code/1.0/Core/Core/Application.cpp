@@ -52,13 +52,13 @@ CorePlayer* CoreApplication::GetPlayer()
     return m_pPlayer;
 }
 
-void CoreApplication::Reset()
+void CoreApplication::Reset(CoreGirl::TYPE type)
 {
     xml  x;
     x.loadfile(INITFILE);
     nodecollect *nc=x.getnodebyname("root");
     node *n1=nc->item(0);
-    m_pGirl->BuildFavorite(n1);
+    m_pGirl->Reset(n1,CoreGirl::LOLI);
     delete nc;
 }
 

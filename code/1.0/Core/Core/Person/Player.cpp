@@ -87,7 +87,10 @@ void CorePlayer::SetLove(bool bLove)
     m_bLove=bLove;
 }
 
-
+void CorePlayer::Reset(node *pNode)
+{
+    
+}
 
 
 

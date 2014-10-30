@@ -84,7 +84,7 @@ bool CoreFavorite::QueryDisLike(const sFavItem* str)
     }
     return false;
 }
-void CoreFavorite::Build(node* pNode)
+void CoreFavorite::Reset(node* pNode)
 {
     nodecollect *nc=pNode->select("/favorite");
     node* root=nc->item(0)->getchild(0);

@@ -25,7 +25,7 @@ public:
     void UnSerializ(node* in);
     bool QueryLike(const sFavItem* str);
     bool QueryDisLike(const sFavItem* str);
-    void Build(node* pNode);
+    void Reset(node* pNode);
 private:
     std::vector<sFavItem> m_VecLike;
     std::vector<sFavItem> m_VecDisLike;

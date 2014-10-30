@@ -27,6 +27,7 @@ public:
     void SetMoney(long val);
     bool GetLove();
     void SetLove(bool bLove);
+    void Reset(node* pNode);
 private:
     long m_lPhysical;
     long m_lMoney;

@@ -19,7 +19,6 @@ public:
     enum TYPE {LOLI,MAID,QUEEN};
     CoreGirl();
     ~CoreGirl();
-    void BuildFavorite(node* pNode);
     PERSONTYPE GetType();
     void Serializ(node* out);
     void UnSerializ(node* in);
@@ -29,6 +28,7 @@ public:
     TYPE GetGirlType();
     void SetGirlType(TYPE type);
     CoreFavorite* GetFavorite();
+    void Reset(node* pNode,TYPE type);
 private:
     CoreMood *m_pMood;
     long m_lIOI;

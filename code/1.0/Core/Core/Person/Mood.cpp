@@ -27,7 +27,7 @@ CoreMood::~CoreMood()
     
 }
 
-void CoreMood::Reset()
+void CoreMood::Adjust()
 {
     long v=m_MoodMap[m_strCurMood];
     if(v==0)
@@ -138,7 +138,21 @@ void CoreMood::UnSerializ(node* in)
     delete nc;
 }
 
-
+void CoreMood::Reset(node* pNode)
+{
+    nodecollect* nc=pNode->select("/mood");
+    node* root=nc->item(0);
+    nodecollect *nc1=root->select("/type");
+    m_strCurMood=nc1->item(0)->gettext();
+    nodecollect *nc2=root->select("/value");
+    m_lCurMood=atol(nc2->item(0)->gettext().data());
+    nodecollect *nc3=root->select("/des");
+    m_strDescription=nc3->item(0)->gettext();
+    delete nc1;
+    delete nc2;
+    delete nc3;
+    delete nc;
+}
 
 
 

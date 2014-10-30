@@ -22,7 +22,7 @@ public:
     ~CoreApplication();
     CoreGirl *GetGirl();
     CorePlayer* GetPlayer();
-    void Reset();
+    void Reset(CoreGirl::TYPE type);
 private:
     CoreNotify* m_pNotify;
     CoreSave* m_pSave;
