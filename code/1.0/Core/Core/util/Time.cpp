@@ -86,5 +86,9 @@ CoreTime CoreTime::GetTimeSince(long sec) const
     return obj;
 }
 
+void CoreTime::Reset()
+{
+    m_lTime=time(0);
+}
 
 

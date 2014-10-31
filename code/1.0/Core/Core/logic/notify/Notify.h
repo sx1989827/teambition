@@ -32,6 +32,7 @@ public:
     long CreateNotify(sNotify* pNotify,long lStatus);//0:leisure,1:sleep,2:work
     sNotify AdjustNotify();
     sNotify::TYPE GetAvailableNotify(long lStatus);
+    void ClearNotify();
     void Serializ(node* out);
     void UnSerializ(node* in);
 private:

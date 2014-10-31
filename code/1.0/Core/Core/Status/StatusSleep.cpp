@@ -9,6 +9,7 @@
 #include "StatusSleep.h"
 void CoreStatusSleep::OnEnter(CorePlayer *pPlayer)
 {
+    m_StartTime.Reset();
     
 }
 void CoreStatusSleep::OnUpdate(CorePlayer *pPlayer)

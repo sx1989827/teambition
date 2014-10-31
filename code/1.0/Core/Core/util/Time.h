@@ -23,6 +23,7 @@ public:
     std::string GetDate() const;
     std::string GetMoment() const;
     CoreTime GetTimeSince(long sec) const;
+    void Reset();
 private:
     time_t m_lTime;
     

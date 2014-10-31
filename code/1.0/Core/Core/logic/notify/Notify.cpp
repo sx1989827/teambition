@@ -178,7 +178,10 @@ void CoreNotify::Reset(bool bLove)
     }
 }
 
-
+void CoreNotify::ClearNotify()
+{
+    std::vector<sNotify>().swap(m_Vector);
+}
 
 
 
