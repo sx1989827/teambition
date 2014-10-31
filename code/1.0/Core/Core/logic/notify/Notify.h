@@ -33,6 +33,7 @@ public:
     sNotify AdjustNotify();
     sNotify::TYPE GetAvailableNotify(long lStatus);
     void ClearNotify();
+    void RemoveNotify(sNotify::TYPE type);
     void Serializ(node* out);
     void UnSerializ(node* in);
 private:

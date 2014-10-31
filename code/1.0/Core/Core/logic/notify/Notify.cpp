@@ -183,7 +183,21 @@ void CoreNotify::ClearNotify()
     std::vector<sNotify>().swap(m_Vector);
 }
 
-
+void CoreNotify::RemoveNotify(sNotify::TYPE type)
+{
+    for(auto it=m_Vector.begin();it!=m_Vector.end();)
+    {
+        if(it->type==type)
+        {
+            it=m_Vector.erase(it);
+        }
+        else
+        {
+            it++;
+        }
+    }
+    
+}
 
 
 
