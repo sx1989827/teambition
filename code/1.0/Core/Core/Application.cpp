@@ -20,8 +20,10 @@ CoreApplication::CoreApplication()
     m_pSave=new CoreSave;
     vec.push_back(NOTIFYCENTER);
     m_pPlayer=new CorePlayer;
+    CorePlayerSingleton::SetInstance(m_pPlayer);
     vec.push_back(m_pPlayer);
     m_pGirl=new CoreGirl;
+    CoreGirlSingleton::SetInstance(m_pGirl);
     vec.push_back(m_pGirl);
     m_pSave->SetSaveObj(&vec);
     CoreSaveSingleton::SetInstance(m_pSave);
@@ -36,6 +38,8 @@ CoreApplication::~CoreApplication()
     CoreObManageSingleton::Release();
     CoreNotifySingleton::Release();
     CoreLogSingleton::Release();
+    CoreGirlSingleton::Release();
+    CorePlayerSingleton::Release();
     delete m_pSave;
     delete m_pObManage;
     delete m_pNotify;

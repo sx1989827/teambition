@@ -12,6 +12,8 @@
 #include "PersonBase.h"
 #include "Mood.h"
 #include "Favorite.h"
+#include "../util/Header.h"
+#define GIRLINSTANCE CoreGirlSingleton::GetInstance()
 class node;
 class CoreGirl:public CorePersonBase
 {
@@ -23,17 +25,42 @@ public:
     void Serializ(node* out);
     void UnSerializ(node* in);
     CoreMood *GetMood();
-    long GetIOI();
-    void SetIOI(long lIOI);
+    double GetIOI();
+    void SetIOI(double lIOI);
     TYPE GetGirlType();
     void SetGirlType(TYPE type);
     CoreFavorite* GetFavorite();
     void Reset(node* pNode,TYPE type);
 private:
     CoreMood *m_pMood;
-    long m_lIOI;
+    double m_dIOI;
     TYPE m_Type;
     CoreFavorite *m_pFavorite;
     void OnStatusChange(void *pObj, const char *name, void* value);
 };
+
+class CoreGirlSingleton:public CoreSingleton<CoreGirl>
+{
+private:
+    CoreGirlSingleton();
+    CoreGirlSingleton(const CoreGirlSingleton&);
+    ~CoreGirlSingleton();
+    CoreGirlSingleton &operator=(const CoreGirlSingleton&);
+    
+};
 #endif /* defined(__Core__Girl__) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

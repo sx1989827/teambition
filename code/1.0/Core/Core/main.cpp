@@ -14,7 +14,7 @@ int main(int argc, const char * argv[])
     noti.sec=1000;
     noti.type=sNotify::DATEEND;
     noti.flag=222;
-    NOTIFYCENTER->CreateNotify(&noti,0);
+    NOTIFYCENTER->CreateNotify(&noti);
     NOTIFYCENTER->AdjustNotify();
     SAVEINSTANCE->Save();
     SAVEINSTANCE->UnSave();

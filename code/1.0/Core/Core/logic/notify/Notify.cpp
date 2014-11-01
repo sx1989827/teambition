@@ -7,6 +7,9 @@
 //
 
 #include "Notify.h"
+#include "../../Person/Player.h"
+#include "../../Status/StatusController.h"
+#include "../../Person/Girl.h"
 std::map<std::string,sNotify::TYPE> sNotify::mapNotify;
 std::vector<sNotify::sInfo> sNotify::vecInfo;
 char CoreNotify::cID[100];
@@ -22,7 +25,7 @@ CoreNotify::~CoreNotify()
 {
     
 }
-long CoreNotify::CreateNotify(sNotify* pNotify,long lStatus)
+long CoreNotify::CreateNotify(sNotify* pNotify)
 {
     int count=0;
     while (cID[pos]!=0) {
@@ -40,7 +43,8 @@ long CoreNotify::CreateNotify(sNotify* pNotify,long lStatus)
     pNotify->id=pos;
     cID[pos]=1;
     m_Vector.push_back(*pNotify);
-    if(lStatus==2)
+    CoreStatus::TYPE status=PLAYERINSTANCE->GetStatusController()->GetStatus();
+    if(status==CoreStatus::WORK)
     {
         auto it=std::find(m_AvailableWorkVec.begin(), m_AvailableWorkVec.end(), pNotify->type);
         if(it!=m_AvailableWorkVec.end())
@@ -48,7 +52,7 @@ long CoreNotify::CreateNotify(sNotify* pNotify,long lStatus)
             m_AvailableWorkVec.erase(it);
         }
     }
-    else if(lStatus==0)
+    else if(status==CoreStatus::LEISURE)
     {
         auto it=std::find(m_AvailableLeisureVec.begin(), m_AvailableLeisureVec.end(), pNotify->type);
         if(it!=m_AvailableLeisureVec.end())
@@ -98,14 +102,15 @@ sNotify CoreNotify::AdjustNotify()
     return noti;
 }
 
-sNotify::TYPE CoreNotify::GetAvailableNotify(long lStatus,bool bLove,long lIOI)
+sNotify::TYPE CoreNotify::GetAvailableNotify()
 {
     sNotify::TYPE type;
-    if(lStatus==0 && m_AvailableLeisureVec.size()>0)
+    CoreStatus::TYPE status=PLAYERINSTANCE->GetStatusController()->GetStatus();
+    if(status==CoreStatus::LEISURE && m_AvailableLeisureVec.size()>0)
     {
         type=m_AvailableLeisureVec[random()%m_AvailableLeisureVec.size()];
     }
-    else if (lStatus==2 && m_AvailableWorkVec.size()>0)
+    else if (status==CoreStatus::WORK && m_AvailableWorkVec.size()>0)
     {
         type=m_AvailableWorkVec[random()%m_AvailableWorkVec.size()];
     }
@@ -115,17 +120,18 @@ sNotify::TYPE CoreNotify::GetAvailableNotify(long lStatus,bool bLove,long lIOI)
     }
     for(auto it=sNotify::vecInfo.begin();it!=sNotify::vecInfo.end();it++)
     {
-        if(it->type==type && it->bLove==bLove)
+        if(it->type==type && it->bLove==PLAYERINSTANCE->GetLove())
         {
-            if(lIOI<1)
+            double dIOI=GIRLINSTANCE->GetIOI();
+            if(dIOI<1)
             {
-                lIOI=1;
+                dIOI=1;
             }
-            else if (lIOI>100)
+            else if (dIOI>100)
             {
-                lIOI=100;
+                dIOI=100;
             }
-            long val=it->cContext[lIOI-1];
+            long val=it->cContext[(long)dIOI-1];
             long rnd=random()%100+1;
             if(rnd>val)
             {
@@ -177,11 +183,11 @@ void CoreNotify::UnSerializ(node* in)
     delete nc;
 }
 
-void CoreNotify::Adjust(bool bLove)
+void CoreNotify::Adjust()
 {
     std::vector<sNotify::TYPE>().swap(m_AvailableLeisureVec);
     std::vector<sNotify::TYPE>().swap(m_AvailableWorkVec);
-    if(bLove)
+    if(PLAYERINSTANCE->GetLove())
     {
         m_AvailableWorkVec.push_back(sNotify::WORKIOI);
         m_AvailableWorkVec.push_back(sNotify::WORKIOI);
@@ -243,7 +249,7 @@ void CoreNotify::Reset(node* pNode)
     }
     delete ncItem;
     delete nc;
-    Adjust(false);
+    Adjust();
 }
 
 

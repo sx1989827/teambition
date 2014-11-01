@@ -1132,6 +1132,28 @@ node *node::puttext(long s){
     return this;
 }
 
+node *node::puttext(double s){
+    if(child && child->gettype()=="text"){
+        child->remove();
+    }
+    char szBuf[10]={0};
+    sprintf(szBuf, "%0.1lf",s);
+    node *n=x->createtextnode(szBuf);
+    insert(0,n);
+    return this;
+}
+
+node *node::puttext(bool s){
+    if(child && child->gettype()=="text"){
+        child->remove();
+    }
+    char szBuf[10]={0};
+    sprintf(szBuf, "%d",s);
+    node *n=x->createtextnode(szBuf);
+    insert(0,n);
+    return this;
+}
+
 nodecollect *node::selectnodes(string s){
     nodecollect *nc=new nodecollect;
     long i=0;

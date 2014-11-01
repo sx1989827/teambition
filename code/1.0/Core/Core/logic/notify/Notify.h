@@ -38,11 +38,11 @@ class CoreNotify:public CoreSerializ
 public:
     CoreNotify();
     ~CoreNotify();
-    void Adjust(bool bLove);
+    void Adjust();
     void Reset(node* pNode);
-    long CreateNotify(sNotify* pNotify,long lStatus);//0:leisure,1:sleep,2:work
+    long CreateNotify(sNotify* pNotify);
     sNotify AdjustNotify();
-    sNotify::TYPE GetAvailableNotify(long lStatus,bool bLove,long lIOI);
+    sNotify::TYPE GetAvailableNotify();
     void ClearNotify();
     void Serializ(node* out);
     void UnSerializ(node* in);

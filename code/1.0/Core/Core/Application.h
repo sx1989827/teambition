@@ -31,6 +31,8 @@ private:
     CoreGirl *m_pGirl;
     CorePlayer *m_pPlayer;
 };
+
+
 #endif /* defined(__Core__Application__) */
 
 
