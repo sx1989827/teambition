@@ -58,7 +58,7 @@ void CoreApplication::Reset(CoreGirl::TYPE type)
     x.loadfile(INITFILE);
     nodecollect *nc=x.getnodebyname("root");
     node *n1=nc->item(0);
-    m_pGirl->Reset(n1,CoreGirl::LOLI);
+    m_pGirl->Reset(n1,type);
     delete nc;
 }
 
