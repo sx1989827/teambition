@@ -59,6 +59,8 @@ void CoreApplication::Reset(CoreGirl::TYPE type)
     nodecollect *nc=x.getnodebyname("root");
     node *n1=nc->item(0);
     m_pGirl->Reset(n1,type);
+    m_pPlayer->Reset(n1);
+    m_pNotify->Reset(n1);
     delete nc;
 }
 

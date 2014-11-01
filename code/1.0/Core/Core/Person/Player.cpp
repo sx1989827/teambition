@@ -89,7 +89,18 @@ void CorePlayer::SetLove(bool bLove)
 
 void CorePlayer::Reset(node *pNode)
 {
-    
+    nodecollect* nc=pNode->select("/player");
+    node* root=nc->item(0);
+    nodecollect *ncPhysical=root->select("/physical");
+    m_lPhysical=atol(ncPhysical->item(0)->gettext().data());
+    nodecollect *ncMoney=root->select("/money");
+    m_lMoney=atol(ncMoney->item(0)->gettext().data());
+    nodecollect *ncLove=root->select("/love");
+    m_bLove=atol(ncLove->item(0)->gettext().data());
+    delete ncLove;
+    delete ncMoney;
+    delete ncPhysical;
+    delete nc;
 }
 
 

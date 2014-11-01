@@ -7,11 +7,16 @@
 //
 
 #include "Notify.h"
+std::map<std::string,sNotify::TYPE> sNotify::mapNotify;
+std::vector<sNotify::sInfo> sNotify::vecInfo;
 char CoreNotify::cID[100];
 long CoreNotify::pos=0;
 CoreNotify::CoreNotify()
 {
     memset((void*)cID, 0, sizeof(char)*100);
+    sNotify::mapNotify["workioi"]=sNotify::WORKIOI;
+    sNotify::mapNotify["leisureioi"]=sNotify::LEISUREIOI;
+    sNotify::mapNotify["leisuredate"]=sNotify::LEISUREDATE;
 }
 CoreNotify::~CoreNotify()
 {
@@ -93,7 +98,7 @@ sNotify CoreNotify::AdjustNotify()
     return noti;
 }
 
-sNotify::TYPE CoreNotify::GetAvailableNotify(long lStatus)
+sNotify::TYPE CoreNotify::GetAvailableNotify(long lStatus,bool bLove,long lIOI)
 {
     sNotify::TYPE type;
     if(lStatus==0 && m_AvailableLeisureVec.size()>0)
@@ -107,6 +112,27 @@ sNotify::TYPE CoreNotify::GetAvailableNotify(long lStatus)
     else
     {
         type=sNotify::NONE;
+    }
+    for(auto it=sNotify::vecInfo.begin();it!=sNotify::vecInfo.end();it++)
+    {
+        if(it->type==type && it->bLove==bLove)
+        {
+            if(lIOI<1)
+            {
+                lIOI=1;
+            }
+            else if (lIOI>100)
+            {
+                lIOI=100;
+            }
+            long val=it->cContext[lIOI-1];
+            long rnd=random()%100+1;
+            if(rnd>val)
+            {
+                type=sNotify::NONE;
+            }
+            break;
+        }
     }
     return type;
 }
@@ -151,7 +177,7 @@ void CoreNotify::UnSerializ(node* in)
     delete nc;
 }
 
-void CoreNotify::Reset(bool bLove)
+void CoreNotify::Adjust(bool bLove)
 {
     std::vector<sNotify::TYPE>().swap(m_AvailableLeisureVec);
     std::vector<sNotify::TYPE>().swap(m_AvailableWorkVec);
@@ -183,7 +209,42 @@ void CoreNotify::ClearNotify()
     std::vector<sNotify>().swap(m_Vector);
 }
 
-
+void CoreNotify::Reset(node* pNode)
+{
+    std::vector<sNotify::sInfo>().swap(sNotify::vecInfo);
+    nodecollect *nc=pNode->select("/notify");
+    node* root=nc->item(0);
+    nodecollect * ncItem=root->select("/item");
+    for(long i=0;i<ncItem->getcount();i++)
+    {
+        sNotify::sInfo info;
+        node *n=ncItem->item(i);
+        info.bLove=atol(n->getattr("love").data());
+        info.type=sNotify::mapNotify[n->getattr("type")];
+        nodecollect *ncValue=n->select("/value");
+        memset(info.cContext, 0, 100*sizeof(char));
+        for(long j=0;j<ncValue->getcount();j++)
+        {
+            node* nn=ncValue->item(j);
+            long val=atol(nn->gettext().data());
+            long min=atol(nn->getattr("min").data())-1;
+            long max=atol(nn->getattr("max").data())-1;
+            if(max==-2)
+            {
+                max=100;
+            }
+            for(long k=min;k<max;k++)
+            {
+                info.cContext[k]=val;
+            }
+        }
+        sNotify::vecInfo.push_back(info);
+        delete  ncValue;
+    }
+    delete ncItem;
+    delete nc;
+    Adjust(false);
+}
 
 
 
