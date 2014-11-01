@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
-#include <list>
 #include <map>
 #include "../../util/Header.h"
 #define  NOTIFYCENTER CoreNotifySingleton::GetInstance()
