@@ -31,12 +31,16 @@ public:
     void SetGirlType(TYPE type);
     CoreFavorite* GetFavorite();
     void Reset(node* pNode,TYPE type);
+    long GetOffsetTime();
+    double GetOffset();
 private:
     CoreMood *m_pMood;
     double m_dIOI;
     TYPE m_Type;
     CoreFavorite *m_pFavorite;
     void OnStatusChange(void *pObj, const char *name, void* value);
+    long m_lOffsetTime;
+    double m_dOffset;
 };
 
 class CoreGirlSingleton:public CoreSingleton<CoreGirl>

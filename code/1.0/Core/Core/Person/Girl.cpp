@@ -119,14 +119,23 @@ void CoreGirl::Reset(node* pNode,CoreGirl::TYPE type)
         strType="queen";
     }
     nodecollect *ncIOI=root->select("/"+strType+"/ioi");
-    m_dIOI=atof(ncIOI->item(0)->gettext().data());
+    m_dIOI=atof(ncIOI->item(0)->getattr("value").data());
+    m_lOffsetTime=atol(ncIOI->item(0)->getattr("time").data());
+    m_dOffset=atof(ncIOI->item(0)->getattr("offset").data());
     m_pMood->Reset(root);
     m_pFavorite->Reset(root);
     delete ncIOI;
     delete nc;
 }
 
-
+long CoreGirl::GetOffsetTime()
+{
+    return m_lOffsetTime;
+}
+double CoreGirl::GetOffset()
+{
+    return m_dOffset;
+}
 
 
 
