@@ -7,6 +7,8 @@
 //
 
 #include "StatusSleep.h"
+#include "../Person/Player.h"
+#include "../logic/notify/Notify.h"
 void CoreStatusSleep::OnEnter()
 {
     m_StartTime.Reset();
@@ -14,11 +16,20 @@ void CoreStatusSleep::OnEnter()
 }
 void CoreStatusSleep::OnUpdate()
 {
-    
+   const  sPlayInfo *info=PLAYERINSTANCE->GetPhysicalInfo(CoreStatus::SLEEP);
+    if(info)
+    {
+        long count=(time(0)-m_StartTime.GetOriTime())/info->time;
+        if(count>0)
+        {
+            PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+(count*info->offset));
+            m_StartTime.Reset();
+        }
+    }
 }
 void CoreStatusSleep::OnExit()
 {
-    
+    NOTIFYCENTER->ClearNotify();
 }
 
 CoreStatus::TYPE CoreStatusSleep::GetType()

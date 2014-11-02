@@ -24,6 +24,7 @@ public:
     std::string GetMoment() const;
     CoreTime GetTimeSince(long sec) const;
     void Reset();
+    time_t GetOriTime();
 private:
     time_t m_lTime;
     

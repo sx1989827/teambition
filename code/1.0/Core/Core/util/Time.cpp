@@ -91,4 +91,13 @@ void CoreTime::Reset()
     m_lTime=time(0);
 }
 
+time_t CoreTime::GetOriTime()
+{
+    return m_lTime;
+}
+
+
+
+
+
 
