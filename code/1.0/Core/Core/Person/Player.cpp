@@ -14,7 +14,6 @@ CorePlayer::CorePlayer()
     m_dMoney=0;
     m_bLove=false;
     m_pStatusController=new CoreStatusController;
-    m_pStatusController->SetPlayer(this);
     
 }
 CorePlayer::~CorePlayer()
@@ -95,15 +94,68 @@ void CorePlayer::Reset(node *pNode)
     m_dPhysical=atof(ncPhysical->item(0)->getattr("value").data());
     nodecollect *ncMoney=root->select("/money");
     m_dMoney=atof(ncMoney->item(0)->getattr("value").data());
-    nodecollect *ncLove=root->select("/love");
-    m_bLove=atol(ncLove->item(0)->gettext().data());
-    delete ncLove;
+    node *nodeType=ncPhysical->item(0);
+    while (nodeType) {
+        nodecollect *ncSleep=nodeType->select("/sleep");
+        nodecollect *ncWork=nodeType->select("/work");
+        if(ncSleep->getcount()>0)
+        {
+            sPlayInfo info={atol(ncSleep->item(0)->getattr("time").data()),atof(ncSleep->item(0)->getattr("val").data())};
+            if(nodeType->gettag()=="money")
+            {
+                m_mapMoney[CoreStatus::SLEEP]=info;
+            }
+            else if(nodeType->gettag()=="physical")
+            {
+                m_mapPhysical[CoreStatus::SLEEP]=info;
+            }
+        }
+        if(ncWork->getcount()>0)
+        {
+            sPlayInfo info={atol(ncWork->item(0)->getattr("time").data()),atof(ncWork->item(0)->getattr("val").data())};
+            if(nodeType->gettag()=="money")
+            {
+                m_mapMoney[CoreStatus::WORK]=info;
+            }
+            else if(nodeType->gettag()=="physical")
+            {
+                m_mapPhysical[CoreStatus::WORK]=info;
+            }
+        }
+        delete ncWork;
+        delete ncSleep;
+        nodeType=nodeType->getnext();
+    }
+    m_bLove=atol(root->getattr("love").data());
     delete ncMoney;
     delete ncPhysical;
     delete nc;
 }
 
-
+const sPlayInfo* CorePlayer::GetPhysicalInfo(CoreStatus::TYPE type)
+{
+    auto it=m_mapPhysical.find(type);
+    if(it!=m_mapPhysical.end())
+    {
+        return (sPlayInfo*)&(it->second);
+    }
+    else
+    {
+        return 0;
+    }
+}
+const sPlayInfo* CorePlayer::GetMoneyInfo(CoreStatus::TYPE type)
+{
+    auto it=m_mapMoney.find(type);
+    if(it!=m_mapMoney.end())
+    {
+        return (sPlayInfo*)&(it->second);
+    }
+    else
+    {
+        return 0;
+    }
+}
 
 
 

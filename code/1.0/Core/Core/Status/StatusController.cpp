@@ -16,7 +16,6 @@ CoreStatusController::CoreStatusController()
 {
     m_pStatus=0;
     m_pPreStatus=0;
-    m_pPlayer=0;
 }
 CoreStatusController::~CoreStatusController()
 {
@@ -57,7 +56,6 @@ void CoreStatusController::Rollback()
 }
 void CoreStatusController::ChangeStatus(CoreStatus::TYPE type)
 {
-    assert(m_pPlayer!=0);
     if(m_pStatus!=0 && m_pStatus->GetType()==type)
     {
         return;
@@ -82,16 +80,11 @@ void CoreStatusController::ChangeStatus(CoreStatus::TYPE type)
     }
     if(m_pStatus)
     {
-            m_pStatus->OnExit(m_pPlayer);
+            m_pStatus->OnExit();
     }
     m_pPreStatus=m_pStatus;
     m_pStatus=pStatus;
-    m_pStatus->OnEnter(m_pPlayer);
-}
-
-void CoreStatusController::SetPlayer(CorePlayer *pPlayer)
-{
-    m_pPlayer=pPlayer;
+    m_pStatus->OnEnter();
 }
 
 

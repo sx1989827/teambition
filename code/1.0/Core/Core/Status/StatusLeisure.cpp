@@ -8,15 +8,15 @@
 
 #include "StatusLeisure.h"
 #include "../util/Header.h"
-void CoreStatusLeisure::OnEnter(CorePlayer *pPlayer)
+void CoreStatusLeisure::OnEnter()
 {
     
 }
-void CoreStatusLeisure::OnUpdate(CorePlayer *pPlayer)
+void CoreStatusLeisure::OnUpdate()
 {
     
 }
-void CoreStatusLeisure::OnExit(CorePlayer* pPlayer)
+void CoreStatusLeisure::OnExit()
 {
     
 }

@@ -7,16 +7,16 @@
 //
 
 #include "StatusSleep.h"
-void CoreStatusSleep::OnEnter(CorePlayer *pPlayer)
+void CoreStatusSleep::OnEnter()
 {
     m_StartTime.Reset();
     
 }
-void CoreStatusSleep::OnUpdate(CorePlayer *pPlayer)
+void CoreStatusSleep::OnUpdate()
 {
     
 }
-void CoreStatusSleep::OnExit(CorePlayer* pPlayer)
+void CoreStatusSleep::OnExit()
 {
     
 }

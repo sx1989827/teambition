@@ -15,9 +15,9 @@ class CoreStatus
 public:
     enum TYPE {LEISURE,SLEEP,WORK};
     virtual ~CoreStatus(){}
-    virtual void OnEnter(CorePlayer *pPlayer)=0;
-    virtual void OnUpdate(CorePlayer *pPlayer)=0;
-    virtual void OnExit(CorePlayer* pPlayer)=0;
+    virtual void OnEnter()=0;
+    virtual void OnUpdate()=0;
+    virtual void OnExit()=0;
     virtual TYPE GetType()=0;
 protected:
     CoreTime m_StartTime;

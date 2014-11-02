@@ -12,6 +12,11 @@
 #include "PersonBase.h"
 #include "../Status/Status.h"
 #define PLAYERINSTANCE CorePlayerSingleton::GetInstance()
+struct sPlayInfo
+{
+    long time;
+    double offset;
+};
 class CorePlayer:public CorePersonBase
 {
 public:
@@ -29,11 +34,15 @@ public:
     bool GetLove();
     void SetLove(bool bLove);
     void Reset(node* pNode);
+    const sPlayInfo* GetPhysicalInfo(CoreStatus::TYPE type);
+    const sPlayInfo* GetMoneyInfo(CoreStatus::TYPE type);
 private:
     double m_dPhysical;
     double m_dMoney;
     bool  m_bLove;
     CoreStatusController *m_pStatusController;
+    std::map<CoreStatus::TYPE,sPlayInfo> m_mapPhysical;
+    std::map<CoreStatus::TYPE,sPlayInfo> m_mapMoney;
 };
 
 class CorePlayerSingleton:public CoreSingleton<CorePlayer>

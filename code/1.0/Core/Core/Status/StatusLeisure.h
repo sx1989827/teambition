@@ -12,9 +12,9 @@
 class CoreStatusLeisure:public CoreStatus
 {
 public:
-    void OnEnter(CorePlayer *pPlayer);
-    void OnUpdate(CorePlayer *pPlayer);
-    void OnExit(CorePlayer* pPlayer);
+    void OnEnter();
+    void OnUpdate();
+    void OnExit();
     TYPE GetType();
 };
 

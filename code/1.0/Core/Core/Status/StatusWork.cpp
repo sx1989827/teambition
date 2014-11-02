@@ -7,15 +7,15 @@
 //
 
 #include "StatusWork.h"
-void CoreStatusWork::OnEnter(CorePlayer *pPlayer)
+void CoreStatusWork::OnEnter()
 {
     
 }
-void CoreStatusWork::OnUpdate(CorePlayer *pPlayer)
+void CoreStatusWork::OnUpdate()
 {
     
 }
-void CoreStatusWork::OnExit(CorePlayer* pPlayer)
+void CoreStatusWork::OnExit()
 {
     
 }
