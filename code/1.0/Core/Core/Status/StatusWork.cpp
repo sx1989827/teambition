@@ -9,7 +9,7 @@
 #include "StatusWork.h"
 void CoreStatusWork::OnEnter()
 {
-    
+    m_StartTime.Reset();
 }
 void CoreStatusWork::OnUpdate()
 {

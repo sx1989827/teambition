@@ -26,9 +26,11 @@ void CoreStatusSleep::OnUpdate()
             m_StartTime.Reset();
         }
     }
+    OBINSTANCE->PostOberserver(this, MSG_SLEEPUPDATE, 0);
 }
 void CoreStatusSleep::OnExit()
 {
+    OnUpdate();
     NOTIFYCENTER->ClearNotify();
 }
 

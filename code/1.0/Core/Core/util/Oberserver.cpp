@@ -8,10 +8,10 @@
 #include <stdio.h>
 #include "Oberserver.h"
 
-void CoreObManage::PostOberserver(void *pObj,const char *name,void* value)
+void CoreObManage::PostOberserver(void *pObj,const std::string& name,void* value)
 {
     char szName[TEXT_SIZE] = { 0 };
-    sprintf(szName, "%ld#%s", (long)pObj, name);
+    sprintf(szName, "%ld#%s", (long)pObj, name.data());
     if (m_Map.find(szName) != m_Map.end())
     {
         auto pos = m_Map.equal_range(szName);

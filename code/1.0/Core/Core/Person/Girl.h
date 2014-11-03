@@ -38,9 +38,10 @@ private:
     double m_dIOI;
     TYPE m_Type;
     CoreFavorite *m_pFavorite;
-    void OnStatusChange(void *pObj, const char *name, void* value);
+    void OnStatusChange(void *pObj, const std::string& name, void* value);
     long m_lOffsetTime;
     double m_dOffset;
+    CoreTime m_StartTime;
 };
 
 class CoreGirlSingleton:public CoreSingleton<CoreGirl>

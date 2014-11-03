@@ -83,11 +83,7 @@ sNotify CoreNotify::AdjustNotify()
     noti.sec=0;
     for(auto it=vec.begin();it!=vec.end();it++)
     {
-        if(it->type==sNotify::CALL)
-        {
-            return *it;
-        }
-        else if (it->type==sNotify::DATEEND)
+        if(it->type==sNotify::CALL || it->type==sNotify::DATEITEMEND || it->type==sNotify::WORKHELPEND)
         {
             return *it;
         }

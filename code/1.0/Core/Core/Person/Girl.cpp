@@ -71,9 +71,21 @@ CorePersonBase::PERSONTYPE CoreGirl::GetType()
     return GIRL;
 }
 
-void CoreGirl::OnStatusChange(void *pObj, const char *name, void* value)
+void CoreGirl::OnStatusChange(void *pObj, const std::string& name, void* value)
 {
-    
+    if(name==MSG_SLEEPENTER)
+    {
+        m_StartTime.Reset();
+    }
+    else if (name==MSG_SLEEPUPDATE)
+    {
+        long count=(time(0)-m_StartTime.GetOriTime())/m_lOffsetTime;
+        if(count>0)
+        {
+            m_dIOI+=count*m_dOffset;
+            m_StartTime.Reset();
+        }
+    }
 }
 
 CoreMood *CoreGirl::GetMood()

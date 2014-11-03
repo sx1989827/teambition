@@ -23,7 +23,7 @@ void Set_##name(decltype(name) param) \
 class CoreFuncBase
 {
 public:
-    virtual void operator() (void *pObj, const char *name, void* value) = 0;
+    virtual void operator() (void *pObj, const std::string& name, void* value) = 0;
 	virtual long GetID() = 0;
 	virtual ~CoreFuncBase()
 	{
@@ -42,7 +42,7 @@ public:
 		m_pObj = pObj;
 		m_func = pFunc;
 	}
-    void operator() (void *pObj, const char *name, void* value)
+    void operator() (void *pObj, const std::string& name, void* value)
     {
         (m_pObj->*m_func)(pObj,name,value);
     }
@@ -55,27 +55,27 @@ public:
 class CoreObManage
 {
 public:
-    void PostOberserver(void *pObj,const char *name,void* value);
+    void PostOberserver(void *pObj,const std::string& name,void* value);
     template<class T1,class T2>
-    void AddOberserver(void *pObj,const char* name,T1 pObj1,T2 func)
+    void AddOberserver(void *pObj,const std::string& name,T1 pObj1,T2 func)
     {
 		char szName[TEXT_SIZE] = { 0 };
-		sprintf(szName, "%ld#%s", (long)pObj, name);
+		sprintf(szName, "%ld#%s", (long)pObj, name.data());
 		CoreFuncBase *pOb = new CoreObFunc<T1, T2>(pObj1, func);
 		m_Map.insert(std::make_pair(szName, pOb));
     }
     template<class T1,class T2>
-    void AddOberserver(const char* name,T1 pObj1,T2 func)
+    void AddOberserver(const std::string& name,T1 pObj1,T2 func)
     {
         char szName[TEXT_SIZE] = { 0 };
-        sprintf(szName, "%s", name);
+        sprintf(szName, "%s", name.data());
         CoreFuncBase *pOb = new CoreObFunc<T1, T2>(pObj1, func);
         m_Map.insert(std::make_pair(szName, pOb));
     }
-    void RemoveOberserver(void *pObj,const char* name,void* pObj1)
+    void RemoveOberserver(void *pObj,const std::string& name,void* pObj1)
     {
 		char szName[TEXT_SIZE] = { 0 };
-		sprintf(szName, "%ld#%s", (long)pObj, name);
+		sprintf(szName, "%ld#%s", (long)pObj, name.data());
 		auto pos = m_Map.equal_range(szName);
 		while (pos.first != pos.second)
 		{
@@ -91,10 +91,10 @@ public:
 			}
 		}
     }
-    void RemoveOberserver(const char* name,void* pObj1)
+    void RemoveOberserver(const std::string& name,void* pObj1)
     {
         char szName[TEXT_SIZE] = { 0 };
-        sprintf(szName, "%s", name);
+        sprintf(szName, "%s", name.data());
         auto pos = m_Map.equal_range(szName);
         while (pos.first != pos.second)
         {
