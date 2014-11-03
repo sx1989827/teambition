@@ -433,7 +433,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "250"
             endingLineNumber = "250"
-            landmarkName = "CoreNotify::RemoveNotify(sNotify::TYPE type)"
+            landmarkName = "CoreNotify::Reset(node* pNode)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -449,7 +449,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "234"
             endingLineNumber = "234"
-            landmarkName = "CoreNotify::RemoveNotify(sNotify::TYPE type)"
+            landmarkName = "CoreNotify::Reset(node* pNode)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -465,7 +465,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "230"
             endingLineNumber = "230"
-            landmarkName = "CoreNotify::RemoveNotify(sNotify::TYPE type)"
+            landmarkName = "CoreNotify::Reset(node* pNode)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -496,9 +496,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "CorePlayer::ChangeStatus(CoreStatus::TYPE type)"
-            landmarkType = "5">
+            endingLineNumber = "63">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

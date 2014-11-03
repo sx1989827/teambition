@@ -36,6 +36,7 @@ public:
     void Reset(node* pNode);
     const sPlayInfo* GetPhysicalInfo(CoreStatus::TYPE type);
     const sPlayInfo* GetMoneyInfo(CoreStatus::TYPE type);
+    bool IsInteraction();
 private:
     double m_dPhysical;
     double m_dMoney;

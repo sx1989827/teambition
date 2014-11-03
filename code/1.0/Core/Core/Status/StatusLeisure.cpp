@@ -7,18 +7,23 @@
 //
 
 #include "StatusLeisure.h"
-#include "../util/Header.h"
+#include "../Person/Player.h"
+#include "../logic/notify/Notify.h"
 void CoreStatusLeisure::OnEnter()
 {
-    
+    m_StartTime.Reset();
 }
 void CoreStatusLeisure::OnUpdate()
 {
-    
+    if(PLAYERINSTANCE->IsInteraction())
+    {
+        
+    }
 }
 void CoreStatusLeisure::OnExit()
 {
-    
+    OnUpdate();
+    NOTIFYCENTER->ClearNotify();
 }
 CoreStatus::TYPE CoreStatusLeisure::GetType()
 {

@@ -68,6 +68,14 @@ double CorePlayer::GetPhysical()
 void CorePlayer::SetPhysical(double val)
 {
     m_dPhysical=val;
+    if(m_dPhysical<1)
+    {
+        m_dPhysical=1;
+    }
+    else if (m_dPhysical>100)
+    {
+        m_dPhysical=100;
+    }
 }
 double CorePlayer::GetMoney()
 {
@@ -76,6 +84,10 @@ double CorePlayer::GetMoney()
 void CorePlayer::SetMoney(double val)
 {
     m_dMoney=val;
+    if(m_dMoney<0)
+    {
+        m_dMoney=0;
+    }
 }
 bool CorePlayer::GetLove()
 {
@@ -157,7 +169,10 @@ const sPlayInfo* CorePlayer::GetMoneyInfo(CoreStatus::TYPE type)
     }
 }
 
-
+bool CorePlayer::IsInteraction()
+{
+    return false;
+}
 
 
 

@@ -99,6 +99,10 @@ double CoreGirl::GetIOI()
 void CoreGirl::SetIOI(double lIOI)
 {
     m_dIOI=lIOI;
+    if(lIOI<1)
+    {
+        lIOI=1;
+    }
 }
 CoreGirl::TYPE CoreGirl::GetGirlType()
 {
