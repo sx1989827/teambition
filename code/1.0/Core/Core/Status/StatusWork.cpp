@@ -7,15 +7,15 @@
 //
 
 #include "StatusWork.h"
-void CoreStatusWork::OnEnter(CorePlayer *pPlayer)
+void CoreStatusWork::OnEnter()
+{
+    m_StartTime.Reset();
+}
+void CoreStatusWork::OnUpdate()
 {
     
 }
-void CoreStatusWork::OnUpdate(CorePlayer *pPlayer)
-{
-    
-}
-void CoreStatusWork::OnExit(CorePlayer* pPlayer)
+void CoreStatusWork::OnExit()
 {
     
 }

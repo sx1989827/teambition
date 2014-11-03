@@ -7,17 +7,25 @@
 //
 
 #include "Notify.h"
+#include "../../Person/Player.h"
+#include "../../Status/StatusController.h"
+#include "../../Person/Girl.h"
+std::map<std::string,sNotify::TYPE> sNotify::mapNotify;
+std::vector<sNotify::sInfo> sNotify::vecInfo;
 char CoreNotify::cID[100];
 long CoreNotify::pos=0;
 CoreNotify::CoreNotify()
 {
     memset((void*)cID, 0, sizeof(char)*100);
+    sNotify::mapNotify["workioi"]=sNotify::WORKIOI;
+    sNotify::mapNotify["leisureioi"]=sNotify::LEISUREIOI;
+    sNotify::mapNotify["leisuredate"]=sNotify::LEISUREDATE;
 }
 CoreNotify::~CoreNotify()
 {
     
 }
-long CoreNotify::CreateNotify(sNotify* pNotify,long lStatus)
+long CoreNotify::CreateNotify(sNotify* pNotify)
 {
     int count=0;
     while (cID[pos]!=0) {
@@ -35,7 +43,8 @@ long CoreNotify::CreateNotify(sNotify* pNotify,long lStatus)
     pNotify->id=pos;
     cID[pos]=1;
     m_Vector.push_back(*pNotify);
-    if(lStatus==2)
+    CoreStatus::TYPE status=PLAYERINSTANCE->GetStatusController()->GetStatus();
+    if(status==CoreStatus::WORK)
     {
         auto it=std::find(m_AvailableWorkVec.begin(), m_AvailableWorkVec.end(), pNotify->type);
         if(it!=m_AvailableWorkVec.end())
@@ -43,7 +52,7 @@ long CoreNotify::CreateNotify(sNotify* pNotify,long lStatus)
             m_AvailableWorkVec.erase(it);
         }
     }
-    else if(lStatus==0)
+    else if(status==CoreStatus::LEISURE)
     {
         auto it=std::find(m_AvailableLeisureVec.begin(), m_AvailableLeisureVec.end(), pNotify->type);
         if(it!=m_AvailableLeisureVec.end())
@@ -74,11 +83,7 @@ sNotify CoreNotify::AdjustNotify()
     noti.sec=0;
     for(auto it=vec.begin();it!=vec.end();it++)
     {
-        if(it->type==sNotify::CALL)
-        {
-            return *it;
-        }
-        else if (it->type==sNotify::DATEEND)
+        if(it->type==sNotify::CALL || it->type==sNotify::DATEITEMEND || it->type==sNotify::WORKHELPEND)
         {
             return *it;
         }
@@ -93,20 +98,43 @@ sNotify CoreNotify::AdjustNotify()
     return noti;
 }
 
-sNotify::TYPE CoreNotify::GetAvailableNotify(long lStatus)
+sNotify::TYPE CoreNotify::GetAvailableNotify()
 {
     sNotify::TYPE type;
-    if(lStatus==0 && m_AvailableLeisureVec.size()>0)
+    CoreStatus::TYPE status=PLAYERINSTANCE->GetStatusController()->GetStatus();
+    if(status==CoreStatus::LEISURE && m_AvailableLeisureVec.size()>0)
     {
         type=m_AvailableLeisureVec[random()%m_AvailableLeisureVec.size()];
     }
-    else if (lStatus==2 && m_AvailableWorkVec.size()>0)
+    else if (status==CoreStatus::WORK && m_AvailableWorkVec.size()>0)
     {
         type=m_AvailableWorkVec[random()%m_AvailableWorkVec.size()];
     }
     else
     {
         type=sNotify::NONE;
+    }
+    for(auto it=sNotify::vecInfo.begin();it!=sNotify::vecInfo.end();it++)
+    {
+        if(it->type==type && it->bLove==PLAYERINSTANCE->GetLove())
+        {
+            double dIOI=GIRLINSTANCE->GetIOI();
+            if(dIOI<1)
+            {
+                dIOI=1;
+            }
+            else if (dIOI>100)
+            {
+                dIOI=100;
+            }
+            long val=it->cContext[(long)dIOI-1];
+            long rnd=random()%100+1;
+            if(rnd>val)
+            {
+                type=sNotify::NONE;
+            }
+            break;
+        }
     }
     return type;
 }
@@ -151,11 +179,11 @@ void CoreNotify::UnSerializ(node* in)
     delete nc;
 }
 
-void CoreNotify::Reset(bool bLove)
+void CoreNotify::Adjust()
 {
     std::vector<sNotify::TYPE>().swap(m_AvailableLeisureVec);
     std::vector<sNotify::TYPE>().swap(m_AvailableWorkVec);
-    if(bLove)
+    if(PLAYERINSTANCE->GetLove())
     {
         m_AvailableWorkVec.push_back(sNotify::WORKIOI);
         m_AvailableWorkVec.push_back(sNotify::WORKIOI);
@@ -183,6 +211,7 @@ void CoreNotify::ClearNotify()
     std::vector<sNotify>().swap(m_Vector);
 }
 
+
 void CoreNotify::RemoveNotify(sNotify::TYPE type)
 {
     for(auto it=m_Vector.begin();it!=m_Vector.end();)
@@ -197,6 +226,44 @@ void CoreNotify::RemoveNotify(sNotify::TYPE type)
         }
     }
     
+}
+
+void CoreNotify::Reset(node* pNode)
+{
+    std::vector<sNotify::sInfo>().swap(sNotify::vecInfo);
+    nodecollect *nc=pNode->select("/notify");
+    node* root=nc->item(0);
+    nodecollect * ncItem=root->select("/item");
+    for(long i=0;i<ncItem->getcount();i++)
+    {
+        sNotify::sInfo info;
+        node *n=ncItem->item(i);
+        info.bLove=atol(n->getattr("love").data());
+        info.type=sNotify::mapNotify[n->getattr("type")];
+        nodecollect *ncValue=n->select("/value");
+        memset(info.cContext, 0, 100*sizeof(char));
+        for(long j=0;j<ncValue->getcount();j++)
+        {
+            node* nn=ncValue->item(j);
+            long val=atol(nn->gettext().data());
+            long min=atol(nn->getattr("min").data())-1;
+            long max=atol(nn->getattr("max").data())-1;
+            if(max==-2)
+            {
+                max=100;
+            }
+            for(long k=min;k<max;k++)
+            {
+                info.cContext[k]=val;
+            }
+        }
+        sNotify::vecInfo.push_back(info);
+        delete  ncValue;
+    }
+    delete ncItem;
+    delete nc;
+    Adjust();
+>>>>>>> FETCH_HEAD
 }
 
 

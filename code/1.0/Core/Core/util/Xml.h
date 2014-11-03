@@ -38,6 +38,8 @@ public:
     string gettext();
     node *puttext(string);
     node *puttext(long);
+    node *puttext(double);
+    node *puttext(bool);
     nodecollect *selectnodes(string);
     nodecollect *select(string);
     xml* getXml()

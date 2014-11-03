@@ -11,7 +11,7 @@
 #include "../util/Oberserver.h"
 CoreGirl::CoreGirl()
 {
-    m_lIOI=0;
+    m_dIOI=0;
     m_Type=CoreGirl::LOLI;
     m_pMood=new CoreMood;
     m_pFavorite=new CoreFavorite;
@@ -45,7 +45,7 @@ void CoreGirl::Serializ(node* out)
 {
     node* root=out->getXml()->createnode("Girl");
     WriteXml(root, (long)m_Type, "type");
-    WriteXml(root, m_lIOI, "ioi");
+    WriteXml(root, m_dIOI, "ioi");
     m_pMood->Serializ(root);
     m_pFavorite->Serializ(root);
     out->appned(root);
@@ -57,7 +57,7 @@ void CoreGirl::UnSerializ(node* in)
     nodecollect * ncType=root->select("/type");
     m_Type=(CoreGirl::TYPE)atol(ncType->item(0)->gettext().data());
     nodecollect *ncIOI=root->select("/ioi");
-    m_lIOI=atol(ncIOI->item(0)->gettext().data());
+    m_dIOI=atof(ncIOI->item(0)->gettext().data());
     m_pMood->UnSerializ(root);
     m_pFavorite->UnSerializ(root);
     delete ncIOI;
@@ -71,22 +71,34 @@ CorePersonBase::PERSONTYPE CoreGirl::GetType()
     return GIRL;
 }
 
-void CoreGirl::OnStatusChange(void *pObj, const char *name, void* value)
+void CoreGirl::OnStatusChange(void *pObj, const std::string& name, void* value)
 {
-    
+    if(name==MSG_SLEEPENTER)
+    {
+        m_StartTime.Reset();
+    }
+    else if (name==MSG_SLEEPUPDATE)
+    {
+        long count=(time(0)-m_StartTime.GetOriTime())/m_lOffsetTime;
+        if(count>0)
+        {
+            m_dIOI+=count*m_dOffset;
+            m_StartTime.Reset();
+        }
+    }
 }
 
 CoreMood *CoreGirl::GetMood()
 {
     return m_pMood;
 }
-long CoreGirl::GetIOI()
+double CoreGirl::GetIOI()
 {
-    return m_lIOI;
+    return m_dIOI;
 }
-void CoreGirl::SetIOI(long lIOI)
+void CoreGirl::SetIOI(double lIOI)
 {
-    m_lIOI=lIOI;
+    m_dIOI=lIOI;
 }
 CoreGirl::TYPE CoreGirl::GetGirlType()
 {
@@ -119,12 +131,34 @@ void CoreGirl::Reset(node* pNode,CoreGirl::TYPE type)
         strType="queen";
     }
     nodecollect *ncIOI=root->select("/"+strType+"/ioi");
-    m_lIOI=atol(ncIOI->item(0)->gettext().data());
+    m_dIOI=atof(ncIOI->item(0)->getattr("value").data());
+    m_lOffsetTime=atol(ncIOI->item(0)->getattr("time").data());
+    m_dOffset=atof(ncIOI->item(0)->getattr("offset").data());
     m_pMood->Reset(root);
     m_pFavorite->Reset(root);
     delete ncIOI;
     delete nc;
 }
+
+long CoreGirl::GetOffsetTime()
+{
+    return m_lOffsetTime;
+}
+double CoreGirl::GetOffset()
+{
+    return m_dOffset;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -20,8 +20,10 @@ CoreApplication::CoreApplication()
     m_pSave=new CoreSave;
     vec.push_back(NOTIFYCENTER);
     m_pPlayer=new CorePlayer;
+    CorePlayerSingleton::SetInstance(m_pPlayer);
     vec.push_back(m_pPlayer);
     m_pGirl=new CoreGirl;
+    CoreGirlSingleton::SetInstance(m_pGirl);
     vec.push_back(m_pGirl);
     m_pSave->SetSaveObj(&vec);
     CoreSaveSingleton::SetInstance(m_pSave);
@@ -36,6 +38,8 @@ CoreApplication::~CoreApplication()
     CoreObManageSingleton::Release();
     CoreNotifySingleton::Release();
     CoreLogSingleton::Release();
+    CoreGirlSingleton::Release();
+    CorePlayerSingleton::Release();
     delete m_pSave;
     delete m_pObManage;
     delete m_pNotify;
@@ -58,7 +62,9 @@ void CoreApplication::Reset(CoreGirl::TYPE type)
     x.loadfile(INITFILE);
     nodecollect *nc=x.getnodebyname("root");
     node *n1=nc->item(0);
-    m_pGirl->Reset(n1,CoreGirl::LOLI);
+    m_pGirl->Reset(n1,type);
+    m_pPlayer->Reset(n1);
+    m_pNotify->Reset(n1);
     delete nc;
 }
 

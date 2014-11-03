@@ -12,26 +12,37 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
-#include <list>
+#include <map>
 #include "../../util/Header.h"
 #define  NOTIFYCENTER CoreNotifySingleton::GetInstance()
 struct sNotify
 {
-    enum TYPE {CALL,DATEEND,WORKIOI,WORKMEET,WORKHELP,LEISUREIOI,LEISUREDATE,WORKEVENT,LEISUREEVENT,NONE};
+    enum TYPE {CALL,DATEITEMEND,WORKHELPEND,WORKIOI,WORKMEET,WORKHELP,LEISUREIOI,LEISUREDATE,WORKEVENT,LEISUREEVENT,NONE};
     long id;
     long sec;
     TYPE type;
     long flag;
+    struct sInfo
+    {
+        TYPE type;
+        bool bLove;
+        char cContext[100];
+    };
+    static std::vector<sInfo> vecInfo;
+    static std::map<std::string,sNotify::TYPE> mapNotify;
 };
+
+
 class CoreNotify:public CoreSerializ
 {
 public:
     CoreNotify();
     ~CoreNotify();
-    void Reset(bool bLove);
-    long CreateNotify(sNotify* pNotify,long lStatus);//0:leisure,1:sleep,2:work
+    void Adjust();
+    void Reset(node* pNode);
+    long CreateNotify(sNotify* pNotify);
     sNotify AdjustNotify();
-    sNotify::TYPE GetAvailableNotify(long lStatus);
+    sNotify::TYPE GetAvailableNotify();
     void ClearNotify();
     void RemoveNotify(sNotify::TYPE type);
     void Serializ(node* out);
