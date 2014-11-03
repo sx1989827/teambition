@@ -263,7 +263,7 @@ void CoreNotify::Reset(node* pNode)
     delete ncItem;
     delete nc;
     Adjust();
->>>>>>> FETCH_HEAD
+
 }
 
 
