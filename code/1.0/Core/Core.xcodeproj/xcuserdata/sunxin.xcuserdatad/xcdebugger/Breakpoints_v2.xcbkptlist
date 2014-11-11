@@ -494,7 +494,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
-            endingLineNumber = "63">
+            endingLineNumber = "63"
+            landmarkName = "CorePlayer::ChangeStatus(CoreStatus::TYPE type)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
