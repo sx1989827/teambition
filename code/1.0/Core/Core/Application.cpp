@@ -68,7 +68,10 @@ void CoreApplication::Reset(CoreGirl::TYPE type)
     delete nc;
 }
 
-
+void CoreApplication::Update()
+{
+    m_pPlayer->Update();
+}
 
 
 

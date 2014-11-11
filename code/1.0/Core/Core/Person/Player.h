@@ -11,6 +11,7 @@
 
 #include "PersonBase.h"
 #include "../Status/Status.h"
+#include "../Interaction/Interaction.h"
 #define PLAYERINSTANCE CorePlayerSingleton::GetInstance()
 struct sPlayInfo
 {
@@ -37,6 +38,7 @@ public:
     const sPlayInfo* GetPhysicalInfo(CoreStatus::TYPE type);
     const sPlayInfo* GetMoneyInfo(CoreStatus::TYPE type);
     bool IsInteraction();
+    void Update();
 private:
     double m_dPhysical;
     double m_dMoney;
@@ -44,6 +46,7 @@ private:
     CoreStatusController *m_pStatusController;
     std::map<CoreStatus::TYPE,sPlayInfo> m_mapPhysical;
     std::map<CoreStatus::TYPE,sPlayInfo> m_mapMoney;
+    CoreInteraction *m_pInteraction;
 };
 
 class CorePlayerSingleton:public CoreSingleton<CorePlayer>

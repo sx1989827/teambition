@@ -11,6 +11,20 @@
 		B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614019ED0DBD00B618EB /* Notify.cpp */; };
 		B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614319ED0E4400B618EB /* Serializ.cpp */; };
 		B5530CE919F0F9000020A5AB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5530CE719F0F9000020A5AB /* Application.cpp */; };
+		B57D323D1A11AE68006E66E5 /* WorkMeetNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D323B1A11AE68006E66E5 /* WorkMeetNoLove.cpp */; };
+		B57D32401A11B3AC006E66E5 /* WorkIOINoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D323E1A11B3AC006E66E5 /* WorkIOINoLove.cpp */; };
+		B57D32431A11B3BD006E66E5 /* WorkHelpNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32411A11B3BD006E66E5 /* WorkHelpNoLove.cpp */; };
+		B57D32461A11B3D3006E66E5 /* WorkTalkNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32441A11B3D3006E66E5 /* WorkTalkNoLove.cpp */; };
+		B57D32491A11B3E5006E66E5 /* WorkTalkLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32471A11B3E5006E66E5 /* WorkTalkLove.cpp */; };
+		B57D324C1A11ECA5006E66E5 /* WorkIOILove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D324A1A11ECA5006E66E5 /* WorkIOILove.cpp */; };
+		B57D324F1A11ECB5006E66E5 /* WorkHelpLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D324D1A11ECB5006E66E5 /* WorkHelpLove.cpp */; };
+		B57D32521A11ECCA006E66E5 /* LeisureIOINoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32501A11ECCA006E66E5 /* LeisureIOINoLove.cpp */; };
+		B57D32551A11ECDE006E66E5 /* LeisureTalkNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32531A11ECDD006E66E5 /* LeisureTalkNoLove.cpp */; };
+		B57D32581A11ECED006E66E5 /* LeisureIOILove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32561A11ECED006E66E5 /* LeisureIOILove.cpp */; };
+		B57D325B1A11ED03006E66E5 /* LeisureTalkLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32591A11ED03006E66E5 /* LeisureTalkLove.cpp */; };
+		B57D325E1A11ED16006E66E5 /* DateIOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D325C1A11ED16006E66E5 /* DateIOI.cpp */; };
+		B57D32611A11ED25006E66E5 /* DateNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D325F1A11ED25006E66E5 /* DateNoLove.cpp */; };
+		B57D32641A11ED32006E66E5 /* DateLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32621A11ED32006E66E5 /* DateLove.cpp */; };
 		B57F64AB19F750C000F88FB2 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64A919F750C000F88FB2 /* Status.cpp */; };
 		B57F64AE19F750DB00F88FB2 /* StatusController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64AC19F750DB00F88FB2 /* StatusController.cpp */; };
 		B57F64B119F7512700F88FB2 /* Interaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64AF19F7512700F88FB2 /* Interaction.cpp */; };
@@ -52,6 +66,34 @@
 		B50C614419ED0E4400B618EB /* Serializ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serializ.h; sourceTree = "<group>"; };
 		B5530CE719F0F9000020A5AB /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		B5530CE819F0F9000020A5AB /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		B57D323B1A11AE68006E66E5 /* WorkMeetNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkMeetNoLove.cpp; sourceTree = "<group>"; };
+		B57D323C1A11AE68006E66E5 /* WorkMeetNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkMeetNoLove.h; sourceTree = "<group>"; };
+		B57D323E1A11B3AC006E66E5 /* WorkIOINoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkIOINoLove.cpp; sourceTree = "<group>"; };
+		B57D323F1A11B3AC006E66E5 /* WorkIOINoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkIOINoLove.h; sourceTree = "<group>"; };
+		B57D32411A11B3BD006E66E5 /* WorkHelpNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkHelpNoLove.cpp; sourceTree = "<group>"; };
+		B57D32421A11B3BD006E66E5 /* WorkHelpNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHelpNoLove.h; sourceTree = "<group>"; };
+		B57D32441A11B3D3006E66E5 /* WorkTalkNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkTalkNoLove.cpp; sourceTree = "<group>"; };
+		B57D32451A11B3D3006E66E5 /* WorkTalkNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkTalkNoLove.h; sourceTree = "<group>"; };
+		B57D32471A11B3E5006E66E5 /* WorkTalkLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkTalkLove.cpp; sourceTree = "<group>"; };
+		B57D32481A11B3E5006E66E5 /* WorkTalkLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkTalkLove.h; sourceTree = "<group>"; };
+		B57D324A1A11ECA5006E66E5 /* WorkIOILove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkIOILove.cpp; sourceTree = "<group>"; };
+		B57D324B1A11ECA5006E66E5 /* WorkIOILove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkIOILove.h; sourceTree = "<group>"; };
+		B57D324D1A11ECB5006E66E5 /* WorkHelpLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkHelpLove.cpp; sourceTree = "<group>"; };
+		B57D324E1A11ECB5006E66E5 /* WorkHelpLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHelpLove.h; sourceTree = "<group>"; };
+		B57D32501A11ECCA006E66E5 /* LeisureIOINoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeisureIOINoLove.cpp; sourceTree = "<group>"; };
+		B57D32511A11ECCA006E66E5 /* LeisureIOINoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeisureIOINoLove.h; sourceTree = "<group>"; };
+		B57D32531A11ECDD006E66E5 /* LeisureTalkNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeisureTalkNoLove.cpp; sourceTree = "<group>"; };
+		B57D32541A11ECDD006E66E5 /* LeisureTalkNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeisureTalkNoLove.h; sourceTree = "<group>"; };
+		B57D32561A11ECED006E66E5 /* LeisureIOILove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeisureIOILove.cpp; sourceTree = "<group>"; };
+		B57D32571A11ECED006E66E5 /* LeisureIOILove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeisureIOILove.h; sourceTree = "<group>"; };
+		B57D32591A11ED03006E66E5 /* LeisureTalkLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeisureTalkLove.cpp; sourceTree = "<group>"; };
+		B57D325A1A11ED03006E66E5 /* LeisureTalkLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeisureTalkLove.h; sourceTree = "<group>"; };
+		B57D325C1A11ED16006E66E5 /* DateIOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateIOI.cpp; sourceTree = "<group>"; };
+		B57D325D1A11ED16006E66E5 /* DateIOI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateIOI.h; sourceTree = "<group>"; };
+		B57D325F1A11ED25006E66E5 /* DateNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateNoLove.cpp; sourceTree = "<group>"; };
+		B57D32601A11ED25006E66E5 /* DateNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateNoLove.h; sourceTree = "<group>"; };
+		B57D32621A11ED32006E66E5 /* DateLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateLove.cpp; sourceTree = "<group>"; };
+		B57D32631A11ED32006E66E5 /* DateLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateLove.h; sourceTree = "<group>"; };
 		B57F64A919F750C000F88FB2 /* Status.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Status.cpp; sourceTree = "<group>"; };
 		B57F64AA19F750C000F88FB2 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		B57F64AC19F750DB00F88FB2 /* StatusController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusController.cpp; sourceTree = "<group>"; };
@@ -125,6 +167,34 @@
 			children = (
 				B57F64AF19F7512700F88FB2 /* Interaction.cpp */,
 				B57F64B019F7512700F88FB2 /* Interaction.h */,
+				B57D323B1A11AE68006E66E5 /* WorkMeetNoLove.cpp */,
+				B57D323C1A11AE68006E66E5 /* WorkMeetNoLove.h */,
+				B57D323E1A11B3AC006E66E5 /* WorkIOINoLove.cpp */,
+				B57D323F1A11B3AC006E66E5 /* WorkIOINoLove.h */,
+				B57D32411A11B3BD006E66E5 /* WorkHelpNoLove.cpp */,
+				B57D32421A11B3BD006E66E5 /* WorkHelpNoLove.h */,
+				B57D32441A11B3D3006E66E5 /* WorkTalkNoLove.cpp */,
+				B57D32451A11B3D3006E66E5 /* WorkTalkNoLove.h */,
+				B57D32471A11B3E5006E66E5 /* WorkTalkLove.cpp */,
+				B57D32481A11B3E5006E66E5 /* WorkTalkLove.h */,
+				B57D324A1A11ECA5006E66E5 /* WorkIOILove.cpp */,
+				B57D324B1A11ECA5006E66E5 /* WorkIOILove.h */,
+				B57D324D1A11ECB5006E66E5 /* WorkHelpLove.cpp */,
+				B57D324E1A11ECB5006E66E5 /* WorkHelpLove.h */,
+				B57D32501A11ECCA006E66E5 /* LeisureIOINoLove.cpp */,
+				B57D32511A11ECCA006E66E5 /* LeisureIOINoLove.h */,
+				B57D32531A11ECDD006E66E5 /* LeisureTalkNoLove.cpp */,
+				B57D32541A11ECDD006E66E5 /* LeisureTalkNoLove.h */,
+				B57D32561A11ECED006E66E5 /* LeisureIOILove.cpp */,
+				B57D32571A11ECED006E66E5 /* LeisureIOILove.h */,
+				B57D32591A11ED03006E66E5 /* LeisureTalkLove.cpp */,
+				B57D325A1A11ED03006E66E5 /* LeisureTalkLove.h */,
+				B57D325C1A11ED16006E66E5 /* DateIOI.cpp */,
+				B57D325D1A11ED16006E66E5 /* DateIOI.h */,
+				B57D325F1A11ED25006E66E5 /* DateNoLove.cpp */,
+				B57D32601A11ED25006E66E5 /* DateNoLove.h */,
+				B57D32621A11ED32006E66E5 /* DateLove.cpp */,
+				B57D32631A11ED32006E66E5 /* DateLove.h */,
 			);
 			path = Interaction;
 			sourceTree = "<group>";
@@ -280,28 +350,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57D32431A11B3BD006E66E5 /* WorkHelpNoLove.cpp in Sources */,
 				B57F64C019F7542400F88FB2 /* Mood.cpp in Sources */,
+				B57D32401A11B3AC006E66E5 /* WorkIOINoLove.cpp in Sources */,
+				B57D32611A11ED25006E66E5 /* DateNoLove.cpp in Sources */,
 				B504E3D919F0AF0E00767625 /* Save.cpp in Sources */,
 				B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */,
 				B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */,
+				B57D324C1A11ECA5006E66E5 /* WorkIOILove.cpp in Sources */,
 				B5E146BD19FA3CE600AED87E /* StatusWork.cpp in Sources */,
+				B57D32641A11ED32006E66E5 /* DateLove.cpp in Sources */,
 				B5530CE919F0F9000020A5AB /* Application.cpp in Sources */,
+				B57D325B1A11ED03006E66E5 /* LeisureTalkLove.cpp in Sources */,
 				B5E730CB19EBB10200CF6A51 /* Time.cpp in Sources */,
+				B57D32491A11B3E5006E66E5 /* WorkTalkLove.cpp in Sources */,
 				B57F64C319F7545800F88FB2 /* Favorite.cpp in Sources */,
 				B5E730C819EB865300CF6A51 /* Log.cpp in Sources */,
 				B5E730CE19EBB90500CF6A51 /* Constant.cpp in Sources */,
 				B57F64AE19F750DB00F88FB2 /* StatusController.cpp in Sources */,
 				B57F64BA19F753E000F88FB2 /* Player.cpp in Sources */,
+				B57D325E1A11ED16006E66E5 /* DateIOI.cpp in Sources */,
 				B5E146B719FA3C6F00AED87E /* StatusLeisure.cpp in Sources */,
 				B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */,
 				B57F64BD19F753EC00F88FB2 /* Girl.cpp in Sources */,
+				B57D32581A11ECED006E66E5 /* LeisureIOILove.cpp in Sources */,
+				B57D323D1A11AE68006E66E5 /* WorkMeetNoLove.cpp in Sources */,
 				B57F64AB19F750C000F88FB2 /* Status.cpp in Sources */,
 				B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */,
 				B5E146BA19FA3CCE00AED87E /* StatusSleep.cpp in Sources */,
+				B57D32461A11B3D3006E66E5 /* WorkTalkNoLove.cpp in Sources */,
 				B57F64B119F7512700F88FB2 /* Interaction.cpp in Sources */,
+				B57D324F1A11ECB5006E66E5 /* WorkHelpLove.cpp in Sources */,
 				B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */,
 				B5E730D119EBE25200CF6A51 /* Oberserver.cpp in Sources */,
+				B57D32521A11ECCA006E66E5 /* LeisureIOINoLove.cpp in Sources */,
 				B5E730C419EB768B00CF6A51 /* Singleton.cpp in Sources */,
+				B57D32551A11ECDE006E66E5 /* LeisureTalkNoLove.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

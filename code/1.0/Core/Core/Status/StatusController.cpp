@@ -87,7 +87,13 @@ void CoreStatusController::ChangeStatus(CoreStatus::TYPE type)
     m_pStatus->OnEnter();
 }
 
-
+void CoreStatusController::Update()
+{
+    if(m_pStatus)
+    {
+        m_pStatus->OnUpdate();
+    }
+}
 
 
 

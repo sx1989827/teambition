@@ -18,6 +18,7 @@ public:
     CoreStatus::TYPE GetStatus();
     void Rollback();
     void ChangeStatus(CoreStatus::TYPE type);
+    void Update();
 private:
     CoreStatus *m_pStatus;
     CoreStatus *m_pPreStatus;

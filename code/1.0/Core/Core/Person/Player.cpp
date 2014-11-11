@@ -13,12 +13,17 @@ CorePlayer::CorePlayer()
     m_dPhysical=0;
     m_dMoney=0;
     m_bLove=false;
+    m_pInteraction=0;
     m_pStatusController=new CoreStatusController;
     
 }
 CorePlayer::~CorePlayer()
 {
     delete m_pStatusController;
+    if(m_pInteraction)
+    {
+        delete m_pInteraction;
+    }
 }
 
 void CorePlayer::Serializ(node* out)
@@ -171,10 +176,27 @@ const sPlayInfo* CorePlayer::GetMoneyInfo(CoreStatus::TYPE type)
 
 bool CorePlayer::IsInteraction()
 {
-    return false;
+    if(m_pInteraction)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
-
+void CorePlayer::Update()
+{
+    if(m_pInteraction)
+    {
+        
+    }
+    else
+    {
+        m_pStatusController->Update();
+    }
+}
 
 
 

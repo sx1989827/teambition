@@ -23,6 +23,7 @@ public:
     CoreGirl *GetGirl();
     CorePlayer* GetPlayer();
     void Reset(CoreGirl::TYPE type);
+    void Update();
 private:
     CoreNotify* m_pNotify;
     CoreSave* m_pSave;
