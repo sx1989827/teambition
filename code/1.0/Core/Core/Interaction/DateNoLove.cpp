@@ -17,6 +17,17 @@ void CoreDateNoLove::Update()
     
 }
 
+bool CoreDateNoLove::Enter()
+{
+    
+}
+
+void CoreDateNoLove::Leave()
+{
+    
+}
+
+
 bool CoreDateNoLove::IsNeedEnd()
 {
     return true;
@@ -24,7 +35,7 @@ bool CoreDateNoLove::IsNeedEnd()
 
 bool CoreDateNoLove::IsEnd()
 {
-    return bEnd;
+    return m_bEnd;
 }
 
 CoreInteraction::TYPE CoreDateNoLove::GetType()

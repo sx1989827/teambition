@@ -54,7 +54,10 @@ CoreInteraction* CoreInteraction::CreateInstance(TYPE type)
     }
 }
 
-
+CoreInteraction::CoreInteraction()
+{
+    m_bEnd=false;
+}
 
 
 

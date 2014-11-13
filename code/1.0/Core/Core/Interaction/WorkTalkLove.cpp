@@ -7,6 +7,8 @@
 //
 
 #include "WorkTalkLove.h"
+#include "../Person/Player.h"
+const double g_dPhysical=-6;
 CoreInteraction*  CoreWorkTalkLove::CreateInstance()
 {
     return new CoreWorkTalkLove;
@@ -14,8 +16,20 @@ CoreInteraction*  CoreWorkTalkLove::CreateInstance()
 
 void CoreWorkTalkLove::Update()
 {
+
+}
+
+bool CoreWorkTalkLove::Enter()
+{
+    PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+g_dPhysical);
+    return true;
+}
+
+void CoreWorkTalkLove::Leave()
+{
     
 }
+
 
 bool CoreWorkTalkLove::IsNeedEnd()
 {
@@ -24,7 +38,7 @@ bool CoreWorkTalkLove::IsNeedEnd()
 
 bool CoreWorkTalkLove::IsEnd()
 {
-    return bEnd;
+    return m_bEnd;
 }
 
 CoreInteraction::TYPE CoreWorkTalkLove::GetType()

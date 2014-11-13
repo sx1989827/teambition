@@ -17,6 +17,17 @@ void CoreWorkIOINoLove::Update()
     
 }
 
+bool CoreWorkIOINoLove::Enter()
+{
+    return true;
+}
+
+void CoreWorkIOINoLove::Leave()
+{
+    
+}
+
+
 bool CoreWorkIOINoLove::IsNeedEnd()
 {
     return false;
@@ -24,7 +35,7 @@ bool CoreWorkIOINoLove::IsNeedEnd()
 
 bool CoreWorkIOINoLove::IsEnd()
 {
-    return bEnd;
+    return m_bEnd;
 }
 
 CoreInteraction::TYPE CoreWorkIOINoLove::GetType()

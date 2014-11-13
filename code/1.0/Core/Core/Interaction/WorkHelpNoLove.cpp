@@ -19,21 +19,31 @@ CoreInteraction*  CoreWorkHelpNoLove::CreateInstance()
 
 void CoreWorkHelpNoLove::Update()
 {
-    if(!bEnd)
+    if(!m_bEnd)
     {
         if(time(0)-m_StartTime.GetOriTime()>=1800)
         {
-            bEnd=true;
-            PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+g_dPhysical);
-            GIRLINSTANCE->SetIOI(GIRLINSTANCE->GetIOI()+g_dIOI);
-            PLAYERINSTANCE->GetStatusController()->ResetTime(m_StartTime.GetOriTime()+1800);
+            m_bEnd=true;
         }
     }
 }
 
+bool CoreWorkHelpNoLove::Enter()
+{
+    return true;
+}
+
+void CoreWorkHelpNoLove::Leave()
+{
+    PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+g_dPhysical);
+    GIRLINSTANCE->SetIOI(GIRLINSTANCE->GetIOI()+g_dIOI);
+    PLAYERINSTANCE->GetStatusController()->ResetTime(m_StartTime.GetOriTime()+1800);
+}
+
+
 bool CoreWorkHelpNoLove::IsEnd()
 {
-    return bEnd;
+    return m_bEnd;
 }
 
 bool CoreWorkHelpNoLove::IsNeedEnd()

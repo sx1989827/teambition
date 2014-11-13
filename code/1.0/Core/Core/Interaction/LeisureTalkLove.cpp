@@ -7,6 +7,8 @@
 //
 
 #include "LeisureTalkLove.h"
+#include "../Person/Player.h"
+const double g_dPhysical=-4;
 CoreInteraction*  CoreLeisureTalkLove::CreateInstance()
 {
     return new CoreLeisureTalkLove;
@@ -14,8 +16,20 @@ CoreInteraction*  CoreLeisureTalkLove::CreateInstance()
 
 void CoreLeisureTalkLove::Update()
 {
+
+}
+
+bool CoreLeisureTalkLove::Enter()
+{
+    PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+g_dPhysical);
+    return true;
+}
+
+void CoreLeisureTalkLove::Leave()
+{
     
 }
+
 
 bool CoreLeisureTalkLove::IsNeedEnd()
 {
@@ -24,7 +38,7 @@ bool CoreLeisureTalkLove::IsNeedEnd()
 
 bool CoreLeisureTalkLove::IsEnd()
 {
-    return bEnd;
+    return m_bEnd;
 }
 
 CoreInteraction::TYPE CoreLeisureTalkLove::GetType()

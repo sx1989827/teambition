@@ -198,8 +198,10 @@ void CorePlayer::Update()
             }
             if(m_pInteraction->IsEnd())
             {
+                m_pInteraction->Leave();
                 delete m_pInteraction;
                 m_pInteraction=0;
+                m_pStatusController->Update();
             }
         }
         else
@@ -217,10 +219,13 @@ bool CorePlayer::EnterInteraction(CoreInteraction::TYPE type)
 {
     if(m_pInteraction)
     {
+        m_pInteraction->Leave();
         delete m_pInteraction;
         m_pInteraction=0;
     }
+    m_pStatusController->Update();
     m_pInteraction=CoreInteraction::CreateInstance(type);
+    m_pInteraction->Enter();
     if(m_pInteraction!=0)
     {
         return true;
@@ -235,9 +240,11 @@ void CorePlayer::LeaveInteraction()
 {
     if(m_pInteraction)
     {
+        m_pInteraction->Leave();
         delete m_pInteraction;
         m_pInteraction=0;
     }
+    m_pStatusController->ResetTime(time(0));
 }
 
 

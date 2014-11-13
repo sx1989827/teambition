@@ -15,14 +15,17 @@ class CoreInteraction
 public:
     enum TYPE {WORKMEETNOLOVE,WORKIOINOLOVE,WORKHELPNOLOVE,WORKTALKNOLOVE,WORKTALKLOVE,WORKIOILOVE,WORKHELPLOVE,LEISUREIOINOLOVE,LEISURETALKNOLOVE,LEISUREIOILOVE,LEISURETALKLOVE,DATEIOI,DATENOLOVE,DATELOVE};
     static CoreInteraction* CreateInstance(TYPE type);
+    virtual bool Enter()=0;
     virtual void Update()=0;
+    virtual void Leave()=0;
     virtual bool IsEnd()=0;
     virtual bool IsNeedEnd()=0;
     virtual TYPE GetType()=0;
+    CoreInteraction();
     virtual ~CoreInteraction(){}
 protected:
     CoreTime m_StartTime;
-    bool bEnd;
+    bool m_bEnd;
 private:
     static bool bInit;
     typedef  CoreInteraction* (*Func)();

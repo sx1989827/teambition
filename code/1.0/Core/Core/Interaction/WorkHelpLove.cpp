@@ -7,6 +7,11 @@
 //
 
 #include "WorkHelpLove.h"
+#include "../Person/Player.h"
+#include "../Person/Girl.h"
+#include "../Status/StatusController.h"
+const double g_dPhysical=-3;
+const double g_dIOI=3;
 CoreInteraction*  CoreWorkHelpLove::CreateInstance()
 {
     return new CoreWorkHelpLove;
@@ -14,8 +19,27 @@ CoreInteraction*  CoreWorkHelpLove::CreateInstance()
 
 void CoreWorkHelpLove::Update()
 {
-    
+    if(!m_bEnd)
+    {
+        if(time(0)-m_StartTime.GetOriTime()>=1800)
+        {
+            m_bEnd=true;
+        }
+    }
 }
+
+bool CoreWorkHelpLove::Enter()
+{
+    return true;
+}
+
+void CoreWorkHelpLove::Leave()
+{
+    PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+g_dPhysical);
+    GIRLINSTANCE->SetIOI(GIRLINSTANCE->GetIOI()+g_dIOI);
+    PLAYERINSTANCE->GetStatusController()->ResetTime(m_StartTime.GetOriTime()+1800);
+}
+
 
 bool CoreWorkHelpLove::IsNeedEnd()
 {
@@ -24,7 +48,7 @@ bool CoreWorkHelpLove::IsNeedEnd()
 
 bool CoreWorkHelpLove::IsEnd()
 {
-    return bEnd;
+    return m_bEnd;
 }
 
 CoreInteraction::TYPE CoreWorkHelpLove::GetType()

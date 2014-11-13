@@ -17,6 +17,17 @@ void CoreDateIOI::Update()
     
 }
 
+bool CoreDateIOI::Enter()
+{
+    
+}
+
+void CoreDateIOI::Leave()
+{
+    
+}
+
+
 bool CoreDateIOI::IsNeedEnd()
 {
     return true;
@@ -25,7 +36,7 @@ bool CoreDateIOI::IsNeedEnd()
 
 bool CoreDateIOI::IsEnd()
 {
-    return bEnd;
+    return m_bEnd;
 }
 
 CoreInteraction::TYPE CoreDateIOI::GetType()
