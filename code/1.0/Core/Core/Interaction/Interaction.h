@@ -17,9 +17,12 @@ public:
     static CoreInteraction* CreateInstance(TYPE type);
     virtual void Update()=0;
     virtual bool IsEnd()=0;
+    virtual bool IsNeedEnd()=0;
     virtual TYPE GetType()=0;
+    virtual ~CoreInteraction(){}
 protected:
     CoreTime m_StartTime;
+    bool bEnd;
 private:
     static bool bInit;
     typedef  CoreInteraction* (*Func)();

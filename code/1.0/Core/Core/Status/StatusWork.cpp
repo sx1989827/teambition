@@ -15,31 +15,24 @@ void CoreStatusWork::OnEnter()
 }
 void CoreStatusWork::OnUpdate()
 {
-    if(PLAYERINSTANCE->IsInteraction())
+    const  sPlayInfo *info=PLAYERINSTANCE->GetPhysicalInfo(CoreStatus::WORK);
+    if(info)
     {
-        
-    }
-    else
-    {
-        const  sPlayInfo *info=PLAYERINSTANCE->GetPhysicalInfo(CoreStatus::WORK);
-        if(info)
+        long count=(time(0)-m_StartTime.GetOriTime())/info->time;
+        if(count>0)
         {
-            long count=(time(0)-m_StartTime.GetOriTime())/info->time;
-            if(count>0)
-            {
-                PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+(count*info->offset));
-                m_StartTime.Reset();
-            }
+            PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+(count*info->offset));
+            m_StartTime.Reset();
         }
-        info=PLAYERINSTANCE->GetMoneyInfo(CoreStatus::WORK);
-        if(info)
+    }
+    info=PLAYERINSTANCE->GetMoneyInfo(CoreStatus::WORK);
+    if(info)
+    {
+        long count=(time(0)-m_StartTime.GetOriTime())/info->time;
+        if(count>0)
         {
-            long count=(time(0)-m_StartTime.GetOriTime())/info->time;
-            if(count>0)
-            {
-                PLAYERINSTANCE->SetMoney(PLAYERINSTANCE->GetMoney()+(count*info->offset));
-                m_StartTime.Reset();
-            }
+            PLAYERINSTANCE->SetMoney(PLAYERINSTANCE->GetMoney()+(count*info->offset));
+            m_StartTime.Reset();
         }
     }
 }

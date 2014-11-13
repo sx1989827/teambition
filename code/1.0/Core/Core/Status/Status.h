@@ -19,6 +19,7 @@ public:
     virtual void OnUpdate()=0;
     virtual void OnExit()=0;
     virtual TYPE GetType()=0;
+    void ResetTime(long lTime);
 protected:
     CoreTime m_StartTime;
 };

@@ -19,6 +19,7 @@ public:
     void Rollback();
     void ChangeStatus(CoreStatus::TYPE type);
     void Update();
+    void ResetTime(long lTime);
 private:
     CoreStatus *m_pStatus;
     CoreStatus *m_pPreStatus;

@@ -7,3 +7,7 @@
 //
 
 #include "Status.h"
+void CoreStatus::ResetTime(long lTime)
+{
+    m_StartTime.Attach(lTime);
+}

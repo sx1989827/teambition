@@ -95,7 +95,13 @@ void CoreStatusController::Update()
     }
 }
 
-
+void CoreStatusController::ResetTime(long lTime)
+{
+    if(m_pStatus)
+    {
+        m_pStatus->ResetTime(lTime);
+    }
+}
 
 
 

@@ -17,12 +17,28 @@ void CoreWorkIOILove::Update()
     
 }
 
-bool CoreWorkIOILove::IsEnd()
+
+bool CoreWorkIOILove::IsNeedEnd()
 {
     return false;
+}
+
+bool CoreWorkIOILove::IsEnd()
+{
+    return bEnd;
 }
 
 CoreInteraction::TYPE CoreWorkIOILove::GetType()
 {
     return WORKIOILOVE;
 }
+
+
+
+
+
+
+
+
+
+

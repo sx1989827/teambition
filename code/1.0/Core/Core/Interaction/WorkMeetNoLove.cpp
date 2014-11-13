@@ -12,6 +12,16 @@ CoreInteraction*  CoreWorkMeetNoLove::CreateInstance()
     return new CoreWorkMeetNoLove;
 }
 
+CoreWorkMeetNoLove::CoreWorkMeetNoLove()
+{
+    bEnd=false;
+}
+
+bool CoreWorkMeetNoLove::IsNeedEnd()
+{
+    return false;
+}
+
 void CoreWorkMeetNoLove::Update()
 {
     
@@ -19,7 +29,7 @@ void CoreWorkMeetNoLove::Update()
 
 bool CoreWorkMeetNoLove::IsEnd()
 {
-    return false;
+    return bEnd;
 }
 
 CoreInteraction::TYPE CoreWorkMeetNoLove::GetType()

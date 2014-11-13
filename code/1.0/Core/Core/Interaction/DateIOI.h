@@ -17,6 +17,7 @@ public:
     void Update();
     bool IsEnd();
     TYPE GetType();
+    bool IsNeedEnd();
 };
 
 #endif /* defined(__Core__DateIOI__) */

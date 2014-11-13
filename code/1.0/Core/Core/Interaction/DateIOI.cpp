@@ -17,9 +17,15 @@ void CoreDateIOI::Update()
     
 }
 
+bool CoreDateIOI::IsNeedEnd()
+{
+    return true;
+}
+
+
 bool CoreDateIOI::IsEnd()
 {
-    return false;
+    return bEnd;
 }
 
 CoreInteraction::TYPE CoreDateIOI::GetType()

@@ -15,10 +15,7 @@ void CoreStatusLeisure::OnEnter()
 }
 void CoreStatusLeisure::OnUpdate()
 {
-    if(PLAYERINSTANCE->IsInteraction())
-    {
-        
-    }
+
 }
 void CoreStatusLeisure::OnExit()
 {

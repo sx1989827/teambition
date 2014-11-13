@@ -190,7 +190,22 @@ void CorePlayer::Update()
 {
     if(m_pInteraction)
     {
-        
+        if(m_pInteraction->IsNeedEnd())
+        {
+            if(!m_pInteraction->IsEnd())
+            {
+                m_pInteraction->Update();
+            }
+            if(m_pInteraction->IsEnd())
+            {
+                delete m_pInteraction;
+                m_pInteraction=0;
+            }
+        }
+        else
+        {
+            m_pInteraction->Update();
+        }
     }
     else
     {
@@ -198,7 +213,32 @@ void CorePlayer::Update()
     }
 }
 
+bool CorePlayer::EnterInteraction(CoreInteraction::TYPE type)
+{
+    if(m_pInteraction)
+    {
+        delete m_pInteraction;
+        m_pInteraction=0;
+    }
+    m_pInteraction=CoreInteraction::CreateInstance(type);
+    if(m_pInteraction!=0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
+void CorePlayer::LeaveInteraction()
+{
+    if(m_pInteraction)
+    {
+        delete m_pInteraction;
+        m_pInteraction=0;
+    }
+}
 
 
 

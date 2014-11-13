@@ -25,6 +25,7 @@ public:
     CoreTime GetTimeSince(long sec) const;
     void Reset();
     time_t GetOriTime();
+    void Attach(long lTime);
 private:
     time_t m_lTime;
     

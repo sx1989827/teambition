@@ -17,9 +17,14 @@ void CoreLeisureIOINoLove::Update()
     
 }
 
-bool CoreLeisureIOINoLove::IsEnd()
+bool CoreLeisureIOINoLove::IsNeedEnd()
 {
     return false;
+}
+
+bool CoreLeisureIOINoLove::IsEnd()
+{
+    return bEnd;
 }
 
 CoreInteraction::TYPE CoreLeisureIOINoLove::GetType()

@@ -14,8 +14,10 @@ class CoreWorkMeetNoLove:public CoreInteraction
 {
 public:
     static CoreInteraction* CreateInstance();
+    CoreWorkMeetNoLove();
     void Update();
     bool IsEnd();
+    bool IsNeedEnd();
     TYPE GetType();
 };
 

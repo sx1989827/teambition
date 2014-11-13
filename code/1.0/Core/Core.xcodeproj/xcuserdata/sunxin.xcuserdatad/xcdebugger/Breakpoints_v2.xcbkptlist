@@ -479,7 +479,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "CorePlayer::GetPhysical()"
+            landmarkName = "CorePlayer::ChangeStatus(CoreStatus::TYPE type)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -494,9 +494,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "CorePlayer::ChangeStatus(CoreStatus::TYPE type)"
-            landmarkType = "5">
+            endingLineNumber = "63">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -543,7 +541,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
             endingLineNumber = "99"
-            landmarkName = "CorePlayer::SetLove(bool bLove)"
+            landmarkName = "CorePlayer::GetLove()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -559,7 +557,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "CorePlayer::SetLove(bool bLove)"
+            landmarkName = "CorePlayer::GetLove()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -17,9 +17,14 @@ void CoreWorkTalkLove::Update()
     
 }
 
-bool CoreWorkTalkLove::IsEnd()
+bool CoreWorkTalkLove::IsNeedEnd()
 {
     return false;
+}
+
+bool CoreWorkTalkLove::IsEnd()
+{
+    return bEnd;
 }
 
 CoreInteraction::TYPE CoreWorkTalkLove::GetType()

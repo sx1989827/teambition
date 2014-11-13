@@ -39,6 +39,8 @@ public:
     const sPlayInfo* GetMoneyInfo(CoreStatus::TYPE type);
     bool IsInteraction();
     void Update();
+    bool EnterInteraction(CoreInteraction::TYPE type);
+    void LeaveInteraction();
 private:
     double m_dPhysical;
     double m_dMoney;

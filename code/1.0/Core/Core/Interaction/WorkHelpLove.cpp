@@ -17,12 +17,22 @@ void CoreWorkHelpLove::Update()
     
 }
 
+bool CoreWorkHelpLove::IsNeedEnd()
+{
+    return true;
+}
+
 bool CoreWorkHelpLove::IsEnd()
 {
-    return false;
+    return bEnd;
 }
 
 CoreInteraction::TYPE CoreWorkHelpLove::GetType()
 {
     return WORKHELPLOVE;
 }
+
+
+
+
+

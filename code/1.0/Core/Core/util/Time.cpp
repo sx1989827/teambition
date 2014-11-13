@@ -96,7 +96,10 @@ time_t CoreTime::GetOriTime()
     return m_lTime;
 }
 
-
+void CoreTime::Attach(long lTime)
+{
+    m_lTime=lTime;
+}
 
 
 

@@ -17,9 +17,14 @@ void CoreLeisureTalkNoLove::Update()
     
 }
 
-bool CoreLeisureTalkNoLove::IsEnd()
+bool CoreLeisureTalkNoLove::IsNeedEnd()
 {
     return false;
+}
+
+bool CoreLeisureTalkNoLove::IsEnd()
+{
+    return bEnd;
 }
 
 CoreInteraction::TYPE CoreLeisureTalkNoLove::GetType()
