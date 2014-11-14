@@ -10,6 +10,7 @@
 #define __Core__DateNoLove__
 
 #include "Interaction.h"
+#include "DateBase.h"
 class CoreDateNoLove:public CoreInteraction
 {
 public:
@@ -20,6 +21,11 @@ public:
     bool IsEnd();
     TYPE GetType();
     bool IsNeedEnd();
+    void SetDateType(CoreDateBase::TYPE type);
+    ~CoreDateNoLove();
+    CoreDateNoLove();
+private:
+    CoreDateBase *m_pDate;
 };
 
 #endif /* defined(__Core__DateNoLove__) */

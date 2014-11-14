@@ -17,4 +17,10 @@ double CoreDateBase::GetIOIValue(double min,double max)
 CoreDateBase::CoreDateBase()
 {
     m_bEnd=false;
+    m_bIOI=false;
+}
+
+void CoreDateBase::SetIOI(bool bIOI)
+{
+    m_bIOI=bIOI;
 }

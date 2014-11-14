@@ -18,12 +18,15 @@ public:
     virtual void Leave()=0;
     virtual TYPE GetType()=0;
     virtual bool IsEnd()=0;
+    void SetIOI(bool bIOI);
     CoreDateBase();
+    virtual ~CoreDateBase(){}
 protected:
     double GetIOIValue(double min,double max);
     CoreTime m_StartTime;
     CoreTime m_FlagTime;
     bool m_bEnd;
+    bool m_bIOI;
 };
 
 #endif /* defined(__Core__DateBase__) */

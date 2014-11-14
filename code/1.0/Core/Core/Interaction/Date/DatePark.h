@@ -13,9 +13,9 @@
 class CoreDatePark:public CoreDateBase
 {
 public:
-    virtual bool Enter()=0;
-    virtual void Update()=0;
-    virtual void Leave()=0;
+    bool Enter();
+    void Update();
+    void Leave();
     TYPE GetType();
     bool IsEnd();
 };

@@ -10,6 +10,7 @@
 #define __Core__DateIOI__
 
 #include "Interaction.h"
+#include "DateBase.h"
 class CoreDateIOI:public CoreInteraction
 {
 public:
@@ -20,6 +21,11 @@ public:
     bool IsEnd();
     TYPE GetType();
     bool IsNeedEnd();
+    void SetDateType(CoreDateBase::TYPE type);
+    ~CoreDateIOI();
+    CoreDateIOI();
+private:
+    CoreDateBase *m_pDate;
 };
 
 #endif /* defined(__Core__DateIOI__) */

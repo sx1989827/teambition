@@ -12,10 +12,10 @@
 const double g_time=10;
 const double g_IOIMin=0.6;
 const double g_IOIMax=1;
-const double g_dPhysical=1;
+const double g_dPhysical=2;
 bool CoreDateEat::Enter()
 {
-    if(PLAYERINSTANCE->GetPhysical()>=20)
+    if(PLAYERINSTANCE->GetPhysical()>=(m_bIOI?20:30))
     {
         return true;
     }
@@ -33,7 +33,7 @@ void CoreDateEat::Update()
         {
             m_bEnd=true;
         }
-        if(time(0)-m_FlagTime.GetOriTime()>=600)
+        if(time(0)-m_FlagTime.GetOriTime()>=g_time*60)
         {
             m_FlagTime.Reset();
             PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+g_dPhysical);
