@@ -12,7 +12,7 @@
 void CoreStatusSleep::OnEnter()
 {
     m_StartTime.Reset();
-    
+    OBINSTANCE->PostOberserver(this, MSG_SLEEPENTER, 0);
 }
 void CoreStatusSleep::OnUpdate()
 {

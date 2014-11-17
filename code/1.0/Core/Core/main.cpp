@@ -18,7 +18,9 @@ int main(int argc, const char * argv[])
     NOTIFYCENTER->AdjustNotify();
     SAVEINSTANCE->Save();
     SAVEINSTANCE->UnSave();
-    
+    while (1) {
+        app.Update();
+    }
 }
 
 
