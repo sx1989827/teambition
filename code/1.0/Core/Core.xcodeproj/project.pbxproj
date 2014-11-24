@@ -16,6 +16,8 @@
 		B562B2D41A1475B300ADD418 /* DateFilm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B562B2D21A1475B300ADD418 /* DateFilm.cpp */; };
 		B562B2D71A1475C300ADD418 /* DateWalk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B562B2D51A1475C300ADD418 /* DateWalk.cpp */; };
 		B562B2DA1A1475E500ADD418 /* DatePark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B562B2D81A1475E500ADD418 /* DatePark.cpp */; };
+		B56562C01A22CABA009B3135 /* Story.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56562BE1A22CABA009B3135 /* Story.cpp */; };
+		B56562C41A2304D8009B3135 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56562C21A2304D8009B3135 /* Event.cpp */; };
 		B57D323D1A11AE68006E66E5 /* WorkMeetNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D323B1A11AE68006E66E5 /* WorkMeetNoLove.cpp */; };
 		B57D32401A11B3AC006E66E5 /* WorkIOINoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D323E1A11B3AC006E66E5 /* WorkIOINoLove.cpp */; };
 		B57D32431A11B3BD006E66E5 /* WorkHelpNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32411A11B3BD006E66E5 /* WorkHelpNoLove.cpp */; };
@@ -81,6 +83,10 @@
 		B562B2D61A1475C300ADD418 /* DateWalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateWalk.h; sourceTree = "<group>"; };
 		B562B2D81A1475E500ADD418 /* DatePark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DatePark.cpp; sourceTree = "<group>"; };
 		B562B2D91A1475E500ADD418 /* DatePark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePark.h; sourceTree = "<group>"; };
+		B56562BE1A22CABA009B3135 /* Story.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Story.cpp; sourceTree = "<group>"; };
+		B56562BF1A22CABA009B3135 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		B56562C21A2304D8009B3135 /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		B56562C31A2304D8009B3135 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		B57D323B1A11AE68006E66E5 /* WorkMeetNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkMeetNoLove.cpp; sourceTree = "<group>"; };
 		B57D323C1A11AE68006E66E5 /* WorkMeetNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkMeetNoLove.h; sourceTree = "<group>"; };
 		B57D323E1A11B3AC006E66E5 /* WorkIOINoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkIOINoLove.cpp; sourceTree = "<group>"; };
@@ -194,9 +200,29 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		B56562BD1A22CA8E009B3135 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				B56562BE1A22CABA009B3135 /* Story.cpp */,
+				B56562BF1A22CABA009B3135 /* Story.h */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		B56562C11A2304C6009B3135 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				B56562C21A2304D8009B3135 /* Event.cpp */,
+				B56562C31A2304D8009B3135 /* Event.h */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
 		B57F64A719F7500F00F88FB2 /* Interaction */ = {
 			isa = PBXGroup;
 			children = (
+				B56562C11A2304C6009B3135 /* Event */,
+				B56562BD1A22CA8E009B3135 /* Story */,
 				B562B2CB1A14754F00ADD418 /* Date */,
 				B57D325C1A11ED16006E66E5 /* DateIOI.cpp */,
 				B57D325D1A11ED16006E66E5 /* DateIOI.h */,
@@ -388,6 +414,7 @@
 				B562B2D71A1475C300ADD418 /* DateWalk.cpp in Sources */,
 				B57D32401A11B3AC006E66E5 /* WorkIOINoLove.cpp in Sources */,
 				B57D32611A11ED25006E66E5 /* DateNoLove.cpp in Sources */,
+				B56562C01A22CABA009B3135 /* Story.cpp in Sources */,
 				B504E3D919F0AF0E00767625 /* Save.cpp in Sources */,
 				B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */,
 				B562B2CE1A14757900ADD418 /* DateBase.cpp in Sources */,
@@ -418,6 +445,7 @@
 				B5E146BA19FA3CCE00AED87E /* StatusSleep.cpp in Sources */,
 				B57D32461A11B3D3006E66E5 /* WorkTalkNoLove.cpp in Sources */,
 				B57F64B119F7512700F88FB2 /* Interaction.cpp in Sources */,
+				B56562C41A2304D8009B3135 /* Event.cpp in Sources */,
 				B57D324F1A11ECB5006E66E5 /* WorkHelpLove.cpp in Sources */,
 				B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */,
 				B5E730D119EBE25200CF6A51 /* Oberserver.cpp in Sources */,

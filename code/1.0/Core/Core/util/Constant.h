@@ -11,6 +11,8 @@
 #ifdef XCODE
 #define SAVEFILE  "save"
 #define INITFILE    "init"
+#define STORYFILE "story"
+#define EVENTFILE "event"
 #elif defined(VS)
 #include <windows.h>
 #include <string>
