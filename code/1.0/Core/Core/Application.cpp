@@ -25,8 +25,15 @@ CoreApplication::CoreApplication()
     m_pGirl=new CoreGirl;
     CoreGirlSingleton::SetInstance(m_pGirl);
     vec.push_back(m_pGirl);
+    m_pStory=new CoreStory;
+    CoreStorySingleton::SetInstance(m_pStory);
+    vec.push_back(m_pStory);
     m_pSave->SetSaveObj(&vec);
     CoreSaveSingleton::SetInstance(m_pSave);
+    m_pGift=new CoreGift;
+    CoreGiftSingleton::SetInstance(m_pGift);
+    m_pEvent=new CoreEvent;
+    CoreEventSingleton::SetInstance(m_pEvent);
     m_pPlayer->ChangeStatus(CoreStatus::LEISURE);
 }
 
@@ -40,10 +47,16 @@ CoreApplication::~CoreApplication()
     CoreLogSingleton::Release();
     CoreGirlSingleton::Release();
     CorePlayerSingleton::Release();
+    CoreEventSingleton::Release();
+    CoreGiftSingleton::Release();
+    CoreStorySingleton::Release();
     delete m_pSave;
     delete m_pObManage;
     delete m_pNotify;
     delete m_pLog;
+    delete m_pGift;
+    delete m_pEvent;
+    delete m_pStory;
 }
 
 CoreGirl* CoreApplication::GetGirl()

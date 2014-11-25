@@ -15,6 +15,9 @@
 #include "Person/Player.h"
 #include "Status/Status.h"
 #include "Status/StatusController.h"
+#include "Interaction/Gift/Gift.h"
+#include "Interaction/Event/Event.h"
+#include "Interaction/Story/Story.h"
 class CoreApplication
 {
 public:
@@ -31,6 +34,9 @@ private:
     CoreLog *m_pLog;
     CoreGirl *m_pGirl;
     CorePlayer *m_pPlayer;
+    CoreGift *m_pGift;
+    CoreEvent *m_pEvent;
+    CoreStory *m_pStory;
 };
 
 

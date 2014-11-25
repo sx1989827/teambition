@@ -10,6 +10,7 @@
 		B504E3D919F0AF0E00767625 /* Save.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B504E3D719F0AF0E00767625 /* Save.cpp */; };
 		B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614019ED0DBD00B618EB /* Notify.cpp */; };
 		B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614319ED0E4400B618EB /* Serializ.cpp */; };
+		B5521EB71A24389200D5FD94 /* Gift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5521EB51A24389200D5FD94 /* Gift.cpp */; };
 		B5530CE919F0F9000020A5AB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5530CE719F0F9000020A5AB /* Application.cpp */; };
 		B562B2CE1A14757900ADD418 /* DateBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B562B2CC1A14757900ADD418 /* DateBase.cpp */; };
 		B562B2D11A1475A800ADD418 /* DateEat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B562B2CF1A1475A800ADD418 /* DateEat.cpp */; };
@@ -71,6 +72,8 @@
 		B50C614119ED0DBD00B618EB /* Notify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notify.h; sourceTree = "<group>"; };
 		B50C614319ED0E4400B618EB /* Serializ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Serializ.cpp; sourceTree = "<group>"; };
 		B50C614419ED0E4400B618EB /* Serializ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serializ.h; sourceTree = "<group>"; };
+		B5521EB51A24389200D5FD94 /* Gift.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gift.cpp; sourceTree = "<group>"; };
+		B5521EB61A24389200D5FD94 /* Gift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gift.h; sourceTree = "<group>"; };
 		B5530CE719F0F9000020A5AB /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		B5530CE819F0F9000020A5AB /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		B562B2CC1A14757900ADD418 /* DateBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateBase.cpp; sourceTree = "<group>"; };
@@ -183,6 +186,15 @@
 			path = notify;
 			sourceTree = "<group>";
 		};
+		B5521EB41A24388600D5FD94 /* Gift */ = {
+			isa = PBXGroup;
+			children = (
+				B5521EB51A24389200D5FD94 /* Gift.cpp */,
+				B5521EB61A24389200D5FD94 /* Gift.h */,
+			);
+			path = Gift;
+			sourceTree = "<group>";
+		};
 		B562B2CB1A14754F00ADD418 /* Date */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +233,7 @@
 		B57F64A719F7500F00F88FB2 /* Interaction */ = {
 			isa = PBXGroup;
 			children = (
+				B5521EB41A24388600D5FD94 /* Gift */,
 				B56562C11A2304C6009B3135 /* Event */,
 				B56562BD1A22CA8E009B3135 /* Story */,
 				B562B2CB1A14754F00ADD418 /* Date */,
@@ -440,6 +453,7 @@
 				B57D32581A11ECED006E66E5 /* LeisureIOILove.cpp in Sources */,
 				B57D323D1A11AE68006E66E5 /* WorkMeetNoLove.cpp in Sources */,
 				B562B2D11A1475A800ADD418 /* DateEat.cpp in Sources */,
+				B5521EB71A24389200D5FD94 /* Gift.cpp in Sources */,
 				B57F64AB19F750C000F88FB2 /* Status.cpp in Sources */,
 				B5E730BC19EB75A100CF6A51 /* main.cpp in Sources */,
 				B5E146BA19FA3CCE00AED87E /* StatusSleep.cpp in Sources */,

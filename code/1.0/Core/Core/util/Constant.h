@@ -13,6 +13,7 @@
 #define INITFILE    "init"
 #define STORYFILE "story"
 #define EVENTFILE "event"
+#define GIFTFILE "gift"
 #elif defined(VS)
 #include <windows.h>
 #include <string>
