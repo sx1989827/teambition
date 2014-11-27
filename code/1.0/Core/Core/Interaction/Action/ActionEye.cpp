@@ -8,7 +8,9 @@
 
 #include "ActionEye.h"
 #include "../../util/Header.h"
-
+#include "../../Person/Player.h"
+#include "../../Person/Girl.h"
+#include "../../Person/Mood.h"
 CoreActionEye::CoreActionEye()
 {
     xml x;
@@ -51,6 +53,7 @@ CoreActionEye::CoreActionEye()
                 mood.strMoodTrend=item->getattr("moodtrend");
                 mood.lMoodOffset=atoi(root->getattr("moodoffset").data());
                 mood.dIOIOffset=atof(root->getattr("ioi").data());
+                mood.strMoodDes=item->getattr("mooddes");
                 mapMood[mood.strMood]=mood;
             }
             info.vecGirl.push_back(mapMood);
@@ -62,7 +65,42 @@ CoreActionEye::CoreActionEye()
 
 bool CoreActionEye::Handle(CoreActionEye::TYPE type)
 {
-    
+    auto it=m_MapAction.find(type);
+    if(it==m_MapAction.end())
+    {
+        return false;
+    }
+    if(PLAYERINSTANCE->GetPhysical()<it->second.sPremise.dPhysical || (it->second.sPremise.strMood.size()>0 && strstr(it->second.sPremise.strMood.data(),GIRLINSTANCE->GetMood()->GetStrMood().data())==0) || GIRLINSTANCE->GetIOI()<it->second.sPremise.dIOI)
+    {
+        return false;
+    }
+    long i=0;
+    switch (GIRLINSTANCE->GetGirlType()) {
+        case CoreGirl::LOLI:
+            i=0;
+            break;
+        case CoreGirl::MAID:
+            i=1;
+            break;
+        case CoreGirl::QUEEN:
+            i=2;
+            break;
+        default:
+            break;
+    }
+    PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+it->second.sPremise.dPhysicalOffset);
+    sActionEyeMoodChange mood=it->second.vecGirl[i][GIRLINSTANCE->GetMood()->GetStrMood()];
+    double off=PLAYERINSTANCE->GetMoney()*0.0001+(GIRLINSTANCE->GetIOI()-50)/100.0f;
+    GIRLINSTANCE->SetIOI(GIRLINSTANCE->GetIOI()+mood.dIOIOffset+off);
+    if(it->first==GAZEFACE || it->first==LOOKBREAST || it->first==GAZEBREAST)
+    {
+        sMood MoodTransfer;
+        MoodTransfer.strDes=mood.strMoodDes;
+        MoodTransfer.strMood=mood.strMoodTrend;
+        MoodTransfer.lOffset=mood.lMoodOffset;
+        GIRLINSTANCE->GetMood()->Transfer(&MoodTransfer);
+    }
+    return true;
 }
 
 

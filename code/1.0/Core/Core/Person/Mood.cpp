@@ -154,9 +154,20 @@ void CoreMood::Reset(node* pNode)
     delete nc;
 }
 
+std::string CoreMood::GetStrMood()
+{
+    return m_strCurMood;
+}
 
-
-
+long CoreMood::QueryMoodType(std::string strMood)
+{
+    auto it=m_MoodMap.find(strMood);
+    if(it==m_MoodMap.end())
+    {
+        return -1;
+    }
+    return it->second;
+}
 
 
 

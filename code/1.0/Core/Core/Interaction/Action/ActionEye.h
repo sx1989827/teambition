@@ -22,6 +22,7 @@ struct sActionEyeMoodChange
 {
     std::string strMood;
     std::string strMoodTrend;
+    std::string strMoodDes;
     long lMoodOffset;
     double dIOIOffset;
 };

@@ -34,98 +34,98 @@
 	</lookface> 
 	<gazeface physical="1" mood="" ioi="0" physicaloffset="-0.2">
 	<loli>
-	<item mood="平静" moodtrend="害羞" moodoffset="1" ioi="0.6"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="1" ioi="0.6"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="1.2"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="1" ioi="1.4"/>
-	<item mood="伤心" moodtrend="平静" moodoffset="1" ioi="0.4"/>
-	<item mood="生气" moodtrend="平静" moodoffset="-1" ioi="-0.1"/>
-	<item mood="烦躁" moodtrend="平静" moodoffset="-1" ioi="-0.2"/>
-	<item mood="紧张" moodtrend="平静" moodoffset="1" ioi="0.3"/>
+	<item mood="平静" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6"/>
+	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.2"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="1.4"/>
+	<item mood="伤心" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.4"/>
+	<item mood="生气" moodtrend="平静" mooddes="你挺关注我的" moodoffset="-1" ioi="-0.1"/>
+	<item mood="烦躁" moodtrend="平静" mooddes="你挺关注我的" moodoffset="-1" ioi="-0.2"/>
+	<item mood="紧张" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.3"/>
 	</loli>
 	<maid>
-	<item mood="平静" moodtrend="害羞" moodoffset="1" ioi="0.5"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="1" ioi="0.6"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="1"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="1" ioi="1"/>
-	<item mood="伤心" moodtrend="平静" moodoffset="1" ioi="0.3"/>
-	<item mood="生气" moodtrend="平静" moodoffset="-1" ioi="-0.2"/>
-	<item mood="烦躁" moodtrend="平静" moodoffset="-1" ioi="-0.3"/>
-	<item mood="紧张" moodtrend="平静" moodoffset="1" ioi="0.2"/>
+	<item mood="平静" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.5"/>
+	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="1"/>
+	<item mood="伤心" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.3"/>
+	<item mood="生气" moodtrend="平静" mooddes="你挺关注我的" moodoffset="-1" ioi="-0.2"/>
+	<item mood="烦躁" moodtrend="平静" mooddes="你挺关注我的" moodoffset="-1" ioi="-0.3"/>
+	<item mood="紧张" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.2"/>
 	</maid>
 	<queen>
-	<item mood="平静" moodtrend="" moodoffset="0" ioi="0.2"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="1" ioi="0.6"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="0.8"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="1" ioi="0.8"/>
-	<item mood="伤心" moodtrend="" moodoffset="0" ioi="0.3"/>
-	<item mood="生气" moodtrend="" moodoffset="0" ioi="-0.6"/>
-	<item mood="烦躁" moodtrend="" moodoffset="0" ioi="-0.8"/>
-	<item mood="紧张" moodtrend="" moodoffset="0" ioi="0.3"/>
+	<item mood="平静" moodtrend="" mooddes="" moodoffset="0" ioi="0.2"/>
+	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.8"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.8"/>
+	<item mood="伤心" moodtrend="" mooddes="" moodoffset="0" ioi="0.3"/>
+	<item mood="生气" moodtrend="" mooddes="" moodoffset="0" ioi="-0.6"/>
+	<item mood="烦躁" moodtrend="" mooddes="" moodoffset="0" ioi="-0.8"/>
+	<item mood="紧张" moodtrend="" mooddes="" moodoffset="0" ioi="0.3"/>
 	</queen>
 	</gazeface>
 	<lookbreast physical="3" mood="" ioi="0" physicaloffset="-0.5">
 	<loli>
-	<item mood="平静" moodtrend="" moodoffset="0" ioi="0"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="2" ioi="0.4"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="1.4"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="3" ioi="1.6"/>
-	<item mood="伤心" moodtrend="生气" moodoffset="-2" ioi="-0.6"/>
-	<item mood="生气" moodtrend="" moodoffset="-2" ioi="-0.6"/>
-	<item mood="烦躁" moodtrend="生气" moodoffset="-2" ioi="-0.6"/>
-	<item mood="紧张" moodtrend="生气" moodoffset="-2" ioi="-0.4"/>
+	<item mood="平静" moodtrend="" mooddes="" moodoffset="0" ioi="0"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="2" ioi="0.4"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.4"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="3" ioi="1.6"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6"/>
+	<item mood="生气" moodtrend="" mooddes="" moodoffset="-2" ioi="-0.6"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.4"/>
 	</loli>
 	<maid>
-	<item mood="平静" moodtrend="生气" moodoffset="-2" ioi="-1"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="1" ioi="0.2"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="1.2"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="3" ioi="1"/>
-	<item mood="伤心" moodtrend="生气" moodoffset="-3" ioi="-0.8"/>
-	<item mood="生气" moodtrend="" moodoffset="-3" ioi="-0.8"/>
-	<item mood="烦躁" moodtrend="生气" moodoffset="-3" ioi="-0.8"/>
-	<item mood="紧张" moodtrend="生气" moodoffset="-3" ioi="-0.6"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-1"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.2"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.2"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="3" ioi="1"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.8"/>
+	<item mood="生气" moodtrend="" mooddes="" moodoffset="-3" ioi="-0.8"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.8"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.6"/>
 	</maid>
 	<queen>
-	<item mood="平静" moodtrend="生气" moodoffset="-3" ioi="-1.5"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="1" ioi="0.1"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="0.6"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="1" ioi="0.8"/>
-	<item mood="伤心" moodtrend="生气" moodoffset="-3" ioi="-1"/>
-	<item mood="生气" moodtrend="生气" moodoffset="-3" ioi="-1"/>
-	<item mood="烦躁" moodtrend="生气" moodoffset="-3" ioi="-1"/>
-	<item mood="紧张" moodtrend="生气" moodoffset="-3" ioi="-1"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1.5"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.1"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.6"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.8"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1"/>
+	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1"/>
 	</queen>
 	</lookbreast>  
 	<gazebreast physical="10" mood="" ioi="0" physicaloffset="-1">
 	<loli>
-	<item mood="平静" moodtrend="生气" moodoffset="-1" ioi="-0.4"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="1" ioi="1"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="1"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="1" ioi="1.2"/>
-	<item mood="伤心" moodtrend="生气" moodoffset="-3" ioi="-1"/>
-	<item mood="生气" moodtrend="生气" moodoffset="-3" ioi="-1"/>
-	<item mood="烦躁" moodtrend="生气" moodoffset="-3" ioi="-1"/>
-	<item mood="紧张" moodtrend="生气" moodoffset="-3" ioi="-1"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-1" ioi="-0.4"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1"/>
+	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1"/>
 	</loli>
 	<maid>
-	<item mood="平静" moodtrend="生气" moodoffset="-2" ioi="-0.6"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="1" ioi="1.2"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="1"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="1" ioi="1.2"/>
-	<item mood="伤心" moodtrend="生气" moodoffset="-4" ioi="-1.2"/>
-	<item mood="生气" moodtrend="生气" moodoffset="-4" ioi="-1.2"/>
-	<item mood="烦躁" moodtrend="生气" moodoffset="-4" ioi="-1.2"/>
-	<item mood="紧张" moodtrend="生气" moodoffset="-4" ioi="-1.2"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2"/>
+	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2"/>
 	</maid>
 	<queen>
-	<item mood="平静" moodtrend="生气" moodoffset="-6" ioi="-1.2"/>
-	<item mood="开心" moodtrend="害羞" moodoffset="1" ioi="0.1"/>
-	<item mood="害羞" moodtrend="" moodoffset="0" ioi="0.2"/>
-	<item mood="撒娇" moodtrend="害羞" moodoffset="1" ioi="0.2"/>
-	<item mood="伤心" moodtrend="生气" moodoffset="-8" ioi="-2"/>
-	<item mood="生气" moodtrend="生气" moodoffset="-8" ioi="-2"/>
-	<item mood="烦躁" moodtrend="生气" moodoffset="-8" ioi="-2"/>
-	<item mood="紧张" moodtrend="生气" moodoffset="-8" ioi="-2"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-6" ioi="-1.2"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.1"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.2"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.2"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2"/>
+	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2"/>
 	</queen>
 	</gazebreast>  
 </root>

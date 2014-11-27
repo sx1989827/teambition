@@ -27,6 +27,8 @@ public:
     void Serializ(node* out);
     void UnSerializ(node* in);
     void Reset(node* pNode);
+    std::string GetStrMood();
+    long QueryMoodType(std::string strMood);
 private:
     std::map<std::string, long> m_MoodMap;
     std::string m_strCurMood;
