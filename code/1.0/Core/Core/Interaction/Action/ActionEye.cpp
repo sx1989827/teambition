@@ -60,7 +60,10 @@ CoreActionEye::CoreActionEye()
     delete ncRoot;
 }
 
-
+bool CoreActionEye::Handle(CoreActionEye::TYPE type)
+{
+    
+}
 
 
 
