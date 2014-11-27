@@ -19,6 +19,7 @@
 		B562B2DA1A1475E500ADD418 /* DatePark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B562B2D81A1475E500ADD418 /* DatePark.cpp */; };
 		B56562C01A22CABA009B3135 /* Story.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56562BE1A22CABA009B3135 /* Story.cpp */; };
 		B56562C41A2304D8009B3135 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56562C21A2304D8009B3135 /* Event.cpp */; };
+		B5694ADA1A26F02F00956498 /* ActionEye.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5694AD81A26F02F00956498 /* ActionEye.cpp */; };
 		B57D323D1A11AE68006E66E5 /* WorkMeetNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D323B1A11AE68006E66E5 /* WorkMeetNoLove.cpp */; };
 		B57D32401A11B3AC006E66E5 /* WorkIOINoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D323E1A11B3AC006E66E5 /* WorkIOINoLove.cpp */; };
 		B57D32431A11B3BD006E66E5 /* WorkHelpNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57D32411A11B3BD006E66E5 /* WorkHelpNoLove.cpp */; };
@@ -90,6 +91,8 @@
 		B56562BF1A22CABA009B3135 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
 		B56562C21A2304D8009B3135 /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
 		B56562C31A2304D8009B3135 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		B5694AD81A26F02F00956498 /* ActionEye.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEye.cpp; sourceTree = "<group>"; };
+		B5694AD91A26F02F00956498 /* ActionEye.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEye.h; sourceTree = "<group>"; };
 		B57D323B1A11AE68006E66E5 /* WorkMeetNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkMeetNoLove.cpp; sourceTree = "<group>"; };
 		B57D323C1A11AE68006E66E5 /* WorkMeetNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkMeetNoLove.h; sourceTree = "<group>"; };
 		B57D323E1A11B3AC006E66E5 /* WorkIOINoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkIOINoLove.cpp; sourceTree = "<group>"; };
@@ -230,9 +233,19 @@
 			path = Event;
 			sourceTree = "<group>";
 		};
+		B5694AD71A26F00900956498 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				B5694AD81A26F02F00956498 /* ActionEye.cpp */,
+				B5694AD91A26F02F00956498 /* ActionEye.h */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
 		B57F64A719F7500F00F88FB2 /* Interaction */ = {
 			isa = PBXGroup;
 			children = (
+				B5694AD71A26F00900956498 /* Action */,
 				B5521EB41A24388600D5FD94 /* Gift */,
 				B56562C11A2304C6009B3135 /* Event */,
 				B56562BD1A22CA8E009B3135 /* Story */,
@@ -464,6 +477,7 @@
 				B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */,
 				B5E730D119EBE25200CF6A51 /* Oberserver.cpp in Sources */,
 				B57D32521A11ECCA006E66E5 /* LeisureIOINoLove.cpp in Sources */,
+				B5694ADA1A26F02F00956498 /* ActionEye.cpp in Sources */,
 				B5E730C419EB768B00CF6A51 /* Singleton.cpp in Sources */,
 				B57D32551A11ECDE006E66E5 /* LeisureTalkNoLove.cpp in Sources */,
 			);

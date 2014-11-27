@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<Notify>
+		<work>
+			<item type="4"/>
+			<item type="2"/>
+			<item type="3"/>
+			<item type="7"/>
+		</work>
+		<leisure>
+			<item type="8"/>
+			<item type="5"/>
+		</leisure>
+	</Notify>
+	<Player>
+		<love>
+			0
+		</love>
+		<physical>
+			80.0
+		</physical>
+		<money>
+			300.0
+		</money>
+	</Player>
+	<Girl>
+		<type>
+			0
+		</type>
+		<ioi>
+			60.0
+		</ioi>
+		<Mood>
+			<curmood>
+				平静
+			</curmood>
+			<curvalue>
+				5
+			</curvalue>
+			<des>
+				
+			</des>
+		</Mood>
+		<Favorite>
+			<like>
+				<item type="dish" name="西餐" flag="0"/>
+				<item type="dish" name="粤菜" flag="0"/>
+				<item type="film" name="爱情片" flag="0"/>
+				<item type="film" name="恐怖片" flag="0"/>
+				<item type="sports" name="跑步" flag="0"/>
+				<item type="sports" name="骑车" flag="0"/>
+				<item type="gift" name="鲜花" flag="100"/>
+				<item type="gift" name="钻石" flag="1000"/>
+			</like>
+			<dislike>
+				<item type="dish" name="西餐" flag="0"/>
+				<item type="dish" name="粤菜" flag="0"/>
+				<item type="film" name="爱情片" flag="0"/>
+				<item type="film" name="恐怖片" flag="0"/>
+				<item type="sports" name="跑步" flag="0"/>
+				<item type="sports" name="骑车" flag="0"/>
+			</dislike>
+		</Favorite>
+	</Girl>
+</root>

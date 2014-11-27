@@ -14,6 +14,7 @@
 #define STORYFILE "story"
 #define EVENTFILE "event"
 #define GIFTFILE "gift"
+#define ACTIONEYEFILE "actioneye"
 #elif defined(VS)
 #include <windows.h>
 #include <string>

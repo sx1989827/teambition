@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<Notify>
+		<cID>
+			<used>
+				0
+			</used>
+		</cID>
+		<pos>
+			0
+		</pos>
+		<size>
+			<item id="0" sec="1000" szText="都是都f是 drrer" type="3" bEnabled="1" flag="222"/>
+		</size>
+	</Notify>
+	<Girl>
+		<type>
+			0
+		</type>
+		<ioi>
+			0
+		</ioi>
+		<Favorite>
+			<like>
+				<item type="dish" name="徽菜" flag="0"/>
+				<item type="dish" name="川菜" flag="0"/>
+				<item type="film" name="喜剧片" flag="0"/>
+				<item type="film" name="爱情片" flag="0"/>
+				<item type="sports" name="游泳" flag="0"/>
+				<item type="sports" name="羽毛球" flag="0"/>
+				<item type="gift" name="电子产品" flag="600"/>
+				<item type="gift" name="鲜花" flag="100"/>
+			</like>
+			<dislike>
+				<item type="dish" name="徽菜" flag="0"/>
+				<item type="dish" name="川菜" flag="0"/>
+				<item type="film" name="喜剧片" flag="0"/>
+				<item type="film" name="爱情片" flag="0"/>
+				<item type="sports" name="游泳" flag="0"/>
+				<item type="sports" name="羽毛球" flag="0"/>
+			</dislike>
+		</Favorite>
+	</Girl>
+</root>

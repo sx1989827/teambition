@@ -12,6 +12,7 @@
 #include "PersonBase.h"
 #include "../Status/Status.h"
 #include "../Interaction/Interaction.h"
+#include "../Interaction/Action/ActionEye.h"
 #define PLAYERINSTANCE CorePlayerSingleton::GetInstance()
 struct sPlayInfo
 {
@@ -49,6 +50,7 @@ private:
     std::map<CoreStatus::TYPE,sPlayInfo> m_mapPhysical;
     std::map<CoreStatus::TYPE,sPlayInfo> m_mapMoney;
     CoreInteraction *m_pInteraction;
+    CoreActionEye *m_pActionEye;
 };
 
 class CorePlayerSingleton:public CoreSingleton<CorePlayer>

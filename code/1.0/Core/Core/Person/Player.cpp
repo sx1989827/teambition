@@ -15,7 +15,7 @@ CorePlayer::CorePlayer()
     m_bLove=false;
     m_pInteraction=0;
     m_pStatusController=new CoreStatusController;
-    
+    m_pActionEye=new CoreActionEye;
 }
 CorePlayer::~CorePlayer()
 {
@@ -23,6 +23,10 @@ CorePlayer::~CorePlayer()
     if(m_pInteraction)
     {
         delete m_pInteraction;
+    }
+    if(m_pActionEye)
+    {
+        delete m_pActionEye;
     }
 }
 
