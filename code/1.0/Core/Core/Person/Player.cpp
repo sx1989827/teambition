@@ -251,7 +251,14 @@ void CorePlayer::LeaveInteraction()
     m_pStatusController->ResetTime(time(0));
 }
 
-
+void CorePlayer::SetPlace(std::string strPlace)
+{
+    m_strPlace=strPlace;
+}
+std::string CorePlayer::GetPlace()
+{
+    return m_strPlace;
+}
 
 
 

@@ -75,22 +75,8 @@ bool CoreActionEye::Handle(CoreActionEye::TYPE type)
     {
         return false;
     }
-    long i=0;
-    switch (GIRLINSTANCE->GetGirlType()) {
-        case CoreGirl::LOLI:
-            i=0;
-            break;
-        case CoreGirl::MAID:
-            i=1;
-            break;
-        case CoreGirl::QUEEN:
-            i=2;
-            break;
-        default:
-            break;
-    }
     PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+it->second.sPremise.dPhysicalOffset);
-    sActionEyeMoodChange mood=it->second.vecGirl[i][GIRLINSTANCE->GetMood()->GetStrMood()];
+    sActionEyeMoodChange mood=it->second.vecGirl[GIRLINSTANCE->GetGirlType()][GIRLINSTANCE->GetMood()->GetStrMood()];
     double off=PLAYERINSTANCE->GetMoney()*0.0001+(GIRLINSTANCE->GetIOI()-50)/100.0f;
     GIRLINSTANCE->SetIOI(GIRLINSTANCE->GetIOI()+mood.dIOIOffset+off);
     if(it->first==GAZEFACE || it->first==LOOKBREAST || it->first==GAZEBREAST)

@@ -42,6 +42,8 @@ public:
     void Update();
     bool EnterInteraction(CoreInteraction::TYPE type);
     void LeaveInteraction();
+    void SetPlace(std::string strPlace);
+    std::string GetPlace();
 private:
     double m_dPhysical;
     double m_dMoney;
@@ -51,6 +53,7 @@ private:
     std::map<CoreStatus::TYPE,sPlayInfo> m_mapMoney;
     CoreInteraction *m_pInteraction;
     CoreActionEye *m_pActionEye;
+    std::string m_strPlace;
 };
 
 class CorePlayerSingleton:public CoreSingleton<CorePlayer>

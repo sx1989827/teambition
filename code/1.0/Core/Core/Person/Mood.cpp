@@ -52,7 +52,19 @@ void CoreMood::Adjust()
 
 void CoreMood::Transfer(sMood *pMood)
 {
-    if(m_MoodMap[m_strCurMood]==m_MoodMap[pMood->strMood])
+    if(pMood->strMood.empty())
+    {
+        m_lCurMood+=pMood->lOffset;
+        if(m_lCurMood>10)
+        {
+            m_lCurMood=10;
+        }
+        else if (m_lCurMood<-10)
+        {
+            m_lCurMood=-10;
+        }
+    }
+    else if(m_MoodMap[m_strCurMood]==m_MoodMap[pMood->strMood])
     {
         if(m_strCurMood==pMood->strMood)
         {

@@ -12,6 +12,7 @@
 void CoreStatusSleep::OnEnter()
 {
     m_StartTime.Reset();
+    PLAYERINSTANCE->SetPlace("家");
     OBINSTANCE->PostOberserver(this, MSG_SLEEPENTER, 0);
 }
 void CoreStatusSleep::OnUpdate()

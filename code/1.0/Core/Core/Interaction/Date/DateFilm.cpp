@@ -27,6 +27,7 @@ bool CoreDateFilm::Enter()
     }
     if(PLAYERINSTANCE->GetPhysical()>=(m_bIOI?30:40))
     {
+        PLAYERINSTANCE->SetPlace("电影院");
         return true;
     }
     else
@@ -55,7 +56,7 @@ void CoreDateFilm::Update()
 
 void CoreDateFilm::Leave()
 {
-    
+
 }
 
 bool CoreDateFilm::IsEnd()

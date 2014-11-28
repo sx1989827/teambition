@@ -39,6 +39,8 @@ CoreActionBody::CoreActionBody()
         info.sPremise.dPhysical=atof(root->getattr("physical").data());
         info.sPremise.dIOI=atof(root->getattr("ioi").data());
         info.sPremise.dPhysicalOffset=atof(root->getattr("physicaloffset").data());
+        info.sPremise.strPlace=root->getattr("place");
+        info.sPremise.bLove=atoi(root->getattr("love").data());
         node* n1=root->getchild(0);
         do
         {
@@ -74,11 +76,50 @@ void CoreActionBody::UnSerializ(node* in)
 }
 std::vector<CoreActionBody::TYPE> CoreActionBody::GetAvalibleAction()
 {
-    
+    std::vector<CoreActionBody::TYPE> vec;
+    for(auto it=m_MapAction.begin();it!=m_MapAction.end();it++)
+    {
+        sActionBodyMood mood=it->second.vecGirl[GIRLINSTANCE->GetGirlType()];
+        if(!it->second.bOpen)
+        {
+            if(GIRLINSTANCE->GetIOI()>=mood.dOpenIOI)
+            {
+                it->second.bOpen=true;
+            }
+            else
+            {
+                continue;
+            }
+        }
+        if(PLAYERINSTANCE->GetPhysical()<it->second.sPremise.dPhysical ||
+           (it->second.sPremise.strMood.size()>0 && strstr(it->second.sPremise.strMood.data(),GIRLINSTANCE->GetMood()->GetStrMood().data())==0) ||
+           GIRLINSTANCE->GetIOI()<it->second.sPremise.dIOI ||
+           (it->second.sPremise.strPlace.size()>0 && strstr(it->second.sPremise.strPlace.data(),PLAYERINSTANCE->GetPlace().data())==0) ||
+           PLAYERINSTANCE->GetLove()<it->second.sPremise.bLove)
+        {
+            continue;
+        }
+        vec.push_back(it->first);
+    }
+    return vec;
 }
 void CoreActionBody::Handle(TYPE type)
 {
-    
+    auto it=m_MapAction.find(type);
+    if(it==m_MapAction.end())
+    {
+        return;
+    }
+    PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+it->second.sPremise.dPhysicalOffset);
+    sActionBodyMoodChange mood=it->second.vecGirl[GIRLINSTANCE->GetGirlType()].mapMood[GIRLINSTANCE->GetMood()->GetStrMood()];
+    double off=PLAYERINSTANCE->GetMoney()*0.0001+(GIRLINSTANCE->GetIOI()-50)/100.0f;
+    GIRLINSTANCE->SetIOI(GIRLINSTANCE->GetIOI()+mood.dIOIOffset+off);
+    sMood MoodTransfer;
+    MoodTransfer.strDes=mood.strMoodDes;
+    MoodTransfer.strMood=mood.strMoodTrend;
+    MoodTransfer.lOffset=mood.lMoodOffset;
+    GIRLINSTANCE->GetMood()->Transfer(&MoodTransfer);
+
 }
 
 

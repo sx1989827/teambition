@@ -25,6 +25,7 @@ bool CoreDateWalk::Enter()
     }
     if(PLAYERINSTANCE->GetPhysical()>=(m_bIOI?40:50))
     {
+        PLAYERINSTANCE->SetPlace("公园");
         return true;
     }
     else
@@ -54,7 +55,7 @@ void CoreDateWalk::Update()
 
 void CoreDateWalk::Leave()
 {
-    
+
 }
 
 bool CoreDateWalk::IsEnd()

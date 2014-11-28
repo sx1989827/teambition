@@ -12,6 +12,7 @@
 void CoreStatusWork::OnEnter()
 {
     m_StartTime.Reset();
+    PLAYERINSTANCE->SetPlace("公司");
 }
 void CoreStatusWork::OnUpdate()
 {

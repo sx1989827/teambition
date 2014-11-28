@@ -18,6 +18,8 @@ struct sActionBodyPremise
     double dIOI;
     std::string strMood;
     double dPhysicalOffset;
+    std::string strPlace;
+    bool bLove;
 };
 struct sActionBodyMoodChange
 {

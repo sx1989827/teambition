@@ -24,6 +24,7 @@ bool CoreDatePark::Enter()
     }
     if(PLAYERINSTANCE->GetPhysical()>=(m_bIOI?50:60))
     {
+        PLAYERINSTANCE->SetPlace("游乐场");
         return true;
     }
     else
@@ -53,7 +54,7 @@ void CoreDatePark::Update()
 
 void CoreDatePark::Leave()
 {
-    
+
 }
 
 bool CoreDatePark::IsEnd()

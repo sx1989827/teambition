@@ -17,6 +17,7 @@ bool CoreDateEat::Enter()
 {
     if(PLAYERINSTANCE->GetPhysical()>=(m_bIOI?20:30))
     {
+        PLAYERINSTANCE->SetPlace("餐厅");
         return true;
     }
     else
@@ -44,7 +45,7 @@ void CoreDateEat::Update()
 
 void CoreDateEat::Leave()
 {
-    
+
 }
 
 bool CoreDateEat::IsEnd()
