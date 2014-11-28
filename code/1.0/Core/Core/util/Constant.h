@@ -15,6 +15,7 @@
 #define EVENTFILE "event"
 #define GIFTFILE "gift"
 #define ACTIONEYEFILE "actioneye"
+#define ACTIONBODYFILE "actionbody"
 #elif defined(VS)
 #include <windows.h>
 #include <string>

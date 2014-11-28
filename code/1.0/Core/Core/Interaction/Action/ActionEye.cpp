@@ -57,6 +57,7 @@ CoreActionEye::CoreActionEye()
                 mapMood[mood.strMood]=mood;
             }
             info.vecGirl.push_back(mapMood);
+            delete ncItem;
         }while((n1=n1->getnext()));
         m_MapAction[(TYPE)info.type]=info;
     }while ((root=root->getnext()));

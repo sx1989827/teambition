@@ -42,6 +42,7 @@
 		B57F64C019F7542400F88FB2 /* Mood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64BE19F7542400F88FB2 /* Mood.cpp */; };
 		B57F64C319F7545800F88FB2 /* Favorite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57F64C119F7545800F88FB2 /* Favorite.cpp */; };
 		B5B4016F19F688D10009CAC2 /* PersonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5B4016D19F688D10009CAC2 /* PersonBase.cpp */; };
+		B5C2A31F1A28143B00263B67 /* ActionBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5C2A31D1A28143B00263B67 /* ActionBody.cpp */; };
 		B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E04CF119F0CB6A00CCFD10 /* Xml.cpp */; };
 		B5E146B719FA3C6F00AED87E /* StatusLeisure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E146B519FA3C6F00AED87E /* StatusLeisure.cpp */; };
 		B5E146BA19FA3CCE00AED87E /* StatusSleep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E146B819FA3CCE00AED87E /* StatusSleep.cpp */; };
@@ -137,6 +138,8 @@
 		B57F64C219F7545800F88FB2 /* Favorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
 		B5B4016D19F688D10009CAC2 /* PersonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PersonBase.cpp; sourceTree = "<group>"; };
 		B5B4016E19F688D10009CAC2 /* PersonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonBase.h; sourceTree = "<group>"; };
+		B5C2A31D1A28143B00263B67 /* ActionBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionBody.cpp; sourceTree = "<group>"; };
+		B5C2A31E1A28143B00263B67 /* ActionBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionBody.h; sourceTree = "<group>"; };
 		B5E04CF119F0CB6A00CCFD10 /* Xml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Xml.cpp; sourceTree = "<group>"; };
 		B5E04CF219F0CB6A00CCFD10 /* Xml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xml.h; sourceTree = "<group>"; };
 		B5E146B519FA3C6F00AED87E /* StatusLeisure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusLeisure.cpp; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 			children = (
 				B5694AD81A26F02F00956498 /* ActionEye.cpp */,
 				B5694AD91A26F02F00956498 /* ActionEye.h */,
+				B5C2A31D1A28143B00263B67 /* ActionBody.cpp */,
+				B5C2A31E1A28143B00263B67 /* ActionBody.h */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				B5E730CB19EBB10200CF6A51 /* Time.cpp in Sources */,
 				B57D32491A11B3E5006E66E5 /* WorkTalkLove.cpp in Sources */,
 				B57F64C319F7545800F88FB2 /* Favorite.cpp in Sources */,
+				B5C2A31F1A28143B00263B67 /* ActionBody.cpp in Sources */,
 				B5E730C819EB865300CF6A51 /* Log.cpp in Sources */,
 				B562B2D41A1475B300ADD418 /* DateFilm.cpp in Sources */,
 				B5E730CE19EBB90500CF6A51 /* Constant.cpp in Sources */,

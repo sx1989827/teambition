@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<patshoulder physical="10" mood="" ioi="30" physicaloffset="-5">
+	<loli openioi="30">
+	<item mood="平静" moodtrend="" moodoffset="2" ioi="1"/>
+	<item mood="开心" moodtrend="" moodoffset="2" ioi="1"/>
+	<item mood="害羞" moodtrend="" moodoffset="2" ioi="1"/>
+	<item mood="撒娇" moodtrend="" moodoffset="2" ioi="1"/>
+	<item mood="伤心" moodtrend="平静" moodoffset="2" ioi="1"/>
+	<item mood="生气" moodtrend="平静" moodoffset="2" ioi="1"/>
+	<item mood="烦躁" moodtrend="平静" moodoffset="2" ioi="1"/>
+	<item mood="紧张" moodtrend="平静" moodoffset="2" ioi="1"/>
+	</loli>
+	<maid openioi="35">
+	<item mood="平静" moodtrend="" moodoffset="2" ioi="1"/>
+	<item mood="开心" moodtrend="" moodoffset="2" ioi="1"/>
+	<item mood="害羞" moodtrend="" moodoffset="2" ioi="1"/>
+	<item mood="撒娇" moodtrend="" moodoffset="2" ioi="1"/>
+	<item mood="伤心" moodtrend="平静" moodoffset="2" ioi="1"/>
+	<item mood="生气" moodtrend="平静" moodoffset="2" ioi="1"/>
+	<item mood="烦躁" moodtrend="平静" moodoffset="2" ioi="1"/>
+	<item mood="紧张" moodtrend="平静" moodoffset="2" ioi="1"/>
+	</maid>
+	<queen openioi="40">
+	<item mood="平静" moodtrend="" moodoffset="1" ioi="0.5"/>
+	<item mood="开心" moodtrend="" moodoffset="1" ioi="0.5"/>
+	<item mood="害羞" moodtrend="" moodoffset="1" ioi="0.5"/>
+	<item mood="撒娇" moodtrend="" moodoffset="1" ioi="0.5"/>
+	<item mood="伤心" moodtrend="平静" moodoffset="1" ioi="0.5"/>
+	<item mood="生气" moodtrend="平静" moodoffset="1" ioi="0.5"/>
+	<item mood="烦躁" moodtrend="平静" moodoffset="1" ioi="0.5"/>
+	<item mood="紧张" moodtrend="平静" moodoffset="1" ioi="0.5"/>
+	</queen>
+	</patshoulder> 
+</root>
