@@ -16,6 +16,7 @@ CorePlayer::CorePlayer()
     m_pInteraction=0;
     m_pStatusController=new CoreStatusController;
     m_pActionEye=new CoreActionEye;
+    m_pActionBody=new CoreActionBody;
 }
 CorePlayer::~CorePlayer()
 {
@@ -28,6 +29,10 @@ CorePlayer::~CorePlayer()
     {
         delete m_pActionEye;
     }
+    if(m_pActionBody)
+    {
+        delete m_pActionBody;
+    }
 }
 
 void CorePlayer::Serializ(node* out)
@@ -36,6 +41,7 @@ void CorePlayer::Serializ(node* out)
     WriteXml(root, m_bLove, "love");
     WriteXml(root, m_dPhysical, "physical");
     WriteXml(root, m_dMoney, "money");
+    m_pActionBody->Serializ(root);
     out->appned(root);
 
 }
@@ -49,6 +55,7 @@ void CorePlayer::UnSerializ(node* in)
     m_dPhysical=atof(nc2->item(0)->gettext().data());
     nodecollect *nc3=root->select("/money");
     m_dMoney=atof(nc3->item(0)->gettext().data());
+    m_pActionBody->UnSerializ(root);
     delete nc3;
     delete nc2;
     delete nc1;

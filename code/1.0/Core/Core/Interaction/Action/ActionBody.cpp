@@ -11,9 +11,9 @@
 #include "../../Person/Player.h"
 #include "../../Person/Girl.h"
 #include "../../Person/Mood.h"
+std::map<std::string,CoreActionBody::TYPE> CoreActionBody::mapType;
 CoreActionBody::CoreActionBody()
 {
-    std::map<std::string,TYPE> mapType;
     mapType["patshoulder"]=PATSHOULDER;
     mapType["touchhair"]=TOUCHHAIR;
     mapType["touchhand"]=TOUCHHAND;
@@ -33,6 +33,7 @@ CoreActionBody::CoreActionBody()
     do
     {
         sActionBody info;
+        info.name=root->gettag();
         info.type=mapType[root->gettag()];
         info.bOpen=false;
         info.sPremise.strMood=root->getattr("mood");
@@ -68,11 +69,34 @@ CoreActionBody::CoreActionBody()
 }
 void CoreActionBody::Serializ(node* out)
 {
-    
+    node *root=out->getXml()->createnode("actionbody");
+    for(auto it=m_MapAction.begin();it!=m_MapAction.end();it++)
+    {
+        if(it->second.bOpen)
+        {
+            node *item=out->getXml()->createnode("item");
+            item->setattr("name", it->second.name);
+            root->appned(item);
+        }
+    }
+    out->appned(root);
 }
 void CoreActionBody::UnSerializ(node* in)
 {
-    
+    nodecollect *nc=in->select("/actionbody");
+    node *root=nc->item(0);
+    nodecollect *ncItem=root->select("/item");
+    for(long i=0;i<ncItem->getcount();i++)
+    {
+        auto it=m_MapAction.find(mapType[ncItem->item(0)->getattr("name")]);
+        if(it==m_MapAction.end())
+        {
+            continue;
+        }
+        it->second.bOpen=true;
+    }
+    delete ncItem;
+    delete nc;
 }
 std::vector<CoreActionBody::TYPE> CoreActionBody::GetAvalibleAction()
 {

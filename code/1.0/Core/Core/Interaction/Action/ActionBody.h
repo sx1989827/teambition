@@ -38,6 +38,7 @@ struct sActionBodyMood
 
 struct sActionBody
 {
+    std::string name;
     long type;
     bool bOpen;
     sActionBodyPremise sPremise;
@@ -57,6 +58,7 @@ public:
     void Handle(TYPE type);
 private:
     std::map<TYPE,sActionBody> m_MapAction;
+    static std::map<std::string,TYPE> mapType;
 };
 
 #endif /* defined(__Core__ActionBody__) */
