@@ -17,6 +17,7 @@ CorePlayer::CorePlayer()
     m_pStatusController=new CoreStatusController;
     m_pActionEye=new CoreActionEye;
     m_pActionBody=new CoreActionBody;
+    m_pActionTalk=new CoreActionTalk;
 }
 CorePlayer::~CorePlayer()
 {
@@ -32,6 +33,10 @@ CorePlayer::~CorePlayer()
     if(m_pActionBody)
     {
         delete m_pActionBody;
+    }
+    if(m_pActionTalk)
+    {
+        delete m_pActionTalk;
     }
 }
 

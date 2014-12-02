@@ -14,6 +14,7 @@
 #include "../Interaction/Interaction.h"
 #include "../Interaction/Action/ActionEye.h"
 #include "../Interaction/Action/ActionBody.h"
+#include "../Interaction/Action/ActionTalk.h"
 #define PLAYERINSTANCE CorePlayerSingleton::GetInstance()
 struct sPlayInfo
 {
@@ -55,6 +56,7 @@ private:
     CoreInteraction *m_pInteraction;
     CoreActionEye *m_pActionEye;
     CoreActionBody *m_pActionBody;
+    CoreActionTalk *m_pActionTalk;
     std::string m_strPlace;
 };
 

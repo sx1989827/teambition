@@ -401,7 +401,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
             endingLineNumber = "143"
-            landmarkName = "CoreMood::Reset(node* pNode)"
+            landmarkName = "CoreMood::UnSerializ(node* in)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -478,9 +478,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "CorePlayer::ChangeStatus(CoreStatus::TYPE type)"
-            landmarkType = "5">
+            endingLineNumber = "69">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -494,7 +492,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
-            endingLineNumber = "67">
+            endingLineNumber = "67"
+            landmarkName = "CorePlayer::GetType()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -541,7 +541,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "CorePlayer::GetLove()"
+            landmarkName = "CorePlayer::SetMoney(double val)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -557,7 +557,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
             endingLineNumber = "102"
-            landmarkName = "CorePlayer::GetLove()"
+            landmarkName = "CorePlayer::SetMoney(double val)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

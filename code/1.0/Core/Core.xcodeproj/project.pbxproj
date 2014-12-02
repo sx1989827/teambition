@@ -10,6 +10,7 @@
 		B504E3D919F0AF0E00767625 /* Save.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B504E3D719F0AF0E00767625 /* Save.cpp */; };
 		B50C614219ED0DBD00B618EB /* Notify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614019ED0DBD00B618EB /* Notify.cpp */; };
 		B50C614519ED0E4400B618EB /* Serializ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B50C614319ED0E4400B618EB /* Serializ.cpp */; };
+		B54D50181A2DA47A0042BBAA /* ActionTalk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B54D50161A2DA47A0042BBAA /* ActionTalk.cpp */; };
 		B5521EB71A24389200D5FD94 /* Gift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5521EB51A24389200D5FD94 /* Gift.cpp */; };
 		B5530CE919F0F9000020A5AB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5530CE719F0F9000020A5AB /* Application.cpp */; };
 		B562B2CE1A14757900ADD418 /* DateBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B562B2CC1A14757900ADD418 /* DateBase.cpp */; };
@@ -74,6 +75,8 @@
 		B50C614119ED0DBD00B618EB /* Notify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notify.h; sourceTree = "<group>"; };
 		B50C614319ED0E4400B618EB /* Serializ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Serializ.cpp; sourceTree = "<group>"; };
 		B50C614419ED0E4400B618EB /* Serializ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serializ.h; sourceTree = "<group>"; };
+		B54D50161A2DA47A0042BBAA /* ActionTalk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionTalk.cpp; sourceTree = "<group>"; };
+		B54D50171A2DA47A0042BBAA /* ActionTalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionTalk.h; sourceTree = "<group>"; };
 		B5521EB51A24389200D5FD94 /* Gift.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gift.cpp; sourceTree = "<group>"; };
 		B5521EB61A24389200D5FD94 /* Gift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gift.h; sourceTree = "<group>"; };
 		B5530CE719F0F9000020A5AB /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				B5694AD91A26F02F00956498 /* ActionEye.h */,
 				B5C2A31D1A28143B00263B67 /* ActionBody.cpp */,
 				B5C2A31E1A28143B00263B67 /* ActionBody.h */,
+				B54D50161A2DA47A0042BBAA /* ActionTalk.cpp */,
+				B54D50171A2DA47A0042BBAA /* ActionTalk.h */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 				B5E04CF319F0CB6A00CCFD10 /* Xml.cpp in Sources */,
 				B5E730D119EBE25200CF6A51 /* Oberserver.cpp in Sources */,
 				B57D32521A11ECCA006E66E5 /* LeisureIOINoLove.cpp in Sources */,
+				B54D50181A2DA47A0042BBAA /* ActionTalk.cpp in Sources */,
 				B5694ADA1A26F02F00956498 /* ActionEye.cpp in Sources */,
 				B5E730C419EB768B00CF6A51 /* Singleton.cpp in Sources */,
 				B57D32551A11ECDE006E66E5 /* LeisureTalkNoLove.cpp in Sources */,

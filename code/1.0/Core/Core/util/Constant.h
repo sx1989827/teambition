@@ -16,6 +16,7 @@
 #define GIFTFILE "gift"
 #define ACTIONEYEFILE "actioneye"
 #define ACTIONBODYFILE "actionbody"
+#define ACTIONTALKFILE "actiontalk"
 #elif defined(VS)
 #include <windows.h>
 #include <string>
