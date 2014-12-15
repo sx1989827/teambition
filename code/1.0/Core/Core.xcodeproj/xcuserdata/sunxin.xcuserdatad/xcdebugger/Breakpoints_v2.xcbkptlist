@@ -493,7 +493,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "CorePlayer::GetType()"
+            landmarkName = "CorePlayer::UnSerializ(node* in)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -541,7 +541,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "CorePlayer::SetMoney(double val)"
+            landmarkName = "CorePlayer::GetMoney()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -557,7 +557,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
             endingLineNumber = "102"
-            landmarkName = "CorePlayer::SetMoney(double val)"
+            landmarkName = "CorePlayer::GetMoney()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
