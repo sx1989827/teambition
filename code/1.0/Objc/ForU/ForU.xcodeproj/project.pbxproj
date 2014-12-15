@@ -10,18 +10,7 @@
 		B586D44E1A3EBFCE004EEE84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D44D1A3EBFCE004EEE84 /* main.m */; };
 		B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D4501A3EBFCE004EEE84 /* AppDelegate.m */; };
 		B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586D4581A3EBFCE004EEE84 /* Images.xcassets */; };
-		B586D4681A3EBFCE004EEE84 /* ForUTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D4671A3EBFCE004EEE84 /* ForUTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B586D4621A3EBFCE004EEE84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B586D4401A3EBFCD004EEE84 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B586D4471A3EBFCE004EEE84;
-			remoteInfo = ForU;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B586D4481A3EBFCE004EEE84 /* ForU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForU.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,20 +19,12 @@
 		B586D44F1A3EBFCE004EEE84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B586D4501A3EBFCE004EEE84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B586D4581A3EBFCE004EEE84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B586D4611A3EBFCE004EEE84 /* ForUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586D4661A3EBFCE004EEE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586D4671A3EBFCE004EEE84 /* ForUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForUTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B586D4451A3EBFCE004EEE84 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B586D45E1A3EBFCE004EEE84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				B586D4481A3EBFCE004EEE84 /* ForU.app */,
-				B586D4611A3EBFCE004EEE84 /* ForUTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,24 +116,6 @@
 			productReference = B586D4481A3EBFCE004EEE84 /* ForU.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B586D4601A3EBFCE004EEE84 /* ForUTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B586D46E1A3EBFCE004EEE84 /* Build configuration list for PBXNativeTarget "ForUTests" */;
-			buildPhases = (
-				B586D45D1A3EBFCE004EEE84 /* Sources */,
-				B586D45E1A3EBFCE004EEE84 /* Frameworks */,
-				B586D45F1A3EBFCE004EEE84 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B586D4631A3EBFCE004EEE84 /* PBXTargetDependency */,
-			);
-			name = ForUTests;
-			productName = ForUTests;
-			productReference = B586D4611A3EBFCE004EEE84 /* ForUTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,10 +127,6 @@
 				TargetAttributes = {
 					B586D4471A3EBFCE004EEE84 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					B586D4601A3EBFCE004EEE84 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = B586D4471A3EBFCE004EEE84;
 					};
 				};
 			};
@@ -186,7 +144,6 @@
 			projectRoot = "";
 			targets = (
 				B586D4471A3EBFCE004EEE84 /* ForU */,
-				B586D4601A3EBFCE004EEE84 /* ForUTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,13 +154,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B586D45F1A3EBFCE004EEE84 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,23 +169,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B586D45D1A3EBFCE004EEE84 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B586D4681A3EBFCE004EEE84 /* ForUTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B586D4631A3EBFCE004EEE84 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B586D4471A3EBFCE004EEE84 /* ForU */;
-			targetProxy = B586D4621A3EBFCE004EEE84 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B586D4691A3EBFCE004EEE84 /* Debug */ = {
@@ -334,40 +268,6 @@
 			};
 			name = Release;
 		};
-		B586D46F1A3EBFCE004EEE84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ForUTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForU.app/ForU";
-			};
-			name = Debug;
-		};
-		B586D4701A3EBFCE004EEE84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ForUTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForU.app/ForU";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -387,14 +287,7 @@
 				B586D46D1A3EBFCE004EEE84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		B586D46E1A3EBFCE004EEE84 /* Build configuration list for PBXNativeTarget "ForUTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B586D46F1A3EBFCE004EEE84 /* Debug */,
-				B586D4701A3EBFCE004EEE84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
