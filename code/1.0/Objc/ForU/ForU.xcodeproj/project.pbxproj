@@ -7,11 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B586D44E1A3EBFCE004EEE84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D44D1A3EBFCE004EEE84 /* main.m */; };
 		B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D4501A3EBFCE004EEE84 /* AppDelegate.m */; };
 		B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586D4581A3EBFCE004EEE84 /* Images.xcassets */; };
 		B5CB839D1A3FFAF300F3D9B1 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */; };
 		B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */; };
+		B5CB844D1A400AF100F3D9B1 /* FUApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */; };
+		B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844F1A400DD800F3D9B1 /* Application.cpp */; };
+		B5CB84CC1A400DD800F3D9B1 /* ActionBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */; };
+		B5CB84CD1A400DD800F3D9B1 /* ActionEye.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB845F1A400DD800F3D9B1 /* ActionEye.cpp */; };
+		B5CB84CE1A400DD800F3D9B1 /* ActionTalk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84611A400DD800F3D9B1 /* ActionTalk.cpp */; };
+		B5CB84CF1A400DD800F3D9B1 /* DateBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84641A400DD800F3D9B1 /* DateBase.cpp */; };
+		B5CB84D01A400DD800F3D9B1 /* DateEat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84661A400DD800F3D9B1 /* DateEat.cpp */; };
+		B5CB84D11A400DD800F3D9B1 /* DateFilm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84681A400DD800F3D9B1 /* DateFilm.cpp */; };
+		B5CB84D21A400DD800F3D9B1 /* DatePark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB846A1A400DD800F3D9B1 /* DatePark.cpp */; };
+		B5CB84D31A400DD800F3D9B1 /* DateWalk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB846C1A400DD800F3D9B1 /* DateWalk.cpp */; };
+		B5CB84D41A400DD800F3D9B1 /* DateIOI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB846E1A400DD800F3D9B1 /* DateIOI.cpp */; };
+		B5CB84D51A400DD800F3D9B1 /* DateLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84701A400DD800F3D9B1 /* DateLove.cpp */; };
+		B5CB84D61A400DD800F3D9B1 /* DateNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84721A400DD800F3D9B1 /* DateNoLove.cpp */; };
+		B5CB84D71A400DD800F3D9B1 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84751A400DD800F3D9B1 /* Event.cpp */; };
+		B5CB84D81A400DD800F3D9B1 /* Gift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84781A400DD800F3D9B1 /* Gift.cpp */; };
+		B5CB84D91A400DD800F3D9B1 /* Interaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB847A1A400DD800F3D9B1 /* Interaction.cpp */; };
+		B5CB84DA1A400DD800F3D9B1 /* LeisureIOILove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB847C1A400DD800F3D9B1 /* LeisureIOILove.cpp */; };
+		B5CB84DB1A400DD800F3D9B1 /* LeisureIOINoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB847E1A400DD800F3D9B1 /* LeisureIOINoLove.cpp */; };
+		B5CB84DC1A400DD800F3D9B1 /* LeisureTalkLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84801A400DD800F3D9B1 /* LeisureTalkLove.cpp */; };
+		B5CB84DD1A400DD800F3D9B1 /* LeisureTalkNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84821A400DD800F3D9B1 /* LeisureTalkNoLove.cpp */; };
+		B5CB84DE1A400DD800F3D9B1 /* Story.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84851A400DD800F3D9B1 /* Story.cpp */; };
+		B5CB84DF1A400DD800F3D9B1 /* WorkHelpLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84871A400DD800F3D9B1 /* WorkHelpLove.cpp */; };
+		B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84891A400DD800F3D9B1 /* WorkHelpNoLove.cpp */; };
+		B5CB84E11A400DD800F3D9B1 /* WorkIOILove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB848B1A400DD800F3D9B1 /* WorkIOILove.cpp */; };
+		B5CB84E21A400DD800F3D9B1 /* WorkIOINoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB848D1A400DD800F3D9B1 /* WorkIOINoLove.cpp */; };
+		B5CB84E31A400DD800F3D9B1 /* WorkMeetNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB848F1A400DD800F3D9B1 /* WorkMeetNoLove.cpp */; };
+		B5CB84E41A400DD800F3D9B1 /* WorkTalkLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84911A400DD800F3D9B1 /* WorkTalkLove.cpp */; };
+		B5CB84E51A400DD800F3D9B1 /* WorkTalkNoLove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84931A400DD800F3D9B1 /* WorkTalkNoLove.cpp */; };
+		B5CB84E61A400DD800F3D9B1 /* Notify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84971A400DD800F3D9B1 /* Notify.cpp */; };
+		B5CB84E81A400DD800F3D9B1 /* Favorite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB849B1A400DD800F3D9B1 /* Favorite.cpp */; };
+		B5CB84E91A400DD800F3D9B1 /* Girl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB849D1A400DD800F3D9B1 /* Girl.cpp */; };
+		B5CB84EA1A400DD800F3D9B1 /* Mood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB849F1A400DD800F3D9B1 /* Mood.cpp */; };
+		B5CB84EB1A400DD800F3D9B1 /* PersonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84A11A400DD800F3D9B1 /* PersonBase.cpp */; };
+		B5CB84EC1A400DD800F3D9B1 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84A31A400DD800F3D9B1 /* Player.cpp */; };
+		B5CB84ED1A400DD800F3D9B1 /* Save.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84A61A400DD800F3D9B1 /* Save.cpp */; };
+		B5CB84EE1A400DD800F3D9B1 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84A91A400DD800F3D9B1 /* Status.cpp */; };
+		B5CB84EF1A400DD800F3D9B1 /* StatusController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84AB1A400DD800F3D9B1 /* StatusController.cpp */; };
+		B5CB84F01A400DD800F3D9B1 /* StatusLeisure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84AD1A400DD800F3D9B1 /* StatusLeisure.cpp */; };
+		B5CB84F11A400DD800F3D9B1 /* StatusSleep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84AF1A400DD800F3D9B1 /* StatusSleep.cpp */; };
+		B5CB84F21A400DD800F3D9B1 /* StatusWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B11A400DD800F3D9B1 /* StatusWork.cpp */; };
+		B5CB84F31A400DD800F3D9B1 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B41A400DD800F3D9B1 /* Constant.cpp */; };
+		B5CB84F41A400DD800F3D9B1 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B71A400DD800F3D9B1 /* Log.cpp */; };
+		B5CB84F51A400DD800F3D9B1 /* Oberserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B91A400DD800F3D9B1 /* Oberserver.cpp */; };
+		B5CB84F61A400DD800F3D9B1 /* Serializ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84BB1A400DD800F3D9B1 /* Serializ.cpp */; };
+		B5CB84F71A400DD800F3D9B1 /* Singleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84BD1A400DD800F3D9B1 /* Singleton.cpp */; };
+		B5CB84F81A400DD800F3D9B1 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84BF1A400DD800F3D9B1 /* Time.cpp */; };
+		B5CB84F91A400DD800F3D9B1 /* Xml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84C11A400DD800F3D9B1 /* Xml.cpp */; };
+		B5CB84FC1A4011D300F3D9B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84FA1A4010F900F3D9B1 /* main.m */; };
+		B5CB84FE1A40124C00F3D9B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB84FD1A40124C00F3D9B1 /* UIKit.framework */; };
+		B5CB85001A40126500F3D9B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB84FF1A40126500F3D9B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +75,104 @@
 		B5CB839A1A3FFAF300F3D9B1 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		B5CB844B1A400AF100F3D9B1 /* FUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUApplication.h; sourceTree = "<group>"; };
+		B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FUApplication.mm; sourceTree = "<group>"; };
+		B5CB844F1A400DD800F3D9B1 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		B5CB84501A400DD800F3D9B1 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionBody.cpp; sourceTree = "<group>"; };
+		B5CB845E1A400DD800F3D9B1 /* ActionBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionBody.h; sourceTree = "<group>"; };
+		B5CB845F1A400DD800F3D9B1 /* ActionEye.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionEye.cpp; sourceTree = "<group>"; };
+		B5CB84601A400DD800F3D9B1 /* ActionEye.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionEye.h; sourceTree = "<group>"; };
+		B5CB84611A400DD800F3D9B1 /* ActionTalk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActionTalk.cpp; sourceTree = "<group>"; };
+		B5CB84621A400DD800F3D9B1 /* ActionTalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionTalk.h; sourceTree = "<group>"; };
+		B5CB84641A400DD800F3D9B1 /* DateBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateBase.cpp; sourceTree = "<group>"; };
+		B5CB84651A400DD800F3D9B1 /* DateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateBase.h; sourceTree = "<group>"; };
+		B5CB84661A400DD800F3D9B1 /* DateEat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateEat.cpp; sourceTree = "<group>"; };
+		B5CB84671A400DD800F3D9B1 /* DateEat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateEat.h; sourceTree = "<group>"; };
+		B5CB84681A400DD800F3D9B1 /* DateFilm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateFilm.cpp; sourceTree = "<group>"; };
+		B5CB84691A400DD800F3D9B1 /* DateFilm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFilm.h; sourceTree = "<group>"; };
+		B5CB846A1A400DD800F3D9B1 /* DatePark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DatePark.cpp; sourceTree = "<group>"; };
+		B5CB846B1A400DD800F3D9B1 /* DatePark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePark.h; sourceTree = "<group>"; };
+		B5CB846C1A400DD800F3D9B1 /* DateWalk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateWalk.cpp; sourceTree = "<group>"; };
+		B5CB846D1A400DD800F3D9B1 /* DateWalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateWalk.h; sourceTree = "<group>"; };
+		B5CB846E1A400DD800F3D9B1 /* DateIOI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateIOI.cpp; sourceTree = "<group>"; };
+		B5CB846F1A400DD800F3D9B1 /* DateIOI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateIOI.h; sourceTree = "<group>"; };
+		B5CB84701A400DD800F3D9B1 /* DateLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateLove.cpp; sourceTree = "<group>"; };
+		B5CB84711A400DD800F3D9B1 /* DateLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateLove.h; sourceTree = "<group>"; };
+		B5CB84721A400DD800F3D9B1 /* DateNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DateNoLove.cpp; sourceTree = "<group>"; };
+		B5CB84731A400DD800F3D9B1 /* DateNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateNoLove.h; sourceTree = "<group>"; };
+		B5CB84751A400DD800F3D9B1 /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		B5CB84761A400DD800F3D9B1 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		B5CB84781A400DD800F3D9B1 /* Gift.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gift.cpp; sourceTree = "<group>"; };
+		B5CB84791A400DD800F3D9B1 /* Gift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gift.h; sourceTree = "<group>"; };
+		B5CB847A1A400DD800F3D9B1 /* Interaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interaction.cpp; sourceTree = "<group>"; };
+		B5CB847B1A400DD800F3D9B1 /* Interaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interaction.h; sourceTree = "<group>"; };
+		B5CB847C1A400DD800F3D9B1 /* LeisureIOILove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeisureIOILove.cpp; sourceTree = "<group>"; };
+		B5CB847D1A400DD800F3D9B1 /* LeisureIOILove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeisureIOILove.h; sourceTree = "<group>"; };
+		B5CB847E1A400DD800F3D9B1 /* LeisureIOINoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeisureIOINoLove.cpp; sourceTree = "<group>"; };
+		B5CB847F1A400DD800F3D9B1 /* LeisureIOINoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeisureIOINoLove.h; sourceTree = "<group>"; };
+		B5CB84801A400DD800F3D9B1 /* LeisureTalkLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeisureTalkLove.cpp; sourceTree = "<group>"; };
+		B5CB84811A400DD800F3D9B1 /* LeisureTalkLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeisureTalkLove.h; sourceTree = "<group>"; };
+		B5CB84821A400DD800F3D9B1 /* LeisureTalkNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeisureTalkNoLove.cpp; sourceTree = "<group>"; };
+		B5CB84831A400DD800F3D9B1 /* LeisureTalkNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeisureTalkNoLove.h; sourceTree = "<group>"; };
+		B5CB84851A400DD800F3D9B1 /* Story.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Story.cpp; sourceTree = "<group>"; };
+		B5CB84861A400DD800F3D9B1 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		B5CB84871A400DD800F3D9B1 /* WorkHelpLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkHelpLove.cpp; sourceTree = "<group>"; };
+		B5CB84881A400DD800F3D9B1 /* WorkHelpLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHelpLove.h; sourceTree = "<group>"; };
+		B5CB84891A400DD800F3D9B1 /* WorkHelpNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkHelpNoLove.cpp; sourceTree = "<group>"; };
+		B5CB848A1A400DD800F3D9B1 /* WorkHelpNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkHelpNoLove.h; sourceTree = "<group>"; };
+		B5CB848B1A400DD800F3D9B1 /* WorkIOILove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkIOILove.cpp; sourceTree = "<group>"; };
+		B5CB848C1A400DD800F3D9B1 /* WorkIOILove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkIOILove.h; sourceTree = "<group>"; };
+		B5CB848D1A400DD800F3D9B1 /* WorkIOINoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkIOINoLove.cpp; sourceTree = "<group>"; };
+		B5CB848E1A400DD800F3D9B1 /* WorkIOINoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkIOINoLove.h; sourceTree = "<group>"; };
+		B5CB848F1A400DD800F3D9B1 /* WorkMeetNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkMeetNoLove.cpp; sourceTree = "<group>"; };
+		B5CB84901A400DD800F3D9B1 /* WorkMeetNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkMeetNoLove.h; sourceTree = "<group>"; };
+		B5CB84911A400DD800F3D9B1 /* WorkTalkLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkTalkLove.cpp; sourceTree = "<group>"; };
+		B5CB84921A400DD800F3D9B1 /* WorkTalkLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkTalkLove.h; sourceTree = "<group>"; };
+		B5CB84931A400DD800F3D9B1 /* WorkTalkNoLove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkTalkNoLove.cpp; sourceTree = "<group>"; };
+		B5CB84941A400DD800F3D9B1 /* WorkTalkNoLove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkTalkNoLove.h; sourceTree = "<group>"; };
+		B5CB84971A400DD800F3D9B1 /* Notify.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Notify.cpp; sourceTree = "<group>"; };
+		B5CB84981A400DD800F3D9B1 /* Notify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notify.h; sourceTree = "<group>"; };
+		B5CB849B1A400DD800F3D9B1 /* Favorite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Favorite.cpp; sourceTree = "<group>"; };
+		B5CB849C1A400DD800F3D9B1 /* Favorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
+		B5CB849D1A400DD800F3D9B1 /* Girl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Girl.cpp; sourceTree = "<group>"; };
+		B5CB849E1A400DD800F3D9B1 /* Girl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Girl.h; sourceTree = "<group>"; };
+		B5CB849F1A400DD800F3D9B1 /* Mood.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mood.cpp; sourceTree = "<group>"; };
+		B5CB84A01A400DD800F3D9B1 /* Mood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mood.h; sourceTree = "<group>"; };
+		B5CB84A11A400DD800F3D9B1 /* PersonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PersonBase.cpp; sourceTree = "<group>"; };
+		B5CB84A21A400DD800F3D9B1 /* PersonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonBase.h; sourceTree = "<group>"; };
+		B5CB84A31A400DD800F3D9B1 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		B5CB84A41A400DD800F3D9B1 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		B5CB84A61A400DD800F3D9B1 /* Save.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Save.cpp; sourceTree = "<group>"; };
+		B5CB84A71A400DD800F3D9B1 /* Save.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Save.h; sourceTree = "<group>"; };
+		B5CB84A91A400DD800F3D9B1 /* Status.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Status.cpp; sourceTree = "<group>"; };
+		B5CB84AA1A400DD800F3D9B1 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		B5CB84AB1A400DD800F3D9B1 /* StatusController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusController.cpp; sourceTree = "<group>"; };
+		B5CB84AC1A400DD800F3D9B1 /* StatusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusController.h; sourceTree = "<group>"; };
+		B5CB84AD1A400DD800F3D9B1 /* StatusLeisure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusLeisure.cpp; sourceTree = "<group>"; };
+		B5CB84AE1A400DD800F3D9B1 /* StatusLeisure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusLeisure.h; sourceTree = "<group>"; };
+		B5CB84AF1A400DD800F3D9B1 /* StatusSleep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusSleep.cpp; sourceTree = "<group>"; };
+		B5CB84B01A400DD800F3D9B1 /* StatusSleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusSleep.h; sourceTree = "<group>"; };
+		B5CB84B11A400DD800F3D9B1 /* StatusWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusWork.cpp; sourceTree = "<group>"; };
+		B5CB84B21A400DD800F3D9B1 /* StatusWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusWork.h; sourceTree = "<group>"; };
+		B5CB84B41A400DD800F3D9B1 /* Constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant.cpp; sourceTree = "<group>"; };
+		B5CB84B51A400DD800F3D9B1 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		B5CB84B61A400DD800F3D9B1 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		B5CB84B71A400DD800F3D9B1 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		B5CB84B81A400DD800F3D9B1 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		B5CB84B91A400DD800F3D9B1 /* Oberserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Oberserver.cpp; sourceTree = "<group>"; };
+		B5CB84BA1A400DD800F3D9B1 /* Oberserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oberserver.h; sourceTree = "<group>"; };
+		B5CB84BB1A400DD800F3D9B1 /* Serializ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Serializ.cpp; sourceTree = "<group>"; };
+		B5CB84BC1A400DD800F3D9B1 /* Serializ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Serializ.h; sourceTree = "<group>"; };
+		B5CB84BD1A400DD800F3D9B1 /* Singleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Singleton.cpp; sourceTree = "<group>"; };
+		B5CB84BE1A400DD800F3D9B1 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		B5CB84BF1A400DD800F3D9B1 /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
+		B5CB84C01A400DD800F3D9B1 /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
+		B5CB84C11A400DD800F3D9B1 /* Xml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Xml.cpp; sourceTree = "<group>"; };
+		B5CB84C21A400DD800F3D9B1 /* Xml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xml.h; sourceTree = "<group>"; };
+		B5CB84FA1A4010F900F3D9B1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ForU/main.m; sourceTree = SOURCE_ROOT; };
+		B5CB84FD1A40124C00F3D9B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B5CB84FF1A40126500F3D9B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CB85001A40126500F3D9B1 /* Foundation.framework in Frameworks */,
+				B5CB84FE1A40124C00F3D9B1 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +191,8 @@
 		B586D43F1A3EBFCD004EEE84 = {
 			isa = PBXGroup;
 			children = (
+				B5CB85011A40127700F3D9B1 /* framework */,
+				B5CB844E1A400DD800F3D9B1 /* Core */,
 				B586D4721A3EC069004EEE84 /* MiddleWare */,
 				B586D44A1A3EBFCE004EEE84 /* ForU */,
 				B586D4641A3EBFCE004EEE84 /* ForUTests */,
@@ -93,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				B586D4661A3EBFCE004EEE84 /* Info.plist */,
+				B5CB84FA1A4010F900F3D9B1 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -100,8 +252,216 @@
 		B586D4721A3EC069004EEE84 /* MiddleWare */ = {
 			isa = PBXGroup;
 			children = (
+				B5CB844B1A400AF100F3D9B1 /* FUApplication.h */,
+				B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */,
 			);
 			path = MiddleWare;
+			sourceTree = "<group>";
+		};
+		B5CB844E1A400DD800F3D9B1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB844F1A400DD800F3D9B1 /* Application.cpp */,
+				B5CB84501A400DD800F3D9B1 /* Application.h */,
+				B5CB845B1A400DD800F3D9B1 /* Interaction */,
+				B5CB84951A400DD800F3D9B1 /* logic */,
+				B5CB849A1A400DD800F3D9B1 /* Person */,
+				B5CB84A51A400DD800F3D9B1 /* save */,
+				B5CB84A81A400DD800F3D9B1 /* Status */,
+				B5CB84B31A400DD800F3D9B1 /* util */,
+			);
+			name = Core;
+			path = ../../Core/Core;
+			sourceTree = "<group>";
+		};
+		B5CB845B1A400DD800F3D9B1 /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB845C1A400DD800F3D9B1 /* Action */,
+				B5CB84631A400DD800F3D9B1 /* Date */,
+				B5CB846E1A400DD800F3D9B1 /* DateIOI.cpp */,
+				B5CB846F1A400DD800F3D9B1 /* DateIOI.h */,
+				B5CB84701A400DD800F3D9B1 /* DateLove.cpp */,
+				B5CB84711A400DD800F3D9B1 /* DateLove.h */,
+				B5CB84721A400DD800F3D9B1 /* DateNoLove.cpp */,
+				B5CB84731A400DD800F3D9B1 /* DateNoLove.h */,
+				B5CB84741A400DD800F3D9B1 /* Event */,
+				B5CB84771A400DD800F3D9B1 /* Gift */,
+				B5CB847A1A400DD800F3D9B1 /* Interaction.cpp */,
+				B5CB847B1A400DD800F3D9B1 /* Interaction.h */,
+				B5CB847C1A400DD800F3D9B1 /* LeisureIOILove.cpp */,
+				B5CB847D1A400DD800F3D9B1 /* LeisureIOILove.h */,
+				B5CB847E1A400DD800F3D9B1 /* LeisureIOINoLove.cpp */,
+				B5CB847F1A400DD800F3D9B1 /* LeisureIOINoLove.h */,
+				B5CB84801A400DD800F3D9B1 /* LeisureTalkLove.cpp */,
+				B5CB84811A400DD800F3D9B1 /* LeisureTalkLove.h */,
+				B5CB84821A400DD800F3D9B1 /* LeisureTalkNoLove.cpp */,
+				B5CB84831A400DD800F3D9B1 /* LeisureTalkNoLove.h */,
+				B5CB84841A400DD800F3D9B1 /* Story */,
+				B5CB84871A400DD800F3D9B1 /* WorkHelpLove.cpp */,
+				B5CB84881A400DD800F3D9B1 /* WorkHelpLove.h */,
+				B5CB84891A400DD800F3D9B1 /* WorkHelpNoLove.cpp */,
+				B5CB848A1A400DD800F3D9B1 /* WorkHelpNoLove.h */,
+				B5CB848B1A400DD800F3D9B1 /* WorkIOILove.cpp */,
+				B5CB848C1A400DD800F3D9B1 /* WorkIOILove.h */,
+				B5CB848D1A400DD800F3D9B1 /* WorkIOINoLove.cpp */,
+				B5CB848E1A400DD800F3D9B1 /* WorkIOINoLove.h */,
+				B5CB848F1A400DD800F3D9B1 /* WorkMeetNoLove.cpp */,
+				B5CB84901A400DD800F3D9B1 /* WorkMeetNoLove.h */,
+				B5CB84911A400DD800F3D9B1 /* WorkTalkLove.cpp */,
+				B5CB84921A400DD800F3D9B1 /* WorkTalkLove.h */,
+				B5CB84931A400DD800F3D9B1 /* WorkTalkNoLove.cpp */,
+				B5CB84941A400DD800F3D9B1 /* WorkTalkNoLove.h */,
+			);
+			path = Interaction;
+			sourceTree = "<group>";
+		};
+		B5CB845C1A400DD800F3D9B1 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */,
+				B5CB845E1A400DD800F3D9B1 /* ActionBody.h */,
+				B5CB845F1A400DD800F3D9B1 /* ActionEye.cpp */,
+				B5CB84601A400DD800F3D9B1 /* ActionEye.h */,
+				B5CB84611A400DD800F3D9B1 /* ActionTalk.cpp */,
+				B5CB84621A400DD800F3D9B1 /* ActionTalk.h */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		B5CB84631A400DD800F3D9B1 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84641A400DD800F3D9B1 /* DateBase.cpp */,
+				B5CB84651A400DD800F3D9B1 /* DateBase.h */,
+				B5CB84661A400DD800F3D9B1 /* DateEat.cpp */,
+				B5CB84671A400DD800F3D9B1 /* DateEat.h */,
+				B5CB84681A400DD800F3D9B1 /* DateFilm.cpp */,
+				B5CB84691A400DD800F3D9B1 /* DateFilm.h */,
+				B5CB846A1A400DD800F3D9B1 /* DatePark.cpp */,
+				B5CB846B1A400DD800F3D9B1 /* DatePark.h */,
+				B5CB846C1A400DD800F3D9B1 /* DateWalk.cpp */,
+				B5CB846D1A400DD800F3D9B1 /* DateWalk.h */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		B5CB84741A400DD800F3D9B1 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84751A400DD800F3D9B1 /* Event.cpp */,
+				B5CB84761A400DD800F3D9B1 /* Event.h */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		B5CB84771A400DD800F3D9B1 /* Gift */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84781A400DD800F3D9B1 /* Gift.cpp */,
+				B5CB84791A400DD800F3D9B1 /* Gift.h */,
+			);
+			path = Gift;
+			sourceTree = "<group>";
+		};
+		B5CB84841A400DD800F3D9B1 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84851A400DD800F3D9B1 /* Story.cpp */,
+				B5CB84861A400DD800F3D9B1 /* Story.h */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		B5CB84951A400DD800F3D9B1 /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84961A400DD800F3D9B1 /* notify */,
+			);
+			path = logic;
+			sourceTree = "<group>";
+		};
+		B5CB84961A400DD800F3D9B1 /* notify */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84971A400DD800F3D9B1 /* Notify.cpp */,
+				B5CB84981A400DD800F3D9B1 /* Notify.h */,
+			);
+			path = notify;
+			sourceTree = "<group>";
+		};
+		B5CB849A1A400DD800F3D9B1 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB849B1A400DD800F3D9B1 /* Favorite.cpp */,
+				B5CB849C1A400DD800F3D9B1 /* Favorite.h */,
+				B5CB849D1A400DD800F3D9B1 /* Girl.cpp */,
+				B5CB849E1A400DD800F3D9B1 /* Girl.h */,
+				B5CB849F1A400DD800F3D9B1 /* Mood.cpp */,
+				B5CB84A01A400DD800F3D9B1 /* Mood.h */,
+				B5CB84A11A400DD800F3D9B1 /* PersonBase.cpp */,
+				B5CB84A21A400DD800F3D9B1 /* PersonBase.h */,
+				B5CB84A31A400DD800F3D9B1 /* Player.cpp */,
+				B5CB84A41A400DD800F3D9B1 /* Player.h */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		B5CB84A51A400DD800F3D9B1 /* save */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84A61A400DD800F3D9B1 /* Save.cpp */,
+				B5CB84A71A400DD800F3D9B1 /* Save.h */,
+			);
+			path = save;
+			sourceTree = "<group>";
+		};
+		B5CB84A81A400DD800F3D9B1 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84A91A400DD800F3D9B1 /* Status.cpp */,
+				B5CB84AA1A400DD800F3D9B1 /* Status.h */,
+				B5CB84AB1A400DD800F3D9B1 /* StatusController.cpp */,
+				B5CB84AC1A400DD800F3D9B1 /* StatusController.h */,
+				B5CB84AD1A400DD800F3D9B1 /* StatusLeisure.cpp */,
+				B5CB84AE1A400DD800F3D9B1 /* StatusLeisure.h */,
+				B5CB84AF1A400DD800F3D9B1 /* StatusSleep.cpp */,
+				B5CB84B01A400DD800F3D9B1 /* StatusSleep.h */,
+				B5CB84B11A400DD800F3D9B1 /* StatusWork.cpp */,
+				B5CB84B21A400DD800F3D9B1 /* StatusWork.h */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		B5CB84B31A400DD800F3D9B1 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84B41A400DD800F3D9B1 /* Constant.cpp */,
+				B5CB84B51A400DD800F3D9B1 /* Constant.h */,
+				B5CB84B61A400DD800F3D9B1 /* Header.h */,
+				B5CB84B71A400DD800F3D9B1 /* Log.cpp */,
+				B5CB84B81A400DD800F3D9B1 /* Log.h */,
+				B5CB84B91A400DD800F3D9B1 /* Oberserver.cpp */,
+				B5CB84BA1A400DD800F3D9B1 /* Oberserver.h */,
+				B5CB84BB1A400DD800F3D9B1 /* Serializ.cpp */,
+				B5CB84BC1A400DD800F3D9B1 /* Serializ.h */,
+				B5CB84BD1A400DD800F3D9B1 /* Singleton.cpp */,
+				B5CB84BE1A400DD800F3D9B1 /* Singleton.h */,
+				B5CB84BF1A400DD800F3D9B1 /* Time.cpp */,
+				B5CB84C01A400DD800F3D9B1 /* Time.h */,
+				B5CB84C11A400DD800F3D9B1 /* Xml.cpp */,
+				B5CB84C21A400DD800F3D9B1 /* Xml.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		B5CB85011A40127700F3D9B1 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB84FD1A40124C00F3D9B1 /* UIKit.framework */,
+				B5CB84FF1A40126500F3D9B1 /* Foundation.framework */,
+			);
+			name = framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +533,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CB84FC1A4011D300F3D9B1 /* main.m in Sources */,
+				B5CB84EA1A400DD800F3D9B1 /* Mood.cpp in Sources */,
+				B5CB84D61A400DD800F3D9B1 /* DateNoLove.cpp in Sources */,
+				B5CB84D51A400DD800F3D9B1 /* DateLove.cpp in Sources */,
+				B5CB84DD1A400DD800F3D9B1 /* LeisureTalkNoLove.cpp in Sources */,
+				B5CB84F41A400DD800F3D9B1 /* Log.cpp in Sources */,
+				B5CB84D11A400DD800F3D9B1 /* DateFilm.cpp in Sources */,
+				B5CB84F91A400DD800F3D9B1 /* Xml.cpp in Sources */,
 				B5CB839D1A3FFAF300F3D9B1 /* StartViewController.m in Sources */,
+				B5CB84E21A400DD800F3D9B1 /* WorkIOINoLove.cpp in Sources */,
+				B5CB84D31A400DD800F3D9B1 /* DateWalk.cpp in Sources */,
+				B5CB84EB1A400DD800F3D9B1 /* PersonBase.cpp in Sources */,
+				B5CB84CE1A400DD800F3D9B1 /* ActionTalk.cpp in Sources */,
 				B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */,
-				B586D44E1A3EBFCE004EEE84 /* main.m in Sources */,
+				B5CB84F51A400DD800F3D9B1 /* Oberserver.cpp in Sources */,
+				B5CB84E51A400DD800F3D9B1 /* WorkTalkNoLove.cpp in Sources */,
+				B5CB84F11A400DD800F3D9B1 /* StatusSleep.cpp in Sources */,
+				B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */,
+				B5CB84E31A400DD800F3D9B1 /* WorkMeetNoLove.cpp in Sources */,
+				B5CB84DB1A400DD800F3D9B1 /* LeisureIOINoLove.cpp in Sources */,
+				B5CB84E41A400DD800F3D9B1 /* WorkTalkLove.cpp in Sources */,
+				B5CB84F31A400DD800F3D9B1 /* Constant.cpp in Sources */,
+				B5CB84EC1A400DD800F3D9B1 /* Player.cpp in Sources */,
+				B5CB84DA1A400DD800F3D9B1 /* LeisureIOILove.cpp in Sources */,
+				B5CB84E81A400DD800F3D9B1 /* Favorite.cpp in Sources */,
+				B5CB84DC1A400DD800F3D9B1 /* LeisureTalkLove.cpp in Sources */,
+				B5CB84DE1A400DD800F3D9B1 /* Story.cpp in Sources */,
+				B5CB84D41A400DD800F3D9B1 /* DateIOI.cpp in Sources */,
+				B5CB84E11A400DD800F3D9B1 /* WorkIOILove.cpp in Sources */,
+				B5CB84EE1A400DD800F3D9B1 /* Status.cpp in Sources */,
+				B5CB84CF1A400DD800F3D9B1 /* DateBase.cpp in Sources */,
+				B5CB84F21A400DD800F3D9B1 /* StatusWork.cpp in Sources */,
+				B5CB84E61A400DD800F3D9B1 /* Notify.cpp in Sources */,
+				B5CB84EF1A400DD800F3D9B1 /* StatusController.cpp in Sources */,
+				B5CB84F61A400DD800F3D9B1 /* Serializ.cpp in Sources */,
+				B5CB84DF1A400DD800F3D9B1 /* WorkHelpLove.cpp in Sources */,
+				B5CB84D81A400DD800F3D9B1 /* Gift.cpp in Sources */,
+				B5CB84E91A400DD800F3D9B1 /* Girl.cpp in Sources */,
+				B5CB84F71A400DD800F3D9B1 /* Singleton.cpp in Sources */,
+				B5CB84D21A400DD800F3D9B1 /* DatePark.cpp in Sources */,
+				B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */,
+				B5CB84D91A400DD800F3D9B1 /* Interaction.cpp in Sources */,
+				B5CB84D71A400DD800F3D9B1 /* Event.cpp in Sources */,
+				B5CB84ED1A400DD800F3D9B1 /* Save.cpp in Sources */,
+				B5CB84F81A400DD800F3D9B1 /* Time.cpp in Sources */,
+				B5CB84F01A400DD800F3D9B1 /* StatusLeisure.cpp in Sources */,
+				B5CB84D01A400DD800F3D9B1 /* DateEat.cpp in Sources */,
+				B5CB844D1A400AF100F3D9B1 /* FUApplication.mm in Sources */,
+				B5CB84CC1A400DD800F3D9B1 /* ActionBody.cpp in Sources */,
+				B5CB84CD1A400DD800F3D9B1 /* ActionEye.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +669,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					XCODE,
+				);
 				INFOPLIST_FILE = ForU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = ForU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

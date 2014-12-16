@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "StartViewController.h"
+#include "FUApplication.h"
 @interface AppDelegate ()
 
 @end
