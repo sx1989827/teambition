@@ -10,6 +10,8 @@
 		B586D44E1A3EBFCE004EEE84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D44D1A3EBFCE004EEE84 /* main.m */; };
 		B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D4501A3EBFCE004EEE84 /* AppDelegate.m */; };
 		B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586D4581A3EBFCE004EEE84 /* Images.xcassets */; };
+		B5CB839D1A3FFAF300F3D9B1 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */; };
+		B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		B586D4581A3EBFCE004EEE84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B586D4661A3EBFCE004EEE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586D4671A3EBFCE004EEE84 /* ForUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForUTests.m; sourceTree = "<group>"; };
+		B5CB839A1A3FFAF300F3D9B1 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,9 @@
 				B586D4501A3EBFCE004EEE84 /* AppDelegate.m */,
 				B586D4581A3EBFCE004EEE84 /* Images.xcassets */,
 				B586D44B1A3EBFCE004EEE84 /* Supporting Files */,
+				B5CB839A1A3FFAF300F3D9B1 /* StartViewController.h */,
+				B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */,
+				B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */,
 			);
 			path = ForU;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
+				B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CB839D1A3FFAF300F3D9B1 /* StartViewController.m in Sources */,
 				B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */,
 				B586D44E1A3EBFCE004EEE84 /* main.m in Sources */,
 			);
