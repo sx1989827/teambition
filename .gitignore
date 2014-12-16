@@ -54,3 +54,5 @@ teambition/
 code/1.0/Core/DerivedData/Core/Build/Intermediates/Core.build/Debug/Core.build/dgph
 
 code/1.0/Core/DerivedData/Core/Build/Products/Debug/Core
+
+*.xcfind
