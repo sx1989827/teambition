@@ -61,6 +61,16 @@
 		B5CB84FC1A4011D300F3D9B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84FA1A4010F900F3D9B1 /* main.m */; };
 		B5CB84FE1A40124C00F3D9B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB84FD1A40124C00F3D9B1 /* UIKit.framework */; };
 		B5CB85001A40126500F3D9B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB84FF1A40126500F3D9B1 /* Foundation.framework */; };
+		B5D0A1671A4198AC0059A685 /* FUAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A1661A4198AC0059A685 /* FUAlertView.m */; };
+		B5E2132D1A41BA11001735F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2132C1A41BA11001735F7 /* QuartzCore.framework */; };
+		B5E213301A41C05B001735F7 /* FUListView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2132F1A41C05B001735F7 /* FUListView.m */; };
+		B5E213321A41C07A001735F7 /* FUListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E213311A41C07A001735F7 /* FUListView.xib */; };
+		B5F3BD3D1A41D8B5001E7CCA /* SvGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD3C1A41D8B5001E7CCA /* SvGifView.m */; };
+		B5F3BD3F1A41D924001E7CCA /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F3BD3E1A41D924001E7CCA /* ImageIO.framework */; };
+		B5F3BD411A41D934001E7CCA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F3BD401A41D934001E7CCA /* CoreFoundation.framework */; };
+		B5F3BD431A41D9D0001E7CCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F3BD421A41D9D0001E7CCA /* CoreGraphics.framework */; };
+		B5F3BD461A41DA17001E7CCA /* FULoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD451A41DA17001E7CCA /* FULoadingView.m */; };
+		B5F3BD491A41DA52001E7CCA /* jiafei.gif in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD481A41DA52001E7CCA /* jiafei.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +183,20 @@
 		B5CB84FA1A4010F900F3D9B1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ForU/main.m; sourceTree = SOURCE_ROOT; };
 		B5CB84FD1A40124C00F3D9B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5CB84FF1A40126500F3D9B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5D0A1651A4198AC0059A685 /* FUAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUAlertView.h; sourceTree = "<group>"; };
+		B5D0A1661A4198AC0059A685 /* FUAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUAlertView.m; sourceTree = "<group>"; };
+		B5E2132C1A41BA11001735F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B5E2132E1A41C05B001735F7 /* FUListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUListView.h; sourceTree = "<group>"; };
+		B5E2132F1A41C05B001735F7 /* FUListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUListView.m; sourceTree = "<group>"; };
+		B5E213311A41C07A001735F7 /* FUListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUListView.xib; sourceTree = "<group>"; };
+		B5F3BD3B1A41D8B5001E7CCA /* SvGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SvGifView.h; sourceTree = "<group>"; };
+		B5F3BD3C1A41D8B5001E7CCA /* SvGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SvGifView.m; sourceTree = "<group>"; };
+		B5F3BD3E1A41D924001E7CCA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B5F3BD401A41D934001E7CCA /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		B5F3BD421A41D9D0001E7CCA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B5F3BD441A41DA17001E7CCA /* FULoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FULoadingView.h; sourceTree = "<group>"; };
+		B5F3BD451A41DA17001E7CCA /* FULoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FULoadingView.m; sourceTree = "<group>"; };
+		B5F3BD481A41DA52001E7CCA /* jiafei.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = jiafei.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +204,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F3BD431A41D9D0001E7CCA /* CoreGraphics.framework in Frameworks */,
+				B5F3BD411A41D934001E7CCA /* CoreFoundation.framework in Frameworks */,
 				B5CB85001A40126500F3D9B1 /* Foundation.framework in Frameworks */,
+				B5F3BD3F1A41D924001E7CCA /* ImageIO.framework in Frameworks */,
+				B5E2132D1A41BA11001735F7 /* QuartzCore.framework in Frameworks */,
 				B5CB84FE1A40124C00F3D9B1 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +239,7 @@
 		B586D44A1A3EBFCE004EEE84 /* ForU */ = {
 			isa = PBXGroup;
 			children = (
+				B5F3BD471A41DA3D001E7CCA /* Image */,
 				B586D44F1A3EBFCE004EEE84 /* AppDelegate.h */,
 				B586D4501A3EBFCE004EEE84 /* AppDelegate.m */,
 				B586D4581A3EBFCE004EEE84 /* Images.xcassets */,
@@ -254,6 +283,7 @@
 			children = (
 				B5CB844B1A400AF100F3D9B1 /* FUApplication.h */,
 				B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */,
+				B5D0A1641A41982E0059A685 /* Component */,
 			);
 			path = MiddleWare;
 			sourceTree = "<group>";
@@ -458,10 +488,46 @@
 		B5CB85011A40127700F3D9B1 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				B5F3BD421A41D9D0001E7CCA /* CoreGraphics.framework */,
+				B5F3BD401A41D934001E7CCA /* CoreFoundation.framework */,
+				B5F3BD3E1A41D924001E7CCA /* ImageIO.framework */,
+				B5E2132C1A41BA11001735F7 /* QuartzCore.framework */,
 				B5CB84FD1A40124C00F3D9B1 /* UIKit.framework */,
 				B5CB84FF1A40126500F3D9B1 /* Foundation.framework */,
 			);
 			name = framework;
+			sourceTree = "<group>";
+		};
+		B5D0A1641A41982E0059A685 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B5D0A1651A4198AC0059A685 /* FUAlertView.h */,
+				B5D0A1661A4198AC0059A685 /* FUAlertView.m */,
+				B5E2132E1A41C05B001735F7 /* FUListView.h */,
+				B5E2132F1A41C05B001735F7 /* FUListView.m */,
+				B5E213311A41C07A001735F7 /* FUListView.xib */,
+				B5F3BD3A1A41D8B5001E7CCA /* SvGifView */,
+				B5F3BD441A41DA17001E7CCA /* FULoadingView.h */,
+				B5F3BD451A41DA17001E7CCA /* FULoadingView.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B5F3BD3A1A41D8B5001E7CCA /* SvGifView */ = {
+			isa = PBXGroup;
+			children = (
+				B5F3BD3B1A41D8B5001E7CCA /* SvGifView.h */,
+				B5F3BD3C1A41D8B5001E7CCA /* SvGifView.m */,
+			);
+			path = SvGifView;
+			sourceTree = "<group>";
+		};
+		B5F3BD471A41DA3D001E7CCA /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				B5F3BD481A41DA52001E7CCA /* jiafei.gif */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +588,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
+				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
+				B5F3BD491A41DA52001E7CCA /* jiafei.gif in Resources */,
 				B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,10 +618,13 @@
 				B5CB84F51A400DD800F3D9B1 /* Oberserver.cpp in Sources */,
 				B5CB84E51A400DD800F3D9B1 /* WorkTalkNoLove.cpp in Sources */,
 				B5CB84F11A400DD800F3D9B1 /* StatusSleep.cpp in Sources */,
+				B5E213301A41C05B001735F7 /* FUListView.m in Sources */,
+				B5F3BD3D1A41D8B5001E7CCA /* SvGifView.m in Sources */,
 				B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */,
 				B5CB84E31A400DD800F3D9B1 /* WorkMeetNoLove.cpp in Sources */,
 				B5CB84DB1A400DD800F3D9B1 /* LeisureIOINoLove.cpp in Sources */,
 				B5CB84E41A400DD800F3D9B1 /* WorkTalkLove.cpp in Sources */,
+				B5D0A1671A4198AC0059A685 /* FUAlertView.m in Sources */,
 				B5CB84F31A400DD800F3D9B1 /* Constant.cpp in Sources */,
 				B5CB84EC1A400DD800F3D9B1 /* Player.cpp in Sources */,
 				B5CB84DA1A400DD800F3D9B1 /* LeisureIOILove.cpp in Sources */,
@@ -562,6 +633,7 @@
 				B5CB84DE1A400DD800F3D9B1 /* Story.cpp in Sources */,
 				B5CB84D41A400DD800F3D9B1 /* DateIOI.cpp in Sources */,
 				B5CB84E11A400DD800F3D9B1 /* WorkIOILove.cpp in Sources */,
+				B5F3BD461A41DA17001E7CCA /* FULoadingView.m in Sources */,
 				B5CB84EE1A400DD800F3D9B1 /* Status.cpp in Sources */,
 				B5CB84CF1A400DD800F3D9B1 /* DateBase.cpp in Sources */,
 				B5CB84F21A400DD800F3D9B1 /* StatusWork.cpp in Sources */,

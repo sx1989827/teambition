@@ -7,7 +7,10 @@
 //
 
 #import "StartViewController.h"
-
+#import "FUAlertView.h"
+#import "FUListView.h"
+#import "FULoadingView.h"
+#import "SvGifView.h"
 @interface StartViewController ()
 
 @end
@@ -16,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,11 +38,12 @@
 */
 
 - (IBAction)click:(id)sender {
-    [UIView animateWithDuration:2 animations:^{
-        _btn1Height.constant=200;
-        _btn1Left.constant=100;
-        [self.view layoutIfNeeded];
-    }];
+    FULoadingView *view=[[FULoadingView alloc] init];
+    [view showInView:self.view];
+    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 5*NSEC_PER_SEC);
+    dispatch_after(time, dispatch_get_main_queue(), ^{
+        [view remove];
+    });
 }
 @end
 
