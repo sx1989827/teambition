@@ -34,4 +34,26 @@
 }
 */
 
+- (IBAction)click:(id)sender {
+    [UIView animateWithDuration:2 animations:^{
+        _btn1Height.constant=200;
+        _btn1Left.constant=100;
+        [self.view layoutIfNeeded];
+    }];
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
