@@ -9,6 +9,7 @@
 #ifndef __Core__Event__
 #define __Core__Event__
 #include "../../util/Header.h"
+#define  EVENTCENTER CoreEventSingleton::GetInstance()
 struct sEvent
 {
     std::string strDes;

@@ -80,7 +80,7 @@ sNotify CoreNotify::AdjustNotify()
         }
     }
     sNotify noti;
-    noti.sec=0;
+    noti.type=sNotify::NONE;
     for(auto it=vec.begin();it!=vec.end();it++)
     {
         if(it->type==sNotify::CALL || it->type==sNotify::DATEITEMEND || it->type==sNotify::WORKHELPEND)

@@ -19,6 +19,7 @@ enum NOTIFYTYPE {CALL,DATEITEMEND,WORKHELPEND,WORKIOI,WORKMEET,WORKHELP,LEISUREI
 -(NSString*)GetGirlMood;
 -(void)Save;
 -(void)CreateNotify;
+-(void)AdjustNotify;
 @end
 
 
