@@ -32,15 +32,17 @@
     }];
 
 }
--(void)addPhoto:(NSArray*)arrPhoto
+-(void)addPhoto:(NSString*)dir
 {
+    NSString *imgPath=[[NSBundle mainBundle] pathForResource:@"Image" ofType:@"bundle"];
+    NSArray *arrPhoto=[[NSBundle bundleWithPath:imgPath] pathsForResourcesOfType:@"jpg" inDirectory:[NSString stringWithFormat:@"story/%@",dir]];
     long height=[UIScreen mainScreen].bounds.size.height;
     long width=[UIScreen mainScreen].bounds.size.width*arrPhoto.count;
     self.contentSize=CGSizeMake(width, height);
     for(long i=0;i<arrPhoto.count;i++)
     {
         UIImageView* view=[[UIImageView alloc] initWithFrame:CGRectMake(i*[UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-        UIImage *img=[UIImage imageNamed:arrPhoto[i]];
+        UIImage *img=[UIImage imageWithContentsOfFile:arrPhoto[i]];
         view.image=img;
         [self addSubview:view];
         if(i==arrPhoto.count-1)

@@ -10,5 +10,5 @@
 
 @interface FUPhotoView : UIScrollView
 -(void)showInView:(UIView*)view;
--(void)addPhoto:(NSArray*)arrPhoto;
+-(void)addPhoto:(NSString*)dir;
 @end

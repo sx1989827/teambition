@@ -39,7 +39,7 @@
 
 - (IBAction)click:(id)sender {
     FUPhotoView *view=[[FUPhotoView alloc] init];
-    [view addPhoto:@[@"1.jpg",@"2.jpg",@"3.jpg"]];
+    [view addPhoto:@"123"];
     [view showInView:self.view];
 }
 @end
