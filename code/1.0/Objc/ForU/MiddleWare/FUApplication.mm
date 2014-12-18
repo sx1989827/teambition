@@ -31,7 +31,7 @@
     }
 }
 
--(void)Reset:(long)girltype
+-(void)Reset:(GIRLTYPE)girltype
 {
     app->Reset((CoreGirl::TYPE)girltype);
 }
@@ -56,6 +56,16 @@
 -(NSString*)GetGirlMood
 {
     return [NSString  stringWithUTF8String:app->GetGirl()->GetMood()->GetStrMood().data()];
+}
+
+-(void)Save
+{
+    
+}
+
+-(void)CreateNotify
+{
+    
 }
 @end
 

@@ -7,12 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-
+enum GIRLTYPE {LOLI,MAID,QUEEN};
+enum PERSONTYPE {PLAYER,GIRL};
+enum NOTIFYTYPE {CALL,DATEITEMEND,WORKHELPEND,WORKIOI,WORKMEET,WORKHELP,LEISUREIOI,LEISUREDATE,WORKEVENT,LEISUREEVENT,NONE};
 @interface FUApplication : NSObject
--(void)Reset:(long)girltype;
+-(void)Reset:(GIRLTYPE)girltype;
 -(void)Update;
 -(NSString*)GetPlayerPhysical;
 -(NSString*)GetPlayerMoney;
 -(NSString*)GetGirlIOI;
 -(NSString*)GetGirlMood;
+-(void)Save;
+-(void)CreateNotify;
 @end
+
+
+
+
+
+
+
+
