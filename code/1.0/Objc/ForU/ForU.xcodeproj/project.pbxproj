@@ -71,6 +71,10 @@
 		B5F3BD431A41D9D0001E7CCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F3BD421A41D9D0001E7CCA /* CoreGraphics.framework */; };
 		B5F3BD461A41DA17001E7CCA /* FULoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD451A41DA17001E7CCA /* FULoadingView.m */; };
 		B5F3BD491A41DA52001E7CCA /* jiafei.gif in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD481A41DA52001E7CCA /* jiafei.gif */; };
+		B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD511A42768D001E7CCA /* FUPhotoView.m */; };
+		B5F3BD571A428088001E7CCA /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD541A428088001E7CCA /* 1.jpg */; };
+		B5F3BD581A428088001E7CCA /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD551A428088001E7CCA /* 2.jpg */; };
+		B5F3BD591A428088001E7CCA /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD561A428088001E7CCA /* 3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +201,11 @@
 		B5F3BD441A41DA17001E7CCA /* FULoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FULoadingView.h; sourceTree = "<group>"; };
 		B5F3BD451A41DA17001E7CCA /* FULoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FULoadingView.m; sourceTree = "<group>"; };
 		B5F3BD481A41DA52001E7CCA /* jiafei.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = jiafei.gif; sourceTree = "<group>"; };
+		B5F3BD501A42768D001E7CCA /* FUPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUPhotoView.h; sourceTree = "<group>"; };
+		B5F3BD511A42768D001E7CCA /* FUPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUPhotoView.m; sourceTree = "<group>"; };
+		B5F3BD541A428088001E7CCA /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		B5F3BD551A428088001E7CCA /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		B5F3BD561A428088001E7CCA /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +518,8 @@
 				B5F3BD3A1A41D8B5001E7CCA /* SvGifView */,
 				B5F3BD441A41DA17001E7CCA /* FULoadingView.h */,
 				B5F3BD451A41DA17001E7CCA /* FULoadingView.m */,
+				B5F3BD501A42768D001E7CCA /* FUPhotoView.h */,
+				B5F3BD511A42768D001E7CCA /* FUPhotoView.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -525,9 +536,20 @@
 		B5F3BD471A41DA3D001E7CCA /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				B5F3BD531A428088001E7CCA /* 123 */,
 				B5F3BD481A41DA52001E7CCA /* jiafei.gif */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		B5F3BD531A428088001E7CCA /* 123 */ = {
+			isa = PBXGroup;
+			children = (
+				B5F3BD541A428088001E7CCA /* 1.jpg */,
+				B5F3BD551A428088001E7CCA /* 2.jpg */,
+				B5F3BD561A428088001E7CCA /* 3.jpg */,
+			);
+			path = 123;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,6 +612,9 @@
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
 				B5F3BD491A41DA52001E7CCA /* jiafei.gif in Resources */,
+				B5F3BD581A428088001E7CCA /* 2.jpg in Resources */,
+				B5F3BD591A428088001E7CCA /* 3.jpg in Resources */,
+				B5F3BD571A428088001E7CCA /* 1.jpg in Resources */,
 				B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,6 +644,7 @@
 				B5CB84E51A400DD800F3D9B1 /* WorkTalkNoLove.cpp in Sources */,
 				B5CB84F11A400DD800F3D9B1 /* StatusSleep.cpp in Sources */,
 				B5E213301A41C05B001735F7 /* FUListView.m in Sources */,
+				B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */,
 				B5F3BD3D1A41D8B5001E7CCA /* SvGifView.m in Sources */,
 				B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */,
 				B5CB84E31A400DD800F3D9B1 /* WorkMeetNoLove.cpp in Sources */,

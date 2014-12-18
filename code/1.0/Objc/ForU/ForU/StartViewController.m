@@ -10,7 +10,7 @@
 #import "FUAlertView.h"
 #import "FUListView.h"
 #import "FULoadingView.h"
-#import "SvGifView.h"
+#import "FUPhotoView.h"
 @interface StartViewController ()
 
 @end
@@ -38,12 +38,9 @@
 */
 
 - (IBAction)click:(id)sender {
-    FULoadingView *view=[[FULoadingView alloc] init];
+    FUPhotoView *view=[[FUPhotoView alloc] init];
+    [view addPhoto:@[@"1.jpg",@"2.jpg",@"3.jpg"]];
     [view showInView:self.view];
-    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 5*NSEC_PER_SEC);
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-        [view remove];
-    });
 }
 @end
 
