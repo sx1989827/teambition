@@ -14,7 +14,7 @@
 CoreActionEye::CoreActionEye()
 {
     xml x;
-    x.loadfile(ACTIONEYEFILE);
+    x.loadfile(GetCurrentDataDir()+ACTIONEYEFILE);
     nodecollect *ncRoot=x.select("/root");
     node *root=ncRoot->item(0)->getchild(0);
     do

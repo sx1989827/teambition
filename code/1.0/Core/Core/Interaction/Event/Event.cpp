@@ -13,7 +13,7 @@
 CoreEvent::CoreEvent()
 {
     xml x;
-    x.loadfile(EVENTFILE);
+    x.loadfile(GetCurrentDataDir()+EVENTFILE);
     nodecollect *nc=x.select("//item");
     for(long i=0;i<nc->getcount();i++)
     {
@@ -44,7 +44,7 @@ sEvent CoreEvent::GetAvaliableEvent()
         if(m_VecWorkEvent.empty())
         {
             xml x;
-            x.loadfile(EVENTFILE);
+            x.loadfile(GetCurrentDataDir()+EVENTFILE);
             nodecollect *nc=x.select("//item");
             for(long i=0;i<nc->getcount();i++)
             {
@@ -71,7 +71,7 @@ sEvent CoreEvent::GetAvaliableEvent()
         if(m_VecLeisureEvent.empty())
         {
             xml x;
-            x.loadfile(EVENTFILE);
+            x.loadfile(GetCurrentDataDir()+EVENTFILE);
             nodecollect *nc=x.select("//item");
             for(long i=0;i<nc->getcount();i++)
             {

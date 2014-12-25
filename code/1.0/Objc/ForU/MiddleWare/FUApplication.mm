@@ -146,6 +146,11 @@
         }
     }
 }
+
+-(BOOL)GetLove
+{
+    return app->GetPlayer()->GetLove();
+}
 @end
 
 

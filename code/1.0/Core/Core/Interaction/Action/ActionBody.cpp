@@ -27,7 +27,7 @@ CoreActionBody::CoreActionBody()
     mapType["handinhand"]=HANDINHAND;
     mapType["lift"]=LIFT;
     xml x;
-    x.loadfile(ACTIONBODYFILE);
+    x.loadfile(GetCurrentDataDir()+ACTIONBODYFILE);
     nodecollect *ncRoot=x.select("/root");
     node *root=ncRoot->item(0)->getchild(0);
     do

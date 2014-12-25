@@ -13,7 +13,7 @@
 CoreGift::CoreGift()
 {
     xml x;
-    x.loadfile(GIFTFILE);
+    x.loadfile(GetCurrentDataDir()+GIFTFILE);
     nodecollect *nc=x.select("//item");
     for(long i=0;i<nc->getcount();i++)
     {

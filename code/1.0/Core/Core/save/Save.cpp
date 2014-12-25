@@ -23,17 +23,17 @@ void CoreSave::Save()
     {
         m_Vec[i]->Serializ(n1);
     }
-    x.savefile(SAVEFILE,xml::utf8);
+    x.savefile(GetCurrentDataDir()+ SAVEFILE,xml::utf8);
 }
 
 void CoreSave::UnSave()
 {
-    if(access(SAVEFILE, 0)==-1)
+    if(access((GetCurrentDataDir()+SAVEFILE).data(), 0)==-1)
     {
         return;
     }
     xml x;
-    x.loadfile(SAVEFILE);
+    x.loadfile(GetCurrentDataDir()+SAVEFILE);
     nodecollect *nc=x.getnodebyname("root");
     node *n1=nc->item(0);
     for(long i=0;i<m_Vec.size();i++)

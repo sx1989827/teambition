@@ -51,7 +51,7 @@
 		B5CB84F01A400DD800F3D9B1 /* StatusLeisure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84AD1A400DD800F3D9B1 /* StatusLeisure.cpp */; };
 		B5CB84F11A400DD800F3D9B1 /* StatusSleep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84AF1A400DD800F3D9B1 /* StatusSleep.cpp */; };
 		B5CB84F21A400DD800F3D9B1 /* StatusWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B11A400DD800F3D9B1 /* StatusWork.cpp */; };
-		B5CB84F31A400DD800F3D9B1 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B41A400DD800F3D9B1 /* Constant.cpp */; };
+		B5CB84F31A400DD800F3D9B1 /* Constant.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B41A400DD800F3D9B1 /* Constant.mm */; };
 		B5CB84F41A400DD800F3D9B1 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B71A400DD800F3D9B1 /* Log.cpp */; };
 		B5CB84F51A400DD800F3D9B1 /* Oberserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84B91A400DD800F3D9B1 /* Oberserver.cpp */; };
 		B5CB84F61A400DD800F3D9B1 /* Serializ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84BB1A400DD800F3D9B1 /* Serializ.cpp */; };
@@ -72,6 +72,7 @@
 		B5F3BD461A41DA17001E7CCA /* FULoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD451A41DA17001E7CCA /* FULoadingView.m */; };
 		B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD511A42768D001E7CCA /* FUPhotoView.m */; };
 		B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD5C1A429833001E7CCA /* Image.bundle */; };
+		B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD621A4A9D51001E7CCA /* Data.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,7 +167,7 @@
 		B5CB84B01A400DD800F3D9B1 /* StatusSleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusSleep.h; sourceTree = "<group>"; };
 		B5CB84B11A400DD800F3D9B1 /* StatusWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatusWork.cpp; sourceTree = "<group>"; };
 		B5CB84B21A400DD800F3D9B1 /* StatusWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusWork.h; sourceTree = "<group>"; };
-		B5CB84B41A400DD800F3D9B1 /* Constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant.cpp; sourceTree = "<group>"; };
+		B5CB84B41A400DD800F3D9B1 /* Constant.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Constant.mm; sourceTree = "<group>"; };
 		B5CB84B51A400DD800F3D9B1 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		B5CB84B61A400DD800F3D9B1 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		B5CB84B71A400DD800F3D9B1 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 		B5F3BD501A42768D001E7CCA /* FUPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUPhotoView.h; sourceTree = "<group>"; };
 		B5F3BD511A42768D001E7CCA /* FUPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUPhotoView.m; sourceTree = "<group>"; };
 		B5F3BD5C1A429833001E7CCA /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
+		B5F3BD621A4A9D51001E7CCA /* Data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Data.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		B586D44A1A3EBFCE004EEE84 /* ForU */ = {
 			isa = PBXGroup;
 			children = (
+				B5F3BD621A4A9D51001E7CCA /* Data.bundle */,
 				B5F3BD5C1A429833001E7CCA /* Image.bundle */,
 				B586D44F1A3EBFCE004EEE84 /* AppDelegate.h */,
 				B586D4501A3EBFCE004EEE84 /* AppDelegate.m */,
@@ -469,7 +472,7 @@
 		B5CB84B31A400DD800F3D9B1 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				B5CB84B41A400DD800F3D9B1 /* Constant.cpp */,
+				B5CB84B41A400DD800F3D9B1 /* Constant.mm */,
 				B5CB84B51A400DD800F3D9B1 /* Constant.h */,
 				B5CB84B61A400DD800F3D9B1 /* Header.h */,
 				B5CB84B71A400DD800F3D9B1 /* Log.cpp */,
@@ -588,6 +591,7 @@
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
 				B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */,
 				B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */,
+				B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,7 +627,7 @@
 				B5CB84DB1A400DD800F3D9B1 /* LeisureIOINoLove.cpp in Sources */,
 				B5CB84E41A400DD800F3D9B1 /* WorkTalkLove.cpp in Sources */,
 				B5D0A1671A4198AC0059A685 /* FUAlertView.m in Sources */,
-				B5CB84F31A400DD800F3D9B1 /* Constant.cpp in Sources */,
+				B5CB84F31A400DD800F3D9B1 /* Constant.mm in Sources */,
 				B5CB84EC1A400DD800F3D9B1 /* Player.cpp in Sources */,
 				B5CB84DA1A400DD800F3D9B1 /* LeisureIOILove.cpp in Sources */,
 				B5CB84E81A400DD800F3D9B1 /* Favorite.cpp in Sources */,

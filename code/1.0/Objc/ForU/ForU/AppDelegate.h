@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#include "FUApplication.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (assign,nonatomic) long viewAppearTime;
-
+@property (strong,nonatomic) FUApplication *app;
 @end
 

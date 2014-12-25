@@ -17,6 +17,7 @@ enum NOTIFYTYPE {CALL,DATEITEMEND,WORKHELPEND,WORKIOI,WORKMEET,WORKHELP,LEISUREI
 -(NSString*)GetPlayerMoney;
 -(NSString*)GetGirlIOI;
 -(NSString*)GetGirlMood;
+-(BOOL)GetLove;
 -(void)Save;
 -(void)CreateNotify;
 -(void)AdjustNotify;

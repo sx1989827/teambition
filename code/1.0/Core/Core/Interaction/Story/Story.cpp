@@ -12,7 +12,7 @@
 CoreStory::CoreStory()
 {
     xml x;
-    x.loadfile(STORYFILE);
+    x.loadfile(GetCurrentDataDir()+STORYFILE);
     nodecollect *nc=x.select("//item");
     for(long i=0;i<nc->getcount();i++)
     {

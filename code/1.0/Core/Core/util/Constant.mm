@@ -7,7 +7,17 @@
 //
 
 #include "Constant.h"
-#ifdef VS
+
+#if XCODE
+#import <UIKit/UIKit.h>
+std::string GetCurrentDataDir()
+{
+    NSString *imgPath=[[NSBundle mainBundle] pathForResource:@"Data" ofType:@"bundle"];
+    std::string strPath=[imgPath UTF8String];
+    strPath+="/";
+    return strPath;
+}
+#elif deined(VS)
 void StringReplace(std::string&s1, const std::string&s2, const std::string&s3)
 {
 	std::string::size_type pos = 0;

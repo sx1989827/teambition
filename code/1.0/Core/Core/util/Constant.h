@@ -9,6 +9,8 @@
 #ifndef __Core__Constant__
 #define __Core__Constant__
 #ifdef XCODE
+#include <unistd.h>
+#include <string>
 #define SAVEFILE  "save"
 #define INITFILE    "init"
 #define STORYFILE "story"
@@ -25,6 +27,7 @@
 std::wstring UTF8ToUnicode(const std::string& str);
 std::string UnicodeToANSI(const std::wstring& str);
 #endif
+std::string GetCurrentDataDir();
 #define TEXT_SIZE 255
 #define MSG_LEISUREENTER "leisureenter"
 #define MSG_LEISUREUPDATE "leisureupdate"

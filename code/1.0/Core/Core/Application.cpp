@@ -72,7 +72,7 @@ CorePlayer* CoreApplication::GetPlayer()
 void CoreApplication::Reset(CoreGirl::TYPE type)
 {
     xml  x;
-    x.loadfile(INITFILE);
+    x.loadfile(GetCurrentDataDir()+INITFILE);
     nodecollect *nc=x.getnodebyname("root");
     node *n1=nc->item(0);
     m_pGirl->Reset(n1,type);

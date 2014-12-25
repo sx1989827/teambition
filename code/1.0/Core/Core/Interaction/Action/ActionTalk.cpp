@@ -12,7 +12,7 @@
 CoreActionTalk::CoreActionTalk()
 {
     xml x;
-    x.loadfile(ACTIONTALKFILE);
+    x.loadfile(GetCurrentDataDir()+ACTIONTALKFILE);
     nodecollect *ncRoot=x.select("/root");
     node *root=ncRoot->item(0)->getchild(0);
     nodecollect *ncMood=root->select("/mood");

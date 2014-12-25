@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<item price="50" name="书籍"/>
+	<item price="600" name="电子产品"/>
+	<item price="300" name="相册"/>
+	<item price="100" name="鲜花"/>
+	<item price="1000" name="钻石"/>
+</root>
