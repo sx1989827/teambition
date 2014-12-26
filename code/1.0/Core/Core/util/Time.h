@@ -23,6 +23,10 @@ public:
     std::string GetDate() const;
     std::string GetMoment() const;
     CoreTime GetTimeSince(long sec) const;
+    long GetDay();
+    long GetHour();
+    long GetMinute();
+    long GetSecond();
     void Reset();
     time_t GetOriTime();
     void Attach(long lTime);

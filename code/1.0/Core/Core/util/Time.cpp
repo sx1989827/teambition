@@ -101,6 +101,35 @@ void CoreTime::Attach(long lTime)
     m_lTime=lTime;
 }
 
+long CoreTime::GetDay()
+{
+    tm *pTime= localtime((const time_t*)&m_lTime);
+    return pTime->tm_mday;
+}
+long CoreTime::GetHour()
+{
+    tm *pTime= localtime((const time_t*)&m_lTime);
+    return pTime->tm_hour;
+}
+long CoreTime::GetMinute()
+{
+    tm *pTime= localtime((const time_t*)&m_lTime);
+    return pTime->tm_min;
+}
+long CoreTime::GetSecond()
+{
+    tm *pTime= localtime((const time_t*)&m_lTime);
+    return pTime->tm_sec;
+}
+
+
+
+
+
+
+
+
+
 
 
 

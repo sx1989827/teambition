@@ -83,6 +83,14 @@ void CoreApplication::Reset(CoreGirl::TYPE type)
 
 void CoreApplication::Update()
 {
+    static long day=0;
+    CoreTime time;
+    if(time.GetDay()!=day && time.GetHour()>=5)
+    {
+        day=time.GetDay();
+        GIRLINSTANCE->GetMood()->Adjust();
+        NOTIFYCENTER->Adjust();
+    }
     m_pPlayer->Update();
 }
 
