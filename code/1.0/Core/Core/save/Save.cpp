@@ -23,12 +23,12 @@ void CoreSave::Save()
     {
         m_Vec[i]->Serializ(n1);
     }
-    x.savefile(GetCurrentDataDir()+ SAVEFILE,xml::utf8);
+    x.savefile(GetCurrentDocDir()+ SAVEFILE,xml::utf8);
 }
 
 void CoreSave::UnSave()
 {
-    if(access((GetCurrentDataDir()+SAVEFILE).data(), 0)==-1)
+    if(access((GetCurrentDocDir()+SAVEFILE).data(), 0)==-1)
     {
         return;
     }

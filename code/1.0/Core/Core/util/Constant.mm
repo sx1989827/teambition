@@ -17,6 +17,15 @@ std::string GetCurrentDataDir()
     strPath+="/";
     return strPath;
 }
+
+std::string GetCurrentDocDir()
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    std::string strPath=[docDir UTF8String];
+    strPath+="/";
+    return strPath;
+}
 #elif deined(VS)
 void StringReplace(std::string&s1, const std::string&s2, const std::string&s3)
 {

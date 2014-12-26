@@ -18,6 +18,7 @@
 #include "Interaction/Gift/Gift.h"
 #include "Interaction/Event/Event.h"
 #include "Interaction/Story/Story.h"
+#include "Interaction/Date/DateBase.h"
 class CoreApplication
 {
 public:

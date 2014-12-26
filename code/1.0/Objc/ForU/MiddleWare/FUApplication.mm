@@ -86,6 +86,10 @@
     }
     else
     {
+        if(app->GetPlayer()->GetStatusController()->GetStatus()==CoreStatus::SLEEP)
+        {
+            return;
+        }
         AppDelegate *appDelegate=(AppDelegate*)[UIApplication sharedApplication].delegate;
         if(CoreTime::DiffNowTime(appDelegate.viewAppearTime)>=1200)
         {
@@ -112,13 +116,65 @@
                     notification.timeZone = [NSTimeZone defaultTimeZone];
                     notification.soundName = UILocalNotificationDefaultSoundName;
                     notification.alertBody = strContent;
-                    NSDictionary *info = [NSDictionary dictionaryWithObject:@(id) forKey:@"id"];
+                    NSDictionary *info = @{@"id":@(id),@"type":@(noti.type)};
                     notification.userInfo = info;
                     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
                 }
             }
         }
     }
+}
+
+
+-(void)CreateNotify:(NOTIFYTYPE)type Time:(NSDate *)date DateType:(DATETYPE)datetype
+{
+    if(type!=NOTIFYTYPE::CALL && type!=NOTIFYTYPE::WORKHELPEND & type!=NOTIFYTYPE::DATEITEMEND)
+    {
+        return;
+    }
+    sNotify noti;
+    noti.type=(sNotify::TYPE)type;
+    if(type==NOTIFYTYPE::CALL)
+    {
+        noti.sec=[date timeIntervalSince1970];
+    }
+    else if(type==NOTIFYTYPE::WORKHELPEND)
+    {
+        noti.sec=CoreTime::GetTimeSinceNow(1800).GetOriTime();
+    }
+    else if(type==NOTIFYTYPE::DATEITEMEND)
+    {
+        if((CoreDateBase::TYPE)type==CoreDateBase::FILM)
+        {
+            noti.sec=CoreTime::GetTimeSinceNow(3600).GetOriTime();
+        }
+        else if((CoreDateBase::TYPE)type==CoreDateBase::EAT)
+        {
+            noti.sec=CoreTime::GetTimeSinceNow(1800).GetOriTime();
+        }
+        else if((CoreDateBase::TYPE)type==CoreDateBase::PARK)
+        {
+            noti.sec=CoreTime::GetTimeSinceNow(3600).GetOriTime();
+        }
+        else if((CoreDateBase::TYPE)type==CoreDateBase::WALK)
+        {
+            noti.sec=CoreTime::GetTimeSinceNow(2400).GetOriTime();
+        }
+    }
+    long id=NOTIFYCENTER->CreateNotify(&noti);
+    NSString *strContent=[NSString stringWithUTF8String:NotifyDes[noti.type].data()];
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    if (notification != nil)
+    {
+        notification.fireDate=[NSDate dateWithTimeIntervalSince1970:noti.sec];
+        notification.timeZone = [NSTimeZone defaultTimeZone];
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        notification.alertBody = strContent;
+        NSDictionary *info = @{@"id":@(id),@"type":@(noti.type)};
+        notification.userInfo = info;
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    }
+
 }
 
 -(void)AdjustNotify
@@ -151,7 +207,43 @@
 {
     return app->GetPlayer()->GetLove();
 }
+
+-(void)RemoveNotify
+{
+    UIApplication *appDelagate = [UIApplication sharedApplication];
+    NSArray *localArr = [appDelagate scheduledLocalNotifications];
+    if (localArr)
+    {
+        for (UILocalNotification *noti in localArr)
+        {
+            NSDictionary *dict = noti.userInfo;
+            if (dict)
+            {
+                long type = [[dict objectForKey:@"type"] intValue];
+                if (type==(long)NOTIFYTYPE::CALL || type==(long)NOTIFYTYPE::WORKHELPEND || type==(long)NOTIFYTYPE::DATEITEMEND)
+                {
+                    [appDelagate cancelLocalNotification:noti];
+                }
+            }
+        }
+        
+    }
+    NOTIFYCENTER->RemoveNotify(sNotify::CALL);
+    NOTIFYCENTER->RemoveNotify(sNotify::DATEITEMEND);
+    NOTIFYCENTER->RemoveNotify(sNotify::WORKHELPEND);
+    
+}
+
+-(void)Exit
+{
+    [self Update];
+    [self Save];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+}
 @end
+
+
 
 
 

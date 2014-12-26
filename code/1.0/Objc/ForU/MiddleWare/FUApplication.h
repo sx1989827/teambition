@@ -10,6 +10,7 @@
 enum GIRLTYPE {LOLI,MAID,QUEEN};
 enum PERSONTYPE {PLAYER,GIRL};
 enum NOTIFYTYPE {CALL,DATEITEMEND,WORKHELPEND,WORKIOI,WORKMEET,WORKHELP,LEISUREIOI,LEISUREDATE,WORKEVENT,LEISUREEVENT,NONE};
+enum DATETYPE {EAT,FILM,WALK,PARK};
 @interface FUApplication : NSObject
 -(void)Reset:(GIRLTYPE)girltype;
 -(void)Update;
@@ -20,7 +21,10 @@ enum NOTIFYTYPE {CALL,DATEITEMEND,WORKHELPEND,WORKIOI,WORKMEET,WORKHELP,LEISUREI
 -(BOOL)GetLove;
 -(void)Save;
 -(void)CreateNotify;
+-(void)CreateNotify:(NOTIFYTYPE)type Time:(NSDate *)date DateType:(DATETYPE)datetype;
+-(void)RemoveNotify;
 -(void)AdjustNotify;
+-(void)Exit;
 @end
 
 
