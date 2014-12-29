@@ -9,10 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface StartViewController : UIViewController
-- (IBAction)click:(id)sender;
-@property (strong, nonatomic) IBOutlet UIButton *btn1;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *btn1Height;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *btn1Left;
-@property (strong, nonatomic) IBOutlet UILabel *lbText;
 
 @end

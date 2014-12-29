@@ -73,6 +73,9 @@
 		B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD511A42768D001E7CCA /* FUPhotoView.m */; };
 		B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD5C1A429833001E7CCA /* Image.bundle */; };
 		B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD621A4A9D51001E7CCA /* Data.bundle */; };
+		B5F3BD671A4FB030001E7CCA /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */; };
+		B5F3BD681A4FB030001E7CCA /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */; };
+		B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD701A4FB471001E7CCA /* start.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +205,10 @@
 		B5F3BD511A42768D001E7CCA /* FUPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUPhotoView.m; sourceTree = "<group>"; };
 		B5F3BD5C1A429833001E7CCA /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
 		B5F3BD621A4A9D51001E7CCA /* Data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Data.bundle; sourceTree = "<group>"; };
+		B5F3BD641A4FB030001E7CCA /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
+		B5F3BD701A4FB471001E7CCA /* start.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = start.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +251,7 @@
 		B586D44A1A3EBFCE004EEE84 /* ForU */ = {
 			isa = PBXGroup;
 			children = (
+				B5F3BD6F1A4FB471001E7CCA /* Img */,
 				B5F3BD621A4A9D51001E7CCA /* Data.bundle */,
 				B5F3BD5C1A429833001E7CCA /* Image.bundle */,
 				B586D44F1A3EBFCE004EEE84 /* AppDelegate.h */,
@@ -253,6 +261,9 @@
 				B5CB839A1A3FFAF300F3D9B1 /* StartViewController.h */,
 				B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */,
 				B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */,
+				B5F3BD641A4FB030001E7CCA /* MainMenuViewController.h */,
+				B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */,
+				B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */,
 			);
 			path = ForU;
 			sourceTree = "<group>";
@@ -530,6 +541,14 @@
 			path = SvGifView;
 			sourceTree = "<group>";
 		};
+		B5F3BD6F1A4FB471001E7CCA /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				B5F3BD701A4FB471001E7CCA /* start.jpg */,
+			);
+			path = Img;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -591,7 +610,9 @@
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
 				B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */,
 				B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */,
+				B5F3BD681A4FB030001E7CCA /* MainMenuViewController.xib in Resources */,
 				B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */,
+				B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +643,7 @@
 				B5E213301A41C05B001735F7 /* FUListView.m in Sources */,
 				B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */,
 				B5F3BD3D1A41D8B5001E7CCA /* SvGifView.m in Sources */,
+				B5F3BD671A4FB030001E7CCA /* MainMenuViewController.m in Sources */,
 				B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */,
 				B5CB84E31A400DD800F3D9B1 /* WorkMeetNoLove.cpp in Sources */,
 				B5CB84DB1A400DD800F3D9B1 /* LeisureIOINoLove.cpp in Sources */,

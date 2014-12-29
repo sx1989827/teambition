@@ -1,34 +1,27 @@
 //
-//  StartViewController.m
+//  MainMenuViewController.m
 //  ForU
 //
-//  Created by 孙昕 on 14/12/16.
+//  Created by 孙昕 on 14/12/28.
 //  Copyright (c) 2014年 孙昕. All rights reserved.
 //
 
-#import "StartViewController.h"
 #import "MainMenuViewController.h"
-@interface StartViewController ()
+
+@interface MainMenuViewController ()
 
 @end
 
-@implementation StartViewController
+@implementation MainMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:3]];
-    MainMenuViewController *view=[[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
-    [self.navigationController pushViewController:view animated:NO];
 }
 
 /*
@@ -40,23 +33,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
+
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
