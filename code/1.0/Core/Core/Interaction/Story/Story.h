@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 #include "../../util/Header.h"
-
+#define  STORYCENTER CoreStorySingleton::GetInstance()
 struct sStory
 {
     long id;
@@ -30,6 +30,7 @@ public:
     void Serializ(node* out);
     void UnSerializ(node* in);
     sStory GetAvaliableStory();
+    sStory GetStartStory();
 private:
     std::vector<sStory> m_VecStory;
     std::vector<long> m_VecUsedStory;

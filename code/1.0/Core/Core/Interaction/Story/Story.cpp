@@ -68,7 +68,7 @@ sStory CoreStory::GetAvaliableStory()
     std::vector<sStory> vec;
     for(long i=0;i<m_VecStory.size();i++)
     {
-        if(PLAYERINSTANCE->GetLove()==m_VecStory[i].bLove && PLAYERINSTANCE->GetMoney()>=m_VecStory[i].dMoney && PLAYERINSTANCE->GetPhysical()>=m_VecStory[i].dPhysical && GIRLINSTANCE->GetIOI()>=m_VecStory[i].dIOI)
+        if(PLAYERINSTANCE->GetLove()==m_VecStory[i].bLove && PLAYERINSTANCE->GetMoney()>=m_VecStory[i].dMoney && PLAYERINSTANCE->GetPhysical()>=m_VecStory[i].dPhysical && GIRLINSTANCE->GetIOI()>=m_VecStory[i].dIOI && m_VecStory[i].strSrc!="start")
         {
             vec.push_back(m_VecStory[i]);
         }
@@ -89,7 +89,20 @@ sStory CoreStory::GetAvaliableStory()
     }
 }
 
-
+sStory CoreStory::GetStartStory()
+{
+    sStory info;
+    info.id=-1;
+    for(long i=0;i<m_VecStory.size();i++)
+    {
+        if(m_VecStory[i].strSrc=="start")
+        {
+            info=m_VecStory[i];
+            break;
+        }
+    }
+    return info;
+}
 
 
 
