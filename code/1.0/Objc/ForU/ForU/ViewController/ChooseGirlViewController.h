@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ChooseGirlViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *txtName;
+@property (strong, nonatomic) IBOutlet UIScrollView *scvGirl;
+@property (strong, nonatomic) IBOutlet UIButton *btnAddress;
 
 @end
