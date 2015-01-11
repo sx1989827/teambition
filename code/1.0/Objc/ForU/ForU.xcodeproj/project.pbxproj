@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B529FCE71A60D8CC006DAE93 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B529FCE21A60D8CC006DAE93 /* MainMenuViewController.m */; };
-		B529FCE81A60D8CC006DAE93 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B529FCE31A60D8CC006DAE93 /* MainMenuViewController.xib */; };
-		B529FCE91A60D8CC006DAE93 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B529FCE51A60D8CC006DAE93 /* StartViewController.m */; };
-		B529FCEA1A60D8CC006DAE93 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B529FCE61A60D8CC006DAE93 /* StartViewController.xib */; };
-		B529FCEE1A60D958006DAE93 /* ChooseGirlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B529FCEC1A60D958006DAE93 /* ChooseGirlViewController.m */; };
-		B529FCEF1A60D958006DAE93 /* ChooseGirlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B529FCED1A60D958006DAE93 /* ChooseGirlViewController.xib */; };
 		B54593391A5D807100F78878 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B54593211A5D807100F78878 /* AFHTTPRequestOperation.m */; };
 		B545933A1A5D807100F78878 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54593231A5D807100F78878 /* AFHTTPRequestOperationManager.m */; };
 		B545933B1A5D807100F78878 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54593251A5D807100F78878 /* AFHTTPSessionManager.m */; };
@@ -28,6 +22,8 @@
 		B5749CA81A5D8980006A1953 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5749CA71A5D8980006A1953 /* Security.framework */; };
 		B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D4501A3EBFCE004EEE84 /* AppDelegate.m */; };
 		B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586D4581A3EBFCE004EEE84 /* Images.xcassets */; };
+		B5CB839D1A3FFAF300F3D9B1 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */; };
+		B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */; };
 		B5CB844D1A400AF100F3D9B1 /* FUApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */; };
 		B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844F1A400DD800F3D9B1 /* Application.cpp */; };
 		B5CB84CC1A400DD800F3D9B1 /* ActionBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */; };
@@ -90,19 +86,12 @@
 		B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD511A42768D001E7CCA /* FUPhotoView.m */; };
 		B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD5C1A429833001E7CCA /* Image.bundle */; };
 		B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD621A4A9D51001E7CCA /* Data.bundle */; };
+		B5F3BD671A4FB030001E7CCA /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */; };
+		B5F3BD681A4FB030001E7CCA /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */; };
 		B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD701A4FB471001E7CCA /* start.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B529FCE11A60D8CC006DAE93 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		B529FCE21A60D8CC006DAE93 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
-		B529FCE31A60D8CC006DAE93 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
-		B529FCE41A60D8CC006DAE93 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
-		B529FCE51A60D8CC006DAE93 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
-		B529FCE61A60D8CC006DAE93 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
-		B529FCEB1A60D958006DAE93 /* ChooseGirlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseGirlViewController.h; sourceTree = "<group>"; };
-		B529FCEC1A60D958006DAE93 /* ChooseGirlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseGirlViewController.m; sourceTree = "<group>"; };
-		B529FCED1A60D958006DAE93 /* ChooseGirlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseGirlViewController.xib; sourceTree = "<group>"; };
 		B54593201A5D807100F78878 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		B54593211A5D807100F78878 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		B54593221A5D807100F78878 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -127,7 +116,7 @@
 		B5749CA31A5D895C006A1953 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B5749CA51A5D8966006A1953 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B5749CA71A5D8980006A1953 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		B5749CAD1A5EC2E9006A1953 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ForUTests/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		B5749CAD1A5EC2E9006A1953 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B586D4481A3EBFCE004EEE84 /* ForU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586D44C1A3EBFCE004EEE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586D44D1A3EBFCE004EEE84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -136,6 +125,9 @@
 		B586D4581A3EBFCE004EEE84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B586D4661A3EBFCE004EEE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586D4671A3EBFCE004EEE84 /* ForUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForUTests.m; sourceTree = "<group>"; };
+		B5CB839A1A3FFAF300F3D9B1 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		B5CB844B1A400AF100F3D9B1 /* FUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUApplication.h; sourceTree = "<group>"; };
 		B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FUApplication.mm; sourceTree = "<group>"; };
 		B5CB844F1A400DD800F3D9B1 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
@@ -251,6 +243,9 @@
 		B5F3BD511A42768D001E7CCA /* FUPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUPhotoView.m; sourceTree = "<group>"; };
 		B5F3BD5C1A429833001E7CCA /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
 		B5F3BD621A4A9D51001E7CCA /* Data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Data.bundle; sourceTree = "<group>"; };
+		B5F3BD641A4FB030001E7CCA /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
 		B5F3BD701A4FB471001E7CCA /* start.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = start.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,22 +269,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B529FCE01A60D8CC006DAE93 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B529FCE11A60D8CC006DAE93 /* MainMenuViewController.h */,
-				B529FCE21A60D8CC006DAE93 /* MainMenuViewController.m */,
-				B529FCE31A60D8CC006DAE93 /* MainMenuViewController.xib */,
-				B529FCE41A60D8CC006DAE93 /* StartViewController.h */,
-				B529FCE51A60D8CC006DAE93 /* StartViewController.m */,
-				B529FCE61A60D8CC006DAE93 /* StartViewController.xib */,
-				B529FCEB1A60D958006DAE93 /* ChooseGirlViewController.h */,
-				B529FCEC1A60D958006DAE93 /* ChooseGirlViewController.m */,
-				B529FCED1A60D958006DAE93 /* ChooseGirlViewController.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		B545931E1A5D807100F78878 /* library */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +345,6 @@
 		B586D44A1A3EBFCE004EEE84 /* ForU */ = {
 			isa = PBXGroup;
 			children = (
-				B529FCE01A60D8CC006DAE93 /* ViewController */,
 				B545931E1A5D807100F78878 /* library */,
 				B5F3BD6F1A4FB471001E7CCA /* Img */,
 				B5F3BD621A4A9D51001E7CCA /* Data.bundle */,
@@ -375,6 +353,12 @@
 				B586D4501A3EBFCE004EEE84 /* AppDelegate.m */,
 				B586D4581A3EBFCE004EEE84 /* Images.xcassets */,
 				B586D44B1A3EBFCE004EEE84 /* Supporting Files */,
+				B5CB839A1A3FFAF300F3D9B1 /* StartViewController.h */,
+				B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */,
+				B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */,
+				B5F3BD641A4FB030001E7CCA /* MainMenuViewController.h */,
+				B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */,
+				B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */,
 			);
 			path = ForU;
 			sourceTree = "<group>";
@@ -382,7 +366,6 @@
 		B586D44B1A3EBFCE004EEE84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B5749CAD1A5EC2E9006A1953 /* PrefixHeader.pch */,
 				B586D44C1A3EBFCE004EEE84 /* Info.plist */,
 				B586D44D1A3EBFCE004EEE84 /* main.m */,
 			);
@@ -403,6 +386,7 @@
 			children = (
 				B586D4661A3EBFCE004EEE84 /* Info.plist */,
 				B5CB84FA1A4010F900F3D9B1 /* main.m */,
+				B5749CAD1A5EC2E9006A1953 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -732,10 +716,9 @@
 			files = (
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
-				B529FCEA1A60D8CC006DAE93 /* StartViewController.xib in Resources */,
-				B529FCEF1A60D958006DAE93 /* ChooseGirlViewController.xib in Resources */,
+				B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */,
 				B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */,
-				B529FCE81A60D8CC006DAE93 /* MainMenuViewController.xib in Resources */,
+				B5F3BD681A4FB030001E7CCA /* MainMenuViewController.xib in Resources */,
 				B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */,
 				B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */,
 			);
@@ -786,11 +769,11 @@
 				B5CB84D61A400DD800F3D9B1 /* DateNoLove.cpp in Sources */,
 				B5CB84D51A400DD800F3D9B1 /* DateLove.cpp in Sources */,
 				B5CB84DD1A400DD800F3D9B1 /* LeisureTalkNoLove.cpp in Sources */,
-				B529FCE91A60D8CC006DAE93 /* StartViewController.m in Sources */,
 				B5CB84F41A400DD800F3D9B1 /* Log.cpp in Sources */,
 				B5CB84D11A400DD800F3D9B1 /* DateFilm.cpp in Sources */,
 				B5CB84F91A400DD800F3D9B1 /* Xml.cpp in Sources */,
 				B545933E1A5D807100F78878 /* AFURLConnectionOperation.m in Sources */,
+				B5CB839D1A3FFAF300F3D9B1 /* StartViewController.m in Sources */,
 				B5CB84E21A400DD800F3D9B1 /* WorkIOINoLove.cpp in Sources */,
 				B5CB84D31A400DD800F3D9B1 /* DateWalk.cpp in Sources */,
 				B5CB84EB1A400DD800F3D9B1 /* PersonBase.cpp in Sources */,
@@ -802,6 +785,7 @@
 				B5E213301A41C05B001735F7 /* FUListView.m in Sources */,
 				B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */,
 				B5F3BD3D1A41D8B5001E7CCA /* SvGifView.m in Sources */,
+				B5F3BD671A4FB030001E7CCA /* MainMenuViewController.m in Sources */,
 				B54593391A5D807100F78878 /* AFHTTPRequestOperation.m in Sources */,
 				B545933C1A5D807100F78878 /* AFNetworkReachabilityManager.m in Sources */,
 				B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */,
@@ -821,7 +805,6 @@
 				B5CB84D41A400DD800F3D9B1 /* DateIOI.cpp in Sources */,
 				B5CB84E11A400DD800F3D9B1 /* WorkIOILove.cpp in Sources */,
 				B5F3BD461A41DA17001E7CCA /* FULoadingView.m in Sources */,
-				B529FCE71A60D8CC006DAE93 /* MainMenuViewController.m in Sources */,
 				B5CB84EE1A400DD800F3D9B1 /* Status.cpp in Sources */,
 				B5CB84CF1A400DD800F3D9B1 /* DateBase.cpp in Sources */,
 				B5CB84F21A400DD800F3D9B1 /* StatusWork.cpp in Sources */,
@@ -834,7 +817,6 @@
 				B5CB84E91A400DD800F3D9B1 /* Girl.cpp in Sources */,
 				B54593411A5D807100F78878 /* AFURLSessionManager.m in Sources */,
 				B5CB84F71A400DD800F3D9B1 /* Singleton.cpp in Sources */,
-				B529FCEE1A60D958006DAE93 /* ChooseGirlViewController.m in Sources */,
 				B5CB84D21A400DD800F3D9B1 /* DatePark.cpp in Sources */,
 				B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */,
 				B5CB84D91A400DD800F3D9B1 /* Interaction.cpp in Sources */,
