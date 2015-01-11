@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MainMenuViewController : UIViewController
+- (IBAction)onNew:(id)sender;
+- (IBAction)onLoad:(id)sender;
+- (IBAction)onSetup:(id)sender;
+
 
 @end

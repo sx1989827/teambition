@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B57EA9EC1A623FCD0002B5D3 /* ChooseGirlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57EA9E41A623FCD0002B5D3 /* ChooseGirlViewController.m */; };
+		B57EA9ED1A623FCD0002B5D3 /* ChooseGirlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57EA9E51A623FCD0002B5D3 /* ChooseGirlViewController.xib */; };
+		B57EA9EE1A623FCD0002B5D3 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57EA9E71A623FCD0002B5D3 /* MainMenuViewController.m */; };
+		B57EA9EF1A623FCD0002B5D3 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57EA9E81A623FCD0002B5D3 /* MainMenuViewController.xib */; };
+		B57EA9F01A623FCD0002B5D3 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57EA9EA1A623FCD0002B5D3 /* StartViewController.m */; };
+		B57EA9F11A623FCD0002B5D3 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57EA9EB1A623FCD0002B5D3 /* StartViewController.xib */; };
 		B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D4501A3EBFCE004EEE84 /* AppDelegate.m */; };
 		B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586D4581A3EBFCE004EEE84 /* Images.xcassets */; };
-		B5CB839D1A3FFAF300F3D9B1 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */; };
-		B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */; };
 		B5CB844D1A400AF100F3D9B1 /* FUApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */; };
 		B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844F1A400DD800F3D9B1 /* Application.cpp */; };
 		B5CB84CC1A400DD800F3D9B1 /* ActionBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */; };
@@ -73,12 +77,20 @@
 		B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD511A42768D001E7CCA /* FUPhotoView.m */; };
 		B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD5C1A429833001E7CCA /* Image.bundle */; };
 		B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD621A4A9D51001E7CCA /* Data.bundle */; };
-		B5F3BD671A4FB030001E7CCA /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */; };
-		B5F3BD681A4FB030001E7CCA /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */; };
 		B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5F3BD701A4FB471001E7CCA /* start.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B57EA9E31A623FCD0002B5D3 /* ChooseGirlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseGirlViewController.h; sourceTree = "<group>"; };
+		B57EA9E41A623FCD0002B5D3 /* ChooseGirlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseGirlViewController.m; sourceTree = "<group>"; };
+		B57EA9E51A623FCD0002B5D3 /* ChooseGirlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseGirlViewController.xib; sourceTree = "<group>"; };
+		B57EA9E61A623FCD0002B5D3 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		B57EA9E71A623FCD0002B5D3 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		B57EA9E81A623FCD0002B5D3 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
+		B57EA9E91A623FCD0002B5D3 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		B57EA9EA1A623FCD0002B5D3 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		B57EA9EB1A623FCD0002B5D3 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		B57EA9F21A6240520002B5D3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B586D4481A3EBFCE004EEE84 /* ForU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586D44C1A3EBFCE004EEE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586D44D1A3EBFCE004EEE84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,9 +99,6 @@
 		B586D4581A3EBFCE004EEE84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B586D4661A3EBFCE004EEE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586D4671A3EBFCE004EEE84 /* ForUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForUTests.m; sourceTree = "<group>"; };
-		B5CB839A1A3FFAF300F3D9B1 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
-		B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
-		B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		B5CB844B1A400AF100F3D9B1 /* FUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUApplication.h; sourceTree = "<group>"; };
 		B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FUApplication.mm; sourceTree = "<group>"; };
 		B5CB844F1A400DD800F3D9B1 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
@@ -205,9 +214,6 @@
 		B5F3BD511A42768D001E7CCA /* FUPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUPhotoView.m; sourceTree = "<group>"; };
 		B5F3BD5C1A429833001E7CCA /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
 		B5F3BD621A4A9D51001E7CCA /* Data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Data.bundle; sourceTree = "<group>"; };
-		B5F3BD641A4FB030001E7CCA /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
-		B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
 		B5F3BD701A4FB471001E7CCA /* start.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = start.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +234,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B57EA9E21A623FCD0002B5D3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B57EA9E31A623FCD0002B5D3 /* ChooseGirlViewController.h */,
+				B57EA9E41A623FCD0002B5D3 /* ChooseGirlViewController.m */,
+				B57EA9E51A623FCD0002B5D3 /* ChooseGirlViewController.xib */,
+				B57EA9E61A623FCD0002B5D3 /* MainMenuViewController.h */,
+				B57EA9E71A623FCD0002B5D3 /* MainMenuViewController.m */,
+				B57EA9E81A623FCD0002B5D3 /* MainMenuViewController.xib */,
+				B57EA9E91A623FCD0002B5D3 /* StartViewController.h */,
+				B57EA9EA1A623FCD0002B5D3 /* StartViewController.m */,
+				B57EA9EB1A623FCD0002B5D3 /* StartViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		B586D43F1A3EBFCD004EEE84 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +273,7 @@
 		B586D44A1A3EBFCE004EEE84 /* ForU */ = {
 			isa = PBXGroup;
 			children = (
+				B57EA9E21A623FCD0002B5D3 /* ViewController */,
 				B5F3BD6F1A4FB471001E7CCA /* Img */,
 				B5F3BD621A4A9D51001E7CCA /* Data.bundle */,
 				B5F3BD5C1A429833001E7CCA /* Image.bundle */,
@@ -258,12 +281,6 @@
 				B586D4501A3EBFCE004EEE84 /* AppDelegate.m */,
 				B586D4581A3EBFCE004EEE84 /* Images.xcassets */,
 				B586D44B1A3EBFCE004EEE84 /* Supporting Files */,
-				B5CB839A1A3FFAF300F3D9B1 /* StartViewController.h */,
-				B5CB839B1A3FFAF300F3D9B1 /* StartViewController.m */,
-				B5CB839C1A3FFAF300F3D9B1 /* StartViewController.xib */,
-				B5F3BD641A4FB030001E7CCA /* MainMenuViewController.h */,
-				B5F3BD651A4FB030001E7CCA /* MainMenuViewController.m */,
-				B5F3BD661A4FB030001E7CCA /* MainMenuViewController.xib */,
 			);
 			path = ForU;
 			sourceTree = "<group>";
@@ -271,6 +288,7 @@
 		B586D44B1A3EBFCE004EEE84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B57EA9F21A6240520002B5D3 /* PrefixHeader.pch */,
 				B586D44C1A3EBFCE004EEE84 /* Info.plist */,
 				B586D44D1A3EBFCE004EEE84 /* main.m */,
 			);
@@ -606,11 +624,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57EA9EF1A623FCD0002B5D3 /* MainMenuViewController.xib in Resources */,
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
+				B57EA9ED1A623FCD0002B5D3 /* ChooseGirlViewController.xib in Resources */,
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
-				B5CB839E1A3FFAF300F3D9B1 /* StartViewController.xib in Resources */,
 				B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */,
-				B5F3BD681A4FB030001E7CCA /* MainMenuViewController.xib in Resources */,
+				B57EA9F11A623FCD0002B5D3 /* StartViewController.xib in Resources */,
 				B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */,
 				B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */,
 			);
@@ -630,20 +649,21 @@
 				B5CB84DD1A400DD800F3D9B1 /* LeisureTalkNoLove.cpp in Sources */,
 				B5CB84F41A400DD800F3D9B1 /* Log.cpp in Sources */,
 				B5CB84D11A400DD800F3D9B1 /* DateFilm.cpp in Sources */,
+				B57EA9EC1A623FCD0002B5D3 /* ChooseGirlViewController.m in Sources */,
 				B5CB84F91A400DD800F3D9B1 /* Xml.cpp in Sources */,
-				B5CB839D1A3FFAF300F3D9B1 /* StartViewController.m in Sources */,
 				B5CB84E21A400DD800F3D9B1 /* WorkIOINoLove.cpp in Sources */,
 				B5CB84D31A400DD800F3D9B1 /* DateWalk.cpp in Sources */,
 				B5CB84EB1A400DD800F3D9B1 /* PersonBase.cpp in Sources */,
 				B5CB84CE1A400DD800F3D9B1 /* ActionTalk.cpp in Sources */,
 				B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */,
 				B5CB84F51A400DD800F3D9B1 /* Oberserver.cpp in Sources */,
+				B57EA9F01A623FCD0002B5D3 /* StartViewController.m in Sources */,
 				B5CB84E51A400DD800F3D9B1 /* WorkTalkNoLove.cpp in Sources */,
 				B5CB84F11A400DD800F3D9B1 /* StatusSleep.cpp in Sources */,
 				B5E213301A41C05B001735F7 /* FUListView.m in Sources */,
 				B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */,
 				B5F3BD3D1A41D8B5001E7CCA /* SvGifView.m in Sources */,
-				B5F3BD671A4FB030001E7CCA /* MainMenuViewController.m in Sources */,
+				B57EA9EE1A623FCD0002B5D3 /* MainMenuViewController.m in Sources */,
 				B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */,
 				B5CB84E31A400DD800F3D9B1 /* WorkMeetNoLove.cpp in Sources */,
 				B5CB84DB1A400DD800F3D9B1 /* LeisureIOINoLove.cpp in Sources */,
@@ -766,6 +786,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/sunxin/code/teambition/code/1.0/Objc/ForU/ForU/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -782,6 +804,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/sunxin/code/teambition/code/1.0/Objc/ForU/ForU/PrefixHeader.pch;
 				INFOPLIST_FILE = ForU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

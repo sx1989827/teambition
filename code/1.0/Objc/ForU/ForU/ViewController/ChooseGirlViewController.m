@@ -1,18 +1,18 @@
 //
-//  MainMenuViewController.m
+//  ChooseGirlViewController.m
 //  ForU
 //
-//  Created by 孙昕 on 14/12/28.
-//  Copyright (c) 2014年 孙昕. All rights reserved.
+//  Created by 孙昕 on 15/1/10.
+//  Copyright (c) 2015年 孙昕. All rights reserved.
 //
 
-#import "MainMenuViewController.h"
+#import "ChooseGirlViewController.h"
 
-@interface MainMenuViewController ()
+@interface ChooseGirlViewController ()
 
 @end
 
-@implementation MainMenuViewController
+@implementation ChooseGirlViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
