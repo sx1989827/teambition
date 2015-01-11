@@ -25,8 +25,6 @@ enum DATETYPE {EAT,FILM,WALK,PARK};
 -(void)RemoveNotify;
 -(void)AdjustNotify;
 -(void)Exit;
--(NSString*)GetStartStory;
--(NSString*)GetStory;
 @end
 
 

@@ -241,32 +241,6 @@
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
 }
-
--(NSString*)GetStartStory
-{
-    sStory story=STORYCENTER->GetStartStory();
-    if(story.id!=-1)
-    {
-        return [NSString stringWithUTF8String:story.strSrc.data()];
-    }
-    else
-    {
-        return nil;
-    }
-}
--(NSString*)GetStory
-{
-    sStory story=STORYCENTER->GetAvaliableStory();
-    if(story.id!=-1)
-    {
-        return [NSString stringWithUTF8String:story.strSrc.data()];
-    }
-    else
-    {
-        return nil;
-    }
-
-}
 @end
 
 

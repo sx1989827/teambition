@@ -7,8 +7,7 @@
 //
 
 #import "MainMenuViewController.h"
-#include "FUPhotoView.h"
-#include "AppDelegate.h"
+
 @interface MainMenuViewController ()
 
 @end
@@ -35,39 +34,4 @@
 }
 */
 
-- (IBAction)onNew:(id)sender {
-    NSString *dir=[APP GetStartStory];
-    if(dir!=nil)
-    {
-        FUPhotoView *view=[[FUPhotoView alloc] init];
-        [view addPhoto:dir];
-        [view showInView:self.view];
-    }
-}
-
-- (IBAction)onLoad:(id)sender {
-    
-}
-
-- (IBAction)onSetup:(id)sender {
-    
-}
-
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
