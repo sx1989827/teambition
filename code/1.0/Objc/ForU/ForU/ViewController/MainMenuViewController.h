@@ -12,6 +12,4 @@
 - (IBAction)onNew:(id)sender;
 - (IBAction)onLoad:(id)sender;
 - (IBAction)onSetup:(id)sender;
-
-
 @end

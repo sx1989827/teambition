@@ -8,7 +8,7 @@
 
 #import "ChooseGirlViewController.h"
 
-@interface ChooseGirlViewController ()
+@interface ChooseGirlViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -28,13 +28,21 @@
     [_scvGirl addSubview:viewLoli];
     [_scvGirl addSubview:viewMaid];
     [_scvGirl addSubview:viewQueen];
-    
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenKeyboard:)];
+    [self.view addGestureRecognizer:tap];
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)hiddenKeyboard:(UIGestureRecognizer*)tap
 {
-    _scvGirl.contentSize=CGSizeMake(_scvGirl.frame.size.width*3, _scvGirl.frame.size.height);
+    [self.view endEditing:YES];
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.view endEditing:YES];
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
