@@ -41,6 +41,9 @@
                     <state key="normal" title="选择您的住址">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onAdress:" destination="-1" eventType="touchUpInside" id="C8N-aH-gmz"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OH0-xt-ENc">
                     <rect key="frame" x="104" y="53" width="176" height="30"/>

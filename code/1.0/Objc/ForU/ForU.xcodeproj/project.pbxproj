@@ -72,6 +72,11 @@
 		B5E2132D1A41BA11001735F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2132C1A41BA11001735F7 /* QuartzCore.framework */; };
 		B5E213301A41C05B001735F7 /* FUListView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2132F1A41C05B001735F7 /* FUListView.m */; };
 		B5E213321A41C07A001735F7 /* FUListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E213311A41C07A001735F7 /* FUListView.xib */; };
+		B5F184191A6424DE007C9558 /* AddressMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F184171A6424DE007C9558 /* AddressMapViewController.m */; };
+		B5F1841A1A6424DE007C9558 /* AddressMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F184181A6424DE007C9558 /* AddressMapViewController.xib */; };
+		B5F1841C1A64255F007C9558 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F1841B1A64255F007C9558 /* MapKit.framework */; };
+		B5F1841E1A6425E3007C9558 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F1841D1A6425E3007C9558 /* CoreLocation.framework */; };
+		B5F184221A642A5E007C9558 /* AddressPin.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F184211A642A5E007C9558 /* AddressPin.m */; };
 		B5F3BD3D1A41D8B5001E7CCA /* SvGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F3BD3C1A41D8B5001E7CCA /* SvGifView.m */; };
 		B5F3BD3F1A41D924001E7CCA /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F3BD3E1A41D924001E7CCA /* ImageIO.framework */; };
 		B5F3BD411A41D934001E7CCA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F3BD401A41D934001E7CCA /* CoreFoundation.framework */; };
@@ -213,6 +218,13 @@
 		B5E2132E1A41C05B001735F7 /* FUListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUListView.h; sourceTree = "<group>"; };
 		B5E2132F1A41C05B001735F7 /* FUListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUListView.m; sourceTree = "<group>"; };
 		B5E213311A41C07A001735F7 /* FUListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUListView.xib; sourceTree = "<group>"; };
+		B5F184161A6424DE007C9558 /* AddressMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressMapViewController.h; sourceTree = "<group>"; };
+		B5F184171A6424DE007C9558 /* AddressMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressMapViewController.m; sourceTree = "<group>"; };
+		B5F184181A6424DE007C9558 /* AddressMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressMapViewController.xib; sourceTree = "<group>"; };
+		B5F1841B1A64255F007C9558 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B5F1841D1A6425E3007C9558 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B5F184201A642A5E007C9558 /* AddressPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPin.h; sourceTree = "<group>"; };
+		B5F184211A642A5E007C9558 /* AddressPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPin.m; sourceTree = "<group>"; };
 		B5F3BD3B1A41D8B5001E7CCA /* SvGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SvGifView.h; sourceTree = "<group>"; };
 		B5F3BD3C1A41D8B5001E7CCA /* SvGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SvGifView.m; sourceTree = "<group>"; };
 		B5F3BD3E1A41D924001E7CCA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -232,6 +244,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F1841E1A6425E3007C9558 /* CoreLocation.framework in Frameworks */,
+				B5F1841C1A64255F007C9558 /* MapKit.framework in Frameworks */,
 				B5F3BD431A41D9D0001E7CCA /* CoreGraphics.framework in Frameworks */,
 				B5F3BD411A41D934001E7CCA /* CoreFoundation.framework in Frameworks */,
 				B5CB85001A40126500F3D9B1 /* Foundation.framework in Frameworks */,
@@ -248,6 +262,8 @@
 		3E57BB7A2A254C9EB12AE34F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5F1841D1A6425E3007C9558 /* CoreLocation.framework */,
+				B5F1841B1A64255F007C9558 /* MapKit.framework */,
 				37E0ABFDC431057BD870682A /* libPods.a */,
 			);
 			name = Frameworks;
@@ -274,6 +290,9 @@
 				B57EA9E91A623FCD0002B5D3 /* StartViewController.h */,
 				B57EA9EA1A623FCD0002B5D3 /* StartViewController.m */,
 				B57EA9EB1A623FCD0002B5D3 /* StartViewController.xib */,
+				B5F184161A6424DE007C9558 /* AddressMapViewController.h */,
+				B5F184171A6424DE007C9558 /* AddressMapViewController.m */,
+				B5F184181A6424DE007C9558 /* AddressMapViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -303,6 +322,7 @@
 		B586D44A1A3EBFCE004EEE84 /* ForU */ = {
 			isa = PBXGroup;
 			children = (
+				B5F1841F1A642A37007C9558 /* MapPin */,
 				B57EA9E21A623FCD0002B5D3 /* ViewController */,
 				B5F3BD6F1A4FB471001E7CCA /* Img */,
 				B5F3BD621A4A9D51001E7CCA /* Data.bundle */,
@@ -580,6 +600,15 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		B5F1841F1A642A37007C9558 /* MapPin */ = {
+			isa = PBXGroup;
+			children = (
+				B5F184201A642A5E007C9558 /* AddressPin.h */,
+				B5F184211A642A5E007C9558 /* AddressPin.m */,
+			);
+			name = MapPin;
+			sourceTree = "<group>";
+		};
 		B5F3BD3A1A41D8B5001E7CCA /* SvGifView */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +696,7 @@
 				B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */,
 				B57EA9F71A6244C00002B5D3 /* maid.png in Resources */,
 				B57EA9F11A623FCD0002B5D3 /* StartViewController.xib in Resources */,
+				B5F1841A1A6424DE007C9558 /* AddressMapViewController.xib in Resources */,
 				B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */,
 				B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */,
 				B57EA9F81A6244C00002B5D3 /* queen.PNG in Resources */,
@@ -713,6 +743,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F184221A642A5E007C9558 /* AddressPin.m in Sources */,
 				B5CB84FC1A4011D300F3D9B1 /* main.m in Sources */,
 				B5CB84EA1A400DD800F3D9B1 /* Mood.cpp in Sources */,
 				B5CB84D61A400DD800F3D9B1 /* DateNoLove.cpp in Sources */,
@@ -727,6 +758,7 @@
 				B5CB84EB1A400DD800F3D9B1 /* PersonBase.cpp in Sources */,
 				B5CB84CE1A400DD800F3D9B1 /* ActionTalk.cpp in Sources */,
 				B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */,
+				B5F184191A6424DE007C9558 /* AddressMapViewController.m in Sources */,
 				B5CB84F51A400DD800F3D9B1 /* Oberserver.cpp in Sources */,
 				B57EA9F01A623FCD0002B5D3 /* StartViewController.m in Sources */,
 				B5CB84E51A400DD800F3D9B1 /* WorkTalkNoLove.cpp in Sources */,
@@ -793,7 +825,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sun xin (CWAHPY24F9)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -813,6 +846,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "4e79b44d-f28b-4edd-96b1-35734d8e4886";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -834,7 +868,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sun xin (CWAHPY24F9)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -847,6 +882,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "4e79b44d-f28b-4edd-96b1-35734d8e4886";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -857,6 +893,7 @@
 			baseConfigurationReference = 68BD121DC20884C45E397A8C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/sunxin/code/teambition/code/1.0/Objc/ForU/ForU/PrefixHeader.pch;
@@ -868,6 +905,7 @@
 				INFOPLIST_FILE = ForU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4e79b44d-f28b-4edd-96b1-35734d8e4886";
 			};
 			name = Debug;
 		};
@@ -876,12 +914,14 @@
 			baseConfigurationReference = A574ABBCF0BE8F0BEF0E4F7E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/sunxin/code/teambition/code/1.0/Objc/ForU/ForU/PrefixHeader.pch;
 				INFOPLIST_FILE = ForU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4e79b44d-f28b-4edd-96b1-35734d8e4886";
 			};
 			name = Release;
 		};

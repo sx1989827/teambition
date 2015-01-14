@@ -14,7 +14,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _app=[[FUApplication alloc] init];
     _window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -23,7 +22,6 @@
     nav.navigationBarHidden=YES;
     self.window.rootViewController=nav;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

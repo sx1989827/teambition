@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressMapViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMap" destination="6HC-EM-Di7" id="usL-6z-jag"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6HC-EM-Di7">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="f8k-15-LNq"/>
+                    </connections>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-xQ-lkJ">
+                    <rect key="frame" x="25" y="18" width="50" height="28"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="fUo-oC-cEl"/>
+                        <constraint firstAttribute="height" constant="28" id="nJP-mG-gND"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="返回">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBack:" destination="-1" eventType="touchUpInside" id="phh-Oy-Y8e"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ldc-xQ-lkJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="GwG-H7-mn0"/>
+                <constraint firstItem="Ldc-xQ-lkJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="KeN-xB-0Y9"/>
+                <constraint firstItem="6HC-EM-Di7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Oit-wp-g8u"/>
+                <constraint firstAttribute="bottom" secondItem="6HC-EM-Di7" secondAttribute="bottom" id="Pnm-sY-ZzM"/>
+                <constraint firstAttribute="trailing" secondItem="6HC-EM-Di7" secondAttribute="trailing" id="YRR-dr-KKF"/>
+                <constraint firstItem="6HC-EM-Di7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lW8-Sr-WiP"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

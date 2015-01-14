@@ -7,7 +7,7 @@
 //
 
 #import "ChooseGirlViewController.h"
-
+#import "AddressMapViewController.h"
 @interface ChooseGirlViewController ()<UITextFieldDelegate>
 
 @end
@@ -32,6 +32,11 @@
     [self.view addGestureRecognizer:tap];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    _scvGirl.contentSize=CGSizeMake(_scvGirl.frame.size.width*3, _scvGirl.frame.size.height);
+}
+
 -(void)hiddenKeyboard:(UIGestureRecognizer*)tap
 {
     [self.view endEditing:YES];
@@ -54,4 +59,19 @@
     return YES;
 }
 
+- (IBAction)onAdress:(id)sender {
+    AddressMapViewController *view=[[AddressMapViewController alloc] initWithNibName:@"AddressMapViewController" bundle:nil];
+    view.vc=self;
+    [self presentViewController:view animated:YES completion:nil];
+}
 @end
+
+
+
+
+
+
+
+
+
+
