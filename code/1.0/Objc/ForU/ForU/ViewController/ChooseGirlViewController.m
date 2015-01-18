@@ -8,6 +8,9 @@
 
 #import "ChooseGirlViewController.h"
 #import "AddressMapViewController.h"
+#import "FUPhotoView.h"
+#import "AppDelegate.h"
+#import "FUAlertView.h"
 @interface ChooseGirlViewController ()<UITextFieldDelegate>
 
 @end
@@ -30,6 +33,10 @@
     [_scvGirl addSubview:viewQueen];
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenKeyboard:)];
     [self.view addGestureRecognizer:tap];
+    FUPhotoView *view=[[FUPhotoView alloc] init];
+    NSString *strPath= [APP GetStartStory];
+    [view addPhoto:strPath];
+    [view showInView:self.view];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -63,6 +70,22 @@
     AddressMapViewController *view=[[AddressMapViewController alloc] initWithNibName:@"AddressMapViewController" bundle:nil];
     view.vc=self;
     [self presentViewController:view animated:YES completion:nil];
+}
+- (IBAction)onStart:(id)sender {
+    if([[_btnAddress titleForState:UIControlStateNormal] isEqualToString:@"选择您的住址"])
+    {
+        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"请选择您的住址"];
+        [view showInView:self.view];
+        return;
+    }
+    else if([_txtName.text isEqualToString:@""])
+    {
+        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"请输入女生的名字"];
+        [view showInView:self.view];
+        return;
+    }
+    GIRLTYPE type=(GIRLTYPE)(_scvGirl.contentOffset.y/_scvGirl.frame.size.width);
+    [APP Reset:type girlname:_txtName.text x:_cood.latitude y:_cood.longitude];
 }
 @end
 

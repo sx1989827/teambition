@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CoreLocation/CoreLocation.h>
 @interface ChooseGirlViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *txtName;
 @property (strong, nonatomic) IBOutlet UIScrollView *scvGirl;
 @property (strong, nonatomic) IBOutlet UIButton *btnAddress;
 - (IBAction)onAdress:(id)sender;
+@property (assign,nonatomic) CLLocationCoordinate2D cood;
+- (IBAction)onStart:(id)sender;
 
 @end

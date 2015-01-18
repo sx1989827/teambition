@@ -41,13 +41,18 @@
     }
 }
 
--(void)Reset:(GIRLTYPE)girltype
+-(void)Reset:(GIRLTYPE)girltype girlname:(NSString*)name x:(double)x y:(double)y
 {
     NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
     [userDefaults removeObjectForKey:@"ver"];
     [userDefaults setFloat:  [[[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey] floatValue] forKey:@"ver"];
+    [userDefaults setDouble:x forKey:@"x"];
+    [userDefaults setDouble:y forKey:@"y"];
+    [userDefaults setValue:name forKey:@"name"];
+    [userDefaults setValue:@(girltype) forKey:@"type"];
     [userDefaults synchronize];
     app->Reset((CoreGirl::TYPE)girltype);
+    
 }
 
 -(void)Update

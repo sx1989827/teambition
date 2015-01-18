@@ -80,6 +80,7 @@
                 <constraint firstItem="8tk-AF-aKO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lmQ-zi-mXV"/>
                 <constraint firstAttribute="centerY" secondItem="Qve-b6-aaA" secondAttribute="centerY" id="x5G-v5-Tat"/>
             </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="212" y="323"/>
         </view>

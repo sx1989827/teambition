@@ -22,6 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _viewMap.showsUserLocation=YES;
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addAnnotation:)];
+    [self.viewMap addGestureRecognizer:tap];
+}
+
+-(void)addAnnotation:(UITapGestureRecognizer*)tap
+{
+    CGPoint touchPoint = [tap locationInView:_viewMap];
+    CLLocationCoordinate2D touchMapCoordinate =[_viewMap convertPoint:touchPoint toCoordinateFromView:_viewMap];
+    [_viewMap removeAnnotation:_viewMap.annotations[0]];
+    MKPointAnnotation *anno=[[MKPointAnnotation alloc] init];
+    anno.coordinate=touchMapCoordinate;
+    anno.title=@"确定住址";
+    [_viewMap addAnnotation:anno];
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -34,7 +47,6 @@
     MKPointAnnotation *point=[[MKPointAnnotation alloc] init];
     point.coordinate=userLocation.coordinate;
     [_viewMap addAnnotation:point];
-
 }
 
 -(MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
@@ -50,6 +62,7 @@
 -(void)clickPin
 {
     [_vc.btnAddress setTitle:@"已选择" forState:UIControlStateNormal];
+    _vc.cood=((MKPointAnnotation*)_viewMap.annotations[0]).coordinate;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

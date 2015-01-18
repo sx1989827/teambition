@@ -46,6 +46,7 @@
                 <constraint firstAttribute="trailing" secondItem="6HC-EM-Di7" secondAttribute="trailing" id="YRR-dr-KKF"/>
                 <constraint firstItem="6HC-EM-Di7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lW8-Sr-WiP"/>
             </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
