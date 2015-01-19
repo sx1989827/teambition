@@ -18,6 +18,10 @@
 		B586D4511A3EBFCE004EEE84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B586D4501A3EBFCE004EEE84 /* AppDelegate.m */; };
 		B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586D4581A3EBFCE004EEE84 /* Images.xcassets */; };
 		B59C8F571A68085200B9E386 /* queen.png in Resources */ = {isa = PBXBuildFile; fileRef = B59C8F561A68085200B9E386 /* queen.png */; };
+		B59C8F5B1A6D256F00B9E386 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59C8F5A1A6D256F00B9E386 /* SettingView.m */; };
+		B59C8F5F1A6D28B900B9E386 /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59C8F5E1A6D28B900B9E386 /* SettingView.xib */; };
+		B59C8F631A6D2EFB00B9E386 /* FUPublic.m in Sources */ = {isa = PBXBuildFile; fileRef = B59C8F621A6D2EFB00B9E386 /* FUPublic.m */; };
+		B59C8F651A6D476C00B9E386 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = B59C8F641A6D476C00B9E386 /* close.png */; };
 		B5CB844D1A400AF100F3D9B1 /* FUApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */; };
 		B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844F1A400DD800F3D9B1 /* Application.cpp */; };
 		B5CB84CC1A400DD800F3D9B1 /* ActionBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */; };
@@ -114,6 +118,12 @@
 		B586D4661A3EBFCE004EEE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586D4671A3EBFCE004EEE84 /* ForUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForUTests.m; sourceTree = "<group>"; };
 		B59C8F561A68085200B9E386 /* queen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = queen.png; sourceTree = "<group>"; };
+		B59C8F591A6D256F00B9E386 /* SettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingView.h; sourceTree = "<group>"; };
+		B59C8F5A1A6D256F00B9E386 /* SettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingView.m; sourceTree = "<group>"; };
+		B59C8F5E1A6D28B900B9E386 /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
+		B59C8F611A6D2EFB00B9E386 /* FUPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUPublic.h; sourceTree = "<group>"; };
+		B59C8F621A6D2EFB00B9E386 /* FUPublic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUPublic.m; sourceTree = "<group>"; };
+		B59C8F641A6D476C00B9E386 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		B5CB844B1A400AF100F3D9B1 /* FUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUApplication.h; sourceTree = "<group>"; };
 		B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FUApplication.mm; sourceTree = "<group>"; };
 		B5CB844F1A400DD800F3D9B1 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
@@ -322,6 +332,8 @@
 		B586D44A1A3EBFCE004EEE84 /* ForU */ = {
 			isa = PBXGroup;
 			children = (
+				B59C8F601A6D2EC400B9E386 /* Public */,
+				B59C8F581A6D255500B9E386 /* CustomView */,
 				B5F1841F1A642A37007C9558 /* MapPin */,
 				B57EA9E21A623FCD0002B5D3 /* ViewController */,
 				B5F3BD6F1A4FB471001E7CCA /* Img */,
@@ -371,6 +383,25 @@
 				B5D0A1641A41982E0059A685 /* Component */,
 			);
 			path = MiddleWare;
+			sourceTree = "<group>";
+		};
+		B59C8F581A6D255500B9E386 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B59C8F5E1A6D28B900B9E386 /* SettingView.xib */,
+				B59C8F591A6D256F00B9E386 /* SettingView.h */,
+				B59C8F5A1A6D256F00B9E386 /* SettingView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		B59C8F601A6D2EC400B9E386 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				B59C8F611A6D2EFB00B9E386 /* FUPublic.h */,
+				B59C8F621A6D2EFB00B9E386 /* FUPublic.m */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		B5CB844E1A400DD800F3D9B1 /* Core */ = {
@@ -621,6 +652,7 @@
 		B5F3BD6F1A4FB471001E7CCA /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				B59C8F641A6D476C00B9E386 /* close.png */,
 				B59C8F561A68085200B9E386 /* queen.png */,
 				B57EA9F31A6244C00002B5D3 /* loli.png */,
 				B57EA9F41A6244C00002B5D3 /* maid.png */,
@@ -692,12 +724,14 @@
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
 				B59C8F571A68085200B9E386 /* queen.png in Resources */,
 				B57EA9F61A6244C00002B5D3 /* loli.png in Resources */,
+				B59C8F651A6D476C00B9E386 /* close.png in Resources */,
 				B57EA9ED1A623FCD0002B5D3 /* ChooseGirlViewController.xib in Resources */,
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
 				B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */,
 				B57EA9F71A6244C00002B5D3 /* maid.png in Resources */,
 				B57EA9F11A623FCD0002B5D3 /* StartViewController.xib in Resources */,
 				B5F1841A1A6424DE007C9558 /* AddressMapViewController.xib in Resources */,
+				B59C8F5F1A6D28B900B9E386 /* SettingView.xib in Resources */,
 				B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */,
 				B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */,
 			);
@@ -772,6 +806,7 @@
 				B5CB84DB1A400DD800F3D9B1 /* LeisureIOINoLove.cpp in Sources */,
 				B5CB84E41A400DD800F3D9B1 /* WorkTalkLove.cpp in Sources */,
 				B5D0A1671A4198AC0059A685 /* FUAlertView.m in Sources */,
+				B59C8F5B1A6D256F00B9E386 /* SettingView.m in Sources */,
 				B5CB84F31A400DD800F3D9B1 /* Constant.mm in Sources */,
 				B5CB84EC1A400DD800F3D9B1 /* Player.cpp in Sources */,
 				B5CB84DA1A400DD800F3D9B1 /* LeisureIOILove.cpp in Sources */,
@@ -786,6 +821,7 @@
 				B5CB84F21A400DD800F3D9B1 /* StatusWork.cpp in Sources */,
 				B5CB84E61A400DD800F3D9B1 /* Notify.cpp in Sources */,
 				B5CB84EF1A400DD800F3D9B1 /* StatusController.cpp in Sources */,
+				B59C8F631A6D2EFB00B9E386 /* FUPublic.m in Sources */,
 				B5CB84F61A400DD800F3D9B1 /* Serializ.cpp in Sources */,
 				B5CB84DF1A400DD800F3D9B1 /* WorkHelpLove.cpp in Sources */,
 				B5CB84D81A400DD800F3D9B1 /* Gift.cpp in Sources */,

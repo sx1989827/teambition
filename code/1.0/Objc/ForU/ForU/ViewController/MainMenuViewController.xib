@@ -6,7 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuViewController">
             <connections>
+                <outlet property="btnNew" destination="uHB-ok-lsO" id="lAN-jG-l1S"/>
+                <outlet property="btnOld" destination="tKF-Ds-du3" id="68M-rE-bQw"/>
+                <outlet property="btnSet" destination="JSG-SV-bhF" id="opP-4l-VXE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewSetting" destination="Oh5-aF-mcW" id="Hw8-I9-VNw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,6 +21,14 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8tk-AF-aKO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oh5-aF-mcW" customClass="SettingView">
+                    <rect key="frame" x="40" y="80" width="240" height="320"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="320" id="nWz-tm-mIa"/>
+                        <constraint firstAttribute="width" constant="240" id="zqC-9D-a8t"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qve-b6-aaA">
                     <rect key="frame" x="40" y="80" width="240" height="320"/>
                     <subviews>
@@ -75,6 +87,8 @@
             <constraints>
                 <constraint firstItem="8tk-AF-aKO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4ZF-Kv-ev8"/>
                 <constraint firstAttribute="trailing" secondItem="8tk-AF-aKO" secondAttribute="trailing" id="5Mh-o8-0Z4"/>
+                <constraint firstAttribute="centerY" secondItem="Oh5-aF-mcW" secondAttribute="centerY" id="G6C-s5-XIZ"/>
+                <constraint firstAttribute="centerX" secondItem="Oh5-aF-mcW" secondAttribute="centerX" id="LoQ-Iv-G3p"/>
                 <constraint firstAttribute="bottom" secondItem="8tk-AF-aKO" secondAttribute="bottom" id="Ti1-FS-PYD"/>
                 <constraint firstAttribute="centerX" secondItem="Qve-b6-aaA" secondAttribute="centerX" id="jUW-fR-YNv"/>
                 <constraint firstItem="8tk-AF-aKO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lmQ-zi-mXV"/>

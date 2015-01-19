@@ -12,4 +12,8 @@
 - (IBAction)onNew:(id)sender;
 - (IBAction)onLoad:(id)sender;
 - (IBAction)onSetup:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *btnNew;
+@property (strong, nonatomic) IBOutlet UIButton *btnOld;
+@property (strong, nonatomic) IBOutlet UIButton *btnSet;
+
 @end
