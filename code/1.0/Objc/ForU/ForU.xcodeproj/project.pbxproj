@@ -22,6 +22,8 @@
 		B59C8F5F1A6D28B900B9E386 /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59C8F5E1A6D28B900B9E386 /* SettingView.xib */; };
 		B59C8F631A6D2EFB00B9E386 /* FUPublic.m in Sources */ = {isa = PBXBuildFile; fileRef = B59C8F621A6D2EFB00B9E386 /* FUPublic.m */; };
 		B59C8F651A6D476C00B9E386 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = B59C8F641A6D476C00B9E386 /* close.png */; };
+		B59C8F691A7489C800B9E386 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59C8F671A7489C800B9E386 /* StateViewController.m */; };
+		B59C8F6A1A7489C800B9E386 /* StateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59C8F681A7489C800B9E386 /* StateViewController.xib */; };
 		B5CB844D1A400AF100F3D9B1 /* FUApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */; };
 		B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844F1A400DD800F3D9B1 /* Application.cpp */; };
 		B5CB84CC1A400DD800F3D9B1 /* ActionBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */; };
@@ -124,6 +126,9 @@
 		B59C8F611A6D2EFB00B9E386 /* FUPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUPublic.h; sourceTree = "<group>"; };
 		B59C8F621A6D2EFB00B9E386 /* FUPublic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUPublic.m; sourceTree = "<group>"; };
 		B59C8F641A6D476C00B9E386 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		B59C8F661A7489C800B9E386 /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
+		B59C8F671A7489C800B9E386 /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
+		B59C8F681A7489C800B9E386 /* StateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StateViewController.xib; sourceTree = "<group>"; };
 		B5CB844B1A400AF100F3D9B1 /* FUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUApplication.h; sourceTree = "<group>"; };
 		B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FUApplication.mm; sourceTree = "<group>"; };
 		B5CB844F1A400DD800F3D9B1 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
@@ -303,6 +308,9 @@
 				B5F184161A6424DE007C9558 /* AddressMapViewController.h */,
 				B5F184171A6424DE007C9558 /* AddressMapViewController.m */,
 				B5F184181A6424DE007C9558 /* AddressMapViewController.xib */,
+				B59C8F661A7489C800B9E386 /* StateViewController.h */,
+				B59C8F671A7489C800B9E386 /* StateViewController.m */,
+				B59C8F681A7489C800B9E386 /* StateViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -720,6 +728,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59C8F6A1A7489C800B9E386 /* StateViewController.xib in Resources */,
 				B57EA9EF1A623FCD0002B5D3 /* MainMenuViewController.xib in Resources */,
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
 				B59C8F571A68085200B9E386 /* queen.png in Resources */,
@@ -787,6 +796,7 @@
 				B5CB84D11A400DD800F3D9B1 /* DateFilm.cpp in Sources */,
 				B57EA9EC1A623FCD0002B5D3 /* ChooseGirlViewController.m in Sources */,
 				B5CB84F91A400DD800F3D9B1 /* Xml.cpp in Sources */,
+				B59C8F691A7489C800B9E386 /* StateViewController.m in Sources */,
 				B5CB84E21A400DD800F3D9B1 /* WorkIOINoLove.cpp in Sources */,
 				B5CB84D31A400DD800F3D9B1 /* DateWalk.cpp in Sources */,
 				B5CB84EB1A400DD800F3D9B1 /* PersonBase.cpp in Sources */,
