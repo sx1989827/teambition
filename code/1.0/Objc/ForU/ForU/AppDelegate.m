@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "StartViewController.h"
+#import "StateViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _app=[[FUApplication alloc] init];
     _window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    StartViewController *view=[[StartViewController alloc] initWithNibName:@"StartViewController" bundle:nil];
+    StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
     UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:view];
     nav.navigationBarHidden=YES;
     self.window.rootViewController=nav;

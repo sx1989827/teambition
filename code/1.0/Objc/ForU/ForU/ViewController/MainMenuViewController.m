@@ -87,6 +87,11 @@
     ani.fromValue=@(0);
     ani.toValue=@(1);
     [viewSetting pop_addAnimation:ani forKey:@"SettingShow"];
+    POPSpringAnimation *aniSpring=[POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+    aniSpring.springBounciness=10;
+    aniSpring.fromValue=[NSValue valueWithCGRect:CGRectMake(self.view.center.x, self.view.center.y, 0, 0)];
+    aniSpring.toValue=[NSValue valueWithCGRect:viewSetting.frame];
+    [viewSetting pop_addAnimation:aniSpring forKey:@"SettingFrame"];
 }
 
 - (BOOL)prefersStatusBarHidden

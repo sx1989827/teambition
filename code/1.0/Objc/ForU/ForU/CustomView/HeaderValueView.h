@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HeaderValueView : UIView
-
+@property (assign,nonatomic) long lPhysical;
+@property (assign,nonatomic) long lMoney;
+@property (strong,nonatomic) NSString *mood;
+@property (assign,nonatomic) long lIOI;
 @end

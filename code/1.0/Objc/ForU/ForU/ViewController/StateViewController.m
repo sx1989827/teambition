@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    _viewHeader.lPhysical=100;
+    _viewHeader.lMoney=500;
+    _viewHeader.mood=@"开心";
+    _viewHeader.lIOI=80;
 }
 
 - (void)didReceiveMemoryWarning {

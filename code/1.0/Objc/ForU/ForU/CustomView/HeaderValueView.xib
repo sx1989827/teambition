@@ -12,7 +12,15 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderValueView"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderValueView">
+            <connections>
+                <outlet property="conPhysical" destination="dgC-Pd-B64" id="FdE-TU-zzk"/>
+                <outlet property="imgMood" destination="WnW-pU-rVr" id="JzC-jp-WJ6"/>
+                <outlet property="lbMoney" destination="Vb3-Rh-sm8" id="m5P-sj-AIq"/>
+                <outlet property="lbPhysical" destination="Tyw-Ny-Ypx" id="NQW-lE-J3b"/>
+                <outlet property="viewIOI" destination="1jb-BX-Ydf" id="Vld-fc-JpU"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -49,9 +57,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyw-Ny-Ypx">
-                    <rect key="frame" x="51" y="8" width="100" height="21"/>
+                    <rect key="frame" x="51" y="13" width="100" height="10"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="Vd6-CA-N1l"/>
+                        <constraint firstAttribute="height" constant="10" id="Vd6-CA-N1l"/>
                         <constraint firstAttribute="width" constant="100" id="dgC-Pd-B64"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -100,7 +108,7 @@
                 <constraint firstItem="1jb-BX-Ydf" firstAttribute="leading" secondItem="AfU-Uj-tOa" secondAttribute="trailing" constant="4" id="HWM-ZL-Jbq"/>
                 <constraint firstAttribute="trailing" secondItem="WnW-pU-rVr" secondAttribute="trailing" constant="87" id="IDG-uf-xXT"/>
                 <constraint firstItem="Tyw-Ny-Ypx" firstAttribute="leading" secondItem="wCV-oU-krG" secondAttribute="trailing" constant="1" id="MUm-Fv-sbT"/>
-                <constraint firstItem="Tyw-Ny-Ypx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Rqb-dj-wC4"/>
+                <constraint firstItem="Tyw-Ny-Ypx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="Rqb-dj-wC4"/>
                 <constraint firstItem="WnW-pU-rVr" firstAttribute="leading" secondItem="YeK-um-HmO" secondAttribute="trailing" constant="8" id="SzH-yJ-d6h"/>
                 <constraint firstItem="wCV-oU-krG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Ugv-2C-vYv"/>
                 <constraint firstItem="Vb3-Rh-sm8" firstAttribute="leading" secondItem="ipa-d0-7Ad" secondAttribute="trailing" constant="1" id="diZ-fq-ghb"/>
@@ -109,7 +117,7 @@
                 <constraint firstItem="1jb-BX-Ydf" firstAttribute="top" secondItem="WnW-pU-rVr" secondAttribute="bottom" constant="2" id="gTs-BX-mjN"/>
                 <constraint firstItem="wCV-oU-krG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="lic-DG-o06"/>
                 <constraint firstItem="YeK-um-HmO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="mqJ-xS-wGU"/>
-                <constraint firstItem="Vb3-Rh-sm8" firstAttribute="top" secondItem="Tyw-Ny-Ypx" secondAttribute="bottom" constant="2" id="mx0-sC-OSm"/>
+                <constraint firstItem="Vb3-Rh-sm8" firstAttribute="top" secondItem="Tyw-Ny-Ypx" secondAttribute="bottom" constant="8" id="mx0-sC-OSm"/>
                 <constraint firstItem="WnW-pU-rVr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="xa5-rD-ksC"/>
                 <constraint firstItem="ipa-d0-7Ad" firstAttribute="top" secondItem="wCV-oU-krG" secondAttribute="bottom" constant="2" id="zM9-H9-FRo"/>
             </constraints>

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HeaderValueView.h"
 @interface StateViewController : UIViewController
+@property (strong, nonatomic) IBOutlet HeaderValueView *viewHeader;
 
 @end

@@ -28,6 +28,14 @@
 		B5BADD4F1A88A55B00238649 /* HeaderValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */; };
 		B5BADD541A890E6A00238649 /* msyh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD531A89095700238649 /* msyh.ttf */; };
 		B5BADD551A890E6A00238649 /* RTWS YueRoundedGothic Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD521A8907F600238649 /* RTWS YueRoundedGothic Demo.otf */; };
+		B5BADD5E1A89ABBA00238649 /* 伤心.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD571A89ABBA00238649 /* 伤心.png */; };
+		B5BADD5F1A89ABBA00238649 /* 害羞.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD581A89ABBA00238649 /* 害羞.png */; };
+		B5BADD601A89ABBA00238649 /* 平静.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD591A89ABBA00238649 /* 平静.png */; };
+		B5BADD611A89ABBA00238649 /* 开心.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD5A1A89ABBA00238649 /* 开心.png */; };
+		B5BADD621A89ABBA00238649 /* 撒娇.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD5B1A89ABBA00238649 /* 撒娇.png */; };
+		B5BADD631A89ABBA00238649 /* 生气.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD5C1A89ABBA00238649 /* 生气.png */; };
+		B5BADD641A89ABBA00238649 /* 紧张.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD5D1A89ABBA00238649 /* 紧张.png */; };
+		B5BADD661A89ACC200238649 /* IOI.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD651A89ACC200238649 /* IOI.png */; };
 		B5CB844D1A400AF100F3D9B1 /* FUApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */; };
 		B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844F1A400DD800F3D9B1 /* Application.cpp */; };
 		B5CB84CC1A400DD800F3D9B1 /* ActionBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */; };
@@ -138,6 +146,14 @@
 		B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderValueView.xib; sourceTree = "<group>"; };
 		B5BADD521A8907F600238649 /* RTWS YueRoundedGothic Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTWS YueRoundedGothic Demo.otf"; sourceTree = "<group>"; };
 		B5BADD531A89095700238649 /* msyh.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = msyh.ttf; sourceTree = "<group>"; };
+		B5BADD571A89ABBA00238649 /* 伤心.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "伤心.png"; sourceTree = "<group>"; };
+		B5BADD581A89ABBA00238649 /* 害羞.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "害羞.png"; sourceTree = "<group>"; };
+		B5BADD591A89ABBA00238649 /* 平静.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "平静.png"; sourceTree = "<group>"; };
+		B5BADD5A1A89ABBA00238649 /* 开心.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开心.png"; sourceTree = "<group>"; };
+		B5BADD5B1A89ABBA00238649 /* 撒娇.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "撒娇.png"; sourceTree = "<group>"; };
+		B5BADD5C1A89ABBA00238649 /* 生气.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "生气.png"; sourceTree = "<group>"; };
+		B5BADD5D1A89ABBA00238649 /* 紧张.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "紧张.png"; sourceTree = "<group>"; };
+		B5BADD651A89ACC200238649 /* IOI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IOI.png; sourceTree = "<group>"; };
 		B5CB844B1A400AF100F3D9B1 /* FUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUApplication.h; sourceTree = "<group>"; };
 		B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FUApplication.mm; sourceTree = "<group>"; };
 		B5CB844F1A400DD800F3D9B1 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
@@ -426,6 +442,21 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
+		B5BADD561A89ABBA00238649 /* expression */ = {
+			isa = PBXGroup;
+			children = (
+				B5BADD651A89ACC200238649 /* IOI.png */,
+				B5BADD571A89ABBA00238649 /* 伤心.png */,
+				B5BADD581A89ABBA00238649 /* 害羞.png */,
+				B5BADD591A89ABBA00238649 /* 平静.png */,
+				B5BADD5A1A89ABBA00238649 /* 开心.png */,
+				B5BADD5B1A89ABBA00238649 /* 撒娇.png */,
+				B5BADD5C1A89ABBA00238649 /* 生气.png */,
+				B5BADD5D1A89ABBA00238649 /* 紧张.png */,
+			);
+			path = expression;
+			sourceTree = "<group>";
+		};
 		B5CB844E1A400DD800F3D9B1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,6 +705,7 @@
 		B5F3BD6F1A4FB471001E7CCA /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				B5BADD561A89ABBA00238649 /* expression */,
 				B59C8F641A6D476C00B9E386 /* close.png */,
 				B59C8F561A68085200B9E386 /* queen.png */,
 				B57EA9F31A6244C00002B5D3 /* loli.png */,
@@ -742,18 +774,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BADD641A89ABBA00238649 /* 紧张.png in Resources */,
 				B5BADD541A890E6A00238649 /* msyh.ttf in Resources */,
 				B5BADD551A890E6A00238649 /* RTWS YueRoundedGothic Demo.otf in Resources */,
+				B5BADD601A89ABBA00238649 /* 平静.png in Resources */,
 				B59C8F6A1A7489C800B9E386 /* StateViewController.xib in Resources */,
+				B5BADD631A89ABBA00238649 /* 生气.png in Resources */,
 				B57EA9EF1A623FCD0002B5D3 /* MainMenuViewController.xib in Resources */,
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
+				B5BADD611A89ABBA00238649 /* 开心.png in Resources */,
 				B59C8F571A68085200B9E386 /* queen.png in Resources */,
 				B57EA9F61A6244C00002B5D3 /* loli.png in Resources */,
+				B5BADD621A89ABBA00238649 /* 撒娇.png in Resources */,
 				B5BADD4F1A88A55B00238649 /* HeaderValueView.xib in Resources */,
+				B5BADD5E1A89ABBA00238649 /* 伤心.png in Resources */,
 				B59C8F651A6D476C00B9E386 /* close.png in Resources */,
+				B5BADD5F1A89ABBA00238649 /* 害羞.png in Resources */,
 				B57EA9ED1A623FCD0002B5D3 /* ChooseGirlViewController.xib in Resources */,
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
 				B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */,
+				B5BADD661A89ACC200238649 /* IOI.png in Resources */,
 				B57EA9F71A6244C00002B5D3 /* maid.png in Resources */,
 				B57EA9F11A623FCD0002B5D3 /* StartViewController.xib in Resources */,
 				B5F1841A1A6424DE007C9558 /* AddressMapViewController.xib in Resources */,
