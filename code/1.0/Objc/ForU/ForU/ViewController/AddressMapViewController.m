@@ -13,6 +13,7 @@
 {
     FULoadingView *loadingView;
     CLLocationCoordinate2D *coood;
+    CLLocationManager *cl;
 }
 
 @end
@@ -21,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    {
+        cl=[[CLLocationManager alloc] init];
+        [cl requestAlwaysAuthorization];
+        [cl requestWhenInUseAuthorization];
+    }
     _viewMap.showsUserLocation=YES;
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addAnnotation:)];
     [self.viewMap addGestureRecognizer:tap];

@@ -24,6 +24,10 @@
 		B59C8F651A6D476C00B9E386 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = B59C8F641A6D476C00B9E386 /* close.png */; };
 		B59C8F691A7489C800B9E386 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59C8F671A7489C800B9E386 /* StateViewController.m */; };
 		B59C8F6A1A7489C800B9E386 /* StateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59C8F681A7489C800B9E386 /* StateViewController.xib */; };
+		B5BADD4D1A88A54600238649 /* HeaderValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BADD4C1A88A54600238649 /* HeaderValueView.m */; };
+		B5BADD4F1A88A55B00238649 /* HeaderValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */; };
+		B5BADD541A890E6A00238649 /* msyh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD531A89095700238649 /* msyh.ttf */; };
+		B5BADD551A890E6A00238649 /* RTWS YueRoundedGothic Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD521A8907F600238649 /* RTWS YueRoundedGothic Demo.otf */; };
 		B5CB844D1A400AF100F3D9B1 /* FUApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */; };
 		B5CB84C31A400DD800F3D9B1 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB844F1A400DD800F3D9B1 /* Application.cpp */; };
 		B5CB84CC1A400DD800F3D9B1 /* ActionBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5CB845D1A400DD800F3D9B1 /* ActionBody.cpp */; };
@@ -129,6 +133,11 @@
 		B59C8F661A7489C800B9E386 /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
 		B59C8F671A7489C800B9E386 /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
 		B59C8F681A7489C800B9E386 /* StateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StateViewController.xib; sourceTree = "<group>"; };
+		B5BADD4B1A88A54500238649 /* HeaderValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderValueView.h; sourceTree = "<group>"; };
+		B5BADD4C1A88A54600238649 /* HeaderValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderValueView.m; sourceTree = "<group>"; };
+		B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderValueView.xib; sourceTree = "<group>"; };
+		B5BADD521A8907F600238649 /* RTWS YueRoundedGothic Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTWS YueRoundedGothic Demo.otf"; sourceTree = "<group>"; };
+		B5BADD531A89095700238649 /* msyh.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = msyh.ttf; sourceTree = "<group>"; };
 		B5CB844B1A400AF100F3D9B1 /* FUApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUApplication.h; sourceTree = "<group>"; };
 		B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FUApplication.mm; sourceTree = "<group>"; };
 		B5CB844F1A400DD800F3D9B1 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
@@ -358,6 +367,8 @@
 		B586D44B1A3EBFCE004EEE84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5BADD531A89095700238649 /* msyh.ttf */,
+				B5BADD521A8907F600238649 /* RTWS YueRoundedGothic Demo.otf */,
 				B57EA9F21A6240520002B5D3 /* PrefixHeader.pch */,
 				B586D44C1A3EBFCE004EEE84 /* Info.plist */,
 				B586D44D1A3EBFCE004EEE84 /* main.m */,
@@ -399,6 +410,9 @@
 				B59C8F5E1A6D28B900B9E386 /* SettingView.xib */,
 				B59C8F591A6D256F00B9E386 /* SettingView.h */,
 				B59C8F5A1A6D256F00B9E386 /* SettingView.m */,
+				B5BADD4B1A88A54500238649 /* HeaderValueView.h */,
+				B5BADD4C1A88A54600238649 /* HeaderValueView.m */,
+				B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -728,11 +742,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BADD541A890E6A00238649 /* msyh.ttf in Resources */,
+				B5BADD551A890E6A00238649 /* RTWS YueRoundedGothic Demo.otf in Resources */,
 				B59C8F6A1A7489C800B9E386 /* StateViewController.xib in Resources */,
 				B57EA9EF1A623FCD0002B5D3 /* MainMenuViewController.xib in Resources */,
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
 				B59C8F571A68085200B9E386 /* queen.png in Resources */,
 				B57EA9F61A6244C00002B5D3 /* loli.png in Resources */,
+				B5BADD4F1A88A55B00238649 /* HeaderValueView.xib in Resources */,
 				B59C8F651A6D476C00B9E386 /* close.png in Resources */,
 				B57EA9ED1A623FCD0002B5D3 /* ChooseGirlViewController.xib in Resources */,
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
@@ -842,6 +859,7 @@
 				B5CB84D91A400DD800F3D9B1 /* Interaction.cpp in Sources */,
 				B5CB84D71A400DD800F3D9B1 /* Event.cpp in Sources */,
 				B5CB84ED1A400DD800F3D9B1 /* Save.cpp in Sources */,
+				B5BADD4D1A88A54600238649 /* HeaderValueView.m in Sources */,
 				B5CB84F81A400DD800F3D9B1 /* Time.cpp in Sources */,
 				B5CB84F01A400DD800F3D9B1 /* StatusLeisure.cpp in Sources */,
 				B5CB84D01A400DD800F3D9B1 /* DateEat.cpp in Sources */,

@@ -11,6 +11,7 @@
 #import "FUPhotoView.h"
 #import "AppDelegate.h"
 #import "FUAlertView.h"
+#import "StateViewController.h"
 @interface ChooseGirlViewController ()<UITextFieldDelegate>
 
 @end
@@ -86,6 +87,8 @@
     }
     GIRLTYPE type=(GIRLTYPE)(_scvGirl.contentOffset.y/_scvGirl.frame.size.width);
     [APP Reset:type girlname:_txtName.text x:_cood.latitude y:_cood.longitude];
+    StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
+    [self.navigationController pushViewController:view animated:NO];
 }
 @end
 

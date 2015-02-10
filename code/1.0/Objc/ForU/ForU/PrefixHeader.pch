@@ -10,5 +10,4 @@
 #define ForU_PrefixHeader_pch
 
 #define APP ((AppDelegate*)[UIApplication sharedApplication].delegate).app
-
 #endif

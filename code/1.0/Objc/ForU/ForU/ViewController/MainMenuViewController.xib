@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="RTWS YueRoundedGothic Demo.otf">
+            <string>RTWSYueRoudGoDemo-Regular</string>
+            <string>RTWSYueRoudGoDemo-Regular</string>
+            <string>RTWSYueRoudGoDemo-Regular</string>
+            <string>RTWSYueRoudGoDemo-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuViewController">
             <connections>
@@ -34,13 +42,13 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For   U" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75v-NS-8Ar">
                             <rect key="frame" x="70" y="17" width="100" height="21"/>
-                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHB-ok-lsO">
                             <rect key="frame" x="75" y="77" width="91" height="30"/>
-                            <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="18"/>
                             <state key="normal" title="新的旅程">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,7 +59,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKF-Ds-du3">
                             <rect key="frame" x="74" y="145" width="91" height="30"/>
-                            <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="18"/>
                             <state key="normal" title="旧的回忆">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +70,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSG-SV-bhF">
                             <rect key="frame" x="75" y="213" width="91" height="30"/>
-                            <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="18"/>
                             <state key="normal" title="设置">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
