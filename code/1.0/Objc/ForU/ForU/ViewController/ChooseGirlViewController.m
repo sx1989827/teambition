@@ -20,21 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImageView *viewLoli=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _scvGirl.frame.size.width, _scvGirl.frame.size.height)];
-    viewLoli.image=[UIImage imageNamed:@"loli"];
-    viewLoli.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
-    UIImageView *viewMaid=[[UIImageView alloc] initWithFrame:CGRectMake(_scvGirl.frame.size.width, 0, _scvGirl.frame.size.width, _scvGirl.frame.size.height)];
-    viewMaid.image=[UIImage imageNamed:@"maid"];
-    viewMaid.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
-    UIImageView *viewQueen=[[UIImageView alloc] initWithFrame:CGRectMake(_scvGirl.frame.size.width*2, 0, _scvGirl.frame.size.width, _scvGirl.frame.size.height)];
-    viewQueen.image=[UIImage imageNamed:@"queen"];
-    viewQueen.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
-    [_scvGirl addSubview:viewLoli];
-    [_scvGirl addSubview:viewMaid];
-    [_scvGirl addSubview:viewQueen];
-    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenKeyboard:)];
-    [self.view addGestureRecognizer:tap];
-//    FUPhotoView *view=[[FUPhotoView alloc] init];
+    //    FUPhotoView *view=[[FUPhotoView alloc] init];
 //    NSString *strPath= [APP GetStartStory];
 //    [view addPhoto:strPath];
 //    [view showInView:self.view];
@@ -42,6 +28,39 @@
     _cood.longitude=100;
     _txtName.text=@"asd";
     [_btnAddress setTitle:@"已选择" forState:UIControlStateNormal];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    UIImageView *viewLoli=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _scvGirl.frame.size.width, _scvGirl.frame.size.height)];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"loli" ofType:@"png"];
+    NSData *image = [NSData dataWithContentsOfFile:filePath];
+    viewLoli.image=[UIImage imageWithData:image];
+    viewLoli.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+    UIImageView *viewMaid=[[UIImageView alloc] initWithFrame:CGRectMake(_scvGirl.frame.size.width, 0, _scvGirl.frame.size.width, _scvGirl.frame.size.height)];
+    filePath = [[NSBundle mainBundle] pathForResource:@"maid" ofType:@"png"];
+    image = [NSData dataWithContentsOfFile:filePath];
+    viewMaid.image=[UIImage imageWithData:image];
+    viewMaid.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+    UIImageView *viewQueen=[[UIImageView alloc] initWithFrame:CGRectMake(_scvGirl.frame.size.width*2, 0, _scvGirl.frame.size.width, _scvGirl.frame.size.height)];
+    filePath = [[NSBundle mainBundle] pathForResource:@"queen" ofType:@"png"];
+    image = [NSData dataWithContentsOfFile:filePath];
+    viewQueen.image=[UIImage imageWithData:image];
+    viewQueen.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+    [_scvGirl addSubview:viewLoli];
+    [_scvGirl addSubview:viewMaid];
+    [_scvGirl addSubview:viewQueen];
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenKeyboard:)];
+    [self.view addGestureRecognizer:tap];
+
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    for(UIView * view in _scvGirl.subviews)
+    {
+        [view removeFromSuperview];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
