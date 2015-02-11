@@ -23,6 +23,7 @@
     UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:view];
     nav.navigationBarHidden=YES;
     self.window.rootViewController=nav;
+    [self initTimer];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -49,5 +50,24 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)initTimer
+{
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
+}
 
+-(void)timerUpdate
+{
+    [APP Update];
+    [APP Save];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
+}
 @end
+
+
+
+
+
+
+
+
+

@@ -77,10 +77,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WnW-pU-rVr">
-                    <rect key="frame" x="212" y="8" width="21" height="21"/>
+                    <rect key="frame" x="212" y="4" width="29" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="21" id="dPn-zj-lQo"/>
-                        <constraint firstAttribute="height" constant="21" id="rSL-bV-GG0"/>
+                        <constraint firstAttribute="width" constant="29" id="dPn-zj-lQo"/>
+                        <constraint firstAttribute="height" constant="25" id="rSL-bV-GG0"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jb-BX-Ydf">
@@ -105,7 +105,7 @@
                 <constraint firstAttribute="trailing" secondItem="1jb-BX-Ydf" secondAttribute="trailing" id="2j9-G8-uW0"/>
                 <constraint firstItem="ipa-d0-7Ad" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="EqV-Ze-xL2"/>
                 <constraint firstItem="1jb-BX-Ydf" firstAttribute="leading" secondItem="AfU-Uj-tOa" secondAttribute="trailing" constant="4" id="HWM-ZL-Jbq"/>
-                <constraint firstAttribute="trailing" secondItem="WnW-pU-rVr" secondAttribute="trailing" constant="87" id="IDG-uf-xXT"/>
+                <constraint firstAttribute="trailing" secondItem="WnW-pU-rVr" secondAttribute="trailing" constant="79" id="IDG-uf-xXT"/>
                 <constraint firstItem="Tyw-Ny-Ypx" firstAttribute="leading" secondItem="wCV-oU-krG" secondAttribute="trailing" constant="1" id="MUm-Fv-sbT"/>
                 <constraint firstItem="Tyw-Ny-Ypx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="Rqb-dj-wC4"/>
                 <constraint firstItem="WnW-pU-rVr" firstAttribute="leading" secondItem="YeK-um-HmO" secondAttribute="trailing" constant="8" id="SzH-yJ-d6h"/>
@@ -117,7 +117,7 @@
                 <constraint firstItem="wCV-oU-krG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="lic-DG-o06"/>
                 <constraint firstItem="YeK-um-HmO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="mqJ-xS-wGU"/>
                 <constraint firstItem="Vb3-Rh-sm8" firstAttribute="top" secondItem="Tyw-Ny-Ypx" secondAttribute="bottom" constant="8" id="mx0-sC-OSm"/>
-                <constraint firstItem="WnW-pU-rVr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="xa5-rD-ksC"/>
+                <constraint firstItem="WnW-pU-rVr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="xa5-rD-ksC"/>
                 <constraint firstItem="ipa-d0-7Ad" firstAttribute="top" secondItem="wCV-oU-krG" secondAttribute="bottom" constant="2" id="zM9-H9-FRo"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

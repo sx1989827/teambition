@@ -12,5 +12,6 @@
 @property (strong, nonatomic) IBOutlet HeaderValueView *viewHeader;
 - (IBAction)onSwitch:(id)sender;
 - (IBAction)onAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *btnAction;
 
 @end

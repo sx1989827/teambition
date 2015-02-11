@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StateViewController">
             <connections>
+                <outlet property="btnAction" destination="buT-JC-I1X" id="BbD-Mj-EIo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewHeader" destination="8Z8-UN-okJ" id="APM-fg-srq"/>
             </connections>
@@ -21,21 +22,6 @@
                         <constraint firstAttribute="height" constant="60" id="PFu-Nz-PzV"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-B8-D0l">
-                    <rect key="frame" x="294" y="140" width="25" height="64"/>
-                    <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="H6f-0Y-wb1"/>
-                        <constraint firstAttribute="width" constant="25" id="Q75-WE-4TQ"/>
-                    </constraints>
-                    <state key="normal" title="切换">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onSwitch:" destination="-1" eventType="touchUpInside" id="C99-tm-coN"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="buT-JC-I1X">
                     <rect key="frame" x="294" y="234" width="25" height="64"/>
                     <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,6 +35,21 @@
                     </state>
                     <connections>
                         <action selector="onAction:" destination="-1" eventType="touchUpInside" id="74q-lK-NlE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-B8-D0l">
+                    <rect key="frame" x="294" y="140" width="25" height="64"/>
+                    <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="H6f-0Y-wb1"/>
+                        <constraint firstAttribute="width" constant="25" id="Q75-WE-4TQ"/>
+                    </constraints>
+                    <state key="normal" title="切换">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onSwitch:" destination="-1" eventType="touchUpInside" id="C99-tm-coN"/>
                     </connections>
                 </button>
             </subviews>

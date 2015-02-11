@@ -147,6 +147,7 @@
 		B5A115861A8B008D002ABD7F /* leisure.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leisure.gif; sourceTree = "<group>"; };
 		B5A115871A8B008D002ABD7F /* sleep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sleep.gif; sourceTree = "<group>"; };
 		B5A115881A8B008D002ABD7F /* work.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = work.gif; sourceTree = "<group>"; };
+		B5A1158C1A8B37E9002ABD7F /* FUConstHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FUConstHeader.h; sourceTree = "<group>"; };
 		B5BADD4B1A88A54500238649 /* HeaderValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderValueView.h; sourceTree = "<group>"; };
 		B5BADD4C1A88A54600238649 /* HeaderValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderValueView.m; sourceTree = "<group>"; };
 		B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderValueView.xib; sourceTree = "<group>"; };
@@ -419,6 +420,7 @@
 		B586D4721A3EC069004EEE84 /* MiddleWare */ = {
 			isa = PBXGroup;
 			children = (
+				B5A1158C1A8B37E9002ABD7F /* FUConstHeader.h */,
 				B5CB844B1A400AF100F3D9B1 /* FUApplication.h */,
 				B5CB844C1A400AF100F3D9B1 /* FUApplication.mm */,
 				B5D0A1641A41982E0059A685 /* Component */,

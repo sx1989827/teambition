@@ -7,6 +7,7 @@
 //
 
 #import "HeaderValueView.h"
+#import "AppDelegate.h"
 @interface HeaderValueView()
 @property (strong, nonatomic) IBOutlet UILabel *lbPhysical;
 @property (strong, nonatomic) IBOutlet UILabel *lbMoney;
@@ -28,8 +29,17 @@
         view=[[[NSBundle mainBundle] loadNibNamed:@"HeaderValueView" owner:self options:nil] lastObject];
         view.frame=self.bounds;
         view.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:MSGUPDATE object:nil];
     });
     return view;
+}
+
+-(void)update
+{
+    self.lPhysical=[[APP GetPlayerPhysical] integerValue];
+    self.lMoney=[[APP GetPlayerMoney] integerValue];
+    self.mood=[APP GetGirlMood];
+    self.lIOI=[[APP GetGirlIOI] integerValue];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -72,7 +82,7 @@
 
 -(void)setMood:(NSString *)mood
 {
-    _imgMood.backgroundColor=[UIColor colorWithRed:0.899 green:0.792 blue:0.814 alpha:1.000];
+    //_imgMood.backgroundColor=[UIColor colorWithRed:0.899 green:0.792 blue:0.814 alpha:1.000];
     _imgMood.image=[UIImage imageNamed:mood];
 }
 
@@ -91,6 +101,11 @@
         imgView.frame=CGRectMake(i*20+3, 0, 20, 21);
         [_viewIOI addSubview:imgView];
     }
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
 

@@ -10,6 +10,9 @@
 #import "FUListView.h"
 #import "AppDelegate.h"
 #import "SvGifView.h"
+#define kTalk @0
+#define kDate @1
+#define kGift @2
 @interface StateViewController ()
 {
     SvGifView *imgBack;
@@ -21,11 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
     arrStateImg=@[@"leisure",@"sleep",@"work"];
-    _viewHeader.lPhysical=10;
-    _viewHeader.lMoney=50;
-    _viewHeader.mood=@"生气";
-    _viewHeader.lIOI=50;
     PLAYERSTATE state=[APP GetPlayerState];
     imgBack=[[SvGifView alloc] initWithCenter:CGPointZero fileName:arrStateImg[state] Bundle:nil];
     imgBack.translatesAutoresizingMaskIntoConstraints=NO;
@@ -91,6 +91,14 @@
     [view setSelectedBlock:^(long index, NSArray *arr) {
         SvGifView *view=[weakSelf valueForKey:@"imgBack"];
         PLAYERSTATE state=(PLAYERSTATE)[arr[index][@"id"] integerValue];
+        if(state==SLEEP)
+        {
+            weakSelf.btnAction.hidden=YES;
+        }
+        else
+        {
+            weakSelf.btnAction.hidden=NO;
+        }
         [view setGif:[weakSelf valueForKey:@"arrStateImg"][state] Bundle:nil];
         [weakApp ChangePlayerState:state];
     }];
@@ -98,7 +106,51 @@
 
 - (IBAction)onAction:(id)sender
 {
-    
+    NSArray *arr;
+    switch([APP GetPlayerState])
+    {
+        case LEISURE:
+        {
+            arr=@[
+                  @{
+                      @"text":@"交流",
+                      @"id":kTalk
+                      },
+                  @{
+                      @"text":@"约会",
+                      @"id":kDate
+                      },
+                  @{
+                      @"text":@"送礼物",
+                      @"id":kGift
+                      }
+                  ];
+            break;
+        }
+        case WORK:
+        {
+            arr=@[
+                  @{
+                      @"text":@"交流",
+                      @"id":kTalk
+                      }
+                  ];
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
+    FUListView *view=[[FUListView alloc] init];
+    [view addDataFromArray:arr];
+    [view showInView:self.view];
+    __weak StateViewController* weakSelf=self;
+    __weak FUApplication* weakApp=APP;
+    [view setSelectedBlock:^(long index, NSArray *arr) {
+        
+    }];
+
 }
 
 @end

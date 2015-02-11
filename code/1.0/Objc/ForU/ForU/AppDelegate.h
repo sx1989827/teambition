@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "FUApplication.h"
+#import "FUApplication.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
