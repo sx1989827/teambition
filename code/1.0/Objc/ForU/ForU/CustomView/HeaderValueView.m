@@ -21,16 +21,12 @@
 @dynamic mood;
 @dynamic lIOI;
 
--(UIView*)sharedInstance
+-(UIView*)viewInstance
 {
-    static dispatch_once_t onceToken;
-    static UIView *view;
-    dispatch_once(&onceToken, ^{
-        view=[[[NSBundle mainBundle] loadNibNamed:@"HeaderValueView" owner:self options:nil] lastObject];
-        view.frame=self.bounds;
-        view.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:MSGUPDATE object:nil];
-    });
+    UIView *view=[[[NSBundle mainBundle] loadNibNamed:@"HeaderValueView" owner:self options:nil] lastObject];
+    view.frame=self.bounds;
+    view.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:MSGUPDATE object:nil];
     return view;
 }
 
@@ -46,7 +42,7 @@
 {
     if(self=[super initWithCoder:aDecoder])
     {
-        UIView *view=[self sharedInstance];
+        UIView *view=[self viewInstance];
         [self addSubview:view];
     }
     return self;

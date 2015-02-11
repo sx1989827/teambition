@@ -10,9 +10,10 @@
 #import "FUListView.h"
 #import "AppDelegate.h"
 #import "SvGifView.h"
-#define kTalk @0
-#define kDate @1
-#define kGift @2
+#import "TalkViewController.h"
+#define kTalk 0
+#define kDate 1
+#define kGift 2
 @interface StateViewController ()
 {
     SvGifView *imgBack;
@@ -114,15 +115,15 @@
             arr=@[
                   @{
                       @"text":@"交流",
-                      @"id":kTalk
+                      @"id":@(kTalk)
                       },
                   @{
                       @"text":@"约会",
-                      @"id":kDate
+                      @"id":@(kDate)
                       },
                   @{
                       @"text":@"送礼物",
-                      @"id":kGift
+                      @"id":@(kGift)
                       }
                   ];
             break;
@@ -132,7 +133,7 @@
             arr=@[
                   @{
                       @"text":@"交流",
-                      @"id":kTalk
+                      @"id":@(kTalk)
                       }
                   ];
             break;
@@ -148,7 +149,15 @@
     __weak StateViewController* weakSelf=self;
     __weak FUApplication* weakApp=APP;
     [view setSelectedBlock:^(long index, NSArray *arr) {
-        
+        switch([arr[index][@"id"] integerValue])
+        {
+            case kTalk:
+            {
+                TalkViewController *view=[[TalkViewController alloc] initWithNibName:@"TalkViewController" bundle:nil];
+                [weakSelf.navigationController pushViewController:view animated:NO];
+                break;
+            }
+        }
     }];
 
 }
