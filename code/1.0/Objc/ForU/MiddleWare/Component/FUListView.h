@@ -11,10 +11,10 @@
 @interface FUListView : UIView<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *arrTitle;
-    void (^blockSelected)(long index,NSString* title);
+    void (^blockSelected)(long index,NSArray* arr);
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 -(void)showInView:(UIView*)view;
--(void)addData:(NSString*)title;
--(void)setSelectedBlock:(void (^)(long index,NSString* title))block;
+-(void)addDataFromArray:(NSArray*)arr;
+-(void)setSelectedBlock:(void (^)(long index,NSArray* arr))block;
 @end

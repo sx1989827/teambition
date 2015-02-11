@@ -18,7 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _app=[[FUApplication alloc] init];
     _window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
+    //StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
+    StartViewController *view=[[StartViewController alloc] initWithNibName:@"StartViewController" bundle:nil];
     UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:view];
     nav.navigationBarHidden=YES;
     self.window.rootViewController=nav;

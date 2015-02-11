@@ -21,9 +21,7 @@
 {
     if(self=[super init])
     {
-        NSString *imgPath=[[NSBundle mainBundle] pathForResource:@"Image" ofType:@"bundle"];
-        NSURL *fileUrl = [[NSBundle bundleWithPath:imgPath] URLForResource:@"jiafei" withExtension:@"gif"];
-        gifView = [[SvGifView alloc] initWithCenter:CGPointMake(self.bounds.size.width / 2, 130) fileURL:fileUrl];
+        gifView=[[SvGifView alloc] initWithCenter:CGPointMake(self.bounds.size.width / 2, 130) fileName:@"jiafei" Bundle:@"Image"];
         gifView.backgroundColor = [UIColor clearColor];
         gifView.translatesAutoresizingMaskIntoConstraints=NO;
         [self addSubview:gifView];

@@ -34,10 +34,14 @@
     [_scvGirl addSubview:viewQueen];
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenKeyboard:)];
     [self.view addGestureRecognizer:tap];
-    FUPhotoView *view=[[FUPhotoView alloc] init];
-    NSString *strPath= [APP GetStartStory];
-    [view addPhoto:strPath];
-    [view showInView:self.view];
+//    FUPhotoView *view=[[FUPhotoView alloc] init];
+//    NSString *strPath= [APP GetStartStory];
+//    [view addPhoto:strPath];
+//    [view showInView:self.view];
+    _cood.latitude=100;
+    _cood.longitude=100;
+    _txtName.text=@"asd";
+    [_btnAddress setTitle:@"已选择" forState:UIControlStateNormal];
 }
 
 -(void)viewDidAppear:(BOOL)animated

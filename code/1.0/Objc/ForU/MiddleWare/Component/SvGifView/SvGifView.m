@@ -65,19 +65,28 @@ void getFrameInfo(CFURLRef url, NSMutableArray *frames, NSMutableArray *delayTim
 @implementation SvGifView
 
 
-- (id)initWithCenter:(CGPoint)center fileURL:(NSURL*)fileURL;
+- (id)initWithCenter:(CGPoint)center fileName:(NSString*)name Bundle:(NSString*)bundle
 {
     self = [super init];
     if (self) {
-        
         _frames = [[NSMutableArray alloc] init];
         _frameDelayTimes = [[NSMutableArray alloc] init];
         
         _width = 0;
         _height = 0;
         
-        if (fileURL) {
-            getFrameInfo((__bridge  CFURLRef)fileURL, _frames, _frameDelayTimes, &_totalTime, &_width, &_height);
+        if (name!=nil) {
+            NSString *imgPath;
+            if(bundle!=nil)
+            {
+                NSString *imgBundle=[[NSBundle mainBundle] pathForResource:bundle ofType:@"bundle"];
+                imgPath=[[NSBundle bundleWithPath:imgBundle] pathForResource:imgBundle ofType:@"gif"];
+            }
+            else
+            {
+                imgPath=[[NSBundle mainBundle] pathForResource:name ofType:@"gif"];
+            }
+            getFrameInfo((__bridge  CFURLRef)[NSURL fileURLWithPath:imgPath], _frames, _frameDelayTimes, &_totalTime, &_width, &_height);
         }
         
         self.frame = CGRectMake(0, 0, _width, _height);
@@ -121,7 +130,8 @@ void getFrameInfo(CFURLRef url, NSMutableArray *frames, NSMutableArray *delayTim
     animation.duration = _totalTime;
     animation.delegate = self;
     animation.repeatCount = 5;
-    
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
     [self.layer addAnimation:animation forKey:@"gifAnimation"];
 }
 
@@ -140,6 +150,7 @@ void getFrameInfo(CFURLRef url, NSMutableArray *frames, NSMutableArray *delayTim
     }
 }
 
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
@@ -147,6 +158,39 @@ void getFrameInfo(CFURLRef url, NSMutableArray *frames, NSMutableArray *delayTim
     // Drawing code
 }
 
+- (void)dealloc
+{
+    [self stopGif];
+    [_frames removeAllObjects];
+    [_frameDelayTimes removeAllObjects];
+}
+
+-(void)setGif:(NSString*)name Bundle:(NSString*)bundle
+{
+    [self stopGif];
+    _frames = [[NSMutableArray alloc] init];
+    _frameDelayTimes = [[NSMutableArray alloc] init];
+    _totalTime=0;
+    _width = 0;
+    _height = 0;
+    
+    if (name!=nil) {
+        NSString *imgPath;
+        if(bundle!=nil)
+        {
+            NSString *imgBundle=[[NSBundle mainBundle] pathForResource:bundle ofType:@"bundle"];
+            imgPath=[[NSBundle bundleWithPath:imgBundle] pathForResource:imgBundle ofType:@"gif"];
+        }
+        else
+        {
+            imgPath=[[NSBundle mainBundle] pathForResource:name ofType:@"gif"];
+        }
+        getFrameInfo((__bridge  CFURLRef)[NSURL fileURLWithPath:imgPath], _frames, _frameDelayTimes, &_totalTime, &_width, &_height);
+    }
+    
+    self.frame = CGRectMake(0, 0, _width, _height);
+    [self startGif];
+}
 
 @end
 

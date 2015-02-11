@@ -12,7 +12,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S79-FD-mhg">
                     <rect key="frame" x="40" y="80" width="240" height="320"/>
-                    <color key="backgroundColor" red="0.591796875" green="0.82725123355263153" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.78431372549019607" green="0.95686274509803915" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="240" id="a86-mb-cR8"/>
                         <constraint firstAttribute="height" constant="320" id="hEI-oc-Gr8"/>

@@ -83,8 +83,8 @@
         [view removeFromSuperview];
     }
     long count=lIOI/20+1;
-    if(lIOI<1) count=1;
-    if(lIOI>5) count=5;
+    if(count<1) count=1;
+    if(count>5) count=5;
     for(long i=0;i<count;i++)
     {
         UIImageView *imgView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IOI"]];

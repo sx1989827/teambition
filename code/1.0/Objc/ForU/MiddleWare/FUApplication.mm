@@ -272,6 +272,16 @@
     }
 
 }
+
+-(PLAYERSTATE)GetPlayerState
+{
+    return (PLAYERSTATE)app->GetPlayer()->GetStatusController()->GetStatus();
+}
+
+-(void)ChangePlayerState:(PLAYERSTATE)state
+{
+    app->GetPlayer()->GetStatusController()->ChangeStatus((CoreStatus::TYPE)state);
+}
 @end
 
 

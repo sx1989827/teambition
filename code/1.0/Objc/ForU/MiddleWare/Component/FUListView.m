@@ -8,6 +8,7 @@
 
 #import "FUListView.h"
 #import <QuartzCore/QuartzCore.h>
+#import <pop/POP.h>
 @implementation FUListView
 
 /*
@@ -40,9 +41,18 @@
     [view addSubview:self];
     [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[self]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
     [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[self]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
-    [UIView animateWithDuration:0.5 animations:^{
-        self.alpha=1;
-    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        POPBasicAnimation *aniShow=[POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
+        aniShow.fromValue=@0;
+        aniShow.toValue=@1;
+        [self pop_addAnimation:aniShow forKey:@"aniShow"];
+        POPSpringAnimation *aniFrame=[POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+        aniFrame.springBounciness=10;
+        aniFrame.fromValue=[NSValue valueWithCGRect:CGRectMake(self.tableView.center.x, self.tableView.center.y, 0, 0)];
+        aniFrame.toValue=[NSValue valueWithCGRect:self.tableView.frame];
+        [self.tableView pop_addAnimation:aniFrame forKey:@"aniFrame"];
+    });
+    
 }
 
 -(long)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -50,52 +60,55 @@
     return arrTitle.count;
 }
 
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *reuseIdetify = @"FUListViewTableCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdetify];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdetify];
-        cell.contentView.backgroundColor=[UIColor colorWithRed:151.0/255 green:211.0/255 blue:255.0/255 alpha:1];
+        cell.contentView.backgroundColor=[UIColor colorWithRed:200.0/255 green:244.0/255 blue:251.0/255 alpha:1];
         UILabel *title=[[UILabel alloc] init];
-        title.backgroundColor=[UIColor colorWithRed:238.0/255 green:250.0/255 blue:150.0/255 alpha:1];
+        title.backgroundColor=[UIColor colorWithRed:255.0/255 green:230.0/255 blue:190.0/255 alpha:1];
         title.tag=100;
         title.translatesAutoresizingMaskIntoConstraints=NO;
         [cell.contentView addSubview:title];
         [title.layer setMasksToBounds:YES];
         [title.layer setCornerRadius:10.0];
         [title.layer setBorderWidth:0.5];
-        [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-5-[title]-5-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(title)]];
+        [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-5-[title]-5@750-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(title)]];
         [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-3-[title(30)]-3-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(title)]];
     }
-    ((UILabel*)[cell.contentView viewWithTag:100]).text=arrTitle[indexPath.row];
+    UILabel *lbText=((UILabel*)[cell.contentView viewWithTag:100]);
+    lbText.textAlignment=NSTextAlignmentCenter;
+    lbText.text=arrTitle[indexPath.row][@"text"];
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *title=arrTitle[indexPath.row];
     if(blockSelected)
     {
-        blockSelected(indexPath.row,title);
+        blockSelected(indexPath.row,arrTitle);
     }
     [self removeFromSuperview];
    
 }
 
--(void)addData:(NSString*)title
-{
-    [arrTitle addObject:title];
-}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self removeFromSuperview];
 }
 
--(void)setSelectedBlock:(void (^)(long index,NSString* title))block
+-(void)setSelectedBlock:(void (^)(long index,NSArray* arr))block
 {
     blockSelected=block;
+}
+
+-(void)addDataFromArray:(NSArray*)arr
+{
+    [arrTitle addObjectsFromArray:arr];
 }
 @end
 

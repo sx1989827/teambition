@@ -11,6 +11,7 @@ enum GIRLTYPE {LOLI,MAID,QUEEN};
 enum PERSONTYPE {PLAYER,GIRL};
 enum NOTIFYTYPE {CALL,DATEITEMEND,WORKHELPEND,WORKIOI,WORKMEET,WORKHELP,LEISUREIOI,LEISUREDATE,WORKEVENT,LEISUREEVENT,NONE};
 enum DATETYPE {EAT,FILM,WALK,PARK};
+enum PLAYERSTATE {LEISURE,SLEEP,WORK};
 @interface FUApplication : NSObject
 -(void)Reset:(GIRLTYPE)girltype girlname:(NSString*)name x:(double)x y:(double)y;
 -(void)Update;
@@ -27,6 +28,8 @@ enum DATETYPE {EAT,FILM,WALK,PARK};
 -(void)Exit;
 -(NSString*)GetStartStory;
 -(NSString*)GetStory;
+-(PLAYERSTATE)GetPlayerState;
+-(void)ChangePlayerState:(PLAYERSTATE)state;
 @end
 
 

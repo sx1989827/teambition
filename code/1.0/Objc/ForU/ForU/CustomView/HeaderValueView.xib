@@ -85,7 +85,6 @@
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jb-BX-Ydf">
                     <rect key="frame" x="208" y="31" width="112" height="21"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="1SF-ZB-WF5"/>
                         <constraint firstAttribute="width" constant="112" id="Zms-C3-oV5"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StateViewController">
@@ -21,16 +21,50 @@
                         <constraint firstAttribute="height" constant="60" id="PFu-Nz-PzV"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-B8-D0l">
+                    <rect key="frame" x="294" y="140" width="25" height="64"/>
+                    <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="H6f-0Y-wb1"/>
+                        <constraint firstAttribute="width" constant="25" id="Q75-WE-4TQ"/>
+                    </constraints>
+                    <state key="normal" title="切换">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onSwitch:" destination="-1" eventType="touchUpInside" id="C99-tm-coN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="buT-JC-I1X">
+                    <rect key="frame" x="294" y="234" width="25" height="64"/>
+                    <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="8Xt-Hs-7MJ"/>
+                        <constraint firstAttribute="height" constant="64" id="vag-JD-0mN"/>
+                    </constraints>
+                    <state key="normal" title="互动">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onAction:" destination="-1" eventType="touchUpInside" id="74q-lK-NlE"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="buT-JC-I1X" firstAttribute="top" secondItem="eSe-B8-D0l" secondAttribute="bottom" constant="30" id="9Z4-W9-PBN"/>
                 <constraint firstAttribute="trailing" secondItem="8Z8-UN-okJ" secondAttribute="trailing" id="A5U-da-c94"/>
                 <constraint firstItem="8Z8-UN-okJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jvd-eP-DJ9"/>
+                <constraint firstItem="eSe-B8-D0l" firstAttribute="top" secondItem="8Z8-UN-okJ" secondAttribute="bottom" constant="80" id="SlQ-oE-jwY"/>
+                <constraint firstAttribute="trailing" secondItem="eSe-B8-D0l" secondAttribute="trailing" constant="1" id="ov6-Cu-Ne3"/>
                 <constraint firstItem="8Z8-UN-okJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pSk-hi-cVc"/>
+                <constraint firstAttribute="trailing" secondItem="buT-JC-I1X" secondAttribute="trailing" constant="1" id="une-BC-mBg"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="272" y="255"/>
+            <point key="canvasLocation" x="262" y="255"/>
         </view>
     </objects>
 </document>

@@ -16,7 +16,7 @@
 /*
  * @brief desingated initializer
  */
-- (id)initWithCenter:(CGPoint)center fileURL:(NSURL*)fileURL;
+- (id)initWithCenter:(CGPoint)center fileName:(NSString*)name Bundle:(NSString*)bundle;
 
 /*
  * @brief start Gif Animation
@@ -33,5 +33,6 @@
  */
 + (NSArray*)framesInGif:(NSURL*)fileURL;
 
+-(void)setGif:(NSString*)name Bundle:(NSString*)bundle;
 
 @end

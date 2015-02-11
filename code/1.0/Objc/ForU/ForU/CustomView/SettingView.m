@@ -15,6 +15,7 @@
     self=[[[NSBundle mainBundle] loadNibNamed:@"SettingView" owner:nil options:nil] lastObject];
     if(self)
     {
+        self.clipsToBounds=NO;
         self.translatesAutoresizingMaskIntoConstraints=NO;
         self.backgroundColor=[FUPublic colorWithRGB:255 G:230 B:190];
     }
