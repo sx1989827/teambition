@@ -80,7 +80,7 @@ void getFrameInfo(CFURLRef url, NSMutableArray *frames, NSMutableArray *delayTim
             if(bundle!=nil)
             {
                 NSString *imgBundle=[[NSBundle mainBundle] pathForResource:bundle ofType:@"bundle"];
-                imgPath=[[NSBundle bundleWithPath:imgBundle] pathForResource:imgBundle ofType:@"gif"];
+                imgPath=[[NSBundle bundleWithPath:imgBundle] pathForResource:name ofType:@"gif"];
             }
             else
             {

@@ -21,7 +21,7 @@
 {
     if(self=[super init])
     {
-        gifView=[[SvGifView alloc] initWithCenter:CGPointMake(self.bounds.size.width / 2, 130) fileName:@"jiafei" Bundle:@"Image"];
+        gifView=[[SvGifView alloc] initWithCenter:CGPointMake(self.bounds.size.width / 2, 130) fileName:@"loading" Bundle:@"Image"];
         gifView.backgroundColor = [UIColor clearColor];
         gifView.translatesAutoresizingMaskIntoConstraints=NO;
         [self addSubview:gifView];

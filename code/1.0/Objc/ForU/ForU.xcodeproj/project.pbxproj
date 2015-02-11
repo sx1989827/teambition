@@ -29,6 +29,7 @@
 		B5A1158B1A8B008D002ABD7F /* work.gif in Resources */ = {isa = PBXBuildFile; fileRef = B5A115881A8B008D002ABD7F /* work.gif */; };
 		B5A115901A8B9129002ABD7F /* TalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A1158E1A8B9129002ABD7F /* TalkViewController.m */; };
 		B5A115911A8B9129002ABD7F /* TalkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A1158F1A8B9129002ABD7F /* TalkViewController.xib */; };
+		B5A115931A8BAF95002ABD7F /* 烦躁.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A115921A8BAF95002ABD7F /* 烦躁.png */; };
 		B5BADD4D1A88A54600238649 /* HeaderValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BADD4C1A88A54600238649 /* HeaderValueView.m */; };
 		B5BADD4F1A88A55B00238649 /* HeaderValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */; };
 		B5BADD541A890E6A00238649 /* msyh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD531A89095700238649 /* msyh.ttf */; };
@@ -153,6 +154,7 @@
 		B5A1158D1A8B9129002ABD7F /* TalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkViewController.h; sourceTree = "<group>"; };
 		B5A1158E1A8B9129002ABD7F /* TalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkViewController.m; sourceTree = "<group>"; };
 		B5A1158F1A8B9129002ABD7F /* TalkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkViewController.xib; sourceTree = "<group>"; };
+		B5A115921A8BAF95002ABD7F /* 烦躁.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "烦躁.png"; sourceTree = "<group>"; };
 		B5BADD4B1A88A54500238649 /* HeaderValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderValueView.h; sourceTree = "<group>"; };
 		B5BADD4C1A88A54600238649 /* HeaderValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderValueView.m; sourceTree = "<group>"; };
 		B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderValueView.xib; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				B5BADD651A89ACC200238649 /* IOI.png */,
+				B5A115921A8BAF95002ABD7F /* 烦躁.png */,
 				B5BADD571A89ABBA00238649 /* 伤心.png */,
 				B5BADD581A89ABBA00238649 /* 害羞.png */,
 				B5BADD591A89ABBA00238649 /* 平静.png */,
@@ -811,6 +814,7 @@
 				B5A115891A8B008D002ABD7F /* leisure.gif in Resources */,
 				B5BADD5E1A89ABBA00238649 /* 伤心.png in Resources */,
 				B59C8F651A6D476C00B9E386 /* close.png in Resources */,
+				B5A115931A8BAF95002ABD7F /* 烦躁.png in Resources */,
 				B5A1158B1A8B008D002ABD7F /* work.gif in Resources */,
 				B5BADD5F1A89ABBA00238649 /* 害羞.png in Resources */,
 				B57EA9ED1A623FCD0002B5D3 /* ChooseGirlViewController.xib in Resources */,

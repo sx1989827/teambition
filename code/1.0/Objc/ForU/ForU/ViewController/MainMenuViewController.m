@@ -7,8 +7,9 @@
 //
 
 #import "MainMenuViewController.h"
-#include "FUPhotoView.h"
-#include "AppDelegate.h"
+#import "FUPhotoView.h"
+#import "FULoadingView.h"
+#import "AppDelegate.h"
 #import "ChooseGirlViewController.h"
 #import "SettingView.h"
 #import <pop/POP.h>
