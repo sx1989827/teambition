@@ -27,7 +27,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    
+    [_imgBack setPlaceImg:[APP GetPlace]];
+    [_imgGirl setGirlImg:[APP GetGirlMood]];
 }
 
 -(BOOL)prefersStatusBarHidden

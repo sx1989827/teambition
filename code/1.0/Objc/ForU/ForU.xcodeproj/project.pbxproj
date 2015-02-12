@@ -30,6 +30,7 @@
 		B5A115901A8B9129002ABD7F /* TalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A1158E1A8B9129002ABD7F /* TalkViewController.m */; };
 		B5A115911A8B9129002ABD7F /* TalkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A1158F1A8B9129002ABD7F /* TalkViewController.xib */; };
 		B5A115931A8BAF95002ABD7F /* 烦躁.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A115921A8BAF95002ABD7F /* 烦躁.png */; };
+		B5A115961A8C8B18002ABD7F /* GirlShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A115951A8C8B18002ABD7F /* GirlShowView.m */; };
 		B5BADD4D1A88A54600238649 /* HeaderValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BADD4C1A88A54600238649 /* HeaderValueView.m */; };
 		B5BADD4F1A88A55B00238649 /* HeaderValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */; };
 		B5BADD541A890E6A00238649 /* msyh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD531A89095700238649 /* msyh.ttf */; };
@@ -155,6 +156,8 @@
 		B5A1158E1A8B9129002ABD7F /* TalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkViewController.m; sourceTree = "<group>"; };
 		B5A1158F1A8B9129002ABD7F /* TalkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkViewController.xib; sourceTree = "<group>"; };
 		B5A115921A8BAF95002ABD7F /* 烦躁.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "烦躁.png"; sourceTree = "<group>"; };
+		B5A115941A8C8B18002ABD7F /* GirlShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GirlShowView.h; sourceTree = "<group>"; };
+		B5A115951A8C8B18002ABD7F /* GirlShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GirlShowView.m; sourceTree = "<group>"; };
 		B5BADD4B1A88A54500238649 /* HeaderValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderValueView.h; sourceTree = "<group>"; };
 		B5BADD4C1A88A54600238649 /* HeaderValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderValueView.m; sourceTree = "<group>"; };
 		B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderValueView.xib; sourceTree = "<group>"; };
@@ -447,6 +450,8 @@
 				B5BADD4B1A88A54500238649 /* HeaderValueView.h */,
 				B5BADD4C1A88A54600238649 /* HeaderValueView.m */,
 				B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */,
+				B5A115941A8C8B18002ABD7F /* GirlShowView.h */,
+				B5A115951A8C8B18002ABD7F /* GirlShowView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -904,6 +909,7 @@
 				B5CB84F31A400DD800F3D9B1 /* Constant.mm in Sources */,
 				B5CB84EC1A400DD800F3D9B1 /* Player.cpp in Sources */,
 				B5CB84DA1A400DD800F3D9B1 /* LeisureIOILove.cpp in Sources */,
+				B5A115961A8C8B18002ABD7F /* GirlShowView.m in Sources */,
 				B5CB84E81A400DD800F3D9B1 /* Favorite.cpp in Sources */,
 				B5CB84DC1A400DD800F3D9B1 /* LeisureTalkLove.cpp in Sources */,
 				B5CB84DE1A400DD800F3D9B1 /* Story.cpp in Sources */,

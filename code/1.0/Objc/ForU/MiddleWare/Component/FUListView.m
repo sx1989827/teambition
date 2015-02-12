@@ -68,6 +68,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdetify];
         cell.contentView.backgroundColor=[UIColor colorWithRed:200.0/255 green:244.0/255 blue:251.0/255 alpha:1];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         UILabel *title=[[UILabel alloc] init];
         title.backgroundColor=[UIColor colorWithRed:255.0/255 green:230.0/255 blue:190.0/255 alpha:1];
         title.tag=100;
@@ -110,6 +111,7 @@
 {
     [arrTitle addObjectsFromArray:arr];
 }
+
 @end
 
 

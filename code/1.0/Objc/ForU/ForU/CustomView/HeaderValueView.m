@@ -43,6 +43,7 @@
     if(self=[super initWithCoder:aDecoder])
     {
         UIView *view=[self viewInstance];
+        self.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
         [self addSubview:view];
     }
     return self;

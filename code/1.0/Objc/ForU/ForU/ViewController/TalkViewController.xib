@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TalkViewController">
             <connections>
                 <outlet property="imgBack" destination="ZUh-ZG-BeD" id="wCI-Kh-WmF"/>
+                <outlet property="imgGirl" destination="s4m-mk-YLS" id="Cx8-IZ-BQK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -55,23 +56,31 @@
                         <action selector="onQuit:" destination="-1" eventType="touchUpInside" id="KIi-ZT-3A6"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s4m-mk-YLS" customClass="GirlShowView">
+                    <rect key="frame" x="40" y="90" width="240" height="400"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="AN5-ds-lcP" firstAttribute="top" secondItem="1Bw-O9-cX0" secondAttribute="bottom" constant="80" id="1DG-X4-vkB"/>
+                <constraint firstAttribute="bottom" secondItem="s4m-mk-YLS" secondAttribute="bottom" constant="-10" id="2FF-zf-OH2"/>
                 <constraint firstItem="KJq-vO-Ckh" firstAttribute="top" secondItem="AN5-ds-lcP" secondAttribute="bottom" constant="30" id="5po-fb-10v"/>
                 <constraint firstAttribute="trailing" secondItem="1Bw-O9-cX0" secondAttribute="trailing" id="6eN-Tn-735"/>
                 <constraint firstAttribute="bottom" secondItem="ZUh-ZG-BeD" secondAttribute="bottom" id="743-Pk-qv4"/>
+                <constraint firstItem="s4m-mk-YLS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="Ptc-5h-ceC"/>
+                <constraint firstItem="s4m-mk-YLS" firstAttribute="top" secondItem="1Bw-O9-cX0" secondAttribute="bottom" constant="30" id="XTj-oR-Fbu"/>
                 <constraint firstAttribute="trailing" secondItem="KJq-vO-Ckh" secondAttribute="trailing" constant="1" id="Xwl-UA-FFS"/>
                 <constraint firstItem="1Bw-O9-cX0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a4C-uB-0RN"/>
                 <constraint firstItem="1Bw-O9-cX0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bWR-Tz-e1f"/>
                 <constraint firstItem="ZUh-ZG-BeD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="f0m-Dz-BOK"/>
                 <constraint firstItem="ZUh-ZG-BeD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oPI-PE-Xdd"/>
+                <constraint firstAttribute="trailing" secondItem="s4m-mk-YLS" secondAttribute="trailing" constant="40" id="q98-OR-qcB"/>
                 <constraint firstAttribute="trailing" secondItem="AN5-ds-lcP" secondAttribute="trailing" constant="1" id="rDb-9g-0DN"/>
                 <constraint firstAttribute="trailing" secondItem="ZUh-ZG-BeD" secondAttribute="trailing" id="sNI-iG-Lbg"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="273" y="327"/>
         </view>
     </objects>
 </document>
