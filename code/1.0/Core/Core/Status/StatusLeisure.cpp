@@ -12,6 +12,7 @@
 void CoreStatusLeisure::OnEnter()
 {
     m_StartTime.Reset();
+    PLAYERINSTANCE->SetPlace("家");
 }
 void CoreStatusLeisure::OnUpdate()
 {

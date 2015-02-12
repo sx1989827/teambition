@@ -26,6 +26,8 @@
 -(NSString*)GetStory;
 -(PLAYERSTATE)GetPlayerState;
 -(void)ChangePlayerState:(PLAYERSTATE)state;
+-(NSString*)GetPlace;
+-(GIRLTYPE)GetGirlType;
 @end
 
 

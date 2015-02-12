@@ -282,6 +282,16 @@
 {
     app->GetPlayer()->GetStatusController()->ChangeStatus((CoreStatus::TYPE)state);
 }
+
+-(NSString*)GetPlace
+{
+    return [NSString stringWithUTF8String:app->GetPlayer()->GetPlace().data()];
+}
+
+-(GIRLTYPE)GetGirlType
+{
+    return (GIRLTYPE)app->GetGirl()->GetGirlType();
+}
 @end
 
 

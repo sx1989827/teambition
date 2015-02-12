@@ -1,4 +1,4 @@
-//
+
 //  FUPublic.m
 //  ForU
 //
@@ -9,6 +9,7 @@
 #import "FUPublic.h"
 #import <objc/runtime.h>
 #import <objc/objc.h>
+#import "AppDelegate.h"
 @implementation UILabel (CustomeFont)
 +(void)load
 {
@@ -90,6 +91,54 @@
 }
 
 @end
+@implementation UIImageView (LoadImage)
+
+
+-(void)setPlaceImg:(NSString*)name
+{
+    NSMutableDictionary* dic=[[NSMutableDictionary alloc] initWithCapacity:30];
+    [dic setObject:@3 forKey:@"餐厅"];
+    [dic setObject:@4 forKey:@"公园"];
+    [dic setObject:@3 forKey:@"游乐场"];
+    [dic setObject:@2 forKey:@"电影院"];
+    [dic setObject:@4 forKey:@"家"];
+    [dic setObject:@3 forKey:@"公司"];
+    NSString *strBundle=[[NSBundle mainBundle] pathForResource:@"Image" ofType:@"bundle"];
+    NSString* strImg=[[NSBundle bundleWithPath:strBundle] pathForResource:[NSString stringWithFormat:@"%@%ld",name,random()%[dic[name] integerValue]+1] ofType:@"jpg" inDirectory:@"scene"];
+    UIImage *img=[UIImage imageWithContentsOfFile:strImg];
+    self.image=img;
+}
+
+-(void)setGirlImg:(NSString*)name
+{
+    GIRLTYPE type=[APP GetGirlType];
+    NSString *strType;
+    switch(type)
+    {
+        case LOLI:
+        {
+            strType=@"loli";
+            break;
+        }
+        case MAID:
+        {
+            strType=@"maid";
+            break;
+        }
+        case QUEEN:
+        {
+            strType=@"queen";
+            break;
+        }
+    }
+    NSString *strBundle=[[NSBundle mainBundle] pathForResource:@"Image" ofType:@"bundle"];
+    NSString* strImg=[[NSBundle bundleWithPath:strBundle] pathForResource:name ofType:@"png" inDirectory:[NSString stringWithFormat:@"girl/%@",strType]];
+    UIImage *img=[UIImage imageWithContentsOfFile:strImg];
+    self.image=img;
+}
+
+@end
+
 @implementation FUPublic
 +(UIColor*)colorWithRGB:(NSInteger)r G:(NSInteger)g B:(NSInteger)b
 {

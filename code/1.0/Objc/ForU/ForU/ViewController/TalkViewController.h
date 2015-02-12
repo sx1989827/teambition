@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface TalkViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *imgBack;
+- (IBAction)onClose:(id)sender;
+- (IBAction)onQuit:(id)sender;
+
 
 @end

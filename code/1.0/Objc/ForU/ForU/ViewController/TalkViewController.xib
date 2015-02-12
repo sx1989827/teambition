@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TalkViewController">
             <connections>
+                <outlet property="imgBack" destination="ZUh-ZG-BeD" id="wCI-Kh-WmF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,6 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZUh-ZG-BeD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-O9-cX0" customClass="HeaderValueView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,6 +36,9 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onClose:" destination="-1" eventType="touchUpInside" id="K97-Eb-cKK"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KJq-vO-Ckh">
                     <rect key="frame" x="294" y="234" width="25" height="64"/>
@@ -44,6 +51,9 @@
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onQuit:" destination="-1" eventType="touchUpInside" id="KIi-ZT-3A6"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -51,10 +61,14 @@
                 <constraint firstItem="AN5-ds-lcP" firstAttribute="top" secondItem="1Bw-O9-cX0" secondAttribute="bottom" constant="80" id="1DG-X4-vkB"/>
                 <constraint firstItem="KJq-vO-Ckh" firstAttribute="top" secondItem="AN5-ds-lcP" secondAttribute="bottom" constant="30" id="5po-fb-10v"/>
                 <constraint firstAttribute="trailing" secondItem="1Bw-O9-cX0" secondAttribute="trailing" id="6eN-Tn-735"/>
+                <constraint firstAttribute="bottom" secondItem="ZUh-ZG-BeD" secondAttribute="bottom" id="743-Pk-qv4"/>
                 <constraint firstAttribute="trailing" secondItem="KJq-vO-Ckh" secondAttribute="trailing" constant="1" id="Xwl-UA-FFS"/>
                 <constraint firstItem="1Bw-O9-cX0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a4C-uB-0RN"/>
                 <constraint firstItem="1Bw-O9-cX0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bWR-Tz-e1f"/>
+                <constraint firstItem="ZUh-ZG-BeD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="f0m-Dz-BOK"/>
+                <constraint firstItem="ZUh-ZG-BeD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oPI-PE-Xdd"/>
                 <constraint firstAttribute="trailing" secondItem="AN5-ds-lcP" secondAttribute="trailing" constant="1" id="rDb-9g-0DN"/>
+                <constraint firstAttribute="trailing" secondItem="ZUh-ZG-BeD" secondAttribute="trailing" id="sNI-iG-Lbg"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

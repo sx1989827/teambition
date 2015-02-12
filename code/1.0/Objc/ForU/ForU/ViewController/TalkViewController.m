@@ -8,6 +8,7 @@
 
 #import "TalkViewController.h"
 #import "AppDelegate.h"
+#import "FUPublic.h"
 @interface TalkViewController ()
 
 @end
@@ -24,11 +25,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+}
+
 -(BOOL)prefersStatusBarHidden
 {
     return YES;
 }
 
+- (IBAction)onClose:(id)sender
+{
+    
+}
+
+- (IBAction)onQuit:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:NO];
+}
 @end
 
 

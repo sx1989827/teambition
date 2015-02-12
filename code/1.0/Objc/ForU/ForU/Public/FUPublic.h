@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+@interface UIImageView (LoadImage)
+-(void)setPlaceImg:(NSString*)name;
+-(void)setGirlImg:(NSString*)name;
+@end
 @interface FUPublic : NSObject
 +(UIColor*)colorWithRGB:(NSInteger)r G:(NSInteger)g B:(NSInteger)b;
 +(void)dispatchAfter:(CGFloat)second Block:(dispatch_block_t)block;
