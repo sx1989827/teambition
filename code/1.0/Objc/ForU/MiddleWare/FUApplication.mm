@@ -296,17 +296,42 @@
 
 -(BOOL)HandleActionEye:(ACTIONEYETYPE)type
 {
-    return app->GetPlayer()->HandleActionEye((CoreActionEye::TYPE) type);
+    BOOL bRet= app->GetPlayer()->HandleActionEye((CoreActionEye::TYPE) type);
+    if(bRet)
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
+    }
+    return bRet;
 }
 
 -(void)HandleActionBody:(ACTIONBODYTYPE)type
 {
 	app->GetPlayer()->HandleActionBody((CoreActionBody::TYPE) type);
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
 }
 
 -(void)HandleActionTalk:(NSString*)type
 {
     app->GetPlayer()->HandleActionTalk([type UTF8String]);
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
+}
+
+-(NSString*)GetGirlMoodDes
+{
+    return [NSString stringWithUTF8String: app->GetGirl()->GetMood()->GetStrDescription().data()];
+}
+
+-(CGRect)GetGirlFaceRect
+{
+    CoreGirl::sBodyRect rect=app->GetGirl()->GetFaceRect();
+    return CGRectMake(rect.x, rect.y, rect.w, rect.h);
+}
+
+-(CGRect)GetGirlBreastRect
+{
+    CoreGirl::sBodyRect rect=app->GetGirl()->GetBreastRect();
+    return CGRectMake(rect.x, rect.y, rect.w, rect.h);
+
 }
 @end
 

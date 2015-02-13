@@ -19,6 +19,10 @@ class CoreGirl:public CorePersonBase
 {
 public:
     enum TYPE {LOLI,MAID,QUEEN};
+    struct sBodyRect
+    {
+        long x,y,w,h;
+    };
     CoreGirl();
     ~CoreGirl();
     PERSONTYPE GetType();
@@ -33,6 +37,8 @@ public:
     void Reset(node* pNode,TYPE type);
     long GetOffsetTime();
     double GetOffset();
+    sBodyRect GetFaceRect();
+    sBodyRect GetBreastRect();
 private:
     CoreMood *m_pMood;
     double m_dIOI;
@@ -42,6 +48,8 @@ private:
     long m_lOffsetTime;
     double m_dOffset;
     CoreTime m_StartTime;
+    sBodyRect m_FaceRect;
+    sBodyRect m_BreastRect;
 };
 
 class CoreGirlSingleton:public CoreSingleton<CoreGirl>

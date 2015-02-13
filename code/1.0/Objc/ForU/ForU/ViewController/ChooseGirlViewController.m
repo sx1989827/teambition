@@ -108,8 +108,10 @@
         [view showInView:self.view];
         return;
     }
-    GIRLTYPE type=(GIRLTYPE)(_scvGirl.contentOffset.y/_scvGirl.frame.size.width);
+    GIRLTYPE type=(GIRLTYPE)(_scvGirl.contentOffset.x/_scvGirl.frame.size.width);
     [APP Reset:type girlname:_txtName.text x:_cood.latitude y:_cood.longitude];
+    AppDelegate *app=(AppDelegate*)[UIApplication sharedApplication].delegate;
+    [app performSelector:@selector(initTimer)];
     StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
     [self.navigationController pushViewController:view animated:NO];
 }

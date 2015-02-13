@@ -47,6 +47,18 @@ void CoreGirl::Serializ(node* out)
     node* root=out->getXml()->createnode("Girl");
     WriteXml(root, (long)m_Type, "type");
     WriteXml(root, m_dIOI, "ioi");
+    node *nodeFace=out->getXml()->createnode("face");
+    nodeFace->setattr("x", m_FaceRect.x);
+    nodeFace->setattr("y", m_FaceRect.y);
+    nodeFace->setattr("w", m_FaceRect.w);
+    nodeFace->setattr("h", m_FaceRect.h);
+    root->appned(nodeFace);
+    node *nodeBreast=out->getXml()->createnode("breast");
+    nodeBreast->setattr("x", m_BreastRect.x);
+    nodeBreast->setattr("y", m_BreastRect.y);
+    nodeBreast->setattr("w", m_BreastRect.w);
+    nodeBreast->setattr("h", m_BreastRect.h);
+    root->appned(nodeBreast);
     m_pMood->Serializ(root);
     m_pFavorite->Serializ(root);
     out->appned(root);
@@ -59,8 +71,20 @@ void CoreGirl::UnSerializ(node* in)
     m_Type=(CoreGirl::TYPE)atol(ncType->item(0)->gettext().data());
     nodecollect *ncIOI=root->select("/ioi");
     m_dIOI=atof(ncIOI->item(0)->gettext().data());
+    nodecollect *ncFace=root->select("/face");
+    m_FaceRect.x=atoi(ncFace->item(0)->getattr("x").data());
+    m_FaceRect.y=atoi(ncFace->item(0)->getattr("y").data());
+    m_FaceRect.w=atoi(ncFace->item(0)->getattr("w").data());
+    m_FaceRect.h=atoi(ncFace->item(0)->getattr("h").data());
+    nodecollect *ncBreast=root->select("/breast");
+    m_BreastRect.x=atoi(ncBreast->item(0)->getattr("x").data());
+    m_BreastRect.y=atoi(ncBreast->item(0)->getattr("y").data());
+    m_BreastRect.w=atoi(ncBreast->item(0)->getattr("w").data());
+    m_BreastRect.h=atoi(ncBreast->item(0)->getattr("h").data());
     m_pMood->UnSerializ(root);
     m_pFavorite->UnSerializ(root);
+    delete ncFace;
+    delete ncBreast;
     delete ncIOI;
     delete ncType;
     delete nc;
@@ -135,12 +159,25 @@ void CoreGirl::Reset(node* pNode,CoreGirl::TYPE type)
     {
         strType="queen";
     }
+    m_Type=type;
+    nodecollect *ncFace=root->select("/"+strType+"/face");
+    m_FaceRect.x=atoi(ncFace->item(0)->getattr("x").data());
+    m_FaceRect.y=atoi(ncFace->item(0)->getattr("y").data());
+    m_FaceRect.w=atoi(ncFace->item(0)->getattr("w").data());
+    m_FaceRect.h=atoi(ncFace->item(0)->getattr("h").data());
+    nodecollect *ncBreast=root->select("/"+strType+"/breast");
+    m_BreastRect.x=atoi(ncBreast->item(0)->getattr("x").data());
+    m_BreastRect.y=atoi(ncBreast->item(0)->getattr("y").data());
+    m_BreastRect.w=atoi(ncBreast->item(0)->getattr("w").data());
+    m_BreastRect.h=atoi(ncBreast->item(0)->getattr("h").data());
     nodecollect *ncIOI=root->select("/"+strType+"/ioi");
     m_dIOI=atof(ncIOI->item(0)->getattr("value").data());
     m_lOffsetTime=atol(ncIOI->item(0)->getattr("time").data());
     m_dOffset=atof(ncIOI->item(0)->getattr("offset").data());
     m_pMood->Reset(root);
     m_pFavorite->Reset(root);
+    delete ncFace;
+    delete ncBreast;
     delete ncIOI;
     delete nc;
 }
@@ -154,7 +191,15 @@ double CoreGirl::GetOffset()
     return m_dOffset;
 }
 
+CoreGirl::sBodyRect CoreGirl::GetFaceRect()
+{
+    return m_FaceRect;
+}
 
+CoreGirl::sBodyRect CoreGirl::GetBreastRect()
+{
+    return m_BreastRect;
+}
 
 
 

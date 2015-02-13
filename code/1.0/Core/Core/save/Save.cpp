@@ -23,7 +23,7 @@ void CoreSave::Save()
     {
         m_Vec[i]->Serializ(n1);
     }
-    std::string a=GetCurrentDocDir()+ SAVEFILE;
+    x.savefile(GetCurrentDocDir()+ SAVEFILE) ;
 }
 
 void CoreSave::UnSave()

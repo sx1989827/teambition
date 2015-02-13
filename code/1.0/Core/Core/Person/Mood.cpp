@@ -180,6 +180,10 @@ long CoreMood::QueryMoodType(std::string strMood)
     return it->second;
 }
 
+std::string CoreMood::GetStrDescription()
+{
+    return m_strDescription;
+}
 
 
 

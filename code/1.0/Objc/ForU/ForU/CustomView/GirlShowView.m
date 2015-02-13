@@ -16,6 +16,7 @@
     if(self=[super initWithCoder:aDecoder])
     {
         [self addObserver:self forKeyPath:@"image" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew context:nil];
+        self.userInteractionEnabled=YES;
     }
     return  self;
 }

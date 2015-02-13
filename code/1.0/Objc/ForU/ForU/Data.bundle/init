@@ -2,6 +2,8 @@
 <root>
 <girl>
 <loli>
+<face x="130" y="120" w="90" h="100"/>
+<breast x="120" y="230" w="110" h="80"/>
 <ioi value="60" time="600" offset="-0.1"></ioi>
 </loli>
 <maid>

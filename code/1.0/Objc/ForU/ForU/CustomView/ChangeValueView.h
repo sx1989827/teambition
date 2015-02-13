@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ChangeValueView : UILabel
-+(void)viewWithTitle:(CGPoint)point Title:(NSString*)title View:(UIView*)parentView;
++(void)viewWithTitle:(CGPoint)point Title:(NSString*)title View:(UIView*)parentView Grow:(BOOL)bGrow;
 @end

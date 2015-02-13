@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "FUConstHeader.h"
 @interface FUApplication : NSObject
 -(void)Reset:(GIRLTYPE)girltype girlname:(NSString*)name x:(double)x y:(double)y;
@@ -31,6 +32,9 @@
 -(BOOL)HandleActionEye:(ACTIONEYETYPE)type;
 -(void)HandleActionBody:(ACTIONBODYTYPE)type;
 -(void)HandleActionTalk:(NSString*)type;
+-(NSString*)GetGirlMoodDes;
+-(CGRect)GetGirlFaceRect;
+-(CGRect)GetGirlBreastRect;
 @end
 
 
