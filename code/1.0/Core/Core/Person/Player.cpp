@@ -8,6 +8,7 @@
 
 #include "Player.h"
 #include "../Status/StatusController.h"
+#include  <cmath>
 CorePlayer::CorePlayer()
 {
     m_dPhysical=0;
@@ -271,6 +272,22 @@ std::string CorePlayer::GetPlace()
 {
     return m_strPlace;
 }
+
+bool CorePlayer::HandleActionEye(CoreActionEye::TYPE type)
+{
+    return m_pActionEye->Handle(type);
+}
+void CorePlayer::HandleActionBody(CoreActionBody::TYPE type)
+{
+    m_pActionBody->Handle(type);
+}
+void CorePlayer::HandleActionTalk(std::string type)
+{
+    m_pActionTalk->Handle(type);
+}
+
+
+
 
 
 

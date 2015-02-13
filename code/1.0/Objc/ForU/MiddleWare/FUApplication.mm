@@ -16,6 +16,7 @@
 }
 @end
 @implementation FUApplication
+
 -(id)init
 {
     if(self=[super init])
@@ -291,6 +292,21 @@
 -(GIRLTYPE)GetGirlType
 {
     return (GIRLTYPE)app->GetGirl()->GetGirlType();
+}
+
+-(BOOL)HandleActionEye:(ACTIONEYETYPE)type
+{
+    return app->GetPlayer()->HandleActionEye((CoreActionEye::TYPE) type);
+}
+
+-(void)HandleActionBody:(ACTIONBODYTYPE)type
+{
+	app->GetPlayer()->HandleActionBody((CoreActionBody::TYPE) type);
+}
+
+-(void)HandleActionTalk:(NSString*)type
+{
+    app->GetPlayer()->HandleActionTalk([type UTF8String]);
 }
 @end
 

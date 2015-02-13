@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<item id="1" ioi="70" money="100" phisical="50" count="6" src="start" love="0"/>
+	<item id="1" ioi="70" money="100" phisical="50" count="9" src="start" love="0"/>
 </root>

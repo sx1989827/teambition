@@ -10,7 +10,7 @@
 
 @interface TalkViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *imgBack;
-- (IBAction)onClose:(id)sender;
+- (IBAction)onAction:(id)sender;
 - (IBAction)onQuit:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *imgGirl;
 

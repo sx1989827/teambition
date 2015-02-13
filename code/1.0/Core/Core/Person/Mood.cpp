@@ -7,7 +7,7 @@
 //
 
 #include "Mood.h"
-
+#include "../util/Oberserver.h"
 CoreMood::CoreMood()
 {
     m_MoodMap["平静"]=1;
@@ -124,7 +124,6 @@ void CoreMood::Transfer(sMood *pMood)
             }
         }
     }
-    
 }
 void CoreMood::Serializ(node* out)
 {

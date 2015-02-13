@@ -8,6 +8,7 @@
 
 #import "FUAlertView.h"
 #import <QuartzCore/QuartzCore.h>
+#import <pop/POP.h>
 @implementation FUAlertView
 
 /*
@@ -22,7 +23,11 @@
 {
     self.translatesAutoresizingMaskIntoConstraints=NO;
     viewTitle=[[UIView alloc] init];
-    viewTitle.backgroundColor=[UIColor colorWithRed:238.0/255 green:250.0/255 blue:150.0/255 alpha:1];
+    viewTitle.backgroundColor=[UIColor colorWithRed:255.0/255 green:230.0/255 blue:210.0/255 alpha:1];
+    viewTitle.layer.masksToBounds=YES;
+    [viewTitle.layer setBorderWidth:0.5f];
+    [viewTitle.layer setBorderColor:[viewTitle.backgroundColor CGColor]];
+    [viewTitle.layer setCornerRadius:10];
     viewTitle.translatesAutoresizingMaskIntoConstraints=NO;
     lbTitle=[[UILabel alloc] init];
     lbTitle.numberOfLines=3;
@@ -30,6 +35,7 @@
     btnFirst=[UIButton buttonWithType:UIButtonTypeSystem];
     [btnFirst addTarget:self action:@selector(close:) forControlEvents:UIControlEventTouchUpInside];
     btnFirst.tag=0;
+    btnFirst.backgroundColor=[UIColor colorWithRed:190.0/255 green:233.0/255 blue:248.0/255 alpha:1];
     btnFirst.translatesAutoresizingMaskIntoConstraints=NO;
     [btnFirst setTitle:@"确定" forState:UIControlStateNormal];
     btnFirst.hidden=YES;
@@ -38,6 +44,7 @@
     [btnFirst.layer setBorderWidth:1.0];
     btnSecond=[UIButton buttonWithType:UIButtonTypeSystem];
     [btnSecond addTarget:self action:@selector(close:) forControlEvents:UIControlEventTouchUpInside];
+    btnSecond.backgroundColor=[UIColor colorWithRed:190.0/255 green:233.0/255 blue:248.0/255 alpha:1];
     btnSecond.tag=1;
     btnSecond.translatesAutoresizingMaskIntoConstraints=NO;
     [btnSecond setTitle:@"取消" forState:UIControlStateNormal];
@@ -116,9 +123,18 @@
     [view addSubview:self];
     [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[self]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
     [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[self]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(self)]];
-    [UIView animateWithDuration:0.5 animations:^{
-        self.alpha=1;
-    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        POPBasicAnimation *aniShow=[POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
+        aniShow.fromValue=@0;
+        aniShow.toValue=@1;
+        [self pop_addAnimation:aniShow forKey:@"aniShow"];
+        POPSpringAnimation *aniFrame=[POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+        aniFrame.springBounciness=10;
+        aniFrame.fromValue=[NSValue valueWithCGRect:CGRectMake(viewTitle.center.x, viewTitle.center.y, 0, 0)];
+        aniFrame.toValue=[NSValue valueWithCGRect:viewTitle.frame];
+        [viewTitle pop_addAnimation:aniFrame forKey:@"aniFrame"];
+    });
+
 }
 
 -(void)close:(UIButton*)sender

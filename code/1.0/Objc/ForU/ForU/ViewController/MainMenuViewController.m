@@ -54,7 +54,6 @@
     [FUPublic dispatchAfter:0.8 Block:^{
         [_btnSet pop_addAnimation:aniSet forKey:@"btnSetShow"];
     }];
-    
 }
 
 - (void)didReceiveMemoryWarning {

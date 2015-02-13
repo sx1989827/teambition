@@ -28,6 +28,9 @@
 -(void)ChangePlayerState:(PLAYERSTATE)state;
 -(NSString*)GetPlace;
 -(GIRLTYPE)GetGirlType;
+-(BOOL)HandleActionEye:(ACTIONEYETYPE)type;
+-(void)HandleActionBody:(ACTIONBODYTYPE)type;
+-(void)HandleActionTalk:(NSString*)type;
 @end
 
 

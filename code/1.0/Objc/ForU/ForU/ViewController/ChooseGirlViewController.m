@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //    FUPhotoView *view=[[FUPhotoView alloc] init];
+//        FUPhotoView *view=[[FUPhotoView alloc] init];
 //    NSString *strPath= [APP GetStartStory];
 //    [view addPhoto:strPath];
 //    [view showInView:self.view];

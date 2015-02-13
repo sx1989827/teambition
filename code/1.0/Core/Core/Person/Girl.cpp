@@ -9,6 +9,7 @@
 #include "Girl.h"
 #include "../util/Constant.h"
 #include "../util/Oberserver.h"
+#include <cmath>
 CoreGirl::CoreGirl()
 {
     m_dIOI=0;

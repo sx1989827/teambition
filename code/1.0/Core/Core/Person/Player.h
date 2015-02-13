@@ -46,6 +46,9 @@ public:
     void LeaveInteraction();
     void SetPlace(std::string strPlace);
     std::string GetPlace();
+    bool HandleActionEye(CoreActionEye::TYPE type);
+    void HandleActionBody(CoreActionBody::TYPE type);
+    void HandleActionTalk(std::string type);
 private:
     double m_dPhysical;
     double m_dMoney;
