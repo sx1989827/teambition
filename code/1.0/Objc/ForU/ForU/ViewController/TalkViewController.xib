@@ -9,6 +9,7 @@
                 <outlet property="imgBack" destination="ZUh-ZG-BeD" id="wCI-Kh-WmF"/>
                 <outlet property="imgGirl" destination="s4m-mk-YLS" id="Cx8-IZ-BQK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewTalk" destination="mm4-jb-SVi" id="8bS-Zg-3GM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -59,6 +60,13 @@
                 <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s4m-mk-YLS" customClass="GirlShowView">
                     <rect key="frame" x="40" y="90" width="240" height="400"/>
                 </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mm4-jb-SVi" customClass="TalkContentView">
+                    <rect key="frame" x="15" y="385" width="290" height="80"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="M7j-gN-KYO"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -67,12 +75,15 @@
                 <constraint firstItem="KJq-vO-Ckh" firstAttribute="top" secondItem="AN5-ds-lcP" secondAttribute="bottom" constant="30" id="5po-fb-10v"/>
                 <constraint firstAttribute="trailing" secondItem="1Bw-O9-cX0" secondAttribute="trailing" id="6eN-Tn-735"/>
                 <constraint firstAttribute="bottom" secondItem="ZUh-ZG-BeD" secondAttribute="bottom" id="743-Pk-qv4"/>
+                <constraint firstAttribute="trailing" secondItem="mm4-jb-SVi" secondAttribute="trailing" constant="15" id="8Az-AB-pFK"/>
+                <constraint firstAttribute="bottom" secondItem="mm4-jb-SVi" secondAttribute="bottom" constant="15" id="EZQ-MT-Abd"/>
                 <constraint firstItem="s4m-mk-YLS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="Ptc-5h-ceC"/>
                 <constraint firstItem="s4m-mk-YLS" firstAttribute="top" secondItem="1Bw-O9-cX0" secondAttribute="bottom" constant="30" id="XTj-oR-Fbu"/>
                 <constraint firstAttribute="trailing" secondItem="KJq-vO-Ckh" secondAttribute="trailing" constant="1" id="Xwl-UA-FFS"/>
                 <constraint firstItem="1Bw-O9-cX0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a4C-uB-0RN"/>
                 <constraint firstItem="1Bw-O9-cX0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bWR-Tz-e1f"/>
                 <constraint firstItem="ZUh-ZG-BeD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="f0m-Dz-BOK"/>
+                <constraint firstItem="mm4-jb-SVi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="lhN-fO-g1u"/>
                 <constraint firstItem="ZUh-ZG-BeD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oPI-PE-Xdd"/>
                 <constraint firstAttribute="trailing" secondItem="s4m-mk-YLS" secondAttribute="trailing" constant="40" id="q98-OR-qcB"/>
                 <constraint firstAttribute="trailing" secondItem="AN5-ds-lcP" secondAttribute="trailing" constant="1" id="rDb-9g-0DN"/>
@@ -80,7 +91,7 @@
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="273" y="327"/>
+            <point key="canvasLocation" x="273" y="296"/>
         </view>
     </objects>
 </document>

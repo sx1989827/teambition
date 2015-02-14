@@ -50,6 +50,7 @@
 {
     [_imgBack setPlaceImg:[APP GetPlace]];
     [_imgGirl setGirlImg:[APP GetGirlMood]];
+    [_viewTalk setGirlContentText:@"dsffsdfsdf77875698yg923dsffsdfsdf的方式的冯绍峰1" AfterDiss:3];
 }
 
 -(BOOL)prefersStatusBarHidden
@@ -59,6 +60,10 @@
 
 - (IBAction)onAction:(id)sender
 {
+    for(UIGestureRecognizer *ges in self.view.gestureRecognizers)
+    {
+        [self.view removeGestureRecognizer:ges];
+    }
     if(arrAction.count==0)
     {
         __weak TalkViewController *weakSelf=self;
@@ -156,9 +161,7 @@
         NSString *newMood=[APP GetGirlMoodDes];
         if(![newMood isEqualToString:oldMood])
         {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [ChangeValueView viewWithTitle:p Title:newMood View:self.view Grow:bGrow];
-            });
+            [_viewTalk setGirlContentText:newMood AfterDiss:2];
         }
         [arrAction removeObject:@{
                                   @"text":@"眼神",

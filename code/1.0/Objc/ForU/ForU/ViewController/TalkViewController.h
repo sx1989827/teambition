@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TalkContentView.h"
 @interface TalkViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *imgBack;
 - (IBAction)onAction:(id)sender;
 - (IBAction)onQuit:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *imgGirl;
+@property (strong, nonatomic) IBOutlet TalkContentView *viewTalk;
 
 
 @end
