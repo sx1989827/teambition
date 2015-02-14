@@ -297,23 +297,17 @@
 -(BOOL)HandleActionEye:(ACTIONEYETYPE)type
 {
     BOOL bRet= app->GetPlayer()->HandleActionEye((CoreActionEye::TYPE) type);
-    if(bRet)
-    {
-        [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
-    }
     return bRet;
 }
 
 -(void)HandleActionBody:(ACTIONBODYTYPE)type
 {
 	app->GetPlayer()->HandleActionBody((CoreActionBody::TYPE) type);
-    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
 }
 
 -(void)HandleActionTalk:(NSString*)type
 {
     app->GetPlayer()->HandleActionTalk([type UTF8String]);
-    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
 }
 
 -(NSString*)GetGirlMoodDes

@@ -25,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
     arrStateImg=@[@"leisure",@"sleep",@"work"];
     PLAYERSTATE state=[APP GetPlayerState];
     imgBack=[[SvGifView alloc] initWithCenter:CGPointZero fileName:arrStateImg[state] Bundle:nil];

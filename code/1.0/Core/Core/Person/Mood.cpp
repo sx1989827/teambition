@@ -8,6 +8,7 @@
 
 #include "Mood.h"
 #include "../util/Oberserver.h"
+#include <CoreFoundation/CoreFoundation.h>
 CoreMood::CoreMood()
 {
     m_MoodMap["平静"]=1;
@@ -52,6 +53,7 @@ void CoreMood::Adjust()
 
 void CoreMood::Transfer(sMood *pMood)
 {
+    std::string oldValue=m_strCurMood;
     if(pMood->strMood.empty())
     {
         m_lCurMood+=pMood->lOffset;
@@ -123,6 +125,10 @@ void CoreMood::Transfer(sMood *pMood)
                 m_strDescription=pMood->strDes;
             }
         }
+    }
+    if(m_strCurMood!=oldValue)
+    {
+        CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), CFSTR("MsgMoodChange"), 0, 0, true);
     }
 }
 void CoreMood::Serializ(node* out)

@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeGirlMood) name:MSGMOODCHANGE object:nil];
     arrAction=[[NSMutableArray alloc] initWithCapacity:30];
     [arrAction addObject:@{
                     @"text":@"眼神",
@@ -41,6 +41,11 @@
                      }];
 }
 
+-(void)changeGirlMood
+{
+    [_imgGirl setGirlImg:[APP GetGirlMood]];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -50,7 +55,6 @@
 {
     [_imgBack setPlaceImg:[APP GetPlace]];
     [_imgGirl setGirlImg:[APP GetGirlMood]];
-    [_viewTalk setGirlContentText:@"dsffsdfsdf77875698yg923dsffsdfsdf的方式的冯绍峰1" AfterDiss:3];
 }
 
 -(BOOL)prefersStatusBarHidden
@@ -173,6 +177,11 @@
         }
     }
 
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
 

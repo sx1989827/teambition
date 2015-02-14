@@ -26,16 +26,31 @@
     UIView *view=[[[NSBundle mainBundle] loadNibNamed:@"HeaderValueView" owner:self options:nil] lastObject];
     view.frame=self.bounds;
     view.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:MSGUPDATE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePhysical) name:MSGPHYSICALCHANGE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateMoney) name:MSGMONEYCHANGE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateIOI) name:MSGIOICHANGE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateMood) name:MSGMOODCHANGE object:nil];
     return view;
 }
 
--(void)update
+-(void)updatePhysical
 {
     self.lPhysical=[[APP GetPlayerPhysical] integerValue];
+}
+
+-(void)updateMoney
+{
     self.lMoney=[[APP GetPlayerMoney] integerValue];
-    self.mood=[APP GetGirlMood];
+}
+
+-(void)updateIOI
+{
     self.lIOI=[[APP GetGirlIOI] integerValue];
+}
+
+-(void)updateMood
+{
+    self.mood=[APP GetGirlMood];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -45,6 +60,10 @@
         UIView *view=[self viewInstance];
         self.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
         [self addSubview:view];
+        [self updatePhysical];
+        [self updateMoney];
+        [self updateIOI];
+        [self updateMood];
     }
     return self;
 }

@@ -10,6 +10,7 @@
 #include "../util/Constant.h"
 #include "../util/Oberserver.h"
 #include <cmath>
+#include <CoreFoundation/CoreFoundation.h>
 CoreGirl::CoreGirl()
 {
     m_dIOI=0;
@@ -123,10 +124,15 @@ double CoreGirl::GetIOI()
 }
 void CoreGirl::SetIOI(double lIOI)
 {
+    double oldValue=m_dIOI;
     m_dIOI=lIOI;
     if(lIOI<1)
     {
         lIOI=1;
+    }
+    if(fabs(m_dIOI-oldValue)>0.000001)
+    {
+        CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), CFSTR("MsgIOIChange"), 0, 0, true);
     }
 }
 CoreGirl::TYPE CoreGirl::GetGirlType()

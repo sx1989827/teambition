@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "../Status/StatusController.h"
 #include  <cmath>
+#include <CoreFoundation/CoreFoundation.h>
 CorePlayer::CorePlayer()
 {
     m_dPhysical=0;
@@ -89,6 +90,7 @@ double CorePlayer::GetPhysical()
 }
 void CorePlayer::SetPhysical(double val)
 {
+    double oldValue=m_dPhysical;
     m_dPhysical=val;
     if(m_dPhysical<1)
     {
@@ -98,6 +100,10 @@ void CorePlayer::SetPhysical(double val)
     {
         m_dPhysical=100;
     }
+    if(fabs(m_dPhysical-oldValue)>0.000001)
+    {
+        CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), CFSTR("MsgPhysicalChange"), 0, 0, true);
+    }
 }
 double CorePlayer::GetMoney()
 {
@@ -105,10 +111,15 @@ double CorePlayer::GetMoney()
 }
 void CorePlayer::SetMoney(double val)
 {
+    double oldValue=m_dMoney;
     m_dMoney=val;
     if(m_dMoney<0)
     {
         m_dMoney=0;
+    }
+    if(fabs(m_dMoney-oldValue)>0.000001)
+    {
+        CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), CFSTR("MsgMoneyChange"), 0, 0, true);
     }
 }
 bool CorePlayer::GetLove()

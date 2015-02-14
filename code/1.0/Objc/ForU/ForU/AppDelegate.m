@@ -58,7 +58,6 @@
 {
     [APP Update];
     [APP Save];
-    [[NSNotificationCenter defaultCenter] postNotificationName:MSGUPDATE object:nil];
 }
 @end
 
