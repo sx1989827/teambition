@@ -14,7 +14,7 @@ CoreActionTalk::CoreActionTalk()
     xml x;
     x.loadfile(GetCurrentDataDir()+ACTIONTALKFILE);
     nodecollect *ncRoot=x.select("/root");
-    node *root=ncRoot->item(0)->getchild(0);
+    node *root=ncRoot->item(0);
     nodecollect *ncMood=root->select("/mood");
     for(long i=0;i<ncMood->getcount();i++)
     {

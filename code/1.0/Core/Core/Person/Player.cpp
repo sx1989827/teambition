@@ -297,8 +297,15 @@ void CorePlayer::HandleActionTalk(std::string type)
     m_pActionTalk->Handle(type);
 }
 
+std::vector<CoreActionBody::TYPE> CorePlayer::GetAvalibleActionBody()
+{
+    return m_pActionBody->GetAvalibleAction();
+}
 
-
+std::vector<std::string> CorePlayer::GetAvalibleActionTalk()
+{
+    return m_pActionTalk->GetAvalibleTalk();
+}
 
 
 

@@ -18,6 +18,7 @@
 @interface TalkViewController ()
 {
     NSMutableArray *arrAction;
+    NSMutableDictionary *dicActionBody;
 }
 @end
 
@@ -39,7 +40,18 @@
                      @"text":@"语言",
                      @"id":@(KTalk)
                      }];
+    dicActionBody=[[NSMutableDictionary alloc] initWithCapacity:30];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(PATSHOULDER)];
 }
+
+-(void)actionCommonBody:(NSNumber*)type
+{
+    double oldValue=[[APP GetGirlIOI] doubleValue];
+    [APP HandleActionBody:(ACTIONBODYTYPE)[type integerValue]];
+    double newValue=[[APP GetGirlIOI] doubleValue];
+    [FUPublic showChangeView:@"好感度：" Offset:(newValue-oldValue) View:self.view Point:CGPointMake(self.view.center.x+10,self.view.center.y-100)];
+}
+
 
 -(void)changeGirlMood
 {
@@ -95,13 +107,66 @@
             }
             case KBody:
             {
+                [self showActionBody];
                 break;
             }
             case KTalk:
             {
+                [self showActionTalk];
                 break;
             }
         }
+    }];
+}
+
+-(void)showActionTalk
+{
+    FUListView *view=[[FUListView alloc] init];
+    NSArray *arr=[APP GetAvalibleTalkAction];
+    if(arr.count==0)
+    {
+        FUAlertView *alert=[[FUAlertView alloc] initWithMsg:@"没有可选的选项哦！"];
+        [alert showInView:self.view];
+        return;
+    }
+    [view addDataFromArray:arr];
+    [view showInView:self.view];
+    [view setSelectedBlock:^(long index, NSArray *arr) {
+        [self actionTalk:arr[index][@"text"]];
+        [arrAction removeObject:@{
+                                  @"text":@"语言",
+                                  @"id":@(KTalk)
+                                  }];
+    }];
+
+}
+
+-(void)actionTalk:(NSString*)title
+{
+    double oldValue=[[APP GetGirlIOI] doubleValue];
+    [APP HandleActionTalk:title];
+    double newValue=[[APP GetGirlIOI] doubleValue];
+    [FUPublic showChangeView:@"好感度：" Offset:(newValue-oldValue) View:self.view Point:CGPointMake(self.view.center.x+10,self.view.center.y-100)];
+}
+
+-(void)showActionBody
+{
+    FUListView *view=[[FUListView alloc] init];
+    NSArray *arr=[APP GetAvalibleBodyAction];
+    if(arr.count==0)
+    {
+        FUAlertView *alert=[[FUAlertView alloc] initWithMsg:@"没有可选的选项哦！"];
+        [alert showInView:self.view];
+        return;
+    }
+    [view addDataFromArray:arr];
+    [view showInView:self.view];
+    [view setSelectedBlock:^(long index, NSArray *arr) {
+       [self performSelector:NSSelectorFromString(dicActionBody[arr[index][@"id"]]) withObject:arr[index][@"id"]];
+        [arrAction removeObject:@{
+                                 @"text":@"肢体",
+                                 @"id":@(KBody)
+                                 }];
     }];
 }
 
@@ -150,18 +215,7 @@
     {
         double newIOI=[[APP GetGirlIOI] doubleValue];
         double off=newIOI-oldIOI;
-        NSString *strText=[NSString stringWithFormat:@"好感度:%+.2lf",off];
-        BOOL bGrow=YES;
-        if(off>0.000001)
-        {
-            bGrow=YES;
-            [ChangeValueView viewWithTitle:p Title:strText View:self.view Grow:YES];
-        }
-        else if(off<-0.000001)
-        {
-            bGrow=NO;
-            [ChangeValueView viewWithTitle:p Title:strText View:self.view Grow:NO];
-        }
+        [FUPublic showChangeView:@"好感度:" Offset:off View:self.view Point:p];
         NSString *newMood=[APP GetGirlMoodDes];
         if(![newMood isEqualToString:oldMood])
         {

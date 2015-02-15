@@ -49,6 +49,8 @@ public:
     bool HandleActionEye(CoreActionEye::TYPE type);
     void HandleActionBody(CoreActionBody::TYPE type);
     void HandleActionTalk(std::string type);
+    std::vector<CoreActionBody::TYPE> GetAvalibleActionBody();
+    std::vector<std::string> GetAvalibleActionTalk();
 private:
     double m_dPhysical;
     double m_dMoney;

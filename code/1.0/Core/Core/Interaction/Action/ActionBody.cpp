@@ -54,8 +54,8 @@ CoreActionBody::CoreActionBody()
                 node *item=ncItem->item(i);
                 mood.strMood=item->getattr("mood");
                 mood.strMoodTrend=item->getattr("moodtrend");
-                mood.lMoodOffset=atoi(root->getattr("moodoffset").data());
-                mood.dIOIOffset=atof(root->getattr("ioi").data());
+                mood.lMoodOffset=atoi(item->getattr("moodoffset").data());
+                mood.dIOIOffset=atof(item->getattr("ioi").data());
                 mood.strMoodDes=item->getattr("mooddes");
                 BodyMood.mapMood[mood.strMood]=mood;
             }

@@ -35,6 +35,8 @@
 -(NSString*)GetGirlMoodDes;
 -(CGRect)GetGirlFaceRect;
 -(CGRect)GetGirlBreastRect;
+-(NSArray*)GetAvalibleBodyAction;
+-(NSArray*)GetAvalibleTalkAction;
 @end
 
 

@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import <objc/objc.h>
 #import "AppDelegate.h"
+#import "ChangeValueView.h"
 @implementation UILabel (CustomeFont)
 +(void)load
 {
@@ -150,4 +151,34 @@
     dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, second*NSEC_PER_SEC);
     dispatch_after(time, dispatch_get_main_queue(), block);
 }
+
++(void)showChangeView:(NSString*)title Offset:(double)offset View:(UIView *)view Point:(CGPoint)point
+{
+    NSString *strText=[NSString stringWithFormat:@"%@:%+.2lf",title,offset];
+    BOOL bGrow=YES;
+    if(offset>0.000001)
+    {
+        bGrow=YES;
+        [ChangeValueView viewWithTitle:point Title:strText View:view Grow:YES];
+    }
+    else if(offset<-0.000001)
+    {
+        bGrow=NO;
+        [ChangeValueView viewWithTitle:point Title:strText View:view Grow:NO];
+    }
+
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+

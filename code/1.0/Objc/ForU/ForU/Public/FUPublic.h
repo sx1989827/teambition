@@ -15,4 +15,5 @@
 @interface FUPublic : NSObject
 +(UIColor*)colorWithRGB:(NSInteger)r G:(NSInteger)g B:(NSInteger)b;
 +(void)dispatchAfter:(CGFloat)second Block:(dispatch_block_t)block;
++(void)showChangeView:(NSString*)title Offset:(double)offset View:(UIView*)view Point:(CGPoint)point;
 @end

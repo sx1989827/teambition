@@ -327,6 +327,68 @@
     return CGRectMake(rect.x, rect.y, rect.w, rect.h);
 
 }
+
+-(NSArray*)GetAvalibleBodyAction
+{
+    NSArray *arr=@[@{
+                       @"text":@"拍拍肩膀",
+                       @"id":@(PATSHOULDER)
+                       },@{
+                       @"text":@"抚摸头发",
+                       @"id":@(TOUCHHAIR)
+                       },@{
+                       @"text":@"碰下手臂",
+                       @"id":@(TOUCHHAND)
+                       },@{
+                       @"text":@"捏捏脸",
+                       @"id":@(KNEADFACE)
+                       },@{
+                       @"text":@"拥抱",
+                       @"id":@(HUG)
+                       },@{
+                       @"text":@"Kiss",
+                       @"id":@(KISS)
+                       },@{
+                       @"text":@"按摩",
+                       @"id":@(MASSAGE)
+                       },@{
+                       @"text":@"拇指大战",
+                       @"id":@(FINGERWAR)
+                       },@{
+                       @"text":@"搂腰",
+                       @"id":@(HUGWAIST)
+                       },@{
+                       @"text":@"刮鼻子",
+                       @"id":@(RUBNOSE)
+                       },@{
+                       @"text":@"牵手",
+                       @"id":@(HANDINHAND)
+                       },@{
+                       @"text":@"搭肩",
+                       @"id":@(LIFT)
+                       }];
+    std::vector<CoreActionBody::TYPE> vec=app->GetPlayer()->GetAvalibleActionBody();
+    NSMutableArray *arrRet=[[NSMutableArray alloc] initWithCapacity:30];
+    for(NSDictionary *dic in arr)
+    {
+        if(std::find(vec.begin(), vec.end(), [dic[@"id"] intValue])!=vec.end())
+        {
+            [arrRet addObject:dic];
+        }
+    }
+    return arrRet;
+}
+
+-(NSArray*)GetAvalibleTalkAction
+{
+    NSMutableArray *arr=[[NSMutableArray alloc] initWithCapacity:30];
+    std::vector<std::string> vec=app->GetPlayer()->GetAvalibleActionTalk();
+    for(long i=0;i<vec.size();i++)
+    {
+        [arr addObject:@{@"text":[NSString stringWithUTF8String:vec[i].data()]}];
+    }
+    return arr;
+}
 @end
 
 
