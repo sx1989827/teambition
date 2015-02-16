@@ -15,7 +15,8 @@ class CoreWorkMeetNoLove:public CoreInteraction
 public:
     static CoreInteraction* CreateInstance();
     void Update();
-    bool Enter();
+    void Enter();
+    bool TryEnter();
     void Leave();
     bool IsEnd();
     bool IsNeedEnd();

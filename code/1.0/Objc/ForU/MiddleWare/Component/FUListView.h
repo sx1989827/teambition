@@ -12,9 +12,11 @@
 {
     NSMutableArray *arrTitle;
     void (^blockSelected)(long index,NSArray* arr);
+    void (^blockCancelled)();
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 -(void)showInView:(UIView*)view;
 -(void)addDataFromArray:(NSArray*)arr;
 -(void)setSelectedBlock:(void (^)(long index,NSArray* arr))block;
+-(void)setBlockCancelled:(void (^)())block;
 @end

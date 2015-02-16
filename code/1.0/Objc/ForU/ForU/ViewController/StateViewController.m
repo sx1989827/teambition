@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "SvGifView.h"
 #import "TalkViewController.h"
+#import "DateViewController.h"
 #define kTalk 0
 #define kDate 1
 #define kGift 2
@@ -155,6 +156,12 @@
                 TalkViewController *view=[[TalkViewController alloc] initWithNibName:@"TalkViewController" bundle:nil];
                 [weakSelf.navigationController pushViewController:view animated:NO];
                 break;
+            }
+            case kDate:
+            {
+                DateViewController *view=[[DateViewController alloc] initWithNibName:@"DateViewController" bundle:nil];
+                view.dateType=[APP GetLove]?DATELOVE:DATENOLOVE;
+                [weakSelf.navigationController pushViewController:view animated:NO];
             }
         }
     }];

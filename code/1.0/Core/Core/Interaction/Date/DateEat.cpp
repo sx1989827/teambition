@@ -13,11 +13,15 @@ const double g_time=10;
 const double g_IOIMin=0.6;
 const double g_IOIMax=1;
 const double g_dPhysical=2;
-bool CoreDateEat::Enter()
+void CoreDateEat::Enter()
+{
+    PLAYERINSTANCE->SetPlace("餐厅");
+}
+
+bool CoreDateEat::TryEnter()
 {
     if(PLAYERINSTANCE->GetPhysical()>=(m_bIOI?20:30))
     {
-        PLAYERINSTANCE->SetPlace("餐厅");
         return true;
     }
     else

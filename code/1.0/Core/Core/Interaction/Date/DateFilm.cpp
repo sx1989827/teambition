@@ -13,7 +13,7 @@ const double g_time=10;
 double g_IOIMin=0.6;
 double g_IOIMax=1;
 const double g_dPhysical=1;
-bool CoreDateFilm::Enter()
+void CoreDateFilm::Enter()
 {
     if(GIRLINSTANCE->GetGirlType()==CoreGirl::MAID)
     {
@@ -25,15 +25,20 @@ bool CoreDateFilm::Enter()
         g_IOIMin=0.8;
         g_IOIMax=1.6;
     }
+    PLAYERINSTANCE->SetPlace("电影院");
+}
+
+bool CoreDateFilm::TryEnter()
+{
     if(PLAYERINSTANCE->GetPhysical()>=(m_bIOI?30:40))
     {
-        PLAYERINSTANCE->SetPlace("电影院");
         return true;
     }
     else
     {
         return false;
     }
+
 }
 
 void CoreDateFilm::Update()

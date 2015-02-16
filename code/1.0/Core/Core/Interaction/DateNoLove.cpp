@@ -24,13 +24,24 @@ void CoreDateNoLove::Update()
     }
 }
 
-bool CoreDateNoLove::Enter()
+bool CoreDateNoLove::TryEnter()
 {
     if(m_pDate)
     {
-        return m_pDate->Enter();
+        return m_pDate->TryEnter();
     }
-    return false;
+    else
+    {
+        return false;
+    }
+}
+
+void CoreDateNoLove::Enter()
+{
+    if(m_pDate)
+    {
+        m_pDate->Enter();
+    }
 }
 
 void CoreDateNoLove::Leave()

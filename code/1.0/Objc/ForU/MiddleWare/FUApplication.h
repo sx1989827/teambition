@@ -37,6 +37,9 @@
 -(CGRect)GetGirlBreastRect;
 -(NSArray*)GetAvalibleBodyAction;
 -(NSArray*)GetAvalibleTalkAction;
+-(BOOL)TryEnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType;
+-(void)EnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType;
+-(void)LeaveInteraction;
 @end
 
 

@@ -17,7 +17,12 @@ void CoreWorkIOINoLove::Update()
     
 }
 
-bool CoreWorkIOINoLove::Enter()
+void CoreWorkIOINoLove::Enter()
+{
+    
+}
+
+bool CoreWorkIOINoLove::TryEnter()
 {
     return true;
 }

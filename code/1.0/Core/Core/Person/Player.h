@@ -42,7 +42,8 @@ public:
     const sPlayInfo* GetMoneyInfo(CoreStatus::TYPE type);
     bool IsInteraction();
     void Update();
-    bool EnterInteraction(CoreInteraction::TYPE type);
+    bool TryEnterInteraction(CoreInteraction::TYPE type,CoreDateBase::TYPE dateType);
+    void EnterInteraction(CoreInteraction::TYPE type,CoreDateBase::TYPE dateType);
     void LeaveInteraction();
     void SetPlace(std::string strPlace);
     std::string GetPlace();

@@ -28,7 +28,11 @@ void CoreWorkHelpLove::Update()
     }
 }
 
-bool CoreWorkHelpLove::Enter()
+void CoreWorkHelpLove::Enter()
+{
+}
+
+bool CoreWorkHelpLove::TryEnter()
 {
     return true;
 }

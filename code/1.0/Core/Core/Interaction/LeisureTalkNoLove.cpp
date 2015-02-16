@@ -19,9 +19,13 @@ void CoreLeisureTalkNoLove::Update()
 
 }
 
-bool CoreLeisureTalkNoLove::Enter()
+void CoreLeisureTalkNoLove::Enter()
 {
     PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+g_dPhysical);
+}
+
+bool CoreLeisureTalkNoLove::TryEnter()
+{
     return true;
 }
 

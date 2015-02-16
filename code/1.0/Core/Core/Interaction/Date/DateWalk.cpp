@@ -13,7 +13,7 @@ const double g_time=10;
 static double g_IOI=1;
 
 const double g_dPhysical=-1;
-bool CoreDateWalk::Enter()
+void CoreDateWalk::Enter()
 {
     if(GIRLINSTANCE->GetGirlType()==CoreGirl::MAID)
     {
@@ -23,9 +23,13 @@ bool CoreDateWalk::Enter()
     {
         g_IOI=1.5;
     }
+    PLAYERINSTANCE->SetPlace("公园");
+}
+
+bool CoreDateWalk::TryEnter()
+{
     if(PLAYERINSTANCE->GetPhysical()>=(m_bIOI?40:50))
     {
-        PLAYERINSTANCE->SetPlace("公园");
         return true;
     }
     else

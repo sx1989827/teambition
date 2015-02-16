@@ -389,6 +389,22 @@
     }
     return arr;
 }
+
+
+-(BOOL)TryEnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType
+{
+    return app->GetPlayer()->TryEnterInteraction((CoreInteraction::TYPE)interType, (CoreDateBase::TYPE)dateType);
+}
+
+-(void)EnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType
+{
+	app->GetPlayer()->EnterInteraction((CoreInteraction::TYPE)interType, (CoreDateBase::TYPE)dateType);
+}
+
+-(void)LeaveInteraction
+{
+    app->GetPlayer()->LeaveInteraction();
+}
 @end
 
 

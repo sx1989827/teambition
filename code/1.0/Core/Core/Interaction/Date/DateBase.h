@@ -13,7 +13,8 @@ class CoreDateBase
 {
 public:
     enum TYPE {EAT,FILM,WALK,PARK};
-    virtual bool Enter()=0;
+    virtual void Enter()=0;
+    virtual bool TryEnter()=0;
     virtual void Update()=0;
     virtual void Leave()=0;
     virtual TYPE GetType()=0;

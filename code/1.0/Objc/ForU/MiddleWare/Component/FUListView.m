@@ -99,6 +99,10 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    if(blockCancelled)
+    {
+        blockCancelled();
+    }
     [self removeFromSuperview];
 }
 
@@ -110,6 +114,11 @@
 -(void)addDataFromArray:(NSArray*)arr
 {
     [arrTitle addObjectsFromArray:arr];
+}
+
+-(void)setBlockCancelled:(void (^)())block
+{
+    blockCancelled=block;
 }
 
 @end

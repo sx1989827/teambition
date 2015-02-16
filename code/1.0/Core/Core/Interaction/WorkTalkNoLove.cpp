@@ -19,9 +19,13 @@ void CoreWorkTalkNoLove::Update()
 
 }
 
-bool CoreWorkTalkNoLove::Enter()
+void CoreWorkTalkNoLove::Enter()
 {
     PLAYERINSTANCE->SetPhysical(PLAYERINSTANCE->GetPhysical()+g_dPhysical);
+}
+
+bool CoreWorkTalkNoLove::TryEnter()
+{
     return true;
 }
 

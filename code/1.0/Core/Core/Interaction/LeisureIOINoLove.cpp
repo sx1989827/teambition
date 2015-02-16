@@ -17,7 +17,12 @@ void CoreLeisureIOINoLove::Update()
     
 }
 
-bool CoreLeisureIOINoLove::Enter()
+void CoreLeisureIOINoLove::Enter()
+{
+    
+}
+
+bool CoreLeisureIOINoLove::TryEnter()
 {
     return true;
 }

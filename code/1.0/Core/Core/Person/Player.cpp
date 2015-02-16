@@ -243,7 +243,16 @@ void CorePlayer::Update()
     }
 }
 
-bool CorePlayer::EnterInteraction(CoreInteraction::TYPE type)
+bool CorePlayer::TryEnterInteraction(CoreInteraction::TYPE type,CoreDateBase::TYPE dateType)
+{
+    CoreInteraction* pInteraction= CoreInteraction::CreateInstance(type);
+    pInteraction->SetDateType(dateType);
+    bool bRet=pInteraction->TryEnter();
+    delete pInteraction;
+    return bRet;
+}
+
+void CorePlayer::EnterInteraction(CoreInteraction::TYPE type,CoreDateBase::TYPE dateType)
 {
     if(m_pInteraction)
     {
@@ -253,15 +262,8 @@ bool CorePlayer::EnterInteraction(CoreInteraction::TYPE type)
     }
     m_pStatusController->Update();
     m_pInteraction=CoreInteraction::CreateInstance(type);
+    m_pInteraction->SetDateType(dateType);
     m_pInteraction->Enter();
-    if(m_pInteraction!=0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
 }
 
 void CorePlayer::LeaveInteraction()

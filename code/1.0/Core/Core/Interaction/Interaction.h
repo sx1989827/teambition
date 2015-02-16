@@ -10,17 +10,20 @@
 #define __Core__Interaction__
 #include <map>
 #include "../util/Time.h"
+#include "Date/DateBase.h"
 class CoreInteraction
 {
 public:
     enum TYPE {WORKMEETNOLOVE,WORKIOINOLOVE,WORKHELPNOLOVE,WORKTALKNOLOVE,WORKTALKLOVE,WORKIOILOVE,WORKHELPLOVE,LEISUREIOINOLOVE,LEISURETALKNOLOVE,LEISUREIOILOVE,LEISURETALKLOVE,DATEIOI,DATENOLOVE,DATELOVE};
     static CoreInteraction* CreateInstance(TYPE type);
-    virtual bool Enter()=0;
+    virtual void Enter()=0;
+    virtual bool TryEnter()=0;
     virtual void Update()=0;
     virtual void Leave()=0;
     virtual bool IsEnd()=0;
     virtual bool IsNeedEnd()=0;
     virtual TYPE GetType()=0;
+    virtual void SetDateType(CoreDateBase::TYPE type){}
     CoreInteraction();
     virtual ~CoreInteraction(){}
 protected:

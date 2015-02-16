@@ -23,7 +23,12 @@ void CoreWorkMeetNoLove::Update()
     
 }
 
-bool CoreWorkMeetNoLove::Enter()
+void CoreWorkMeetNoLove::Enter()
+{
+
+}
+
+bool CoreWorkMeetNoLove::TryEnter()
 {
     return true;
 }

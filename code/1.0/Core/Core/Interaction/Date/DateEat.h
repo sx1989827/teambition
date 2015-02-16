@@ -13,7 +13,8 @@
 class CoreDateEat:public CoreDateBase
 {
 public:
-    bool Enter();
+    void Enter();
+    bool TryEnter();
     void Update();
     void Leave();
     TYPE GetType();
