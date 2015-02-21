@@ -24,3 +24,25 @@ void CoreDateBase::SetIOI(bool bIOI)
 {
     m_bIOI=bIOI;
 }
+
+void CoreDateBase::SetOldPlace(std::string strPlace)
+{
+    m_strOldPlace=strPlace;
+}
+
+std::string CoreDateBase::GetOldPlace()
+{
+    return m_strOldPlace;
+}
+
+
+
+
+
+
+
+
+
+
+
+

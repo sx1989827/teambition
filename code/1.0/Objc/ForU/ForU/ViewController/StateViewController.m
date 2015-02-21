@@ -10,6 +10,7 @@
 #import "FUListView.h"
 #import "AppDelegate.h"
 #import "SvGifView.h"
+#import "FUAlertView.h"
 #import "TalkViewController.h"
 #import "DateViewController.h"
 #define kTalk 0
@@ -95,10 +96,15 @@
         if(state==SLEEP)
         {
             weakSelf.btnAction.hidden=YES;
+            weakSelf.conTitleTop.constant=-weakSelf.btnAction.frame.size.height;
+            [weakSelf.view layoutIfNeeded];
         }
         else
         {
             weakSelf.btnAction.hidden=NO;
+            weakSelf.conTitleTop.constant=24;
+            [weakSelf.view layoutIfNeeded];
+
         }
         [view setGif:[weakSelf valueForKey:@"arrStateImg"][state] Bundle:nil];
         [weakApp ChangePlayerState:state];
@@ -168,6 +174,26 @@
 
 }
 
+- (IBAction)onTitle:(id)sender
+{
+    __weak StateViewController* weakSelf=self;
+    FUAlertView *view=[[FUAlertView alloc] initWithChoose:@"是否回到标题页面?" First:@"是" Second:@"否" FirstBlock:^{
+        [APP Save];
+        AppDelegate *app=(AppDelegate*)[UIApplication sharedApplication].delegate;
+        [app.timerUpdate invalidate];
+        app.timerUpdate=nil;
+        for(UIViewController *view in weakSelf.navigationController.viewControllers)
+        {
+            if([view isKindOfClass:NSClassFromString(@"MainMenuViewController")])
+            {
+                [weakSelf.navigationController popToViewController:view animated:NO];
+                break;
+            }
+        }
+    } SecondBlock:^{
+    }];
+    [view showInView:self.view];
+}
 @end
 
 

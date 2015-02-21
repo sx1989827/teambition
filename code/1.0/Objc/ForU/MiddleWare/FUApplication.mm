@@ -405,6 +405,11 @@
 {
     app->GetPlayer()->LeaveInteraction();
 }
+
+-(void)Load
+{
+    app->Load();
+}
 @end
 
 

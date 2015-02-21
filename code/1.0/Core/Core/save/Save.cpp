@@ -33,7 +33,7 @@ void CoreSave::UnSave()
         return;
     }
     xml x;
-    x.loadfile(GetCurrentDataDir()+SAVEFILE);
+    x.loadfile(GetCurrentDocDir()+SAVEFILE);
     nodecollect *nc=x.getnodebyname("root");
     node *n1=nc->item(0);
     for(long i=0;i<m_Vec.size();i++)

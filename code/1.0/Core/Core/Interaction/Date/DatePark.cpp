@@ -14,6 +14,7 @@ static double g_IOI=1.5;
 const double g_dPhysical=-1;
 void CoreDatePark::Enter()
 {
+    SetOldPlace(PLAYERINSTANCE->GetPlace());
     if(GIRLINSTANCE->GetGirlType()==CoreGirl::MAID)
     {
         g_IOI=1;
@@ -59,7 +60,7 @@ void CoreDatePark::Update()
 
 void CoreDatePark::Leave()
 {
-
+    PLAYERINSTANCE->SetPlace(GetOldPlace());
 }
 
 bool CoreDatePark::IsEnd()

@@ -13,5 +13,6 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (assign,nonatomic) long viewAppearTime;
 @property (strong,nonatomic) FUApplication *app;
+@property (strong,nonatomic) NSTimer *timerUpdate;
 @end
 

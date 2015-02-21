@@ -71,6 +71,7 @@ CorePlayer* CoreApplication::GetPlayer()
 
 void CoreApplication::Reset(CoreGirl::TYPE type)
 {
+    m_bAdjust=true;
     xml  x;
     x.loadfile(GetCurrentDataDir()+INITFILE);
     nodecollect *nc=x.getnodebyname("root");
@@ -85,16 +86,25 @@ void CoreApplication::Update()
 {
     static long day=0;
     CoreTime time;
-    if(time.GetDay()!=day && time.GetHour()>=5)
+    if(m_bAdjust && time.GetDay()!=day && time.GetHour()>=5)
     {
         day=time.GetDay();
         GIRLINSTANCE->GetMood()->Adjust();
         NOTIFYCENTER->Adjust();
     }
+    else if(!m_bAdjust)
+    {
+        day=time.GetDay();
+    }
+    m_bAdjust=true;
     m_pPlayer->Update();
 }
 
-
+void CoreApplication::Load()
+{
+    m_bAdjust=false;
+    SAVEINSTANCE->UnSave();
+}
 
 
 

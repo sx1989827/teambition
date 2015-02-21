@@ -15,6 +15,7 @@ double g_IOIMax=1;
 const double g_dPhysical=1;
 void CoreDateFilm::Enter()
 {
+    SetOldPlace(PLAYERINSTANCE->GetPlace());
     if(GIRLINSTANCE->GetGirlType()==CoreGirl::MAID)
     {
         g_IOIMin=0.6;
@@ -61,7 +62,7 @@ void CoreDateFilm::Update()
 
 void CoreDateFilm::Leave()
 {
-
+    PLAYERINSTANCE->SetPlace(GetOldPlace());
 }
 
 bool CoreDateFilm::IsEnd()

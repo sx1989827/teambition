@@ -30,6 +30,7 @@ CoreMood::~CoreMood()
 
 void CoreMood::Adjust()
 {
+    std::string strOldValue=m_strCurMood;
     long v=m_MoodMap[m_strCurMood];
     if(v==0)
     {
@@ -48,6 +49,10 @@ void CoreMood::Adjust()
             m_lCurMood=10+m_lCurMood;
             m_strCurMood="平静";
         }
+    }
+    if(m_strCurMood!=strOldValue)
+    {
+        CFNotificationCenterPostNotification(CFNotificationCenterGetLocalCenter(), CFSTR("MsgMoodChange"), 0, 0, true);
     }
 }
 

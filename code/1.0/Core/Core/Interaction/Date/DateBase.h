@@ -22,12 +22,15 @@ public:
     void SetIOI(bool bIOI);
     CoreDateBase();
     virtual ~CoreDateBase(){}
+    void SetOldPlace(std::string strPlace);
+    std::string GetOldPlace();
 protected:
     double GetIOIValue(double min,double max);
     CoreTime m_StartTime;
     CoreTime m_FlagTime;
     bool m_bEnd;
     bool m_bIOI;
+    std::string m_strOldPlace;
 };
 
 #endif /* defined(__Core__DateBase__) */

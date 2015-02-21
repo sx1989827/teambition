@@ -46,15 +46,16 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [_timerUpdate invalidate];
+    _timerUpdate=nil;
 }
 
 -(void)initTimer
 {
-    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
+    _timerUpdate=[NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timerUpdate:) userInfo:nil repeats:YES];
 }
 
--(void)timerUpdate
+-(void)timerUpdate:(NSTimer*)theTimer
 {
     [APP Update];
     [APP Save];

@@ -40,6 +40,7 @@
 -(BOOL)TryEnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType;
 -(void)EnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType;
 -(void)LeaveInteraction;
+-(void)Load;
 @end
 
 

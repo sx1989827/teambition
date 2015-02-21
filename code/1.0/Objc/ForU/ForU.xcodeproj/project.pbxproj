@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B54754541A91A5B300C8BEC4 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754521A91A5B300C8BEC4 /* DateViewController.m */; };
 		B54754551A91A5B300C8BEC4 /* DateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54754531A91A5B300C8BEC4 /* DateViewController.xib */; };
+		B54754581A97105D00C8BEC4 /* MsgShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754571A97105D00C8BEC4 /* MsgShowView.m */; };
 		B57EA9EC1A623FCD0002B5D3 /* ChooseGirlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57EA9E41A623FCD0002B5D3 /* ChooseGirlViewController.m */; };
 		B57EA9ED1A623FCD0002B5D3 /* ChooseGirlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57EA9E51A623FCD0002B5D3 /* ChooseGirlViewController.xib */; };
 		B57EA9EE1A623FCD0002B5D3 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57EA9E71A623FCD0002B5D3 /* MainMenuViewController.m */; };
@@ -129,6 +130,8 @@
 		B54754511A91A5B300C8BEC4 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		B54754521A91A5B300C8BEC4 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		B54754531A91A5B300C8BEC4 /* DateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateViewController.xib; sourceTree = "<group>"; };
+		B54754561A97105D00C8BEC4 /* MsgShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgShowView.h; sourceTree = "<group>"; };
+		B54754571A97105D00C8BEC4 /* MsgShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgShowView.m; sourceTree = "<group>"; };
 		B57EA9E31A623FCD0002B5D3 /* ChooseGirlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseGirlViewController.h; sourceTree = "<group>"; };
 		B57EA9E41A623FCD0002B5D3 /* ChooseGirlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseGirlViewController.m; sourceTree = "<group>"; };
 		B57EA9E51A623FCD0002B5D3 /* ChooseGirlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseGirlViewController.xib; sourceTree = "<group>"; };
@@ -479,6 +482,8 @@
 				B5A1159A1A8F06A5002ABD7F /* TalkContentView.h */,
 				B5A1159B1A8F06A5002ABD7F /* TalkContentView.m */,
 				B5A1159D1A8F06B6002ABD7F /* TalkContentView.xib */,
+				B54754561A97105D00C8BEC4 /* MsgShowView.h */,
+				B54754571A97105D00C8BEC4 /* MsgShowView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -972,6 +977,7 @@
 				B5CB84ED1A400DD800F3D9B1 /* Save.cpp in Sources */,
 				B5BADD4D1A88A54600238649 /* HeaderValueView.m in Sources */,
 				B5CB84F81A400DD800F3D9B1 /* Time.cpp in Sources */,
+				B54754581A97105D00C8BEC4 /* MsgShowView.m in Sources */,
 				B5A115901A8B9129002ABD7F /* TalkViewController.m in Sources */,
 				B5CB84F01A400DD800F3D9B1 /* StatusLeisure.cpp in Sources */,
 				B5CB84D01A400DD800F3D9B1 /* DateEat.cpp in Sources */,

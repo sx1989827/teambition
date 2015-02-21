@@ -29,6 +29,7 @@ public:
     CorePlayer* GetPlayer();
     void Reset(CoreGirl::TYPE type);
     void Update();
+    void Load();
 private:
     CoreNotify* m_pNotify;
     CoreSave* m_pSave;
@@ -39,6 +40,7 @@ private:
     CoreGift *m_pGift;
     CoreEvent *m_pEvent;
     CoreStory *m_pStory;
+    bool m_bAdjust;
 };
 
 

@@ -14,6 +14,8 @@
 #import "SettingView.h"
 #import <pop/POP.h>
 #import "FUPublic.h"
+#import "StateViewController.h"
+#import "FUAlertView.h"
 @interface MainMenuViewController ()
 {
     SettingView *viewSetting;
@@ -76,8 +78,20 @@
     [self.navigationController pushViewController:view animated:YES];
 }
 
-- (IBAction)onLoad:(id)sender {
-    
+- (IBAction)onLoad:(id)sender
+{
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    if([userDefaults floatForKey:@"ver"]==0)
+    {
+        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"您尚未存档，请开始新的旅程!"];
+        [view showInView:self.view];
+        return;
+    }
+    [APP Load];
+    AppDelegate *app=(AppDelegate*)[UIApplication sharedApplication].delegate;
+    [app performSelector:@selector(initTimer)];
+    StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
+    [self.navigationController pushViewController:view animated:NO];
 }
 
 - (IBAction)onSetup:(id)sender {

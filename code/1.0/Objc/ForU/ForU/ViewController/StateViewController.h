@@ -13,5 +13,7 @@
 - (IBAction)onSwitch:(id)sender;
 - (IBAction)onAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *btnAction;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *conTitleTop;
+- (IBAction)onTitle:(id)sender;
 
 @end

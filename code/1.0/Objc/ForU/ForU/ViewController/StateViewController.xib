@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StateViewController">
             <connections>
                 <outlet property="btnAction" destination="buT-JC-I1X" id="BbD-Mj-EIo"/>
+                <outlet property="conTitleTop" destination="QQg-6Y-IAz" id="iHb-by-bbI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewHeader" destination="8Z8-UN-okJ" id="APM-fg-srq"/>
             </connections>
@@ -52,13 +53,32 @@
                         <action selector="onSwitch:" destination="-1" eventType="touchUpInside" id="C99-tm-coN"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SuU-PL-HcX">
+                    <rect key="frame" x="294" y="322" width="25" height="64"/>
+                    <color key="backgroundColor" red="1" green="0.90196078430000004" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="5dh-jt-3Lc"/>
+                        <constraint firstAttribute="height" constant="64" id="BbU-5h-ypD"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="FjB-ci-tde"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="eJy-Z8-IyG"/>
+                    </constraints>
+                    <state key="normal" title="标题">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTitle:" destination="-1" eventType="touchUpInside" id="EV7-YB-Kg1"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="buT-JC-I1X" firstAttribute="top" secondItem="eSe-B8-D0l" secondAttribute="bottom" constant="30" id="9Z4-W9-PBN"/>
                 <constraint firstAttribute="trailing" secondItem="8Z8-UN-okJ" secondAttribute="trailing" id="A5U-da-c94"/>
                 <constraint firstItem="8Z8-UN-okJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jvd-eP-DJ9"/>
+                <constraint firstItem="SuU-PL-HcX" firstAttribute="top" secondItem="buT-JC-I1X" secondAttribute="bottom" constant="24" id="QQg-6Y-IAz"/>
                 <constraint firstItem="eSe-B8-D0l" firstAttribute="top" secondItem="8Z8-UN-okJ" secondAttribute="bottom" constant="80" id="SlQ-oE-jwY"/>
+                <constraint firstAttribute="trailing" secondItem="SuU-PL-HcX" secondAttribute="trailing" constant="1" id="mVB-xK-KOi"/>
                 <constraint firstAttribute="trailing" secondItem="eSe-B8-D0l" secondAttribute="trailing" constant="1" id="ov6-Cu-Ne3"/>
                 <constraint firstItem="8Z8-UN-okJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pSk-hi-cVc"/>
                 <constraint firstAttribute="trailing" secondItem="buT-JC-I1X" secondAttribute="trailing" constant="1" id="une-BC-mBg"/>

@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 #import "FUListView.h"
 #import "FUAlertView.h"
+#import "MsgShowView.h"
+#import "TalkViewController.h"
 @interface DateViewController ()
 
 @end
@@ -51,7 +53,13 @@
 
 -(void)actionDate:(DATETYPE)type
 {
-    
+    if([APP TryEnterInteraction:_dateType DateType:type])
+    {
+        [APP EnterInteraction:_dateType DateType:type];
+        NSArray *arr=@[@"餐厅",@"电影院",@"公园",@"游乐场"];
+        [_imgBack setPlaceImg:arr[type]];
+        [MsgShowView showTitleInView:@"进入约会模式" View:self.view];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,12 +70,20 @@
 
 - (IBAction)onAction:(id)sender
 {
-    
+    TalkViewController *view=[[TalkViewController alloc] initWithNibName:@"TalkViewController" bundle:nil];
+    [self.navigationController pushViewController:view animated:NO];
 }
 
 - (IBAction)onQuit:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
+    __weak DateViewController* weakSelf=self;
+    FUAlertView *view=[[FUAlertView alloc] initWithChoose:@"是否结束约会?" First:@"是" Second:@"否" FirstBlock:^{
+        [APP LeaveInteraction];
+        [weakSelf.navigationController popViewControllerAnimated:NO];
+    } SecondBlock:^{
+    }];
+    [view showInView:self.view];
+    
 }
 
 -(BOOL)prefersStatusBarHidden

@@ -15,6 +15,7 @@ const double g_IOIMax=1;
 const double g_dPhysical=2;
 void CoreDateEat::Enter()
 {
+    SetOldPlace(PLAYERINSTANCE->GetPlace());
     PLAYERINSTANCE->SetPlace("餐厅");
 }
 
@@ -49,7 +50,7 @@ void CoreDateEat::Update()
 
 void CoreDateEat::Leave()
 {
-
+    PLAYERINSTANCE->SetPlace(GetOldPlace());
 }
 
 bool CoreDateEat::IsEnd()
