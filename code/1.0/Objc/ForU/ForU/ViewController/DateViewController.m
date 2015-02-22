@@ -60,6 +60,14 @@
         [_imgBack setPlaceImg:arr[type]];
         [MsgShowView showTitleInView:@"进入约会模式" View:self.view];
     }
+    else
+    {
+        __weak DateViewController* weakSelf=self;
+        FUAlertView *view=[[FUAlertView alloc] initWithMsgBlock:@"你现在尚没有足够的体力!" Block:^{
+            [weakSelf.navigationController popViewControllerAnimated:NO];
+        } ];
+        [view showInView:self.view];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

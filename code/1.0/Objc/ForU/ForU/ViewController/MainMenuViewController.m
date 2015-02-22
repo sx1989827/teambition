@@ -87,6 +87,7 @@
         [view showInView:self.view];
         return;
     }
+    [APP Reset:(GIRLTYPE)[[userDefaults valueForKey:@"type"] integerValue] girlname:[userDefaults stringForKey:@"name"] x:[userDefaults doubleForKey:@"x"] y:[userDefaults doubleForKey:@"y"]];
     [APP Load];
     AppDelegate *app=(AppDelegate*)[UIApplication sharedApplication].delegate;
     [app performSelector:@selector(initTimer)];

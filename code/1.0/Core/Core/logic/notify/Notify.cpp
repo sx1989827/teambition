@@ -162,6 +162,8 @@ void CoreNotify::Serializ(node* out)
 }
 void CoreNotify::UnSerializ(node* in)
 {
+    std::vector<sNotify::TYPE>().swap(m_AvailableLeisureVec);
+    std::vector<sNotify::TYPE>().swap(m_AvailableWorkVec);
     nodecollect *nc=in->select("/Notify");
     node* NotiNode=nc->item(0);
     nodecollect *col=NotiNode->select("/work/item");
