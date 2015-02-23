@@ -150,19 +150,19 @@
     }
     else if(type==NOTIFYTYPE::DATEITEMEND)
     {
-        if((CoreDateBase::TYPE)type==CoreDateBase::FILM)
+        if((CoreDateBase::TYPE)datetype==CoreDateBase::FILM)
         {
             noti.sec=CoreTime::GetTimeSinceNow(3600).GetOriTime();
         }
-        else if((CoreDateBase::TYPE)type==CoreDateBase::EAT)
+        else if((CoreDateBase::TYPE)datetype==CoreDateBase::EAT)
         {
             noti.sec=CoreTime::GetTimeSinceNow(1800).GetOriTime();
         }
-        else if((CoreDateBase::TYPE)type==CoreDateBase::PARK)
+        else if((CoreDateBase::TYPE)datetype==CoreDateBase::PARK)
         {
             noti.sec=CoreTime::GetTimeSinceNow(3600).GetOriTime();
         }
-        else if((CoreDateBase::TYPE)type==CoreDateBase::WALK)
+        else if((CoreDateBase::TYPE)datetype==CoreDateBase::WALK)
         {
             noti.sec=CoreTime::GetTimeSinceNow(2400).GetOriTime();
         }
@@ -409,6 +409,40 @@
 -(void)Load
 {
     app->Load();
+}
+
+-(NSArray*)GetAvalibleGift
+{
+    NSMutableArray *arr=[[NSMutableArray alloc] initWithCapacity:30];
+    std::map<std::string,double> mapGift= GIFTCENTER->GetAllGift();
+    auto it=mapGift.begin();
+    for(;it!=mapGift.end();++it)
+    {
+        [arr addObject:@{
+                        @"title":[NSString stringWithUTF8String:it->first.data()],
+                        @"price":@(it->second)
+                         }];
+    }
+    return arr;
+}
+
+-(NSDictionary*)HandleGift:(NSString*)title
+{
+    std::string err;
+    BOOL bRet=GIFTCENTER->HandleGift([title UTF8String], err);
+    if(bRet)
+    {
+        return @{
+                 @"status":@"success"
+                 };
+    }
+    else
+    {
+        return @{
+                 @"status":@"fail",
+                 @"error":[NSString stringWithUTF8String:err.data()]
+                 };
+    }
 }
 @end
 

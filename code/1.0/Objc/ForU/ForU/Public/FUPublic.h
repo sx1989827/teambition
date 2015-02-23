@@ -11,6 +11,7 @@
 @interface UIImageView (LoadImage)
 -(void)setPlaceImg:(NSString*)name;
 -(void)setGirlImg:(NSString*)name;
+-(void)setGiftImg:(NSString*)name;
 @end
 @interface FUPublic : NSObject
 +(UIColor*)colorWithRGB:(NSInteger)r G:(NSInteger)g B:(NSInteger)b;

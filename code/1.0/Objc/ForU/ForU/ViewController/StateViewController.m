@@ -13,6 +13,8 @@
 #import "FUAlertView.h"
 #import "TalkViewController.h"
 #import "DateViewController.h"
+#import "GiftView.h"
+#import "DatePickerView.h"
 #define kTalk 0
 #define kDate 1
 #define kGift 2
@@ -36,6 +38,23 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[imgBack]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(imgBack)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imgBack]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(imgBack)]];
     [imgBack startGif];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resignActive) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+}
+
+-(void)resignActive
+{
+    
+}
+
+-(void)enterForeground
+{
+    [imgBack startGif];
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,6 +110,7 @@
     __weak StateViewController* weakSelf=self;
     __weak FUApplication* weakApp=APP;
     [view setSelectedBlock:^(long index, NSArray *arr) {
+        [APP RemoveNotify];
         SvGifView *view=[weakSelf valueForKey:@"imgBack"];
         PLAYERSTATE state=(PLAYERSTATE)[arr[index][@"id"] integerValue];
         if(state==SLEEP)
@@ -98,6 +118,7 @@
             weakSelf.btnAction.hidden=YES;
             weakSelf.conTitleTop.constant=-weakSelf.btnAction.frame.size.height;
             [weakSelf.view layoutIfNeeded];
+            [weakSelf showCall];
         }
         else
         {
@@ -109,6 +130,20 @@
         [view setGif:[weakSelf valueForKey:@"arrStateImg"][state] Bundle:nil];
         [weakApp ChangePlayerState:state];
     }];
+}
+
+-(void)showCall
+{
+    FUAlertView *viewAlert=[[FUAlertView alloc] initWithChoose:@"是否需要女主喊醒呢？" First:@"是" Second:@"否" FirstBlock:^{
+        DatePickerView *view=[[DatePickerView alloc] init];
+        [view showInView:self.view];
+        [view setCompleteBlock:^(NSDate *date) {
+            [APP CreateNotify:CALL Time:date DateType:(DATETYPE)0];
+        }];
+            } SecondBlock:^{
+        
+    }];
+    [viewAlert showInView:self.view];
 }
 
 - (IBAction)onAction:(id)sender
@@ -168,6 +203,13 @@
                 DateViewController *view=[[DateViewController alloc] initWithNibName:@"DateViewController" bundle:nil];
                 view.dateType=[APP GetLove]?DATELOVE:DATENOLOVE;
                 [weakSelf.navigationController pushViewController:view animated:NO];
+                break;
+            }
+            case kGift:
+            {
+                GiftView *view=[[GiftView alloc] init];
+                [view showInView:weakSelf.view];
+                break;
             }
         }
     }];

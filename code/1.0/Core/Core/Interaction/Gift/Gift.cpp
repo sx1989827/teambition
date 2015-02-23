@@ -90,6 +90,7 @@ bool CoreGift::HandleGift(std::string strName,std::string& err)
         dIOI*=2;
     }
     GIRLINSTANCE->SetIOI(GIRLINSTANCE->GetIOI()+dIOI);
+    PLAYERINSTANCE->SetMoney(PLAYERINSTANCE->GetMoney()-it->second);
     return true;
 }
 

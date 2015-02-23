@@ -10,6 +10,7 @@
 #define __Core__Gift__
 #include "../../util/Header.h"
 #include "../../Person/Girl.h"
+#define  GIFTCENTER CoreGiftSingleton::GetInstance()
 class CoreGift
 {
 public:

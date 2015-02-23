@@ -138,6 +138,14 @@
     self.image=img;
 }
 
+-(void)setGiftImg:(NSString*)name
+{
+    NSString *strBundle=[[NSBundle mainBundle] pathForResource:@"Image" ofType:@"bundle"];
+    NSString* strImg=[[NSBundle bundleWithPath:strBundle] pathForResource:[NSString stringWithFormat:@"%@",name] ofType:@"jpg" inDirectory:@"gift"];
+    UIImage *img=[UIImage imageWithContentsOfFile:strImg];
+    self.image=img;
+}
+
 @end
 
 @implementation FUPublic

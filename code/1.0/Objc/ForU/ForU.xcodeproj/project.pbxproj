@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5197BB31A99810C00A598FA /* GiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5197BB21A99810C00A598FA /* GiftView.m */; };
+		B5197BB81A99943F00A598FA /* GiftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5197BB61A99943F00A598FA /* GiftCell.m */; };
+		B5197BB91A99943F00A598FA /* GiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5197BB71A99943F00A598FA /* GiftCell.xib */; };
+		B5197BBB1A99955500A598FA /* price.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BBA1A99955500A598FA /* price.jpg */; };
+		B5197BBD1A9A1A2100A598FA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5197BBC1A9A1A2100A598FA /* Icon.png */; };
+		B5197BC01A9B08A700A598FA /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5197BBF1A9B08A700A598FA /* DatePickerView.m */; };
 		B54754541A91A5B300C8BEC4 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754521A91A5B300C8BEC4 /* DateViewController.m */; };
 		B54754551A91A5B300C8BEC4 /* DateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54754531A91A5B300C8BEC4 /* DateViewController.xib */; };
 		B54754581A97105D00C8BEC4 /* MsgShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754571A97105D00C8BEC4 /* MsgShowView.m */; };
@@ -127,6 +133,15 @@
 		37E0ABFDC431057BD870682A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BD121DC20884C45E397A8C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A574ABBCF0BE8F0BEF0E4F7E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B5197BB11A99810C00A598FA /* GiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftView.h; sourceTree = "<group>"; };
+		B5197BB21A99810C00A598FA /* GiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftView.m; sourceTree = "<group>"; };
+		B5197BB51A99943F00A598FA /* GiftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCell.h; sourceTree = "<group>"; };
+		B5197BB61A99943F00A598FA /* GiftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCell.m; sourceTree = "<group>"; };
+		B5197BB71A99943F00A598FA /* GiftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftCell.xib; sourceTree = "<group>"; };
+		B5197BBA1A99955500A598FA /* price.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = price.jpg; sourceTree = "<group>"; };
+		B5197BBC1A9A1A2100A598FA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B5197BBE1A9B08A700A598FA /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		B5197BBF1A9B08A700A598FA /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
 		B54754511A91A5B300C8BEC4 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		B54754521A91A5B300C8BEC4 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		B54754531A91A5B300C8BEC4 /* DateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateViewController.xib; sourceTree = "<group>"; };
@@ -357,6 +372,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B5197BB41A99942900A598FA /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				B5197BB51A99943F00A598FA /* GiftCell.h */,
+				B5197BB61A99943F00A598FA /* GiftCell.m */,
+				B5197BB71A99943F00A598FA /* GiftCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
 		B57EA9E21A623FCD0002B5D3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +435,7 @@
 		B586D44A1A3EBFCE004EEE84 /* ForU */ = {
 			isa = PBXGroup;
 			children = (
+				B5197BB41A99942900A598FA /* TableCell */,
 				B59C8F601A6D2EC400B9E386 /* Public */,
 				B59C8F581A6D255500B9E386 /* CustomView */,
 				B5F1841F1A642A37007C9558 /* MapPin */,
@@ -484,6 +510,10 @@
 				B5A1159D1A8F06B6002ABD7F /* TalkContentView.xib */,
 				B54754561A97105D00C8BEC4 /* MsgShowView.h */,
 				B54754571A97105D00C8BEC4 /* MsgShowView.m */,
+				B5197BB11A99810C00A598FA /* GiftView.h */,
+				B5197BB21A99810C00A598FA /* GiftView.m */,
+				B5197BBE1A9B08A700A598FA /* DatePickerView.h */,
+				B5197BBF1A9B08A700A598FA /* DatePickerView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -761,6 +791,8 @@
 		B5F3BD6F1A4FB471001E7CCA /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				B5197BBC1A9A1A2100A598FA /* Icon.png */,
+				B5197BBA1A99955500A598FA /* price.jpg */,
 				B5BADD561A89ABBA00238649 /* expression */,
 				B5A115861A8B008D002ABD7F /* leisure.gif */,
 				B5A1159F1A8F1FE5002ABD7F /* lolihead.png */,
@@ -849,6 +881,7 @@
 				B57EA9EF1A623FCD0002B5D3 /* MainMenuViewController.xib in Resources */,
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
 				B5A115A21A8F1FE5002ABD7F /* lolihead.png in Resources */,
+				B5197BBB1A99955500A598FA /* price.jpg in Resources */,
 				B5BADD611A89ABBA00238649 /* 开心.png in Resources */,
 				B59C8F571A68085200B9E386 /* queen.png in Resources */,
 				B57EA9F61A6244C00002B5D3 /* loli.png in Resources */,
@@ -868,6 +901,8 @@
 				B57EA9F11A623FCD0002B5D3 /* StartViewController.xib in Resources */,
 				B5F1841A1A6424DE007C9558 /* AddressMapViewController.xib in Resources */,
 				B59C8F5F1A6D28B900B9E386 /* SettingView.xib in Resources */,
+				B5197BBD1A9A1A2100A598FA /* Icon.png in Resources */,
+				B5197BB91A99943F00A598FA /* GiftCell.xib in Resources */,
 				B54754551A91A5B300C8BEC4 /* DateViewController.xib in Resources */,
 				B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */,
 				B5A115A41A8F1FE5002ABD7F /* queenhead.png in Resources */,
@@ -937,9 +972,11 @@
 				B57EA9F01A623FCD0002B5D3 /* StartViewController.m in Sources */,
 				B5CB84E51A400DD800F3D9B1 /* WorkTalkNoLove.cpp in Sources */,
 				B5CB84F11A400DD800F3D9B1 /* StatusSleep.cpp in Sources */,
+				B5197BB81A99943F00A598FA /* GiftCell.m in Sources */,
 				B5E213301A41C05B001735F7 /* FUListView.m in Sources */,
 				B5F3BD521A42768D001E7CCA /* FUPhotoView.m in Sources */,
 				B5F3BD3D1A41D8B5001E7CCA /* SvGifView.m in Sources */,
+				B5197BC01A9B08A700A598FA /* DatePickerView.m in Sources */,
 				B57EA9EE1A623FCD0002B5D3 /* MainMenuViewController.m in Sources */,
 				B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */,
 				B5CB84E31A400DD800F3D9B1 /* WorkMeetNoLove.cpp in Sources */,
@@ -961,6 +998,7 @@
 				B5F3BD461A41DA17001E7CCA /* FULoadingView.m in Sources */,
 				B5CB84EE1A400DD800F3D9B1 /* Status.cpp in Sources */,
 				B5CB84CF1A400DD800F3D9B1 /* DateBase.cpp in Sources */,
+				B5197BB31A99810C00A598FA /* GiftView.m in Sources */,
 				B5CB84F21A400DD800F3D9B1 /* StatusWork.cpp in Sources */,
 				B5CB84E61A400DD800F3D9B1 /* Notify.cpp in Sources */,
 				B5CB84EF1A400DD800F3D9B1 /* StatusController.cpp in Sources */,
