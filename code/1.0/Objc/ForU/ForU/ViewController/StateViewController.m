@@ -15,6 +15,7 @@
 #import "DateViewController.h"
 #import "GiftView.h"
 #import "DatePickerView.h"
+#import "MsgShowView.h"
 #define kTalk 0
 #define kDate 1
 #define kGift 2
@@ -40,6 +41,17 @@
     [imgBack startGif];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resignActive) name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgDateItemEnd) name:MSGDATEITEMEND object:nil];
+}
+
+-(void)msgDateItemEnd
+{
+    
+    if(self.navigationController.topViewController!=self)
+    {
+        [MsgShowView showTitleInView:@"约会已经结束了！"];
+        [self.navigationController popToViewController:self animated:NO];
+    }
 }
 
 -(void)resignActive

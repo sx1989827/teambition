@@ -203,6 +203,12 @@
                 NSLog(@"%@",@"sNotify::CALL");
                 break;
             }
+            case sNotify::DATEITEMEND:
+            {
+                NSLog(@"%@",@"sNotify::DATEITEMEND");
+                [[NSNotificationCenter defaultCenter] postNotificationName:MSGDATEITEMEND object:nil];
+                break;
+            }
             default:
                 break;
         }
@@ -399,11 +405,16 @@
 -(void)EnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType
 {
 	app->GetPlayer()->EnterInteraction((CoreInteraction::TYPE)interType, (CoreDateBase::TYPE)dateType);
+    if(interType==DATEIOI || interType==DATELOVE || interType==DATENOLOVE)
+    {
+        [self CreateNotify:DATEITEMEND Time:nil DateType:dateType];
+    }
 }
 
 -(void)LeaveInteraction
 {
     app->GetPlayer()->LeaveInteraction();
+    [self RemoveNotify];
 }
 
 -(void)Load

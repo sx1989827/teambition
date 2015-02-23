@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MsgShowView : UILabel
-+(void)showTitleInView:(NSString*)tite View:(UIView*)view;
++(void)showTitleInView:(NSString*)tite;
 @end

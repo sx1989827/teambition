@@ -58,7 +58,7 @@
         [APP EnterInteraction:_dateType DateType:type];
         NSArray *arr=@[@"餐厅",@"电影院",@"公园",@"游乐场"];
         [_imgBack setPlaceImg:arr[type]];
-        [MsgShowView showTitleInView:@"进入约会模式" View:self.view];
+        [MsgShowView showTitleInView:@"进入约会模式"];
     }
     else
     {

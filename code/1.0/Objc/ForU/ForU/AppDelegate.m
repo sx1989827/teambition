@@ -45,13 +45,18 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-
+    [_app AdjustNotify];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     [_timerUpdate invalidate];
     _timerUpdate=nil;
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    [_app AdjustNotify];
 }
 
 -(void)initTimer

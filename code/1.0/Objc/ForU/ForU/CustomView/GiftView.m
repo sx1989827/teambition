@@ -94,12 +94,12 @@
     NSDictionary *dic=[APP HandleGift:arrData[indexPath.row][@"title"]];
     if([dic[@"status"] isEqualToString:@"success"])
     {
-        [MsgShowView showTitleInView:@"购买成功！" View:self.superview];
+        [MsgShowView showTitleInView:@"购买成功！"];
         [self removeFromSuperview];
     }
     else
     {
-        [MsgShowView showTitleInView:dic[@"error"] View:self.superview];
+        [MsgShowView showTitleInView:dic[@"error"]];
         [self removeFromSuperview];
     }
 }
