@@ -85,48 +85,37 @@
 
 -(void)CreateNotify
 {
-    UIApplicationState state = [UIApplication sharedApplication].applicationState;
-    if(state!=UIApplicationStateActive)
+    if(app->GetPlayer()->GetStatusController()->GetStatus()==CoreStatus::SLEEP)
     {
-        
+        return;
     }
-    else
+    sNotify::TYPE type=NOTIFYCENTER->GetAvailableNotify();
+    if(type!=sNotify::NONE)
     {
-        if(app->GetPlayer()->GetStatusController()->GetStatus()==CoreStatus::SLEEP)
+        sNotify noti;
+        noti.type=type;
+        noti.sec=time(0);
+        NSString *strContent;
+        if(noti.type!=sNotify::WORKEVENT && noti.type!=sNotify::LEISUREEVENT)
         {
-            return;
+            strContent=[NSString stringWithUTF8String:NotifyDes[noti.type].data()];
         }
-        AppDelegate *appDelegate=(AppDelegate*)[UIApplication sharedApplication].delegate;
-        if(CoreTime::DiffNowTime(appDelegate.viewAppearTime)>=1200)
+        else
         {
-            sNotify::TYPE type=NOTIFYCENTER->GetAvailableNotify();
-            if(type!=sNotify::NONE)
-            {
-                sNotify noti;
-                noti.type=type;
-                noti.sec=time(0);
-                long id=NOTIFYCENTER->CreateNotify(&noti);
-                NSString *strContent;
-                if(noti.type!=sNotify::WORKEVENT && noti.type!=sNotify::LEISUREEVENT)
-                {
-                    strContent=[NSString stringWithUTF8String:NotifyDes[noti.type].data()];
-                }
-                else
-                {
-                    sEvent eve= EVENTCENTER->GetAvaliableEvent();
-                    strContent=[NSString stringWithUTF8String:eve.strDes.data()];
-                    EVENTCENTER->HandleEvent(eve);
-                }
-                UILocalNotification *notification = [[UILocalNotification alloc] init];
-                if (notification != nil) {
-                    notification.timeZone = [NSTimeZone defaultTimeZone];
-                    notification.soundName = UILocalNotificationDefaultSoundName;
-                    notification.alertBody = strContent;
-                    NSDictionary *info = @{@"id":@(id),@"type":@(noti.type)};
-                    notification.userInfo = info;
-                    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-                }
-            }
+            sEvent eve= EVENTCENTER->GetAvaliableEvent();
+            strContent=[NSString stringWithUTF8String:eve.strDes.data()];
+            EVENTCENTER->HandleEvent(eve);
+        }
+        noti.title=[strContent UTF8String];
+        long notifyId=NOTIFYCENTER->CreateNotify(&noti);
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        if (notification != nil) {
+            notification.timeZone = [NSTimeZone defaultTimeZone];
+            notification.soundName = UILocalNotificationDefaultSoundName;
+            notification.alertBody = strContent;
+            NSDictionary *info = @{@"id":@(notifyId),@"type":@(noti.type)};
+            notification.userInfo = info;
+            [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
         }
     }
 }
@@ -167,8 +156,9 @@
             noti.sec=CoreTime::GetTimeSinceNow(2400).GetOriTime();
         }
     }
-    long id=NOTIFYCENTER->CreateNotify(&noti);
     NSString *strContent=[NSString stringWithUTF8String:NotifyDes[noti.type].data()];
+    noti.title=[strContent UTF8String];
+    long notifyId=NOTIFYCENTER->CreateNotify(&noti);
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     if (notification != nil)
     {
@@ -176,7 +166,7 @@
         notification.timeZone = [NSTimeZone defaultTimeZone];
         notification.soundName = UILocalNotificationDefaultSoundName;
         notification.alertBody = strContent;
-        NSDictionary *info = @{@"id":@(id),@"type":@(noti.type)};
+        NSDictionary *info = @{@"id":@(notifyId),@"type":@(noti.type)};
         notification.userInfo = info;
         [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     }
@@ -207,6 +197,13 @@
             {
                 NSLog(@"%@",@"sNotify::DATEITEMEND");
                 [[NSNotificationCenter defaultCenter] postNotificationName:MSGDATEITEMEND object:nil];
+                break;
+            }
+            case sNotify::WORKEVENT:
+            case sNotify::LEISUREEVENT:
+            {
+                NSLog(@"%@",@"sNotify::WORKLEISUREEVENT");
+                [[NSNotificationCenter defaultCenter] postNotificationName:MSGEVENT object:[NSString stringWithUTF8String: noti.title.data()]];
                 break;
             }
             default:
@@ -454,6 +451,16 @@
                  @"error":[NSString stringWithUTF8String:err.data()]
                  };
     }
+}
+
+-(NSInteger)GetNotifyCount
+{
+    return NOTIFYCENTER->GetNotifyCount();
+}
+
+-(BOOL)isInteraction
+{
+    return app->GetPlayer()->IsInteraction();
 }
 @end
 

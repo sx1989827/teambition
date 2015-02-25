@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<item des="被老板训斥" mood="伤心" loli="-3" maid="-5" queen="-8" status="work" />
+    <item des="感觉自己又胖了" mood="伤心" loli="-2" maid="-3" queen="-4" status="leisure" />
 </root>

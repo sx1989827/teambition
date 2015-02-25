@@ -22,6 +22,7 @@ struct sNotify
     long sec;
     TYPE type;
     long flag;
+    std::string title;
     struct sInfo
     {
         TYPE type;
@@ -47,6 +48,7 @@ public:
     void RemoveNotify(sNotify::TYPE type);
     void Serializ(node* out);
     void UnSerializ(node* in);
+    long GetNotifyCount();
 private:
     std::vector<sNotify> m_Vector;
     std::vector<sNotify::TYPE> m_AvailableWorkVec;

@@ -11,12 +11,15 @@
 #import "StateViewController.h"
 #import "SvGifView.h"
 @interface AppDelegate ()
-
+{
+    UIImageView *viewImg;
+}
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
@@ -33,19 +36,47 @@
     return YES;
 }
 
-
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-
-
+-(void)applicationWillResignActive:(UIApplication *)application
+{
+   viewImg=[[UIImageView alloc] initWithFrame:self.window.bounds];
+   viewImg.image=[UIImage imageNamed:@"start.jpg"];
+    [self.window addSubview:viewImg];
+    _viewAppearTime=[NSDate date];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+   if(_timerUpdate==nil)
+   {
+       return;
+   }
 
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [_app AdjustNotify];
+    [viewImg removeFromSuperview];
+    if(_timerUpdate==nil)
+    {
+        return;
+    }
+    if([APP GetNotifyCount]==0)
+    {
+        if(-[_viewAppearTime timeIntervalSinceNow]>=600 && ![APP isInteraction])
+        {
+            [APP CreateNotify];
+        }
+    }
+    else
+    {
+        [_app AdjustNotify];
+    }
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -56,6 +87,10 @@
 
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
+    if(_timerUpdate==nil)
+    {
+        return;
+    }
     [_app AdjustNotify];
 }
 
@@ -68,6 +103,24 @@
 {
     [APP Update];
     [APP Save];
+}
+
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    if(_timerUpdate!=nil)
+    {
+        if(![APP isInteraction])
+        {
+            [APP CreateNotify];
+        }
+        [APP Update];
+        [APP Save];
+        completionHandler(UIBackgroundFetchResultNewData);
+    }
+    else
+    {
+        completionHandler(UIBackgroundFetchResultNoData);
+    }
 }
 @end
 

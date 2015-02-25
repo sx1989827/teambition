@@ -81,13 +81,18 @@ sNotify CoreNotify::AdjustNotify()
     }
     sNotify noti;
     noti.type=sNotify::NONE;
+    if(vec.size()==0)
+    {
+        return noti;
+    }
+    noti.sec=vec.begin()->sec;
     for(auto it=vec.begin();it!=vec.end();it++)
     {
         if(it->type==sNotify::CALL || it->type==sNotify::DATEITEMEND || it->type==sNotify::WORKHELPEND)
         {
             return *it;
         }
-        else if(it->type!=sNotify::WORKEVENT && it->type!=sNotify::LEISUREEVENT)
+        else
         {
             if(it->sec>=noti.sec)
             {
@@ -268,7 +273,22 @@ void CoreNotify::Reset(node* pNode)
 
 }
 
-
+long CoreNotify::GetNotifyCount()
+{
+    CoreStatus::TYPE status=PLAYERINSTANCE->GetStatusController()->GetStatus();
+    if(status==CoreStatus::WORK)
+    {
+        return m_AvailableWorkVec.size();
+    }
+    else if(status==CoreStatus::LEISURE)
+    {
+        return m_AvailableLeisureVec.size();
+    }
+    else
+    {
+        return 0;
+    }
+}
 
 
 

@@ -40,9 +40,11 @@
 -(BOOL)TryEnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType;
 -(void)EnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType;
 -(void)LeaveInteraction;
+-(BOOL)isInteraction;
 -(void)Load;
 -(NSArray*)GetAvalibleGift;
 -(NSDictionary*)HandleGift:(NSString*)title;
+-(NSInteger)GetNotifyCount;
 @end
 
 

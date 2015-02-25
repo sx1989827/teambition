@@ -39,9 +39,21 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[imgBack]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(imgBack)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imgBack]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(imgBack)]];
     [imgBack startGif];
+    [self initObserver];
+}
+
+-(void)initObserver
+{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resignActive) name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgDateItemEnd) name:MSGDATEITEMEND object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgEvent:) name:MSGEVENT object:nil];
+}
+
+-(void)msgEvent:(NSNotification*)noti
+{
+    NSString *str=[noti object];
+    [MsgShowView showTitleInView:str];
 }
 
 -(void)msgDateItemEnd
