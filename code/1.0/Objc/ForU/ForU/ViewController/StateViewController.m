@@ -48,6 +48,113 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgDateItemEnd) name:MSGDATEITEMEND object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgEvent:) name:MSGEVENT object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgWorkIOI) name:MSGWORKIOI object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgWorkMeet) name:MSGWORKMEET object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgWorkHelp) name:MSGWORKHELP object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgLeisureIOI) name:MSGLEISUREIOI object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgLeisureDate) name:MSGLEISUREDATE object:nil];
+    
+}
+
+-(void)msgWorkIOI
+{
+    [MsgShowView showTitleInView:@"女生主动找你了噢！"];
+    if(self.navigationController.topViewController!=self)
+    {
+        [self.navigationController popToViewController:self animated:NO];
+    }
+    if([APP TryEnterInteraction:[APP GetLove]?WORKIOILOVE:WORKIOINOLOVE DateType:(DATETYPE)0])
+    {
+        [APP EnterInteraction:[APP GetLove]?WORKIOILOVE:WORKIOINOLOVE DateType:(DATETYPE)0];
+        TalkViewController *view=[[TalkViewController alloc] initWithNibName:@"TalkViewController" bundle:nil];
+        [self.navigationController pushViewController:view animated:NO];
+    }
+    else
+    {
+        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"女主已经走了!"];
+        [view showInView:self.view];
+    }
+
+}
+
+-(void)msgWorkMeet
+{
+    if(self.navigationController.topViewController!=self)
+    {
+        [self.navigationController popToViewController:self animated:NO];
+    }
+    if([APP TryEnterInteraction:WORKMEETNOLOVE DateType:(DATETYPE)0])
+    {
+        __weak StateViewController* weakSelf=self;
+        FUAlertView *view=[[FUAlertView alloc] initWithChoose:@"遇见女生，是否上前打个招呼呢?" First:@"好的" Second:@"还是不要了吧" FirstBlock:^{
+            [APP EnterInteraction:WORKMEETNOLOVE DateType:(DATETYPE)0];
+            TalkViewController *view=[[TalkViewController alloc] initWithNibName:@"TalkViewController" bundle:nil];
+            [weakSelf.navigationController pushViewController:view animated:NO];
+        } SecondBlock:^{
+            
+        }];
+        [view showInView:self.view];
+    }
+    else
+    {
+        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"女主已经走了!"];
+        [view showInView:self.view];
+    }
+}
+
+//-(void)msgWorkHelp
+//{
+//    
+//}
+
+-(void)msgLeisureIOI
+{
+    [MsgShowView showTitleInView:@"女生主动找你了噢！"];
+    if(self.navigationController.topViewController!=self)
+    {
+        [self.navigationController popToViewController:self animated:NO];
+    }
+    if([APP TryEnterInteraction:[APP GetLove]?LEISUREIOILOVE:LEISUREIOINOLOVE DateType:(DATETYPE)0])
+    {
+        [APP EnterInteraction:[APP GetLove]?LEISUREIOILOVE:LEISUREIOINOLOVE DateType:(DATETYPE)0];
+        TalkViewController *view=[[TalkViewController alloc] initWithNibName:@"TalkViewController" bundle:nil];
+        [self.navigationController pushViewController:view animated:NO];
+    }
+    else
+    {
+        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"女主已经走了!"];
+        [view showInView:self.view];
+    }
+
+
+}
+
+-(void)msgLeisureDate
+{
+    if(self.navigationController.topViewController!=self)
+    {
+        [self.navigationController popToViewController:self animated:NO];
+    }
+    if([APP TryEnterInteraction:DATEIOI DateType:(DATETYPE)0])
+    {
+        __weak StateViewController* weakSelf=self;
+        FUAlertView *view=[[FUAlertView alloc] initWithChoose:@"女生找你约会啦，是否接受呢?" First:@"好的" Second:@"还是不要了吧" FirstBlock:^{
+            [APP EnterInteraction:DATEIOI  DateType:(DATETYPE)0];
+            DateViewController *view=[[DateViewController alloc] initWithNibName:@"DateViewController" bundle:nil];
+            view.dateType=[APP GetLove]?DATELOVE:DATENOLOVE;
+            [weakSelf.navigationController pushViewController:view animated:NO];
+        } SecondBlock:^{
+            
+        }];
+        [view showInView:self.view];
+    }
+    else
+    {
+        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"女主已经走了!"];
+        [view showInView:self.view];
+    }
+
+   
 }
 
 -(void)msgEvent:(NSNotification*)noti
@@ -218,15 +325,56 @@
         {
             case kTalk:
             {
-                TalkViewController *view=[[TalkViewController alloc] initWithNibName:@"TalkViewController" bundle:nil];
-                [weakSelf.navigationController pushViewController:view animated:NO];
+                INTERACTIONTYPE state;
+                if([APP GetPlayerState]==WORK)
+                {
+                    if([APP GetLove])
+                    {
+                        state=WORKTALKLOVE;
+                    }
+                    else
+                    {
+                        state=WORKTALKNOLOVE;
+                    }
+                }
+                else if([APP GetPlayerState]==LEISURE)
+                {
+                    if([APP GetLove])
+                    {
+                        state=LEISURETALKLOVE;
+                    }
+                    else
+                    {
+                        state=LEISURETALKNOLOVE;
+                    }
+                }
+                if([APP TryEnterInteraction:state DateType:(DATETYPE)0])
+                {
+                    [APP EnterInteraction:state DateType:(DATETYPE)0];
+                    TalkViewController *view=[[TalkViewController alloc] initWithNibName:@"TalkViewController" bundle:nil];
+                    [weakSelf.navigationController pushViewController:view animated:NO];
+                }
+                else
+                {
+                    FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"女主没有睬你噢!"];
+                    [view showInView:self.view];
+                }
                 break;
             }
             case kDate:
             {
-                DateViewController *view=[[DateViewController alloc] initWithNibName:@"DateViewController" bundle:nil];
-                view.dateType=[APP GetLove]?DATELOVE:DATENOLOVE;
-                [weakSelf.navigationController pushViewController:view animated:NO];
+                if([APP TryEnterInteraction:[APP GetLove]?DATELOVE:DATENOLOVE DateType:(DATETYPE)0])
+                {
+                    [APP EnterInteraction:[APP GetLove]?DATELOVE:DATENOLOVE  DateType:(DATETYPE)0];
+                    DateViewController *view=[[DateViewController alloc] initWithNibName:@"DateViewController" bundle:nil];
+                    view.dateType=[APP GetLove]?DATELOVE:DATENOLOVE;
+                    [weakSelf.navigationController pushViewController:view animated:NO];
+                }
+                else
+                {
+                    FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"女主没有睬你噢!"];
+                    [view showInView:self.view];
+                }
                 break;
             }
             case kGift:

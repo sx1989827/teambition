@@ -172,6 +172,11 @@
 
 - (IBAction)onQuit:(id)sender
 {
+    INTERACTIONTYPE type=[APP GetInteractionType];
+    if(type!=DATEIOI && type!=DATELOVE && type!=DATENOLOVE)
+    {
+        [APP LeaveInteraction];
+    }
     [self.navigationController popViewControllerAnimated:NO];
 }
 

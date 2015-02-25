@@ -309,6 +309,10 @@ std::vector<std::string> CorePlayer::GetAvalibleActionTalk()
     return m_pActionTalk->GetAvalibleTalk();
 }
 
+CoreInteraction::TYPE CorePlayer::GetInteractionType()
+{
+    return m_pInteraction->GetType();
+}
 
 
 

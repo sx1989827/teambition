@@ -41,6 +41,7 @@
 -(void)EnterInteraction:(INTERACTIONTYPE)interType DateType:(DATETYPE)dateType;
 -(void)LeaveInteraction;
 -(BOOL)isInteraction;
+-(INTERACTIONTYPE)GetInteractionType;
 -(void)Load;
 -(NSArray*)GetAvalibleGift;
 -(NSDictionary*)HandleGift:(NSString*)title;

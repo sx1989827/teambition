@@ -52,6 +52,7 @@ public:
     void HandleActionTalk(std::string type);
     std::vector<CoreActionBody::TYPE> GetAvalibleActionBody();
     std::vector<std::string> GetAvalibleActionTalk();
+    CoreInteraction::TYPE GetInteractionType();
 private:
     double m_dPhysical;
     double m_dMoney;

@@ -194,7 +194,7 @@ void CoreNotify::Adjust()
     {
         m_AvailableWorkVec.push_back(sNotify::WORKIOI);
         m_AvailableWorkVec.push_back(sNotify::WORKIOI);
-        m_AvailableWorkVec.push_back(sNotify::WORKHELP);
+        //m_AvailableWorkVec.push_back(sNotify::WORKHELP);
         m_AvailableWorkVec.push_back(sNotify::WORKEVENT);
         m_AvailableLeisureVec.push_back(sNotify::LEISUREIOI);
         m_AvailableLeisureVec.push_back(sNotify::LEISUREIOI);
@@ -204,7 +204,7 @@ void CoreNotify::Adjust()
     }
     else
     {
-        m_AvailableWorkVec.push_back(sNotify::WORKHELP);
+        //m_AvailableWorkVec.push_back(sNotify::WORKHELP);
         m_AvailableWorkVec.push_back(sNotify::WORKIOI);
         m_AvailableWorkVec.push_back(sNotify::WORKMEET);
         m_AvailableWorkVec.push_back(sNotify::WORKEVENT);

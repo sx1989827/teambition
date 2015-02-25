@@ -176,7 +176,7 @@
 -(void)AdjustNotify
 {
     UIApplicationState state = [UIApplication sharedApplication].applicationState;
-    if(state!=UIApplicationStateActive)
+    if(state!=UIApplicationStateActive && state!=UIApplicationStateInactive)
     {
         return;
     }
@@ -204,6 +204,36 @@
             {
                 NSLog(@"%@",@"sNotify::WORKLEISUREEVENT");
                 [[NSNotificationCenter defaultCenter] postNotificationName:MSGEVENT object:[NSString stringWithUTF8String: noti.title.data()]];
+                break;
+            }
+            case sNotify::WORKIOI:
+            {
+                NSLog(@"%@",@"sNotify::WORKIOI");
+                [[NSNotificationCenter defaultCenter] postNotificationName:MSGWORKIOI object:nil];
+                break;
+            }
+            case sNotify::WORKMEET:
+            {
+                NSLog(@"%@",@"sNotify::WORKMEET");
+                [[NSNotificationCenter defaultCenter] postNotificationName:MSGWORKMEET object:nil];
+                break;
+            }
+//            case sNotify::WORKHELP:
+//            {
+//                NSLog(@"%@",@"sNotify::WORKHELP");
+//                [[NSNotificationCenter defaultCenter] postNotificationName:MSGWORKHELP object:nil];
+//                break;
+//            }
+            case sNotify::LEISUREIOI:
+            {
+                NSLog(@"%@",@"sNotify::LEISUREIOI");
+                [[NSNotificationCenter defaultCenter] postNotificationName:MSGLEISUREIOI object:nil];
+                break;
+            }
+            case sNotify::LEISUREDATE:
+            {
+                NSLog(@"%@",@"sNotify::LEISUREDATE");
+                [[NSNotificationCenter defaultCenter] postNotificationName:MSGLEISUREDATE object:nil];
                 break;
             }
             default:
@@ -461,6 +491,11 @@
 -(BOOL)isInteraction
 {
     return app->GetPlayer()->IsInteraction();
+}
+
+-(INTERACTIONTYPE)GetInteractionType
+{
+    return (INTERACTIONTYPE)app->GetPlayer()->GetInteractionType();
 }
 @end
 
