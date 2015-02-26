@@ -19,6 +19,12 @@
 		B5197BC91A9EE09D00A598FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5197BC81A9EE09D00A598FA /* AVFoundation.framework */; };
 		B5197BD31A9EF66F00A598FA /* call1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5197BD11A9EF66F00A598FA /* call1.wav */; };
 		B5197BD41A9EF66F00A598FA /* call2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5197BD21A9EF66F00A598FA /* call2.wav */; };
+		B5197BD81A9F571400A598FA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5197BD71A9F571400A598FA /* Default-568h@2x.png */; };
+		B5197BDA1A9F572200A598FA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5197BD91A9F572200A598FA /* Default@2x.png */; };
+		B5197BDC1A9F737200A598FA /* mainmenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BDB1A9F737200A598FA /* mainmenu.jpg */; };
+		B5197BDE1A9F7D0900A598FA /* chooseback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BDD1A9F7D0900A598FA /* chooseback.jpg */; };
+		B5197BE01A9F8D6C00A598FA /* listback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BDF1A9F8D6C00A598FA /* listback.jpg */; };
+		B5197BE21A9F8F1400A598FA /* alertback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BE11A9F8F1400A598FA /* alertback.jpg */; };
 		B54754541A91A5B300C8BEC4 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754521A91A5B300C8BEC4 /* DateViewController.m */; };
 		B54754551A91A5B300C8BEC4 /* DateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54754531A91A5B300C8BEC4 /* DateViewController.xib */; };
 		B54754581A97105D00C8BEC4 /* MsgShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754571A97105D00C8BEC4 /* MsgShowView.m */; };
@@ -155,6 +161,12 @@
 		B5197BC81A9EE09D00A598FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B5197BD11A9EF66F00A598FA /* call1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = call1.wav; sourceTree = "<group>"; };
 		B5197BD21A9EF66F00A598FA /* call2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = call2.wav; sourceTree = "<group>"; };
+		B5197BD71A9F571400A598FA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B5197BD91A9F572200A598FA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B5197BDB1A9F737200A598FA /* mainmenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainmenu.jpg; sourceTree = "<group>"; };
+		B5197BDD1A9F7D0900A598FA /* chooseback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chooseback.jpg; sourceTree = "<group>"; };
+		B5197BDF1A9F8D6C00A598FA /* listback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = listback.jpg; sourceTree = "<group>"; };
+		B5197BE11A9F8F1400A598FA /* alertback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alertback.jpg; sourceTree = "<group>"; };
 		B54754511A91A5B300C8BEC4 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		B54754521A91A5B300C8BEC4 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		B54754531A91A5B300C8BEC4 /* DateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateViewController.xib; sourceTree = "<group>"; };
@@ -821,6 +833,10 @@
 		B5F3BD6F1A4FB471001E7CCA /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				B5197BE11A9F8F1400A598FA /* alertback.jpg */,
+				B5197BDF1A9F8D6C00A598FA /* listback.jpg */,
+				B5197BDD1A9F7D0900A598FA /* chooseback.jpg */,
+				B5197BDB1A9F737200A598FA /* mainmenu.jpg */,
 				B5197BBC1A9A1A2100A598FA /* Icon.png */,
 				B5197BBA1A99955500A598FA /* price.jpg */,
 				B5BADD561A89ABBA00238649 /* expression */,
@@ -835,6 +851,8 @@
 				B57EA9F31A6244C00002B5D3 /* loli.png */,
 				B57EA9F41A6244C00002B5D3 /* maid.png */,
 				B5F3BD701A4FB471001E7CCA /* start.jpg */,
+				B5197BD71A9F571400A598FA /* Default-568h@2x.png */,
+				B5197BD91A9F572200A598FA /* Default@2x.png */,
 			);
 			path = Img;
 			sourceTree = "<group>";
@@ -908,6 +926,7 @@
 				B5BADD541A890E6A00238649 /* msyh.ttf in Resources */,
 				B5A115911A8B9129002ABD7F /* TalkViewController.xib in Resources */,
 				B5A1158A1A8B008D002ABD7F /* sleep.gif in Resources */,
+				B5197BE21A9F8F1400A598FA /* alertback.jpg in Resources */,
 				B5A115A31A8F1FE5002ABD7F /* maidhead.png in Resources */,
 				B5BADD551A890E6A00238649 /* RTWS YueRoundedGothic Demo.otf in Resources */,
 				B5197BD41A9EF66F00A598FA /* call2.wav in Resources */,
@@ -919,19 +938,24 @@
 				B586D4591A3EBFCE004EEE84 /* Images.xcassets in Resources */,
 				B5A115A21A8F1FE5002ABD7F /* lolihead.png in Resources */,
 				B5197BBB1A99955500A598FA /* price.jpg in Resources */,
+				B5197BDA1A9F572200A598FA /* Default@2x.png in Resources */,
 				B5BADD611A89ABBA00238649 /* 开心.png in Resources */,
 				B59C8F571A68085200B9E386 /* queen.png in Resources */,
 				B57EA9F61A6244C00002B5D3 /* loli.png in Resources */,
+				B5197BDC1A9F737200A598FA /* mainmenu.jpg in Resources */,
 				B5BADD621A89ABBA00238649 /* 撒娇.png in Resources */,
 				B5BADD4F1A88A55B00238649 /* HeaderValueView.xib in Resources */,
 				B5A115891A8B008D002ABD7F /* leisure.gif in Resources */,
 				B5BADD5E1A89ABBA00238649 /* 伤心.png in Resources */,
 				B59C8F651A6D476C00B9E386 /* close.png in Resources */,
 				B5A115931A8BAF95002ABD7F /* 烦躁.png in Resources */,
+				B5197BDE1A9F7D0900A598FA /* chooseback.jpg in Resources */,
 				B5A1158B1A8B008D002ABD7F /* work.gif in Resources */,
+				B5197BE01A9F8D6C00A598FA /* listback.jpg in Resources */,
 				B5BADD5F1A89ABBA00238649 /* 害羞.png in Resources */,
 				B57EA9ED1A623FCD0002B5D3 /* ChooseGirlViewController.xib in Resources */,
 				B5E213321A41C07A001735F7 /* FUListView.xib in Resources */,
+				B5197BD81A9F571400A598FA /* Default-568h@2x.png in Resources */,
 				B5F3BD5D1A429833001E7CCA /* Image.bundle in Resources */,
 				B5BADD661A89ACC200238649 /* IOI.png in Resources */,
 				B57EA9F71A6244C00002B5D3 /* maid.png in Resources */,
@@ -1152,6 +1176,7 @@
 			baseConfigurationReference = 68BD121DC20884C45E397A8C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1173,6 +1198,7 @@
 			baseConfigurationReference = A574ABBCF0BE8F0BEF0E4F7E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

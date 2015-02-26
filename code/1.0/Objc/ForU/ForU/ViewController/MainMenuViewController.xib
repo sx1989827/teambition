@@ -25,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8tk-AF-aKO">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainmenu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8tk-AF-aKO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qve-b6-aaA">
@@ -33,15 +33,15 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For   U" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75v-NS-8Ar">
                             <rect key="frame" x="70" y="17" width="100" height="21"/>
-                            <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="25"/>
+                            <color key="textColor" red="1" green="0.41549136513157908" blue="0.78463199013157914" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHB-ok-lsO">
                             <rect key="frame" x="75" y="77" width="91" height="30"/>
                             <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="18"/>
                             <state key="normal" title="新的旅程">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.60784313725490191" green="0.16470588235294117" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -52,7 +52,7 @@
                             <rect key="frame" x="74" y="145" width="91" height="30"/>
                             <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="18"/>
                             <state key="normal" title="旧的回忆">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.60784313725490191" green="0.39215686274509803" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -63,7 +63,7 @@
                             <rect key="frame" x="75" y="213" width="91" height="30"/>
                             <fontDescription key="fontDescription" name="RTWSYueRoudGoDemo-Regular" family="RTWS YueRoundedGothic Demo" pointSize="18"/>
                             <state key="normal" title="设置">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.4392156862745098" green="0.43529411764705883" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -71,7 +71,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="320" id="Hkj-Qh-xK0"/>
                         <constraint firstAttribute="trailing" secondItem="75v-NS-8Ar" secondAttribute="trailing" constant="70" id="I6u-Pr-XH2"/>
@@ -96,4 +96,7 @@
             <point key="canvasLocation" x="212" y="323"/>
         </view>
     </objects>
+    <resources>
+        <image name="mainmenu.jpg" width="640" height="1136"/>
+    </resources>
 </document>

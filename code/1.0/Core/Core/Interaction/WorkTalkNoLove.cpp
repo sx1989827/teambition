@@ -9,6 +9,7 @@
 #include "WorkTalkNoLove.h"
 #include "../Person/Player.h"
 const double g_dPhysical=-8;
+const double  g_dPrePhysical=10;
 CoreInteraction*  CoreWorkTalkNoLove::CreateInstance()
 {
     return new CoreWorkTalkNoLove;
@@ -26,7 +27,14 @@ void CoreWorkTalkNoLove::Enter()
 
 bool CoreWorkTalkNoLove::TryEnter()
 {
-    return true;
+    if(PLAYERINSTANCE->GetPhysical()>=g_dPrePhysical)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 void CoreWorkTalkNoLove::Leave()

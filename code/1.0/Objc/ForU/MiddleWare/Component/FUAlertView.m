@@ -23,7 +23,12 @@
 {
     self.translatesAutoresizingMaskIntoConstraints=NO;
     viewTitle=[[UIView alloc] init];
-    viewTitle.backgroundColor=[UIColor colorWithRed:255.0/255 green:230.0/255 blue:210.0/255 alpha:1];
+    //viewTitle.backgroundColor=[UIColor colorWithRed:255.0/255 green:230.0/255 blue:210.0/255 alpha:1];
+    //viewTitle.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"alertback.jpg"]];
+    UIImageView *backView=[[UIImageView alloc] initWithFrame:viewTitle.bounds];
+    backView.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    backView.image=[UIImage imageNamed:@"alertback.jpg"];
+    [viewTitle addSubview:backView];
     viewTitle.layer.masksToBounds=YES;
     [viewTitle.layer setBorderWidth:0.5f];
     [viewTitle.layer setBorderColor:[viewTitle.backgroundColor CGColor]];

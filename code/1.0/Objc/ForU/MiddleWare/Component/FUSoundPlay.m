@@ -73,16 +73,31 @@ long g_backMusiccount=3;
 
 -(void)pause
 {
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    if([userDefaults boolForKey:@"definedbackmusic"])
+    {
+        return;
+    }
     [audio pause];
 }
 
 -(void)resume
 {
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    if([userDefaults boolForKey:@"definedbackmusic"])
+    {
+        return;
+    }
     [audio play];
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    if([userDefaults boolForKey:@"definedbackmusic"])
+    {
+        return;
+    }
     [self playBackMusic];
 }
 
@@ -115,6 +130,11 @@ long g_backMusiccount=3;
 
 -(void)stop
 {
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    if([userDefaults boolForKey:@"definedbackmusic"])
+    {
+        return;
+    }
     [audio stop];
 }
 @end

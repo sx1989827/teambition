@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class FUPhotoView;
+@protocol FUPhotoViewDelegate<NSObject>
+-(void)FUPhotoViewWillRemove:(FUPhotoView*)view;
+@end
 @interface FUPhotoView : UIScrollView
 -(void)showInView:(UIView*)view;
 -(void)addPhoto:(NSString*)dir;
+@property (weak,nonatomic) id<FUPhotoViewDelegate> photoDelegate;
 @end

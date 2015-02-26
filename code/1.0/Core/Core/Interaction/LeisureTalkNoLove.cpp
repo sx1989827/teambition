@@ -9,6 +9,7 @@
 #include "LeisureTalkNoLove.h"
 #include "../Person/Player.h"
 const double g_dPhysical=-4;
+const double g_dPrePhysical=10;
 CoreInteraction*  CoreLeisureTalkNoLove::CreateInstance()
 {
     return new CoreLeisureTalkNoLove;
@@ -26,7 +27,14 @@ void CoreLeisureTalkNoLove::Enter()
 
 bool CoreLeisureTalkNoLove::TryEnter()
 {
-    return true;
+    if(PLAYERINSTANCE->GetPhysical()>=g_dPrePhysical)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 void CoreLeisureTalkNoLove::Leave()

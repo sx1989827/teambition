@@ -20,6 +20,9 @@
         self.translatesAutoresizingMaskIntoConstraints=NO;
         self.backgroundColor=[FUPublic colorWithRGB:255 G:230 B:190];
         self.lbPeople.text=@"程序：神圣计划\n\n策划:HJ\n\n美工:夏哥，梁梁梁，小洁，阿落，我们仍未知道那些花的名字，莫名的忧伤";
+        NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+        [_switchBackMusic setOn:![userDefaults boolForKey:@"definedbackmusic"]];
+        [_switchSound setOn:![userDefaults boolForKey:@"definedeffectsound"]];
     }
     return self;
 }
@@ -66,7 +69,19 @@
 
 - (IBAction)onSoundChange:(id)sender
 {
-    
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    UISwitch *soundSwitch=(UISwitch*)sender;
+    if(soundSwitch.isOn)
+    {
+        [userDefaults setBool:NO forKey:@"definedeffectsound"];
+        [userDefaults synchronize];
+    }
+    else
+    {
+        [userDefaults setBool:YES forKey:@"definedeffectsound"];
+        [userDefaults synchronize];
+    }
+
 }
 @end
 

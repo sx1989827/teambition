@@ -13,7 +13,8 @@
 #import "FUAlertView.h"
 #import "StateViewController.h"
 #import "FUSoundPlay.h"
-@interface ChooseGirlViewController ()<UITextFieldDelegate>
+#import "MsgShowView.h"
+@interface ChooseGirlViewController ()<UITextFieldDelegate,FUPhotoViewDelegate>
 
 @end
 
@@ -21,14 +22,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//        FUPhotoView *view=[[FUPhotoView alloc] init];
-//    NSString *strPath= [APP GetStartStory];
-//    [view addPhoto:strPath];
-//    [view showInView:self.view];
-    _cood.latitude=100;
-    _cood.longitude=100;
-    _txtName.text=@"asd";
-    [_btnAddress setTitle:@"已选择" forState:UIControlStateNormal];
+    FUPhotoView *view=[[FUPhotoView alloc] init];
+    NSString *strPath= [APP GetStartStory];
+    [view addPhoto:strPath];
+    view.photoDelegate=self;
+    [view showInView:self.view];
+    //_cood.latitude=100;
+    //_cood.longitude=100;
+   // _txtName.text=@"asd";
+    //[_btnAddress setTitle:@"已选择" forState:UIControlStateNormal];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -64,9 +66,15 @@
     }
 }
 
+
 -(void)viewDidAppear:(BOOL)animated
 {
     _scvGirl.contentSize=CGSizeMake(_scvGirl.frame.size.width*3, _scvGirl.frame.size.height);
+}
+
+-(void)FUPhotoViewWillRemove:(FUPhotoView *)view
+{
+    [MsgShowView showTitleInView:@"滑动可选择女生!"];
 }
 
 -(void)hiddenKeyboard:(UIGestureRecognizer*)tap

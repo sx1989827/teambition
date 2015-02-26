@@ -8,12 +8,14 @@
 
 #import "FUPhotoView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "FUSoundPlay.h"
 @implementation FUPhotoView
 -(id)init
 {
     if(self=[super init])
     {
         self.pagingEnabled=YES;
+        self.showsHorizontalScrollIndicator=NO;
     }
     return self;
 }
@@ -30,7 +32,7 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.alpha=1;
     }];
-
+    [[FUSoundPlay shareInstance] pause];
 }
 -(void)addPhoto:(NSString*)dir
 {
@@ -51,6 +53,8 @@
             btn.frame=CGRectMake(width-130, height-60, 100, 30);
             [btn setTitle:@"结束" forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+            btn.backgroundColor=[UIColor colorWithRed:1.000 green:0.902 blue:0.745 alpha:1.000];
+            [btn setTitleColor:[UIColor colorWithRed:155.0/255 green:42.0/255 blue:0 alpha:1] forState:UIControlStateNormal];
             [btn.layer setMasksToBounds:YES];
             [btn.layer setCornerRadius:1.0];
             [btn.layer setBorderWidth:0.5];
@@ -61,7 +65,12 @@
 
 -(void)close
 {
+    if(_photoDelegate && [_photoDelegate respondsToSelector:@selector(FUPhotoViewWillRemove:)])
+    {
+        [_photoDelegate FUPhotoViewWillRemove:self];
+    }
     [self removeFromSuperview];
+    [[FUSoundPlay shareInstance] resume];
 }
 @end
 

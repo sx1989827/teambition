@@ -14,6 +14,8 @@
 - (IBAction)onBackMusicChange:(id)sender;
 - (IBAction)onSoundChange:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *lbPeople;
+@property (strong, nonatomic) IBOutlet UISwitch *switchBackMusic;
+@property (strong, nonatomic) IBOutlet UISwitch *switchSound;
 
 
 @end

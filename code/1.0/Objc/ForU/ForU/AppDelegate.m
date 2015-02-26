@@ -19,6 +19,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [NSThread  sleepForTimeInterval:1];
     [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         
@@ -38,16 +39,19 @@
 
 -(void)applicationWillResignActive:(UIApplication *)application
 {
-   viewImg=[[UIImageView alloc] initWithFrame:self.window.bounds];
-   viewImg.image=[UIImage imageNamed:@"start.jpg"];
-    [self.window addSubview:viewImg];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        viewImg=[[UIImageView alloc] initWithFrame:self.window.bounds];
+        viewImg.image=[UIImage imageNamed:@"start.jpg"];
+        [self.window addSubview:viewImg];
+
+    });
     _viewAppearTime=[NSDate date];
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

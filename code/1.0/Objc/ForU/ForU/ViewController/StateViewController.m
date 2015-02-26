@@ -39,8 +39,12 @@
     [self.view sendSubviewToBack:imgBack];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[imgBack]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(imgBack)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imgBack]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(imgBack)]];
-    [imgBack startGif];
     [self initObserver];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+        [imgBack startGif];
 }
 
 -(void)initObserver
@@ -359,7 +363,7 @@
                 }
                 else
                 {
-                    FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"女主没有睬你噢!"];
+                    FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"你的体力太低了，请先恢复体力!"];
                     [view showInView:self.view];
                 }
                 break;
