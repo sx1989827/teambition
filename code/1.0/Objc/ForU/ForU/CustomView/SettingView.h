@@ -10,6 +10,10 @@
 
 @interface SettingView : UIView
 - (IBAction)onClose:(id)sender;
+- (IBAction)onMail:(id)sender;
+- (IBAction)onBackMusicChange:(id)sender;
+- (IBAction)onSoundChange:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *lbPeople;
 
 
 @end

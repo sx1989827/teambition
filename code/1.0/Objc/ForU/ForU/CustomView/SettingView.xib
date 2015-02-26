@@ -11,11 +11,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o59-0M-U5C">
-                    <rect key="frame" x="157" y="40" width="51" height="31"/>
+                    <rect key="frame" x="155" y="13" width="51" height="31"/>
+                    <connections>
+                        <action selector="onBackMusicChange:" destination="iN0-l3-epB" eventType="valueChanged" id="Ydn-Fs-Lho"/>
+                    </connections>
                 </switch>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="声音：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHU-ZC-dxa">
-                    <rect key="frame" x="32" y="45" width="55" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="背景音乐：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHU-ZC-dxa">
+                    <rect key="frame" x="32" y="18" width="69" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MT7-yc-EqL">
+                    <rect key="frame" x="155" y="47" width="51" height="31"/>
+                    <connections>
+                        <action selector="onSoundChange:" destination="iN0-l3-epB" eventType="valueChanged" id="3Ab-gO-3Vo"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="特效声音：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5d-vq-wCU">
+                    <rect key="frame" x="32" y="52" width="69" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -32,18 +47,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="梵蒂冈梵蒂冈的风格的风格" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ath-hH-Zbw">
-                    <rect key="frame" x="32" y="141" width="179" height="112"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SR-Ni-t5j">
-                    <rect key="frame" x="220" y="-10" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="EdV-od-qxR"/>
-                        <constraint firstAttribute="height" constant="20" id="hxo-Su-pv2"/>
-                    </constraints>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SR-Ni-t5j">
+                    <rect key="frame" x="220" y="-10" width="30" height="30"/>
                     <state key="normal" backgroundImage="close.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -51,15 +56,31 @@
                         <action selector="onClose:" destination="iN0-l3-epB" eventType="touchUpInside" id="8N5-nx-rd2"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSx-c0-3mV">
+                    <rect key="frame" x="88" y="269" width="64" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="联系我们">
+                        <color key="titleColor" red="1" green="0.20457665039999995" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onMail:" destination="iN0-l3-epB" eventType="touchUpInside" id="DTL-fU-UXh"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="characterWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ath-hH-Zbw">
+                    <rect key="frame" x="32" y="131" width="179" height="130"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.60911800986842102" green="0.16569695723684225" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <constraints>
-                <constraint firstItem="8SR-Ni-t5j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-10" id="542-Hd-Wgq"/>
-                <constraint firstAttribute="trailing" secondItem="8SR-Ni-t5j" secondAttribute="trailing" id="IV3-0S-v7y"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="43" y="84"/>
+            <connections>
+                <outlet property="lbPeople" destination="Ath-hH-Zbw" id="CKK-J7-BC2"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="75"/>
         </view>
     </objects>
     <resources>

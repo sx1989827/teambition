@@ -164,7 +164,9 @@
     {
         notification.fireDate=[NSDate dateWithTimeIntervalSince1970:noti.sec];
         notification.timeZone = [NSTimeZone defaultTimeZone];
-        notification.soundName = UILocalNotificationDefaultSoundName;
+        NSArray *arr=@[@"call1.wav",@"call2.wav"];
+        NSString *sound=(type==NOTIFYTYPE::CALL)?arr[random()%2]:UILocalNotificationDefaultSoundName;
+        notification.soundName = sound;
         notification.alertBody = strContent;
         NSDictionary *info = @{@"id":@(notifyId),@"type":@(noti.type)};
         notification.userInfo = info;

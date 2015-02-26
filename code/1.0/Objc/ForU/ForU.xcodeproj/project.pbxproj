@@ -13,6 +13,12 @@
 		B5197BBB1A99955500A598FA /* price.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BBA1A99955500A598FA /* price.jpg */; };
 		B5197BBD1A9A1A2100A598FA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5197BBC1A9A1A2100A598FA /* Icon.png */; };
 		B5197BC01A9B08A700A598FA /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5197BBF1A9B08A700A598FA /* DatePickerView.m */; };
+		B5197BC21A9ED28B00A598FA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5197BC11A9ED28B00A598FA /* AudioToolbox.framework */; };
+		B5197BC41A9ED38C00A598FA /* Sound.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5197BC31A9ED38C00A598FA /* Sound.bundle */; };
+		B5197BC71A9EDF9700A598FA /* FUSoundPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = B5197BC61A9EDF9700A598FA /* FUSoundPlay.m */; };
+		B5197BC91A9EE09D00A598FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5197BC81A9EE09D00A598FA /* AVFoundation.framework */; };
+		B5197BD31A9EF66F00A598FA /* call1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5197BD11A9EF66F00A598FA /* call1.wav */; };
+		B5197BD41A9EF66F00A598FA /* call2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5197BD21A9EF66F00A598FA /* call2.wav */; };
 		B54754541A91A5B300C8BEC4 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754521A91A5B300C8BEC4 /* DateViewController.m */; };
 		B54754551A91A5B300C8BEC4 /* DateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54754531A91A5B300C8BEC4 /* DateViewController.xib */; };
 		B54754581A97105D00C8BEC4 /* MsgShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754571A97105D00C8BEC4 /* MsgShowView.m */; };
@@ -142,6 +148,13 @@
 		B5197BBC1A9A1A2100A598FA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		B5197BBE1A9B08A700A598FA /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
 		B5197BBF1A9B08A700A598FA /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		B5197BC11A9ED28B00A598FA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B5197BC31A9ED38C00A598FA /* Sound.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Sound.bundle; sourceTree = "<group>"; };
+		B5197BC51A9EDF9700A598FA /* FUSoundPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUSoundPlay.h; sourceTree = "<group>"; };
+		B5197BC61A9EDF9700A598FA /* FUSoundPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUSoundPlay.m; sourceTree = "<group>"; };
+		B5197BC81A9EE09D00A598FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B5197BD11A9EF66F00A598FA /* call1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = call1.wav; sourceTree = "<group>"; };
+		B5197BD21A9EF66F00A598FA /* call2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = call2.wav; sourceTree = "<group>"; };
 		B54754511A91A5B300C8BEC4 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		B54754521A91A5B300C8BEC4 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		B54754531A91A5B300C8BEC4 /* DateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateViewController.xib; sourceTree = "<group>"; };
@@ -338,6 +351,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5197BC91A9EE09D00A598FA /* AVFoundation.framework in Frameworks */,
+				B5197BC21A9ED28B00A598FA /* AudioToolbox.framework in Frameworks */,
 				B5F1841E1A6425E3007C9558 /* CoreLocation.framework in Frameworks */,
 				B5F1841C1A64255F007C9558 /* MapKit.framework in Frameworks */,
 				B5F3BD431A41D9D0001E7CCA /* CoreGraphics.framework in Frameworks */,
@@ -356,6 +371,8 @@
 		3E57BB7A2A254C9EB12AE34F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5197BC81A9EE09D00A598FA /* AVFoundation.framework */,
+				B5197BC11A9ED28B00A598FA /* AudioToolbox.framework */,
 				B5F1841D1A6425E3007C9558 /* CoreLocation.framework */,
 				B5F1841B1A64255F007C9558 /* MapKit.framework */,
 				37E0ABFDC431057BD870682A /* libPods.a */,
@@ -380,6 +397,15 @@
 				B5197BB71A99943F00A598FA /* GiftCell.xib */,
 			);
 			path = TableCell;
+			sourceTree = "<group>";
+		};
+		B5197BCA1A9EF07700A598FA /* call */ = {
+			isa = PBXGroup;
+			children = (
+				B5197BD11A9EF66F00A598FA /* call1.wav */,
+				B5197BD21A9EF66F00A598FA /* call2.wav */,
+			);
+			path = call;
 			sourceTree = "<group>";
 		};
 		B57EA9E21A623FCD0002B5D3 /* ViewController */ = {
@@ -440,7 +466,9 @@
 				B59C8F581A6D255500B9E386 /* CustomView */,
 				B5F1841F1A642A37007C9558 /* MapPin */,
 				B57EA9E21A623FCD0002B5D3 /* ViewController */,
+				B5197BCA1A9EF07700A598FA /* call */,
 				B5F3BD6F1A4FB471001E7CCA /* Img */,
+				B5197BC31A9ED38C00A598FA /* Sound.bundle */,
 				B5F3BD621A4A9D51001E7CCA /* Data.bundle */,
 				B5F3BD5C1A429833001E7CCA /* Image.bundle */,
 				B586D44F1A3EBFCE004EEE84 /* AppDelegate.h */,
@@ -766,6 +794,8 @@
 				B5F3BD451A41DA17001E7CCA /* FULoadingView.m */,
 				B5F3BD501A42768D001E7CCA /* FUPhotoView.h */,
 				B5F3BD511A42768D001E7CCA /* FUPhotoView.m */,
+				B5197BC51A9EDF9700A598FA /* FUSoundPlay.h */,
+				B5197BC61A9EDF9700A598FA /* FUSoundPlay.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -874,11 +904,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5BADD641A89ABBA00238649 /* 紧张.png in Resources */,
+				B5197BD31A9EF66F00A598FA /* call1.wav in Resources */,
 				B5BADD541A890E6A00238649 /* msyh.ttf in Resources */,
 				B5A115911A8B9129002ABD7F /* TalkViewController.xib in Resources */,
 				B5A1158A1A8B008D002ABD7F /* sleep.gif in Resources */,
 				B5A115A31A8F1FE5002ABD7F /* maidhead.png in Resources */,
 				B5BADD551A890E6A00238649 /* RTWS YueRoundedGothic Demo.otf in Resources */,
+				B5197BD41A9EF66F00A598FA /* call2.wav in Resources */,
 				B5BADD601A89ABBA00238649 /* 平静.png in Resources */,
 				B5A1159E1A8F06B6002ABD7F /* TalkContentView.xib in Resources */,
 				B59C8F6A1A7489C800B9E386 /* StateViewController.xib in Resources */,
@@ -910,6 +942,7 @@
 				B5197BB91A99943F00A598FA /* GiftCell.xib in Resources */,
 				B54754551A91A5B300C8BEC4 /* DateViewController.xib in Resources */,
 				B5F3BD631A4A9D51001E7CCA /* Data.bundle in Resources */,
+				B5197BC41A9ED38C00A598FA /* Sound.bundle in Resources */,
 				B5A115A41A8F1FE5002ABD7F /* queenhead.png in Resources */,
 				B5F3BD711A4FB471001E7CCA /* start.jpg in Resources */,
 			);
@@ -993,6 +1026,7 @@
 				B5CB84F31A400DD800F3D9B1 /* Constant.mm in Sources */,
 				B5CB84EC1A400DD800F3D9B1 /* Player.cpp in Sources */,
 				B5CB84DA1A400DD800F3D9B1 /* LeisureIOILove.cpp in Sources */,
+				B5197BC71A9EDF9700A598FA /* FUSoundPlay.m in Sources */,
 				B5A115961A8C8B18002ABD7F /* GirlShowView.m in Sources */,
 				B5CB84E81A400DD800F3D9B1 /* Favorite.cpp in Sources */,
 				B5A115991A8DD66E002ABD7F /* ChangeValueView.m in Sources */,

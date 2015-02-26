@@ -16,6 +16,7 @@
 #import "FUPublic.h"
 #import "StateViewController.h"
 #import "FUAlertView.h"
+#import "FUSoundPlay.h"
 @interface MainMenuViewController ()
 {
     SettingView *viewSetting;
@@ -63,15 +64,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillAppear:(BOOL)animated
+{
+    [[FUSoundPlay shareInstance] playTitle];
 }
-*/
 
 - (IBAction)onNew:(id)sender {
     ChooseGirlViewController *view=[[ChooseGirlViewController alloc] initWithNibName:@"ChooseGirlViewController" bundle:nil];
@@ -93,6 +89,7 @@
     [app performSelector:@selector(initTimer)];
     StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
     [self.navigationController pushViewController:view animated:NO];
+    [[FUSoundPlay shareInstance] playBackMusic];
 }
 
 - (IBAction)onSetup:(id)sender {

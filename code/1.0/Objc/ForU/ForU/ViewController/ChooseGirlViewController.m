@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "FUAlertView.h"
 #import "StateViewController.h"
+#import "FUSoundPlay.h"
 @interface ChooseGirlViewController ()<UITextFieldDelegate>
 
 @end
@@ -114,6 +115,8 @@
     [app performSelector:@selector(initTimer)];
     StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
     [self.navigationController pushViewController:view animated:NO];
+    [[FUSoundPlay shareInstance] stop];
+    [[FUSoundPlay shareInstance] playBackMusic];
 }
 @end
 

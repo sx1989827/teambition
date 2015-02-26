@@ -11,6 +11,7 @@
 #import <objc/objc.h>
 #import "AppDelegate.h"
 #import "ChangeValueView.h"
+#import "FUSoundPlay.h"
 @implementation UILabel (CustomeFont)
 +(void)load
 {
@@ -167,11 +168,13 @@
     if(offset>0.000001)
     {
         bGrow=YES;
+        [[FUSoundPlay shareInstance] playEffectSound:@"good"];
         [ChangeValueView viewWithTitle:point Title:strText View:view Grow:YES];
     }
     else if(offset<-0.000001)
     {
         bGrow=NO;
+        [[FUSoundPlay shareInstance] playEffectSound:@"bad"];
         [ChangeValueView viewWithTitle:point Title:strText View:view Grow:NO];
     }
 

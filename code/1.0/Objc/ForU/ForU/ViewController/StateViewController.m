@@ -16,6 +16,7 @@
 #import "GiftView.h"
 #import "DatePickerView.h"
 #import "MsgShowView.h"
+#import "FUSoundPlay.h"
 #define kTalk 0
 #define kDate 1
 #define kGift 2
@@ -250,12 +251,14 @@
             weakSelf.conTitleTop.constant=-weakSelf.btnAction.frame.size.height;
             [weakSelf.view layoutIfNeeded];
             [weakSelf showCall];
+            [[FUSoundPlay shareInstance] pause];
         }
         else
         {
             weakSelf.btnAction.hidden=NO;
             weakSelf.conTitleTop.constant=24;
             [weakSelf.view layoutIfNeeded];
+            [[FUSoundPlay shareInstance] resume];
 
         }
         [view setGif:[weakSelf valueForKey:@"arrStateImg"][state] Bundle:nil];
