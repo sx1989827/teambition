@@ -237,10 +237,10 @@
             {
                 block=^()
                 {
-                    [_viewTalk setGirlContentText:[APP GetGirlMoodDes] AfterDiss:2 DissCompleteBlock:nil];
+                    [_viewTalk setGirlContentText:[APP GetGirlMoodDes] AfterDiss:1 DissCompleteBlock:nil];
                 };
             }
-            [_viewTalk setPlayerContentText:[APP GetPlayerActionDes] AfterDiss:2 DissCompleteBlock:block];
+            [_viewTalk setPlayerContentText:[APP GetPlayerActionDes] AfterDiss:1 DissCompleteBlock:block];
         }
         [arrAction removeObject:@{
                                   @"text":@"眼神",

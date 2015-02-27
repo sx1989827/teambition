@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<lookface physical="1" mood="" ioi="0" physicaloffset="-0.1">
 	<loli>
@@ -34,98 +34,98 @@
 	</lookface> 
 	<gazeface physical="1" mood="" ioi="0" physicaloffset="-0.2">
 	<loli>
-	<item mood="平静" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="1.4" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.4" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="平静" mooddes="你挺关注我的" moodoffset="-1" ioi="-0.1" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="平静" mooddes="你挺关注我的" moodoffset="-1" ioi="-0.2" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.3" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6" playeraction="这么好看的妹子，让我多看会！"/>
+	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6" playeraction="我要用眼神杀死你"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.2" playeraction="怎么看都能让我陶醉"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="1.4" playeraction="要乖乖的听话噢"/>
+	<item mood="伤心" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.4" playeraction="没关系，还有我呢"/>
+	<item mood="生气" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.1" playeraction="我惹你生气了吗"/>
+	<item mood="烦躁" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.2" playeraction="放松点，不要着急"/>
+	<item mood="紧张" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.3" playeraction="慢慢来，我相信你"/>
 	</loli>
 	<maid>
-	<item mood="平静" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.5" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1" playeraction="挺好看的一个妹子"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="1" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.3" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="平静" mooddes="你挺关注我的" moodoffset="-1" ioi="-0.2" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="平静" mooddes="你挺关注我的" moodoffset="-1" ioi="-0.3" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.2" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.5" playeraction="科学家研究表明，每天多看美女两分钟，可以多活两年！"/>
+	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6" playeraction="科学家研究表明，每天多看美女两分钟，可以多活两年！"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1" playeraction="怎么看都是那么美"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="1" playeraction="不可以调皮噢"/>
+	<item mood="伤心" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.3" playeraction="没关系，还有我呢"/>
+	<item mood="生气" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.2" playeraction="我惹你生气了吗"/>
+	<item mood="烦躁" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.3" playeraction="放松点，不要着急"/>
+	<item mood="紧张" moodtrend="平静" mooddes="你挺关注我的" moodoffset="1" ioi="0.2" playeraction="慢慢来，我相信你"/>
 	</maid>
 	<queen>
-	<item mood="平静" moodtrend="" mooddes="" moodoffset="0" ioi="0.2" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.8" playeraction="挺好看的一个妹子"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.8" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="" mooddes="" moodoffset="0" ioi="0.3" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="" mooddes="" moodoffset="0" ioi="-0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="" mooddes="" moodoffset="0" ioi="-0.8" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="" mooddes="" moodoffset="0" ioi="0.3" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="" mooddes="" moodoffset="0" ioi="0.2" playeraction="我感觉你有一点紧张噢"/>
+	<item mood="开心" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.6" playeraction="难得见你这么开心，让我再看仔细点"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.8" playeraction="没想到你也会害羞啊"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="人家不好意思了" moodoffset="1" ioi="0.8" playeraction="我就喜欢你现在的样子"/>
+	<item mood="伤心" moodtrend="" mooddes="" moodoffset="0" ioi="0.3" playeraction="有我呢，我会帮你的"/>
+	<item mood="生气" moodtrend="" mooddes="" moodoffset="0" ioi="0.6" playeraction="如果是因为我，我想你道歉"/>
+	<item mood="烦躁" moodtrend="" mooddes="" moodoffset="0" ioi="0.8" playeraction="每个人都有烦心的时候，不要急，平静下"/>
+	<item mood="紧张" moodtrend="" mooddes="" moodoffset="0" ioi="0.3" playeraction="我有什么可以帮你的吗"/>
 	</queen>
 	</gazeface>
 	<lookbreast physical="3" mood="" ioi="0" physicaloffset="-0.5">
 	<loli>
-	<item mood="平静" moodtrend="" mooddes="" moodoffset="0" ioi="0" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="2" ioi="0.4" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.4" playeraction="挺好看的一个妹子"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="3" ioi="1.6" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="" mooddes="" moodoffset="-2" ioi="-0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.4" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="" mooddes="" moodoffset="0" ioi="0" playeraction="哎呦，不错哦"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="2" ioi="0.4" playeraction="嘿嘿"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.4" playeraction="哇塞"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="3" ioi="1.6" playeraction="再让我多看一眼"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6" playeraction="再让我多看一眼"/>
+	<item mood="生气" moodtrend="" mooddes="" moodoffset="-2" ioi="-0.6" playeraction="再让我多看一眼"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6" playeraction="再让我多看一眼"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.4" playeraction="再让我多看一眼"/>
 	</loli>
 	<maid>
-	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-1" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.2" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="3" ioi="1" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.8" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="" mooddes="" moodoffset="-3" ioi="-0.8" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.8" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.6" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-1" playeraction="哎呦，不错哦"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.2" playeraction="嘿嘿"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1.2" playeraction="哇塞"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="3" ioi="1" playeraction="再让我多看一眼"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.8" playeraction="再让我多看一眼"/>
+	<item mood="生气" moodtrend="" mooddes="" moodoffset="-3" ioi="-0.8" playeraction="再让我多看一眼"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.8" playeraction="再让我多看一眼"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-0.6" playeraction="再让我多看一眼"/>
 	</maid>
 	<queen>
-	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1.5" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.1" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.8" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1.5" playeraction="哎呦，不错哦"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.1" playeraction="嘿嘿"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.6" playeraction="哇塞"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.8" playeraction="再让我多看一眼"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="再让我多看一眼"/>
+	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="再让我多看一眼"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="再让我多看一眼"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="再让我多看一眼"/>
 	</queen>
 	</lookbreast>  
 	<gazebreast physical="10" mood="" ioi="0" physicaloffset="-1">
 	<loli>
-	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-1" ioi="-0.4" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-1" ioi="-0.4" playeraction="手感一定不错"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1" playeraction="手感一定不错"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1" playeraction="手感一定不错"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2" playeraction="手感一定不错"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="手感一定不错"/>
+	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="手感一定不错"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="手感一定不错"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-3" ioi="-1" playeraction="手感一定不错"/>
 	</loli>
 	<maid>
-	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-2" ioi="-0.6" playeraction="圆润润的，不错"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2" playeraction="圆润润的，不错"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1" playeraction="圆润润的，不错"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="1.2" playeraction="圆润润的，不错"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2" playeraction="圆润润的，不错"/>
+	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2" playeraction="圆润润的，不错"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2" playeraction="圆润润的，不错"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-4" ioi="-1.2" playeraction="圆润润的，不错"/>
 	</maid>
 	<queen>
-	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-6" ioi="-1.2" playeraction="挺好看的一个妹子"/>
-	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.1" playeraction="挺好看的一个妹子"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.2" playeraction="挺好看的一个妹子"/>
-	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.2" playeraction="挺好看的一个妹子"/>
-	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2" playeraction="挺好看的一个妹子"/>
-	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2" playeraction="挺好看的一个妹子"/>
-	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2" playeraction="挺好看的一个妹子"/>
-	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2" playeraction="挺好看的一个妹子"/>
+	<item mood="平静" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-6" ioi="-1.2" playeraction="好大一个白馒头啊"/>
+	<item mood="开心" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.1" playeraction="好大一个白馒头啊"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="0.2" playeraction="好大一个白馒头啊"/>
+	<item mood="撒娇" moodtrend="害羞" mooddes="不要这样看人家" moodoffset="1" ioi="0.2" playeraction="好大一个白馒头啊"/>
+	<item mood="伤心" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2" playeraction="好大一个白馒头啊"/>
+	<item mood="生气" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2" playeraction="好大一个白馒头啊"/>
+	<item mood="烦躁" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2" playeraction="好大一个白馒头啊"/>
+	<item mood="紧张" moodtrend="生气" mooddes="你这样的行为很不礼貌" moodoffset="-8" ioi="-2" playeraction="好大一个白馒头啊"/>
 	</queen>
 	</gazebreast>  
 </root>
