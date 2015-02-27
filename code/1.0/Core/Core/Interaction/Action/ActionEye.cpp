@@ -54,6 +54,7 @@ CoreActionEye::CoreActionEye()
                 mood.lMoodOffset=atoi(item->getattr("moodoffset").data());
                 mood.dIOIOffset=atof(item->getattr("ioi").data());
                 mood.strMoodDes=item->getattr("mooddes");
+                mood.strPlayerAction=item->getattr("playeraction");
                 mapMood[mood.strMood]=mood;
             }
             info.vecGirl.push_back(mapMood);
@@ -87,6 +88,7 @@ bool CoreActionEye::Handle(CoreActionEye::TYPE type)
         MoodTransfer.lOffset=mood.lMoodOffset;
         GIRLINSTANCE->GetMood()->Transfer(&MoodTransfer);
     }
+    PLAYERINSTANCE->SetActionDes(mood.strPlayerAction);
     return true;
 }
 

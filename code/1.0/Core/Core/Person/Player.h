@@ -53,6 +53,8 @@ public:
     std::vector<CoreActionBody::TYPE> GetAvalibleActionBody();
     std::vector<std::string> GetAvalibleActionTalk();
     CoreInteraction::TYPE GetInteractionType();
+    std::string GetActionDes();
+    void SetActionDes(std::string str);
 private:
     double m_dPhysical;
     double m_dMoney;
@@ -65,6 +67,7 @@ private:
     CoreActionBody *m_pActionBody;
     CoreActionTalk *m_pActionTalk;
     std::string m_strPlace;
+    std::string m_strActionDes;
 };
 
 class CorePlayerSingleton:public CoreSingleton<CorePlayer>

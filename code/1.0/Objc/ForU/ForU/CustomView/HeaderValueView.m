@@ -78,7 +78,7 @@
     {
         _lbPhysical.backgroundColor=[UIColor orangeColor];
     }
-    else if (lPhysical>60 && lPhysical<80)
+    else if (lPhysical>=60 && lPhysical<80)
     {
         _lbPhysical.backgroundColor=[UIColor yellowColor];
     }

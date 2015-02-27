@@ -46,6 +46,7 @@
 -(NSArray*)GetAvalibleGift;
 -(NSDictionary*)HandleGift:(NSString*)title;
 -(NSInteger)GetNotifyCount;
+-(NSString*)GetPlayerActionDes;
 @end
 
 

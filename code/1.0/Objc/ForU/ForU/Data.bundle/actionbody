@@ -31,5 +31,54 @@
 	<item mood="烦躁" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="1" ioi="0.5"/>
 	<item mood="紧张" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="1" ioi="0.5"/>
 	</queen>
-	</patshoulder> 
+	</patshoulder>
+    <touchhair physical="20" place="" love="0" mood="" ioi="40" physicaloffset="-6">
+        <loli openioi="50">
+            <item mood="平静" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="开心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="伤心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="生气" moodtrend="平静" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-1" ioi="-1"/>
+            <item mood="紧张" moodtrend="平静" mooddes="轻轻的抚摸了下女生的头发" moodoffset="1" ioi="1"/>
+        </loli>
+        <maid openioi="55">
+            <item mood="平静" moodtrend="" mooddes="" moodoffset="1" ioi="1"/>
+            <item mood="开心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="伤心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="1" ioi="1"/>
+            <item mood="生气" moodtrend="平静" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-2" ioi="-2"/>
+            <item mood="紧张" moodtrend="平静" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+        </maid>
+        <queen openioi="60">
+            <item mood="平静" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-3" ioi="-1"/>
+            <item mood="开心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="1" ioi="1"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="1" ioi="3"/>
+            <item mood="伤心" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-4" ioi="-4"/>
+            <item mood="生气" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-4" ioi="-4"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-4" ioi="-4"/>
+            <item mood="紧张" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-4" ioi="-4"/>
+        </queen>
+    </touchhair>
 </root>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

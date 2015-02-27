@@ -499,6 +499,11 @@
 {
     return (INTERACTIONTYPE)app->GetPlayer()->GetInteractionType();
 }
+
+-(NSString*)GetPlayerActionDes
+{
+    return [NSString stringWithUTF8String:app->GetPlayer()->GetActionDes().data()];
+}
 @end
 
 

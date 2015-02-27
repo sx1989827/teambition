@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbName;
 @property (strong, nonatomic) IBOutlet UILabel *lbContent;
 @property (weak,nonatomic) id<TalkContentViewDelegate> delegate;
--(void)setGirlContentText:(NSString*)text AfterDiss:(double)diss;
+-(void)setGirlContentText:(NSString*)text AfterDiss:(double)diss DissCompleteBlock:(void (^)())block;
+-(void)setPlayerContentText:(NSString*)text AfterDiss:(double)diss DissCompleteBlock:(void (^)())block;
 @end

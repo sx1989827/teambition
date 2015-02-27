@@ -55,15 +55,17 @@
     UISwitch *backSwitch=(UISwitch*)sender;
     if(backSwitch.isOn)
     {
+        
         [userDefaults setBool:NO forKey:@"definedbackmusic"];
         [userDefaults synchronize];
         [[FUSoundPlay shareInstance] playTitle];
     }
     else
     {
+        [[FUSoundPlay shareInstance] stop];
         [userDefaults setBool:YES forKey:@"definedbackmusic"];
         [userDefaults synchronize];
-        [[FUSoundPlay shareInstance] stop];
+       
     }
 }
 

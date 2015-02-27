@@ -30,7 +30,7 @@
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[gifView(240)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(gifView)]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-120-[gifView(160)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(gifView)]];
         lbTitle=[[UILabel alloc] init];
-        lbTitle.text=@"加载中。。。";
+        lbTitle.text=@"不要太心急，马上就出来了噢！";
         lbTitle.textAlignment=NSTextAlignmentCenter;
         lbTitle.font=[UIFont fontWithName:@"Arial" size:20];
         lbTitle.translatesAutoresizingMaskIntoConstraints=NO;
@@ -44,7 +44,7 @@
 
 -(void)showInView:(UIView*)view
 {
-    self.backgroundColor=[UIColor colorWithRed:255.0/255 green:248.0/255 blue:210.0/255 alpha:1];
+    self.backgroundColor=[UIColor colorWithRed:255.0/255 green:230.0/255 blue:190.0/255 alpha:1];
     self.translatesAutoresizingMaskIntoConstraints=NO;
     self.alpha=0;
     [view addSubview:self];

@@ -66,7 +66,7 @@ long g_backMusiccount=3;
         return;
     }
     audio = [[AVAudioPlayer alloc]  initWithContentsOfURL:arrMusic[random()%g_backMusiccount]  error:nil];
-    [audio setNumberOfLoops:-1];
+    //[audio setNumberOfLoops:-1];
     audio.delegate=self;
     [audio play];
 }

@@ -70,6 +70,19 @@
 }
 
 - (IBAction)onNew:(id)sender {
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    if([userDefaults floatForKey:@"ver"]>0.0000001)
+    {
+        __weak MainMenuViewController* weakSelf=self;
+        FUAlertView *view=[[FUAlertView alloc] initWithChoose:@"已经有存档，是否覆盖?" First:@"是" Second:@"否" FirstBlock:^{
+            [userDefaults removeObjectForKey:@"ver"];
+            ChooseGirlViewController *view=[[ChooseGirlViewController alloc] initWithNibName:@"ChooseGirlViewController" bundle:nil];
+            [weakSelf.navigationController pushViewController:view animated:YES];
+        } SecondBlock:^{
+        }];
+        [view showInView:self.view];
+        return;
+    }
     ChooseGirlViewController *view=[[ChooseGirlViewController alloc] initWithNibName:@"ChooseGirlViewController" bundle:nil];
     [self.navigationController pushViewController:view animated:YES];
 }

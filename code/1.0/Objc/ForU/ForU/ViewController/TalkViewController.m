@@ -12,6 +12,7 @@
 #import "FUListView.h"
 #import "FUAlertView.h"
 #import "ChangeValueView.h"
+#import "FULoadingView.h"
 #define kEye 0
 #define KBody 1
 #define KTalk 2
@@ -42,6 +43,7 @@
                      }];
     dicActionBody=[[NSMutableDictionary alloc] initWithCapacity:30];
     [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(PATSHOULDER)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(TOUCHHAIR)];
 }
 
 -(void)actionCommonBody:(NSNumber*)type
@@ -65,8 +67,14 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [_imgBack setPlaceImg:[APP GetPlace]];
-    [_imgGirl setGirlImg:[APP GetGirlMood]];
+    FULoadingView *view=[[FULoadingView alloc] init];
+    [view showInView:self.view];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_imgBack setPlaceImg:[APP GetPlace]];
+        [_imgGirl setGirlImg:[APP GetGirlMood]];
+        [view remove];
+    });
+
 }
 
 -(BOOL)prefersStatusBarHidden
@@ -194,7 +202,7 @@
 
 -(void)handleEye:(CGPoint)p FaceEye:(ACTIONEYETYPE)faceEye BreastEye:(ACTIONEYETYPE)breastEye
 {
-    NSString *oldMood=[APP GetGirlMoodDes];
+    NSString *oldMood=[APP GetGirlMood];
     double oldIOI=[[APP GetGirlIOI] doubleValue];
     BOOL bHandle=NO;
     if(CGRectContainsPoint([APP GetGirlFaceRect], p))
@@ -221,10 +229,18 @@
         double newIOI=[[APP GetGirlIOI] doubleValue];
         double off=newIOI-oldIOI;
         [FUPublic showChangeView:@"好感度:" Offset:off View:self.view Point:p];
-        NSString *newMood=[APP GetGirlMoodDes];
-        if(![newMood isEqualToString:oldMood])
+        if(![[APP GetPlayerActionDes] isEqualToString:@""])
         {
-            [_viewTalk setGirlContentText:newMood AfterDiss:2];
+            NSString *newMood=[APP GetGirlMood];
+            void (^block)()=nil;
+            if(![newMood isEqualToString:oldMood])
+            {
+                block=^()
+                {
+                    [_viewTalk setGirlContentText:[APP GetGirlMoodDes] AfterDiss:2 DissCompleteBlock:nil];
+                };
+            }
+            [_viewTalk setPlayerContentText:[APP GetPlayerActionDes] AfterDiss:2 DissCompleteBlock:block];
         }
         [arrAction removeObject:@{
                                   @"text":@"眼神",

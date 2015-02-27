@@ -1,5 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<item des="被老板训斥" mood="伤心" loli="-3" maid="-5" queen="-8" status="work" />
+    <item des="跟同事吵架" mood="生气" loli="-2" maid="-4" queen="-6" status="work" />
+    <item des="被老板表扬" mood="开心" loli="8" maid="6" queen="4" status="work" />
+    <item des="钱包没有带" mood="伤心" loli="-5" maid="-5" queen="-5" status="work" />
+    <item des="发奖金了" mood="开心" loli="10" maid="8" queen="6" status="work" />
+    <item des="被同事称赞" mood="开心" loli="2" maid="4" queen="6" status="work" />
+    <item des="完成了任务" mood="开心" loli="3" maid="5" queen="7" status="work" />
+    <item des="任务被加重" mood="烦躁" loli="-5" maid="-3" queen="-1" status="work" />
+    <item des="不停的开会" mood="烦躁" loli="-3" maid="-2" queen="-1" status="work" />
+    <item des="遇到奇葩的人" mood="生气" loli="-2" maid="-4" queen="-6" status="work" />
+    <item des="钱被偷了" mood="生气" loli="-10" maid="-8" queen="-6" status="leisure" />
     <item des="感觉自己又胖了" mood="伤心" loli="-2" maid="-3" queen="-4" status="leisure" />
+    <item des="感觉自己变漂亮了" mood="开心" loli="2" maid="3" queen="4" status="leisure" />
+    <item des="遇见前男友了" mood="紧张" loli="-2" maid="-4" queen="-6" status="leisure" />
+    <item des="莫名的伤感了" mood="伤心" loli="-1" maid="-2" queen="-3" status="leisure" />
+    <item des="莫名的心情好了" mood="平静" loli="6" maid="4" queen="2" status="leisure" />
+    <item des="遇见了好久不见的姐妹" mood="开心" loli="4" maid="3" queen="2" status="leisure" />
+    <item des="被色狼跟踪" mood="紧张" loli="-10" maid="-10" queen="-10" status="leisure" />
+    <item des="被人称赞漂亮" mood="开心" loli="6" maid="4" queen="2" status="leisure" />
+    <item des="衣服被挂烂了" mood="伤心" loli="-2" maid="-4" queen="-6" status="leisure" />
 </root>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

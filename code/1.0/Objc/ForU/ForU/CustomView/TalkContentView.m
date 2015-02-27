@@ -15,6 +15,7 @@
     NSTimer *timer;
     long index;
     double afterDismiss;
+    void (^blockComplete)();
 }
 @end
 @implementation TalkContentView
@@ -50,7 +51,7 @@
     }
 }
 
--(void)setGirlContentText:(NSString*)text AfterDiss:(double)diss
+-(void)setGirlContentText:(NSString*)text AfterDiss:(double)diss DissCompleteBlock:(void (^)())block
 {
     [timer invalidate];
     timer=nil;
@@ -58,6 +59,7 @@
     strContent=text;
     self.hidden=NO;
     afterDismiss=diss;
+    blockComplete=block;
     NSString *strGirlType;
 	if([APP GetGirlType]==LOLI)
     {
@@ -88,6 +90,10 @@
         {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(afterDismiss * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 self.hidden=YES;
+                if(blockComplete)
+                {
+                    blockComplete();
+                }
             });
         }
         return;
@@ -103,6 +109,20 @@
         [timer invalidate];
         timer=nil;
     }
+}
+
+-(void)setPlayerContentText:(NSString*)text AfterDiss:(double)diss DissCompleteBlock:(void (^)())block
+{
+    [timer invalidate];
+    timer=nil;
+    index=0;
+    strContent=text;
+    self.hidden=NO;
+    afterDismiss=diss;
+    blockComplete=block;
+    _imgHead.image=[UIImage imageNamed:@"player.jpg"];
+    _lbName.text=@"我";
+    timer=[NSTimer scheduledTimerWithTimeInterval:0.08 target:self selector:@selector(setContent) userInfo:nil repeats:YES];
 }
 @end
 

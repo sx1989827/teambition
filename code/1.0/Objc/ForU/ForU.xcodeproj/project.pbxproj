@@ -25,6 +25,7 @@
 		B5197BDE1A9F7D0900A598FA /* chooseback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BDD1A9F7D0900A598FA /* chooseback.jpg */; };
 		B5197BE01A9F8D6C00A598FA /* listback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BDF1A9F8D6C00A598FA /* listback.jpg */; };
 		B5197BE21A9F8F1400A598FA /* alertback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BE11A9F8F1400A598FA /* alertback.jpg */; };
+		B5197BE41AA053D600A598FA /* player.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5197BE31AA053D600A598FA /* player.jpg */; };
 		B54754541A91A5B300C8BEC4 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754521A91A5B300C8BEC4 /* DateViewController.m */; };
 		B54754551A91A5B300C8BEC4 /* DateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54754531A91A5B300C8BEC4 /* DateViewController.xib */; };
 		B54754581A97105D00C8BEC4 /* MsgShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54754571A97105D00C8BEC4 /* MsgShowView.m */; };
@@ -167,6 +168,7 @@
 		B5197BDD1A9F7D0900A598FA /* chooseback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chooseback.jpg; sourceTree = "<group>"; };
 		B5197BDF1A9F8D6C00A598FA /* listback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = listback.jpg; sourceTree = "<group>"; };
 		B5197BE11A9F8F1400A598FA /* alertback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alertback.jpg; sourceTree = "<group>"; };
+		B5197BE31AA053D600A598FA /* player.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = player.jpg; sourceTree = "<group>"; };
 		B54754511A91A5B300C8BEC4 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		B54754521A91A5B300C8BEC4 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		B54754531A91A5B300C8BEC4 /* DateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateViewController.xib; sourceTree = "<group>"; };
@@ -833,6 +835,7 @@
 		B5F3BD6F1A4FB471001E7CCA /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				B5197BE31AA053D600A598FA /* player.jpg */,
 				B5197BE11A9F8F1400A598FA /* alertback.jpg */,
 				B5197BDF1A9F8D6C00A598FA /* listback.jpg */,
 				B5197BDD1A9F7D0900A598FA /* chooseback.jpg */,
@@ -928,6 +931,7 @@
 				B5A1158A1A8B008D002ABD7F /* sleep.gif in Resources */,
 				B5197BE21A9F8F1400A598FA /* alertback.jpg in Resources */,
 				B5A115A31A8F1FE5002ABD7F /* maidhead.png in Resources */,
+				B5197BE41AA053D600A598FA /* player.jpg in Resources */,
 				B5BADD551A890E6A00238649 /* RTWS YueRoundedGothic Demo.otf in Resources */,
 				B5197BD41A9EF66F00A598FA /* call2.wav in Resources */,
 				B5BADD601A89ABBA00238649 /* 平静.png in Resources */,

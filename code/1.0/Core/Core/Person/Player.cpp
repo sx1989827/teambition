@@ -172,6 +172,7 @@ void CorePlayer::Reset(node *pNode)
         nodeType=nodeType->getnext();
     }
     m_bLove=atol(root->getattr("love").data());
+    m_pStatusController->ChangeStatus(CoreStatus::LEISURE);
     delete ncMoney;
     delete ncPhysical;
     delete nc;
@@ -314,7 +315,15 @@ CoreInteraction::TYPE CorePlayer::GetInteractionType()
     return m_pInteraction->GetType();
 }
 
+std::string CorePlayer::GetActionDes()
+{
+    return m_strActionDes;
+}
 
+void CorePlayer::SetActionDes(std::string str)
+{
+    m_strActionDes=str;
+}
 
 
 
