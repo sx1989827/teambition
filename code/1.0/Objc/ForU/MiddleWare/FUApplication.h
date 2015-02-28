@@ -47,6 +47,7 @@
 -(NSDictionary*)HandleGift:(NSString*)title;
 -(NSInteger)GetNotifyCount;
 -(NSString*)GetPlayerActionDes;
+-(BOOL)HandleLove;
 @end
 
 

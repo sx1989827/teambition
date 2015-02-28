@@ -30,6 +30,7 @@ public:
     std::string GetStrMood();
     std::string GetStrDescription();
     long QueryMoodType(std::string strMood);
+    long GetMoodType();
 private:
     std::map<std::string, long> m_MoodMap;
     std::string m_strCurMood;

@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "StartViewController.h"
-#import "StateViewController.h"
+#import "FUAlertView.h"
 #import "SvGifView.h"
+#import "FUSoundPlay.h"
 @interface AppDelegate ()
 {
     UIImageView *viewImg;
@@ -28,7 +29,6 @@
     }
     _app=[[FUApplication alloc] init];
     _window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //StateViewController *view=[[StateViewController alloc] initWithNibName:@"StateViewController" bundle:nil];
     StartViewController *view=[[StartViewController alloc] initWithNibName:@"StartViewController" bundle:nil];
     UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:view];
     nav.navigationBarHidden=YES;
@@ -107,6 +107,16 @@
 {
     [APP Update];
     [APP Save];
+    if([UIApplication sharedApplication].applicationState==UIApplicationStateActive && ![APP isInteraction])
+    {
+        if([APP HandleLove])
+        {
+            UIViewController *view=((UINavigationController*)self.window.rootViewController).topViewController;
+            [[FUSoundPlay shareInstance] playEffectSound:@"good"];
+            FUAlertView *alertview=[[FUAlertView alloc] initWithMsg:@"恭喜你！你终于追到女生啦，不要高兴太早，接下里还有更多挑战噢！"];
+            [alertview showInView:view.view];
+        }
+    }
 }
 
 -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler

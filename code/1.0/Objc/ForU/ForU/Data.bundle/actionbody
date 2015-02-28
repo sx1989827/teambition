@@ -1,69 +1,325 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<patshoulder physical="10" place="" love="0" mood="" ioi="30" physicaloffset="-5">
 	<loli openioi="30">
-	<item mood="平静" moodtrend="" mooddes="" moodoffset="2" ioi="1"/>
-	<item mood="开心" moodtrend="" mooddes="" moodoffset="2" ioi="1"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="2" ioi="1"/>
-	<item mood="撒娇" moodtrend="" mooddes="" moodoffset="2" ioi="1"/>
-	<item mood="伤心" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="2" ioi="1"/>
-	<item mood="生气" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="2" ioi="1"/>
-	<item mood="烦躁" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="2" ioi="1"/>
-	<item mood="紧张" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="2" ioi="1"/>
+	<item mood="平静" moodtrend="" mooddes="" moodoffset="2" ioi="1" playeraction="恩 加油噢！"/>
+	<item mood="开心" moodtrend="" mooddes="" moodoffset="2" ioi="1" playeraction="恩 真乖！"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="2" ioi="1" playeraction="真听话！"/>
+	<item mood="撒娇" moodtrend="" mooddes="" moodoffset="2" ioi="1" playeraction="不要撒娇啦！"/>
+	<item mood="伤心" moodtrend="平静" mooddes="谢谢你的安慰" moodoffset="2" ioi="1" playeraction="发生什么事了吗"/>
+	<item mood="生气" moodtrend="平静" mooddes="谢谢你的安慰" moodoffset="2" ioi="1" playeraction="不要生气 会好起来的"/>
+	<item mood="烦躁" moodtrend="平静" mooddes="谢谢你的安慰" moodoffset="2" ioi="1" playeraction="放松点 没什么的"/>
+	<item mood="紧张" moodtrend="平静" mooddes="谢谢你的安慰" moodoffset="2" ioi="1" playeraction="放松点 没什么的"/>
 	</loli>
 	<maid openioi="35">
-	<item mood="平静" moodtrend="" mooddes="" moodoffset="2" ioi="1"/>
-	<item mood="开心" moodtrend="" mooddes="" moodoffset="2" ioi="1"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="2" ioi="1"/>
-	<item mood="撒娇" moodtrend="" mooddes="" moodoffset="2" ioi="1"/>
-	<item mood="伤心" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="2" ioi="1"/>
-	<item mood="生气" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="2" ioi="1"/>
-	<item mood="烦躁" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="2" ioi="1"/>
-	<item mood="紧张" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="2" ioi="1"/>
+	<item mood="平静" moodtrend="" mooddes="" moodoffset="2" ioi="1" playeraction="恩 加油噢！"/>
+	<item mood="开心" moodtrend="" mooddes="" moodoffset="2" ioi="1" playeraction="恩 真乖！"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="2" ioi="1" playeraction="真听话！"/>
+	<item mood="撒娇" moodtrend="" mooddes="" moodoffset="2" ioi="1" playeraction="不要撒娇啦！"/>
+	<item mood="伤心" moodtrend="平静" mooddes="谢谢你的安慰" moodoffset="2" ioi="1" playeraction="发生什么事了吗"/>
+	<item mood="生气" moodtrend="平静" mooddes="谢谢你的安慰" moodoffset="2" ioi="1" playeraction="不要生气 会好起来的"/>
+	<item mood="烦躁" moodtrend="平静" mooddes="谢谢你的安慰" moodoffset="2" ioi="1" playeraction="放松点 没什么的"/>
+	<item mood="紧张" moodtrend="平静" mooddes="谢谢你的安慰" moodoffset="2" ioi="1" playeraction="放松点 没什么的"/>
 	</maid>
 	<queen openioi="40">
-	<item mood="平静" moodtrend="" mooddes="" moodoffset="1" ioi="0.5"/>
-	<item mood="开心" moodtrend="" mooddes="" moodoffset="1" ioi="0.5"/>
-	<item mood="害羞" moodtrend="" mooddes="" moodoffset="1" ioi="0.5"/>
-	<item mood="撒娇" moodtrend="" mooddes="" moodoffset="1" ioi="0.5"/>
-	<item mood="伤心" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="1" ioi="0.5"/>
-	<item mood="生气" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="1" ioi="0.5"/>
-	<item mood="烦躁" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="1" ioi="0.5"/>
-	<item mood="紧张" moodtrend="平静" mooddes="拍拍肩膀" moodoffset="1" ioi="0.5"/>
+	<item mood="平静" moodtrend="" mooddes="" moodoffset="1" ioi="0.5" playeraction="最近还不错吧"/>
+	<item mood="开心" moodtrend="" mooddes="" moodoffset="1" ioi="0.5" playeraction="你笑起来的样子挺可爱的"/>
+	<item mood="害羞" moodtrend="" mooddes="" moodoffset="1" ioi="0.5" playeraction="我觉得你挺好的"/>
+	<item mood="撒娇" moodtrend="" mooddes="" moodoffset="1" ioi="0.5" playeraction="不要这样啦"/>
+	<item mood="伤心" moodtrend="平静" mooddes="有你在我身边真好" moodoffset="1" ioi="0.5" playeraction="你跟我说怎么做我可以让你开心点"/>
+	<item mood="生气" moodtrend="平静" mooddes="有你在我身边真好" moodoffset="1" ioi="0.5" playeraction="不要生气 会好起来的"/>
+	<item mood="烦躁" moodtrend="平静" mooddes="有你在我身边真好" moodoffset="1" ioi="0.5" playeraction="放松点 没什么的"/>
+	<item mood="紧张" moodtrend="平静" mooddes="有你在我身边真好" moodoffset="1" ioi="0.5" playeraction="放松点 没什么的"/>
 	</queen>
 	</patshoulder>
     <touchhair physical="20" place="" love="0" mood="" ioi="40" physicaloffset="-6">
         <loli openioi="50">
-            <item mood="平静" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
-            <item mood="开心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
-            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2"/>
-            <item mood="撒娇" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
-            <item mood="伤心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
-            <item mood="生气" moodtrend="平静" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
-            <item mood="烦躁" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-1" ioi="-1"/>
-            <item mood="紧张" moodtrend="平静" mooddes="轻轻的抚摸了下女生的头发" moodoffset="1" ioi="1"/>
+            <item mood="平静" moodtrend="害羞" mooddes="你这样我有点不好意思了" moodoffset="2" ioi="2" playeraction="发质真好 你是用霸王洗发水的吗"/>
+            <item mood="开心" moodtrend="害羞" mooddes="你这样我有点不好意思了" moodoffset="2" ioi="2" playeraction="发质真好 你是用霸王洗发水的吗"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2" playeraction="发质真好 你是用霸王洗发水的吗"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="你这样我有点不好意思了" moodoffset="2" ioi="2" playeraction="发质真好 你是用霸王洗发水的吗"/>
+            <item mood="伤心" moodtrend="害羞" mooddes="你这样我有点不好意思了" moodoffset="2" ioi="2" playeraction="发质真好 你是用霸王洗发水的吗"/>
+            <item mood="生气" moodtrend="平静" mooddes="你这样我有点不好意思了" moodoffset="2" ioi="2" playeraction="发质真好 你是用霸王洗发水的吗"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="你这样真的好吗" moodoffset="-1" ioi="-1" playeraction="发质真好 你是用霸王洗发水的吗"/>
+            <item mood="紧张" moodtrend="平静" mooddes="你这样我有点不好意思了" moodoffset="1" ioi="1" playeraction="发质真好 你是用霸王洗发水的吗"/>
         </loli>
         <maid openioi="55">
-            <item mood="平静" moodtrend="" mooddes="" moodoffset="1" ioi="1"/>
-            <item mood="开心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
-            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2"/>
-            <item mood="撒娇" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
-            <item mood="伤心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="1" ioi="1"/>
-            <item mood="生气" moodtrend="平静" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
-            <item mood="烦躁" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-2" ioi="-2"/>
-            <item mood="紧张" moodtrend="平静" mooddes="轻轻的抚摸了下女生的头发" moodoffset="2" ioi="2"/>
+            <item mood="平静" moodtrend="" mooddes="" moodoffset="1" ioi="1" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="开心" moodtrend="害羞" mooddes="你这样我有点不好意思了" moodoffset="2" ioi="2" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="你这样我有点不好意思了" moodoffset="2" ioi="2" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="伤心" moodtrend="害羞" mooddes="你这样我有点不好意思了" moodoffset="1" ioi="1" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="生气" moodtrend="平静" mooddes="你这样我有点不好意思了v" moodoffset="2" ioi="2" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="你这样不大好吧" moodoffset="-2" ioi="-2" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="紧张" moodtrend="平静" mooddes="你这样我有点不好意思了" moodoffset="2" ioi="2" playeraction="手感不错 你是用霸王洗发水吗"/>
         </maid>
         <queen openioi="60">
-            <item mood="平静" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-3" ioi="-1"/>
-            <item mood="开心" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="1" ioi="1"/>
-            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2"/>
-            <item mood="撒娇" moodtrend="害羞" mooddes="轻轻的抚摸了下女生的头发" moodoffset="1" ioi="3"/>
-            <item mood="伤心" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-4" ioi="-4"/>
-            <item mood="生气" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-4" ioi="-4"/>
-            <item mood="烦躁" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-4" ioi="-4"/>
-            <item mood="紧张" moodtrend="生气" mooddes="轻轻的抚摸了下女生的头发" moodoffset="-4" ioi="-4"/>
+            <item mood="平静" moodtrend="生气" mooddes="我不喜欢这样" moodoffset="-3" ioi="-1" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="开心" moodtrend="害羞" mooddes="我有点不好意思啊" moodoffset="1" ioi="1" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="我有点不好意思啊" moodoffset="1" ioi="3" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="伤心" moodtrend="生气" mooddes="请不要这样" moodoffset="-4" ioi="-4" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="生气" moodtrend="生气" mooddes="请不要这样" moodoffset="-4" ioi="-4" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="请不要这样" moodoffset="-4" ioi="-4" playeraction="手感不错 你是用霸王洗发水吗"/>
+            <item mood="紧张" moodtrend="生气" mooddes="请不要这样" moodoffset="-4" ioi="-4" playeraction="手感不错 你是用霸王洗发水吗"/>
         </queen>
     </touchhair>
+    <touchhand physical="25" place="" love="0" mood="" ioi="45" physicaloffset="-7">
+        <loli openioi="50">
+            <item mood="平静" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="手感不错，你每天都用大宝吧"/>
+            <item mood="开心" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="老板，这肉太肥了"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2" playeraction="老板，这肉太肥了"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="老板，这肉太肥了"/>
+            <item mood="伤心" moodtrend="生气" mooddes="你这样很不好噢" moodoffset="-2" ioi="-2" playeraction="老板，这肉太肥了"/>
+            <item mood="生气" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-2" ioi="-2" playeraction="老板，这肉太肥了"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-3" ioi="-3" playeraction="老板，这肉太肥了"/>
+            <item mood="紧张" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-2" ioi="-2" playeraction="老板，这肉太肥了"/>
+        </loli>
+        <maid openioi="55">
+            <item mood="平静" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="手感不错，你每天都用大宝吧"/>
+            <item mood="开心" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="老板，这肉太肥了"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2" playeraction="老板，这肉太肥了"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="老板，这肉太肥了"/>
+            <item mood="伤心" moodtrend="生气" mooddes="你这样很不好噢" moodoffset="-3" ioi="-3" playeraction="老板，这肉太肥了"/>
+            <item mood="生气" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-4" ioi="-4" playeraction="老板，这肉太肥了"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-4" ioi="-4" playeraction="老板，这肉太肥了"/>
+            <item mood="紧张" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-3" ioi="-3" playeraction="老板，这肉太肥了"/>
+        </maid>
+        <queen openioi="60">
+            <item mood="平静" moodtrend="害羞" mooddes="哎呀" moodoffset="1" ioi="1" playeraction="手感不错，你每天都用大宝吧"/>
+            <item mood="开心" moodtrend="害羞" mooddes="哎呀" moodoffset="1" ioi="1" playeraction="老板，这肉太肥了"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1" playeraction="老板，这肉太肥了"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="老板，这肉太肥了"/>
+            <item mood="伤心" moodtrend="生气" mooddes="你这样很不好噢" moodoffset="-4" ioi="-4" playeraction="老板，这肉太肥了"/>
+            <item mood="生气" moodtrend="生气" mooddes="你胆子不小噢" moodoffset="-6" ioi="-6" playeraction="老板，这肉太肥了"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="你胆子不小噢" moodoffset="-6" ioi="-6" playeraction="老板，这肉太肥了"/>
+            <item mood="紧张" moodtrend="生气" mooddes="你胆子不小噢" moodoffset="-3" ioi="-3" playeraction="老板，这肉太肥了"/>
+        </queen>
+    </touchhand>
+    <kneadface physical="30" place="" love="0" mood="" ioi="50" physicaloffset="-8">
+        <loli openioi="55">
+            <item mood="平静" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="小脸嘟嘟的真可爱"/>
+            <item mood="开心" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="小脸嘟嘟的真可爱"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2" playeraction="小脸嘟嘟的真可爱"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="小脸嘟嘟的真可爱"/>
+            <item mood="伤心" moodtrend="生气" mooddes="你这样很不好噢" moodoffset="-2" ioi="-2" playeraction="小脸嘟嘟的真可爱"/>
+            <item mood="生气" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-2" ioi="-2" playeraction="小脸嘟嘟的真可爱"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-3" ioi="-3" playeraction="小脸嘟嘟的真可爱"/>
+            <item mood="紧张" moodtrend="生气" mooddes="谁给你勇气这么做的" moodoffset="-2" ioi="-2" playeraction="小脸嘟嘟的真可爱"/>
+        </loli>
+        <maid openioi="60">
+            <item mood="平静" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="皮肤真滑，真舒服"/>
+            <item mood="开心" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="皮肤真滑，真舒服"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="2" playeraction="皮肤真滑，真舒服"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="皮肤真滑，真舒服"/>
+            <item mood="伤心" moodtrend="生气" mooddes="你这样很不好噢" moodoffset="-3" ioi="-3" playeraction="皮肤真滑，真舒服"/>
+            <item mood="生气" moodtrend="生气" mooddes="我的脸是你能碰的吗" moodoffset="-4" ioi="-4" playeraction="皮肤真滑，真舒服"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="我的脸是你能碰的吗" moodoffset="-4" ioi="-4" playeraction="皮肤真滑，真舒服"/>
+            <item mood="紧张" moodtrend="生气" mooddes="我的脸是你能碰的吗" moodoffset="-3" ioi="-3" playeraction="皮肤真滑，真舒服"/>
+        </maid>
+        <queen openioi="65">
+            <item mood="平静" moodtrend="生气" mooddes="你这样很不礼貌啊" moodoffset="-4" ioi="-4" playeraction="手感真好，向棉花糖一样"/>
+            <item mood="开心" moodtrend="害羞" mooddes="哎呀" moodoffset="1" ioi="1" playeraction="手感真好，向棉花糖一样"/>
+            <item mood="害羞" moodtrend="" mooddes="" moodoffset="0" ioi="1" playeraction="手感真好，向棉花糖一样"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="哎呀" moodoffset="2" ioi="2" playeraction="手感真好，向棉花糖一样"/>
+            <item mood="伤心" moodtrend="生气" mooddes="把你的脏爪拿开" moodoffset="-6" ioi="-6" playeraction="手感真好，向棉花糖一样"/>
+            <item mood="生气" moodtrend="生气" mooddes="把你的脏爪拿开" moodoffset="-7" ioi="-7" playeraction="手感真好，向棉花糖一样"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="把你的脏爪拿开" moodoffset="-7" ioi="-7" playeraction="手感真好，向棉花糖一样"/>
+            <item mood="紧张" moodtrend="生气" mooddes="把你的脏爪拿开" moodoffset="-5" ioi="-5" playeraction="手感真好，向棉花糖一样"/>
+        </queen>
+    </kneadface>
+    <hug physical="40" place="家 公园 游乐场 电影院" love="1" mood="" ioi="55" physicaloffset="-8">
+        <loli openioi="60">
+            <item mood="平静" moodtrend="开心" mooddes="恩~~~" moodoffset="1" ioi="1" playeraction="能和你在一起真好"/>
+            <item mood="开心" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="2" ioi="2" playeraction="能和你在一起真好"/>
+            <item mood="害羞" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="3" ioi="3" playeraction="能和你在一起真好"/>
+            <item mood="撒娇" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="3" ioi="3" playeraction="能和你在一起真好"/>
+            <item mood="伤心" moodtrend="平静" mooddes="谢谢你能抚慰我" moodoffset="3" ioi="3" playeraction="能和你在一起真好"/>
+            <item mood="生气" moodtrend="平静" mooddes="恩~" moodoffset="3" ioi="3" playeraction="能和你在一起真好"/>
+            <item mood="烦躁" moodtrend="平静" mooddes="恩~" moodoffset="3" ioi="3" playeraction="能和你在一起真好"/>
+            <item mood="紧张" moodtrend="平静" mooddes="恩~" moodoffset="3" ioi="3" playeraction="能和你在一起真好"/>
+        </loli>
+        <maid openioi="65">
+            <item mood="平静" moodtrend="开心" mooddes="恩~~~" moodoffset="1" ioi="1" playeraction="想这样一直抱着你直到永远"/>
+            <item mood="开心" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="2" ioi="2" playeraction="想这样一直抱着你直到永远"/>
+            <item mood="害羞" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="3" ioi="3" playeraction="想这样一直抱着你直到永远"/>
+            <item mood="撒娇" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="3" ioi="3" playeraction="想这样一直抱着你直到永远"/>
+            <item mood="伤心" moodtrend="平静" mooddes="谢谢你能抚慰我" moodoffset="2" ioi="2" playeraction="想这样一直抱着你直到永远"/>
+            <item mood="生气" moodtrend="平静" mooddes="恩~" moodoffset="2" ioi="2" playeraction="想这样一直抱着你直到永远"/>
+            <item mood="烦躁" moodtrend="平静" mooddes="恩~" moodoffset="2" ioi="2" playeraction="想这样一直抱着你直到永远"/>
+            <item mood="紧张" moodtrend="平静" mooddes="恩~" moodoffset="2" ioi="2" playeraction="想这样一直抱着你直到永远"/>
+        </maid>
+        <queen openioi="70">
+            <item mood="平静" moodtrend="开心" mooddes="恩~~~" moodoffset="1" ioi="1" playeraction="和你在一起是我的荣幸"/>
+            <item mood="开心" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="2" ioi="2" playeraction="和你在一起是我的荣幸"/>
+            <item mood="害羞" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="2" ioi="2" playeraction="和你在一起是我的荣幸"/>
+            <item mood="撒娇" moodtrend="开心" mooddes="嗯嗯嗯~~~" moodoffset="2" ioi="2" playeraction="和你在一起是我的荣幸"/>
+            <item mood="伤心" moodtrend="平静" mooddes="谢谢你能抚慰我" moodoffset="1" ioi="1" playeraction="和你在一起是我的荣幸"/>
+            <item mood="生气" moodtrend="平静" mooddes="恩~" moodoffset="1" ioi="1" playeraction="和你在一起是我的荣幸"/>
+            <item mood="烦躁" moodtrend="平静" mooddes="恩~" moodoffset="1" ioi="1" playeraction="和你在一起是我的荣幸"/>
+            <item mood="紧张" moodtrend="平静" mooddes="恩~" moodoffset="1" ioi="1" playeraction="和你在一起是我的荣幸"/>
+        </queen>
+    </hug>
+    <kiss physical="50" place="家 公园 游乐场 电影院" love="1" mood="" ioi="80" physicaloffset="-10">
+        <loli openioi="70">
+            <item mood="平静" moodtrend="害羞" mooddes="恩~~~" moodoffset="5" ioi="5" playeraction="好甜好软"/>
+            <item mood="开心" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="6" ioi="6" playeraction="好甜好软"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="7" ioi="7" playeraction="好甜好软"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="8" ioi="8" playeraction="好甜好软"/>
+            <item mood="伤心" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="4" ioi="4" playeraction="好甜好软"/>
+            <item mood="生气" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="4" ioi="4" playeraction="好甜好软"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="你这样很讨厌哎" moodoffset="-4" ioi="-4" playeraction="好甜好软"/>
+            <item mood="紧张" moodtrend="生气" mooddes="你这样很讨厌哎" moodoffset="-4" ioi="-4" playeraction="好甜好软"/>
+        </loli>
+        <maid openioi="75">
+            <item mood="平静" moodtrend="害羞" mooddes="恩~~~" moodoffset="4" ioi="4" playeraction="希望时间能永远停留在这一秒"/>
+            <item mood="开心" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="5" ioi="5" playeraction="希望时间能永远停留在这一秒"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="6" ioi="6" playeraction="希望时间能永远停留在这一秒"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="7" ioi="7" playeraction="希望时间能永远停留在这一秒"/>
+            <item mood="伤心" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="3" ioi="3" playeraction="希望时间能永远停留在这一秒"/>
+            <item mood="生气" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="3" ioi="3" playeraction="希望时间能永远停留在这一秒"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="你这样很讨厌哎" moodoffset="-5" ioi="-5" playeraction="希望时间能永远停留在这一秒"/>
+            <item mood="紧张" moodtrend="生气" mooddes="你这样很讨厌哎" moodoffset="-5" ioi="-5" playeraction="希望时间能永远停留在这一秒"/>
+        </maid>
+        <queen openioi="80">
+            <item mood="平静" moodtrend="害羞" mooddes="恩~~~" moodoffset="5" ioi="5" playeraction="嗯嗯嗯~~~"/>
+            <item mood="开心" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="6" ioi="6" playeraction="嗯嗯嗯~~~"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="7" ioi="7" playeraction="嗯嗯嗯~~~"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="8" ioi="8" playeraction="嗯嗯嗯~~~"/>
+            <item mood="伤心" moodtrend="害羞" mooddes="嗯嗯嗯~~~" moodoffset="4" ioi="4" playeraction="嗯嗯嗯~~~"/>
+            <item mood="生气" moodtrend="生气" mooddes="你怎么能对我这样呢" moodoffset="-4" ioi="-4" playeraction="嗯嗯嗯~~~"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="你怎么能对我这样呢" moodoffset="-4" ioi="-4" playeraction="嗯嗯嗯~~~"/>
+            <item mood="紧张" moodtrend="生气" mooddes="你怎么能对我这样呢" moodoffset="-4" ioi="-4" playeraction="嗯嗯嗯~~~"/>
+        </queen>
+    </kiss>
+    <hugwaist physical="45" place="家 公园 游乐场" love="1" mood="" ioi="45" physicaloffset="-5">
+        <loli openioi="60">
+            <item mood="平静" moodtrend="害羞" mooddes="不要啦 这里人多" moodoffset="3" ioi="3" playeraction="来我怀抱里~"/>
+            <item mood="开心" moodtrend="害羞" mooddes="不要啦 这里人多" moodoffset="4" ioi="4" playeraction="来我怀抱里~"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="不要啦 这里人多" moodoffset="4" ioi="4" playeraction="来我怀抱里~"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="不要啦 这里人多" moodoffset="5" ioi="5" playeraction="来我怀抱里~"/>
+            <item mood="伤心" moodtrend="伤心" mooddes="我不想这样" moodoffset="-2" ioi="-2" playeraction="来我怀抱里~"/>
+            <item mood="生气" moodtrend="生气" mooddes="离我远点" moodoffset="-4" ioi="-4" playeraction="来我怀抱里~"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="离我远点" moodoffset="-3" ioi="-3" playeraction="来我怀抱里~"/>
+            <item mood="紧张" moodtrend="生气" mooddes="离我远点" moodoffset="-3" ioi="-3" playeraction="来我怀抱里~"/>
+        </loli>
+        <maid openioi="65">
+            <item mood="平静" moodtrend="害羞" mooddes="不要啦 这里人多" moodoffset="2" ioi="2" playeraction="来我怀抱里~"/>
+            <item mood="开心" moodtrend="害羞" mooddes="不要啦 这里人多" moodoffset="3" ioi="3" playeraction="来我怀抱里~"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="不要啦 这里人多" moodoffset="3" ioi="3" playeraction="来我怀抱里~"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="不要啦 这里人多" moodoffset="4" ioi="4" playeraction="来我怀抱里~"/>
+            <item mood="伤心" moodtrend="伤心" mooddes="哪里来回哪里去" moodoffset="-3" ioi="-3" playeraction="来我怀抱里~"/>
+            <item mood="生气" moodtrend="生气" mooddes="哪里来回哪里去" moodoffset="-5" ioi="-5" playeraction="来我怀抱里~"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="哪里来回哪里去" moodoffset="-4" ioi="-4" playeraction="来我怀抱里~"/>
+            <item mood="紧张" moodtrend="生气" mooddes="哪里来回哪里去" moodoffset="-4" ioi="-4" playeraction="来我怀抱里~"/>
+        </maid>
+        <queen openioi="70">
+            <item mood="平静" moodtrend="害羞" mooddes="讨厌啦" moodoffset="1" ioi="1" playeraction="来我怀抱里~"/>
+            <item mood="开心" moodtrend="害羞" mooddes="讨厌啦" moodoffset="2" ioi="2" playeraction="来我怀抱里~"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="讨厌啦" moodoffset="2" ioi="2" playeraction="来我怀抱里~"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="讨厌啦" moodoffset="3" ioi="3" playeraction="来我怀抱里~"/>
+            <item mood="伤心" moodtrend="伤心" mooddes="我不想这样" moodoffset="-4" ioi="-4" playeraction="来我怀抱里~"/>
+            <item mood="生气" moodtrend="生气" mooddes="滚远点" moodoffset="-6" ioi="-6" playeraction="来我怀抱里~"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="滚远点" moodoffset="-5" ioi="-5" playeraction="来我怀抱里~"/>
+            <item mood="紧张" moodtrend="生气" mooddes="滚远点" moodoffset="-5" ioi="-5" playeraction="来我怀抱里~"/>
+        </queen>
+    </hugwaist>
+    <rubnose physical="30" place="" love="0" mood="" ioi="40" physicaloffset="-4">
+        <loli openioi="40">
+            <item mood="平静" moodtrend="开心" mooddes="不乖不乖就不乖" moodoffset="2" ioi="2" playeraction="小淘气 要乖噢"/>
+            <item mood="开心" moodtrend="开心" mooddes="不乖不乖就不乖" moodoffset="0" ioi="2" playeraction="小淘气 要乖噢"/>
+            <item mood="害羞" moodtrend="开心" mooddes="不乖不乖就不乖" moodoffset="0" ioi="2" playeraction="小淘气 要乖噢"/>
+            <item mood="撒娇" moodtrend="开心" mooddes="不乖不乖就不乖" moodoffset="2" ioi="2" playeraction="小淘气 要乖噢"/>
+            <item mood="伤心" moodtrend="伤心" mooddes="呵呵呵" moodoffset="-2" ioi="-2" playeraction="小淘气 要乖噢"/>
+            <item mood="生气" moodtrend="生气" mooddes="我才不听你的呢" moodoffset="-2" ioi="-2" playeraction="小淘气 要乖噢"/>
+            <item mood="烦躁" moodtrend="烦躁" mooddes="烦不烦啊你" moodoffset="-3" ioi="-3" playeraction="小淘气 要乖噢"/>
+            <item mood="紧张" moodtrend="烦躁" mooddes="你可能不要这样" moodoffset="-2" ioi="-2" playeraction="小淘气 要乖噢"/>
+        </loli>
+        <maid openioi="45">
+            <item mood="平静" moodtrend="平静" mooddes="呵呵" moodoffset="2" ioi="2" playeraction="小淘气 要乖噢"/>
+            <item mood="开心" moodtrend="开心" mooddes="恩恩 我会很乖的" moodoffset="2" ioi="2" playeraction="小淘气 要乖噢"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="恩恩 我会很乖的" moodoffset="0" ioi="2" playeraction="小淘气 要乖噢"/>
+            <item mood="撒娇" moodtrend="撒娇" mooddes="恩恩 我会很乖的" moodoffset="0" ioi="2" playeraction="小淘气 要乖噢"/>
+            <item mood="伤心" moodtrend="伤心" mooddes="呵呵呵" moodoffset="-2" ioi="-2" playeraction="小淘气 要乖噢"/>
+            <item mood="生气" moodtrend="生气" mooddes="我才不听你的呢" moodoffset="-2" ioi="-2" playeraction="小淘气 要乖噢"/>
+            <item mood="烦躁" moodtrend="烦躁" mooddes="烦不烦啊你" moodoffset="-3" ioi="-3" playeraction="小淘气 要乖噢"/>
+            <item mood="紧张" moodtrend="烦躁" mooddes="你可能不要这样" moodoffset="-2" ioi="-2" playeraction="小淘气 要乖噢"/>
+        </maid>
+        <queen openioi="50">
+            <item mood="平静" moodtrend="生气" mooddes="你谁啊你" moodoffset="-2" ioi="-2" playeraction="宝贝 要乖噢"/>
+            <item mood="开心" moodtrend="开心" mooddes="看你表现喽" moodoffset="0" ioi="2" playeraction="宝贝 要乖噢"/>
+            <item mood="害羞" moodtrend="开心" mooddes="看你表现喽" moodoffset="0" ioi="2" playeraction="宝贝 要乖噢"/>
+            <item mood="撒娇" moodtrend="开心" mooddes="看你表现喽" moodoffset="0" ioi="2" playeraction="宝贝 要乖噢"/>
+            <item mood="伤心" moodtrend="伤心" mooddes="你谁啊你" moodoffset="-2" ioi="-2" playeraction="宝贝 要乖噢"/>
+            <item mood="生气" moodtrend="生气" mooddes="一边凉快去" moodoffset="-2" ioi="-2" playeraction="宝贝 要乖噢"/>
+            <item mood="烦躁" moodtrend="烦躁" mooddes="一边凉快去" moodoffset="-3" ioi="-3" playeraction="宝贝 要乖噢"/>
+            <item mood="紧张" moodtrend="烦躁" mooddes="一边凉快去" moodoffset="-2" ioi="-2" playeraction="宝贝 要乖噢"/>
+        </queen>
+    </rubnose>
+    <handinhand physical="50" place="家 公园 游乐园 电影院" love="1" mood="" ioi="60" physicaloffset="-7">
+        <loli openioi="60">
+            <item mood="平静" moodtrend="害羞" mooddes="恩 我也是" moodoffset="2" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="开心" moodtrend="害羞" mooddes="恩 我也是" moodoffset="2" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="害羞" moodtrend="害喜" mooddes="恩 我也是" moodoffset="0" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="恩 我也是" moodoffset="2" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="伤心" moodtrend="生气" mooddes="好吧 反正我也不能反抗" moodoffset="-2" ioi="-2" playeraction="能牵着你的感觉真好"/>
+            <item mood="生气" moodtrend="生气" mooddes="请不要这样" moodoffset="-2" ioi="-2" playeraction="能牵着你的感觉真好"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="请不要这样" moodoffset="-3" ioi="-3" playeraction="能牵着你的感觉真好"/>
+            <item mood="紧张" moodtrend="生气" mooddes="请不要这样" moodoffset="-2" ioi="-2" playeraction="能牵着你的感觉真好"/>
+        </loli>
+        <maid openioi="65">
+            <item mood="平静" moodtrend="害羞" mooddes="恩 我也是" moodoffset="2" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="开心" moodtrend="害羞" mooddes="恩 我也是" moodoffset="2" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="害羞" moodtrend="害喜" mooddes="恩 我也是" moodoffset="0" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="恩 我也是" moodoffset="2" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="伤心" moodtrend="生气" mooddes="我现在不想这样" moodoffset="-3" ioi="-3" playeraction="能牵着你的感觉真好"/>
+            <item mood="生气" moodtrend="生气" mooddes="我现在不想这样" moodoffset="-3" ioi="-3" playeraction="能牵着你的感觉真好"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="我现在不想这样" moodoffset="-3" ioi="-3" playeraction="能牵着你的感觉真好"/>
+            <item mood="紧张" moodtrend="生气" mooddes="我现在不想这样" moodoffset="-2" ioi="-2" playeraction="能牵着你的感觉真好"/>
+        </maid>
+        <queen openioi="70">
+            <item mood="平静" moodtrend="害羞" mooddes="恩~" moodoffset="2" ioi="2" playeraction="能牵着你的感觉真好"/>
+            <item mood="开心" moodtrend="害羞" mooddes="这种感觉好奇妙啊~" moodoffset="2" ioi="3" playeraction="能牵着你的感觉真好"/>
+            <item mood="害羞" moodtrend="害喜" mooddes="这种感觉好奇妙啊~" moodoffset="0" ioi="3" playeraction="能牵着你的感觉真好"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="这种感觉好奇妙啊~" moodoffset="2" ioi="3" playeraction="能牵着你的感觉真好"/>
+            <item mood="伤心" moodtrend="生气" mooddes="你都是哄女孩的吗" moodoffset="-4" ioi="-4" playeraction="能牵着你的感觉真好"/>
+            <item mood="生气" moodtrend="生气" mooddes="你都是哄女孩的吗" moodoffset="-4" ioi="-4" playeraction="能牵着你的感觉真好"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="你都是哄女孩的吗" moodoffset="-5" ioi="-5" playeraction="能牵着你的感觉真好"/>
+            <item mood="紧张" moodtrend="生气" mooddes="你都是哄女孩的吗" moodoffset="-4" ioi="-4" playeraction="能牵着你的感觉真好"/>
+        </queen>
+    </handinhand>
+    <lift physical="45" place="家 餐厅 电影院 公园 游乐场" love="1" mood="" ioi="45" physicaloffset="-6">
+        <loli openioi="55">
+            <item mood="平静" moodtrend="害羞" mooddes="让别人看见不好啦" moodoffset="3" ioi="3" playeraction="好充实的感觉"/>
+            <item mood="开心" moodtrend="害羞" mooddes="让别人看见不好啦" moodoffset="3" ioi="3" playeraction="好充实的感觉"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="让别人看见不好啦" moodoffset="0" ioi="3" playeraction="好充实的感觉"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="让别人看见不好啦" moodoffset="2" ioi="3" playeraction="好充实的感觉"/>
+            <item mood="伤心" moodtrend="生气" mooddes="你这样很不好噢" moodoffset="-3" ioi="-3" playeraction="好充实的感觉"/>
+            <item mood="生气" moodtrend="生气" mooddes="手拿开手拿开" moodoffset="-3" ioi="-3" playeraction="好充实的感觉"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="手拿开手拿开" moodoffset="-4" ioi="-4" playeraction="好充实的感觉"/>
+            <item mood="紧张" moodtrend="生气" mooddes="手拿开手拿开" moodoffset="-3" ioi="-3" playeraction="好充实的感觉"/>
+        </loli>
+        <maid openioi="60">
+            <item mood="平静" moodtrend="害羞" mooddes="讨厌啦" moodoffset="2" ioi="2" playeraction="好充实的感觉"/>
+            <item mood="开心" moodtrend="害羞" mooddes="讨厌啦" moodoffset="2" ioi="2" playeraction="好充实的感觉"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="讨厌啦" moodoffset="0" ioi="2" playeraction="好充实的感觉"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="讨厌啦" moodoffset="2" ioi="2" playeraction="好充实的感觉"/>
+            <item mood="伤心" moodtrend="生气" mooddes="你这样很不好噢" moodoffset="-4" ioi="-4" playeraction="好充实的感觉"/>
+            <item mood="生气" moodtrend="生气" mooddes="手拿开手拿开" moodoffset="-4" ioi="-4" playeraction="好充实的感觉"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="手拿开手拿开" moodoffset="-5" ioi="-5" playeraction="好充实的感觉"/>
+            <item mood="紧张" moodtrend="生气" mooddes="手拿开手拿开" moodoffset="-4" ioi="-4" playeraction="好充实的感觉"/>
+        </maid>
+        <queen openioi="65">
+            <item mood="平静" moodtrend="害羞" mooddes="额。。。" moodoffset="3" ioi="3" playeraction="好充实的感觉"/>
+            <item mood="开心" moodtrend="害羞" mooddes="好吧 就让你占回便宜吧" moodoffset="1" ioi="1" playeraction="好充实的感觉"/>
+            <item mood="害羞" moodtrend="害羞" mooddes="好吧 就让你占回便宜吧" moodoffset="0" ioi="1" playeraction="好充实的感觉"/>
+            <item mood="撒娇" moodtrend="害羞" mooddes="好吧 就让你占回便宜吧" moodoffset="2" ioi="1" playeraction="好充实的感觉"/>
+            <item mood="伤心" moodtrend="生气" mooddes="本小姐要生气了" moodoffset="-5" ioi="-5" playeraction="好充实的感觉"/>
+            <item mood="生气" moodtrend="生气" mooddes="本小姐要生气了" moodoffset="-5" ioi="-5" playeraction="好充实的感觉"/>
+            <item mood="烦躁" moodtrend="生气" mooddes="本小姐要生气了" moodoffset="-6" ioi="-6" playeraction="好充实的感觉"/>
+            <item mood="紧张" moodtrend="生气" mooddes="本小姐要生气了" moodoffset="-5" ioi="-5" playeraction="好充实的感觉"/>
+        </queen>
+    </lift>
 </root>
 
 

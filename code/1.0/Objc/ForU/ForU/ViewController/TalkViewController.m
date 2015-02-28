@@ -44,14 +44,36 @@
     dicActionBody=[[NSMutableDictionary alloc] initWithCapacity:30];
     [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(PATSHOULDER)];
     [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(TOUCHHAIR)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(TOUCHHAND)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(KNEADFACE)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(HUG)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(KISS)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(HUGWAIST)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(RUBNOSE)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(HANDINHAND)];
+    [dicActionBody setObject:NSStringFromSelector(@selector(actionCommonBody:)) forKey:@(LIFT)];
 }
 
 -(void)actionCommonBody:(NSNumber*)type
 {
+    NSString *oldMood=[APP GetGirlMoodDes];
     double oldValue=[[APP GetGirlIOI] doubleValue];
     [APP HandleActionBody:(ACTIONBODYTYPE)[type integerValue]];
     double newValue=[[APP GetGirlIOI] doubleValue];
     [FUPublic showChangeView:@"好感度：" Offset:(newValue-oldValue) View:self.view Point:CGPointMake(self.view.center.x+10,self.view.center.y-100)];
+    if(![[APP GetPlayerActionDes] isEqualToString:@""])
+    {
+        NSString *newMood=[APP GetGirlMoodDes];
+        void (^block)()=nil;
+        if(![newMood isEqualToString:oldMood] && ![[APP GetGirlMoodDes] isEqualToString:@""])
+        {
+            block=^()
+            {
+                [_viewTalk setGirlContentText:[APP GetGirlMoodDes] AfterDiss:1.5 DissCompleteBlock:nil];
+            };
+        }
+        [_viewTalk setPlayerContentText:[APP GetPlayerActionDes] AfterDiss:1.5 DissCompleteBlock:block];
+    }
 }
 
 
@@ -155,6 +177,7 @@
     [APP HandleActionTalk:title];
     double newValue=[[APP GetGirlIOI] doubleValue];
     [FUPublic showChangeView:@"好感度：" Offset:(newValue-oldValue) View:self.view Point:CGPointMake(self.view.center.x+10,self.view.center.y-100)];
+    [_viewTalk setPlayerContentText:[APP GetPlayerActionDes] AfterDiss:1.5 DissCompleteBlock:nil];
 }
 
 -(void)showActionBody
@@ -202,25 +225,31 @@
 
 -(void)handleEye:(CGPoint)p FaceEye:(ACTIONEYETYPE)faceEye BreastEye:(ACTIONEYETYPE)breastEye
 {
-    NSString *oldMood=[APP GetGirlMood];
+    NSString *oldMood=[APP GetGirlMoodDes];
     double oldIOI=[[APP GetGirlIOI] doubleValue];
     BOOL bHandle=NO;
     if(CGRectContainsPoint([APP GetGirlFaceRect], p))
     {
-        bHandle=YES;
         if(![APP HandleActionEye:faceEye])
         {
             FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"很遗憾，她没有注意到你得举动!"];
             [view showInView:self.view];
         }
+        else
+        {
+            bHandle=YES;
+        }
     }
     else if(CGRectContainsPoint([APP GetGirlBreastRect], p))
     {
-        bHandle=YES;
         if(![APP HandleActionEye:breastEye])
         {
             FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"很遗憾，她没有注意到你得举动!"];
             [view showInView:self.view];
+        }
+        else
+        {
+            bHandle=YES;
         }
         
     }
@@ -231,16 +260,16 @@
         [FUPublic showChangeView:@"好感度:" Offset:off View:self.view Point:p];
         if(![[APP GetPlayerActionDes] isEqualToString:@""])
         {
-            NSString *newMood=[APP GetGirlMood];
+            NSString *newMood=[APP GetGirlMoodDes];
             void (^block)()=nil;
-            if(![newMood isEqualToString:oldMood])
+            if(![newMood isEqualToString:oldMood] && ![[APP GetGirlMoodDes] isEqualToString:@""])
             {
                 block=^()
                 {
-                    [_viewTalk setGirlContentText:[APP GetGirlMoodDes] AfterDiss:1 DissCompleteBlock:nil];
+                    [_viewTalk setGirlContentText:[APP GetGirlMoodDes] AfterDiss:1.5 DissCompleteBlock:nil];
                 };
             }
-            [_viewTalk setPlayerContentText:[APP GetPlayerActionDes] AfterDiss:1 DissCompleteBlock:block];
+            [_viewTalk setPlayerContentText:[APP GetPlayerActionDes] AfterDiss:1.5 DissCompleteBlock:block];
         }
         [arrAction removeObject:@{
                                   @"text":@"眼神",

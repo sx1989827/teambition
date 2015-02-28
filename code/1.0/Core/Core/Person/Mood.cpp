@@ -70,6 +70,10 @@ void CoreMood::Transfer(sMood *pMood)
         {
             m_lCurMood=-10;
         }
+        if(!pMood->strDes.empty())
+        {
+            m_strDescription=pMood->strDes;
+        }
     }
     else if(m_MoodMap[m_strCurMood]==m_MoodMap[pMood->strMood])
     {
@@ -84,11 +88,18 @@ void CoreMood::Transfer(sMood *pMood)
             {
                 m_lCurMood=-10;
             }
+            if(!pMood->strDes.empty())
+            {
+                m_strDescription=pMood->strDes;
+            }
         }
         else
         {
             m_strCurMood=pMood->strMood;
-            m_strDescription=pMood->strDes;
+            if(!pMood->strDes.empty())
+            {
+                m_strDescription=pMood->strDes;
+            }
         }
     }
     else
@@ -101,7 +112,10 @@ void CoreMood::Transfer(sMood *pMood)
             {
                 m_lCurMood++;
                 m_strCurMood=pMood->strMood;
-                m_strDescription=pMood->strDes;
+                if(!pMood->strDes.empty())
+                {
+                    m_strDescription=pMood->strDes;
+                }
             }
         }
         else if (v==1)
@@ -111,13 +125,19 @@ void CoreMood::Transfer(sMood *pMood)
             {
                 m_lCurMood-=10;
                 m_strCurMood=pMood->strMood;
-                m_strDescription=pMood->strDes;
+                if(!pMood->strDes.empty())
+                {
+                    m_strDescription=pMood->strDes;
+                }
             }
             else if (m_lCurMood<1)
             {
                 m_lCurMood--;
                 m_strCurMood=pMood->strMood;
-                m_strDescription=pMood->strDes;
+                if(!pMood->strDes.empty())
+                {
+                    m_strDescription=pMood->strDes;
+                }
             }
         }
         else if (v==2)
@@ -127,7 +147,10 @@ void CoreMood::Transfer(sMood *pMood)
             {
                 m_lCurMood--;
                 m_strCurMood=pMood->strMood;
-                m_strDescription=pMood->strDes;
+                if(!pMood->strDes.empty())
+                {
+                    m_strDescription=pMood->strDes;
+                }
             }
         }
     }
@@ -196,6 +219,9 @@ std::string CoreMood::GetStrDescription()
     return m_strDescription;
 }
 
-
+long CoreMood::GetMoodType()
+{
+    return m_MoodMap[m_strCurMood];
+}
 
 

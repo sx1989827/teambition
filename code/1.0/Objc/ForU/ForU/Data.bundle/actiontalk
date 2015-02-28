@@ -1,64 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
 		<mood name="平静">
-			<action name="寒暄" loli="0.5" maid="0.3" queen="0.1"/>
-			<action name="调侃" loli="0.6" maid="0.4" queen="0.1"/>
-			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1"/>
-			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4"/>
-			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6"/>
-			<action name="了解她" loli="0.1" maid="0.1" queen="0.1"/>
+			<action name="寒暄" loli="0.5" maid="0.3" queen="0.1" playeraction="最近怎么样啊"/>
+			<action name="调侃" loli="0.6" maid="0.4" queen="0.1" playeraction="你的眼睛一眨一眨的，像星星一样"/>
+			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1" playeraction="我要成为世界上最强的程序员"/>
+			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4" playeraction="从前有一个面包，他走在路上，突然感觉很饿，就把自己吃了"/>
+			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6" playeraction="你觉得最近的电影怎么样啊"/>
+			<action name="了解她" loli="0.1" maid="0.1" queen="0.1" playeraction="你喜欢看恐怖片吗"/>
 		</mood>
 		<mood name="开心">
-			<action name="调侃" loli="0.6" maid="0.4" queen="0.1"/>
-			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1"/>
-			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4"/>
-			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6"/>
-			<action name="了解她" loli="0.1" maid="0.1" queen="0.1"/>
-			<action name="称赞她" loli="1" maid="0.6" queen="0.4"/>
+			<action name="调侃" loli="0.6" maid="0.4" queen="0.1" playeraction="你的眼睛一眨一眨的，像星星一样"/>
+			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1" playeraction="我要成为世界上最强的程序员"/>
+			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4" playeraction="从前有一个面包，他走在路上，突然感觉很饿，就把自己吃了"/>
+			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6" playeraction="你觉得最近的电影怎么样啊"/>
+			<action name="了解她" loli="0.1" maid="0.1" queen="0.1" playeraction="你喜欢看恐怖片吗"/>
+			<action name="称赞她" loli="1" maid="0.6" queen="0.4" playeraction="我喜欢你微笑的样子，像阳光一样灿烂"/>
 		</mood>
 		<mood name="害羞">
-			<action name="调侃" loli="0.6" maid="0.4" queen="0.1"/>
-			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1"/>
-			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4"/>
-			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6"/>
-			<action name="了解她" loli="0.1" maid="0.1" queen="0.1"/>
+			<action name="调侃" loli="0.6" maid="0.4" queen="0.1" playeraction="你的眼睛一眨一眨的，像星星一样"/>
+			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1" playeraction="我要成为世界上最强的程序员"/>
+			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4" playeraction="从前有一个面包，他走在路上，突然感觉很饿，就把自己吃了"/>
+			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6" playeraction="你觉得最近的电影怎么样啊"/>
+			<action name="了解她" loli="0.1" maid="0.1" queen="0.1" playeraction="你喜欢看恐怖片吗"/>
 		</mood>
 		<mood name="撒娇">
-			<action name="调侃" loli="0.6" maid="0.4" queen="0.1"/>
-			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4"/>
-			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6"/>
-			<action name="了解她" loli="0.1" maid="0.1" queen="0.1"/>
-			<action name="欺负她" loli="0.4" maid="0.2" queen="0.1"/>
+			<action name="调侃" loli="0.6" maid="0.4" queen="0.1" playeraction="你的眼睛一眨一眨的，像星星一样"/>
+			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4" playeraction="从前有一个面包，他走在路上，突然感觉很饿，就把自己吃了"/>
+			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6" playeraction="你觉得最近的电影怎么样啊"/>
+			<action name="了解她" loli="0.1" maid="0.1" queen="0.1" playeraction="你喜欢看恐怖片吗"/>
+			<action name="欺负她" loli="0.4" maid="0.2" queen="0.1" playeraction="不听话的话可要打屁股噢"/>
 		</mood>
 		<mood name="伤心">
-			<action name="调侃" loli="0.6" maid="0.4" queen="0.1"/>
-			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1"/>
-			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4"/>
-			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6"/>
-			<action name="了解她" loli="0.1" maid="0.1" queen="0.1"/>
-			<action name="安慰她" loli="1.2" maid="1.0" queen="0.8"/>
+			<action name="调侃" loli="0.6" maid="0.4" queen="0.1" playeraction="你的眼睛一眨一眨的，像星星一样"/>
+			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1" playeraction="我要成为世界上最强的程序员"/>
+			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4" playeraction="从前有一个面包，他走在路上，突然感觉很饿，就把自己吃了"/>
+			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6" playeraction="你觉得最近的电影怎么样啊"/>
+			<action name="了解她" loli="0.1" maid="0.1" queen="0.1" playeraction="你喜欢看恐怖片吗"/>
+			<action name="安慰她" loli="1.2" maid="1.0" queen="0.8" playeraction="没关系，每个人都有难过的时候，时间会治愈一切的"/>
 		</mood>
 		<mood name="生气">
-			<action name="调侃" loli="0.6" maid="0.4" queen="0.1"/>
-			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4"/>
-			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6"/>
-			<action name="了解她" loli="0.1" maid="0.1" queen="0.1"/>
-			<action name="道歉" loli="0.4" maid="0.2" queen="0.1"/>
+			<action name="调侃" loli="0.6" maid="0.4" queen="0.1" playeraction="你的眼睛一眨一眨的，像星星一样"/>
+			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4" playeraction="从前有一个面包，他走在路上，突然感觉很饿，就把自己吃了"/>
+			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6" playeraction="你觉得最近的电影怎么样啊"/>
+			<action name="了解她" loli="0.1" maid="0.1" queen="0.1" playeraction="你喜欢看恐怖片吗"/>
+			<action name="道歉" loli="0.4" maid="0.2" queen="0.1" playeraction="抱歉，如果是我的原因，我向你道歉"/>
 		</mood>
 		<mood name="烦躁">
-			<action name="调侃" loli="0.6" maid="0.4" queen="0.1"/>
-			<action name="描述自己" loli="" maid="" queen=""/>
-			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4"/>
-			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6"/>
-			<action name="了解她" loli="0.1" maid="0.1" queen="0.1"/>
-			<action name="理解她" loli="0.6" maid="0.6" queen="0.6"/>
+			<action name="调侃" loli="0.6" maid="0.4" queen="0.1" playeraction="你的眼睛一眨一眨的，像星星一样"/>
+			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1" playeraction="我要成为世界上最强的程序员"/>
+			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4" playeraction="从前有一个面包，他走在路上，突然感觉很饿，就把自己吃了"/>
+			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6" playeraction="你觉得最近的电影怎么样啊"/>
+			<action name="了解她" loli="0.1" maid="0.1" queen="0.1" playeraction="你喜欢看恐怖片吗"/>
+			<action name="理解她" loli="0.6" maid="0.6" queen="0.6" playeraction="我能理解你的感受，我要是你，肯定也不好过"/>
 		</mood>
 		<mood name="紧张">
-			<action name="调侃" loli="0.6" maid="0.4" queen="0.1"/>
-			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1"/>
-			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4"/>
-			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6"/>
-			<action name="了解她" loli="0.1" maid="0.1" queen="0.1"/>
-			<action name="鼓励她" loli="1.2" maid="0.8" queen="0.6"/>
+			<action name="调侃" loli="0.6" maid="0.4" queen="0.1" playeraction="你的眼睛一眨一眨的，像星星一样"/>
+			<action name="描述自己" loli="0.3" maid="0.2" queen="0.1" playeraction="我要成为世界上最强的程序员"/>
+			<action name="说笑话" loli="0.8" maid="0.6" queen="0.4" playeraction="从前有一个面包，他走在路上，突然感觉很饿，就把自己吃了"/>
+			<action name="聊话题" loli="0.6" maid="0.6" queen="0.6" playeraction="你觉得最近的电影怎么样啊"/>
+			<action name="了解她" loli="0.1" maid="0.1" queen="0.1" playeraction="你喜欢看恐怖片吗"/>
+			<action name="鼓励她" loli="1.2" maid="0.8" queen="0.6" playeraction="加油，你是第一名"/>
 		</mood>
 </root>

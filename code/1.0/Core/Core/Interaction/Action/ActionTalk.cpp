@@ -9,6 +9,7 @@
 #include "ActionTalk.h"
 #include "../../Person/Girl.h"
 #include "../../Person/Mood.h"
+#include "../../Person/Player.h"
 CoreActionTalk::CoreActionTalk()
 {
     xml x;
@@ -28,6 +29,7 @@ CoreActionTalk::CoreActionTalk()
             info.dIOI[0]=atof(ncItem->item(j)->getattr("loli").data());
             info.dIOI[1]=atof(ncItem->item(j)->getattr("maid").data());
             info.dIOI[2]=atof(ncItem->item(j)->getattr("queen").data());
+            info.strPlayerAction=ncItem->item(j)->getattr("playeraction");
             talk.mapInfo[info.strAction]=info;
         }
         delete ncItem;
@@ -50,6 +52,7 @@ void CoreActionTalk::Handle(std::string strAction)
 {
     sActionTalkInfo info=m_ActionMap[GIRLINSTANCE->GetMood()->GetStrMood()].mapInfo[strAction];
     GIRLINSTANCE->SetIOI(GIRLINSTANCE->GetIOI()+info.dIOI[GIRLINSTANCE->GetGirlType()]);
+    PLAYERINSTANCE->SetActionDes(info.strPlayerAction);
 }
 
 

@@ -15,6 +15,7 @@ struct sActionTalkInfo
 {
     std::string strAction;
     double dIOI[3];
+    std::string strPlayerAction;
 };
 
 struct sActionTalk

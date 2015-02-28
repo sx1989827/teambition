@@ -44,7 +44,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-        [imgBack startGif];
+    [imgBack startGif];
 }
 
 -(void)initObserver

@@ -25,7 +25,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-//    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
+    [super viewDidAppear:animated];
     MainMenuViewController *view=[[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
     [self.navigationController pushViewController:view animated:NO];
 }

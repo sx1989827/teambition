@@ -28,6 +28,7 @@ struct sActionBodyMoodChange
     std::string strMoodDes;
     long lMoodOffset;
     double dIOIOffset;
+    std::string strPlayerAction;
 };
 
 struct sActionBodyMood

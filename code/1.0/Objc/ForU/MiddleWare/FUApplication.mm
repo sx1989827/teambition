@@ -504,6 +504,19 @@
 {
     return [NSString stringWithUTF8String:app->GetPlayer()->GetActionDes().data()];
 }
+
+-(BOOL)HandleLove
+{
+	if(!app->GetPlayer()->GetLove() && app->GetGirl()->GetIOI()>=95 && app->GetGirl()->GetMood()->GetMoodType()==2)
+    {
+        app->GetPlayer()->SetLove(true);
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 @end
 
 
