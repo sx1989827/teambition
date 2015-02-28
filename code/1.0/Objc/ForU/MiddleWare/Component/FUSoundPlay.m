@@ -7,11 +7,11 @@
 //
 
 #import "FUSoundPlay.h"
-long g_backMusiccount=3;
+#import "AppDelegate.h"
 @interface FUSoundPlay()
 {
     AVAudioPlayer *audio;
-    NSMutableArray *arrMusic;
+    NSMutableDictionary *dicMusic;
     NSURL *title;
 }
 @end
@@ -24,23 +24,47 @@ long g_backMusiccount=3;
     static FUSoundPlay* obj;
     dispatch_once(&onceToken, ^{
         obj=[[FUSoundPlay alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserver:obj selector:@selector(moodChange) name:MSGMOODCHANGE object:nil];
     });
     return obj;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(void)moodChange
+{
+    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
+    if([userDefaults boolForKey:@"definedbackmusic"])
+    {
+        return;
+    }
+    NSURL *url=dicMusic[[APP GetGirlMood]];
+    NSError *err;
+    audio = [[AVAudioPlayer alloc]  initWithContentsOfURL:url error:&err];
+    [audio setNumberOfLoops:-1];
+    audio.delegate=self;
+    [audio play];
+
 }
 
 -(id)init
 {
     if(self=[super init])
     {
-        arrMusic=[[NSMutableArray alloc] initWithCapacity:30];
+        NSArray *arr=@[@"平静",@"开心",@"害羞",@"撒娇",@"伤心",@"生气",@"烦躁",@"紧张"];
+        dicMusic=[[NSMutableDictionary alloc] initWithCapacity:30];
         NSString *musicBundle=[[NSBundle mainBundle] pathForResource:@"Sound" ofType:@"bundle"];
-        for(int i=0;i<g_backMusiccount;i++)
+        for(int i=0;i<arr.count;i++)
         {
-            NSString *musicPath=[[NSBundle bundleWithPath:musicBundle] pathForResource:[NSString stringWithFormat:@"%d",i+1] ofType:@"mp3" inDirectory:@"Music"];
+            NSString *str=arr[i];
+            NSString *musicPath=[[NSBundle bundleWithPath:musicBundle] pathForResource:str ofType:@"mp3" inDirectory:@"Music"];
             NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
-            [arrMusic addObject:musicURL];
+            [dicMusic setObject:musicURL forKey:arr[i]];
         }
-        NSString *musicPath=[[NSBundle bundleWithPath:musicBundle] pathForResource:@"title" ofType:@"mp3" inDirectory:@"Music"];
+        NSString *musicPath=[[NSBundle bundleWithPath:musicBundle] pathForResource:@"标题" ofType:@"mp3" inDirectory:@"Music"];
         title = [NSURL fileURLWithPath:musicPath];
     }
     return self;
@@ -60,15 +84,7 @@ long g_backMusiccount=3;
 
 -(void)playBackMusic
 {
-    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
-    if([userDefaults boolForKey:@"definedbackmusic"])
-    {
-        return;
-    }
-    audio = [[AVAudioPlayer alloc]  initWithContentsOfURL:arrMusic[random()%g_backMusiccount]  error:nil];
-    //[audio setNumberOfLoops:-1];
-    audio.delegate=self;
-    [audio play];
+    [self moodChange];
 }
 
 -(void)pause
@@ -91,15 +107,6 @@ long g_backMusiccount=3;
     [audio play];
 }
 
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
-{
-    NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
-    if([userDefaults boolForKey:@"definedbackmusic"])
-    {
-        return;
-    }
-    [self playBackMusic];
-}
 
 -(void)playEffectSound:(NSString*)name
 {
