@@ -34,7 +34,7 @@
     POPBasicAnimation *ani=[POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
     ani.fromValue=@(1);
     ani.toValue=@(0);
-    ani.completionBlock=^(POPAnimation *an,bool bFinish)
+    ani.completionBlock=^(POPAnimation *an,BOOL bFinish)
     {
         if(bFinish)
         {

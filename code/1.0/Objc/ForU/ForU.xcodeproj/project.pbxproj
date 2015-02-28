@@ -59,6 +59,7 @@
 		B5A115A21A8F1FE5002ABD7F /* lolihead.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A1159F1A8F1FE5002ABD7F /* lolihead.png */; };
 		B5A115A31A8F1FE5002ABD7F /* maidhead.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A115A01A8F1FE5002ABD7F /* maidhead.png */; };
 		B5A115A41A8F1FE5002ABD7F /* queenhead.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A115A11A8F1FE5002ABD7F /* queenhead.png */; };
+		B5B3AE161AA221590045432C /* Icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B3AE151AA221590045432C /* Icon1.png */; };
 		B5BADD4D1A88A54600238649 /* HeaderValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BADD4C1A88A54600238649 /* HeaderValueView.m */; };
 		B5BADD4F1A88A55B00238649 /* HeaderValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */; };
 		B5BADD541A890E6A00238649 /* msyh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5BADD531A89095700238649 /* msyh.ttf */; };
@@ -222,6 +223,7 @@
 		B5A1159F1A8F1FE5002ABD7F /* lolihead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lolihead.png; sourceTree = "<group>"; };
 		B5A115A01A8F1FE5002ABD7F /* maidhead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maidhead.png; sourceTree = "<group>"; };
 		B5A115A11A8F1FE5002ABD7F /* queenhead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = queenhead.png; sourceTree = "<group>"; };
+		B5B3AE151AA221590045432C /* Icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon1.png; sourceTree = "<group>"; };
 		B5BADD4B1A88A54500238649 /* HeaderValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderValueView.h; sourceTree = "<group>"; };
 		B5BADD4C1A88A54600238649 /* HeaderValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderValueView.m; sourceTree = "<group>"; };
 		B5BADD4E1A88A55B00238649 /* HeaderValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderValueView.xib; sourceTree = "<group>"; };
@@ -835,6 +837,7 @@
 		B5F3BD6F1A4FB471001E7CCA /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				B5B3AE151AA221590045432C /* Icon1.png */,
 				B5197BE31AA053D600A598FA /* player.jpg */,
 				B5197BE11A9F8F1400A598FA /* alertback.jpg */,
 				B5197BDF1A9F8D6C00A598FA /* listback.jpg */,
@@ -893,6 +896,7 @@
 				TargetAttributes = {
 					B586D4471A3EBFCE004EEE84 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 86BJ3976ML;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -924,6 +928,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B3AE161AA221590045432C /* Icon1.png in Resources */,
 				B5BADD641A89ABBA00238649 /* 紧张.png in Resources */,
 				B5197BD31A9EF66F00A598FA /* call1.wav in Resources */,
 				B5BADD541A890E6A00238649 /* msyh.ttf in Resources */,
@@ -1112,8 +1117,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sun xin (CWAHPY24F9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anhui Yihui electronic commerce Co., ltd (86BJ3976ML)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anhui Yihui electronic commerce Co., ltd (86BJ3976ML)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1133,7 +1138,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "4e79b44d-f28b-4edd-96b1-35734d8e4886";
+				PROVISIONING_PROFILE = "dc15771f-0b21-4b71-b3c1-511cee1b7724";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1155,8 +1160,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sun xin (CWAHPY24F9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anhui Yihui electronic commerce Co., ltd (86BJ3976ML)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anhui Yihui electronic commerce Co., ltd (86BJ3976ML)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1169,7 +1174,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "4e79b44d-f28b-4edd-96b1-35734d8e4886";
+				PROVISIONING_PROFILE = "dc15771f-0b21-4b71-b3c1-511cee1b7724";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1181,7 +1186,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anhui Yihui electronic commerce Co., ltd (86BJ3976ML)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anhui Yihui electronic commerce Co., ltd (86BJ3976ML)";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/sunxin/code/teambition/code/1.0/Objc/ForU/ForU/PrefixHeader.pch;
@@ -1193,7 +1199,7 @@
 				INFOPLIST_FILE = ForU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e79b44d-f28b-4edd-96b1-35734d8e4886";
+				PROVISIONING_PROFILE = "dc15771f-0b21-4b71-b3c1-511cee1b7724";
 			};
 			name = Debug;
 		};
@@ -1203,14 +1209,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sun xin (CWAHPY24F9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anhui Yihui electronic commerce Co., ltd (86BJ3976ML)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anhui Yihui electronic commerce Co., ltd (86BJ3976ML)";
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/sunxin/code/teambition/code/1.0/Objc/ForU/ForU/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					XCODE,
+				);
 				INFOPLIST_FILE = ForU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e79b44d-f28b-4edd-96b1-35734d8e4886";
+				PROVISIONING_PROFILE = "dc15771f-0b21-4b71-b3c1-511cee1b7724";
 			};
 			name = Release;
 		};
