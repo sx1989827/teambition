@@ -36,7 +36,7 @@
                         <outlet property="delegate" destination="-1" id="kM5-uZ-SSa"/>
                     </connections>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T16-VA-nMq">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T16-VA-nMq">
                     <rect key="frame" x="40" y="370" width="240" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="OAL-hA-lxo"/>
