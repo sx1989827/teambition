@@ -27,8 +27,8 @@
     [view addPhoto:strPath];
     view.photoDelegate=self;
     [view showInView:self.view];
-    //_cood.latitude=100;
-    //_cood.longitude=100;
+    _cood.latitude=100;
+    _cood.longitude=100;
    // _txtName.text=@"asd";
     //[_btnAddress setTitle:@"已选择" forState:UIControlStateNormal];
 }
@@ -105,13 +105,13 @@
     [self presentViewController:view animated:YES completion:nil];
 }
 - (IBAction)onStart:(id)sender {
-    if([[_btnAddress titleForState:UIControlStateNormal] isEqualToString:@"选择您的住址"])
-    {
-        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"请选择您的住址"];
-        [view showInView:self.view];
-        return;
-    }
-    else if([_txtName.text isEqualToString:@""])
+//    if([[_btnAddress titleForState:UIControlStateNormal] isEqualToString:@"选择您的住址"])
+//    {
+//        FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"请选择您的住址"];
+//        [view showInView:self.view];
+//        return;
+//    }
+    if([_txtName.text isEqualToString:@""])
     {
         FUAlertView *view=[[FUAlertView alloc] initWithMsg:@"请输入女生的名字"];
         [view showInView:self.view];
