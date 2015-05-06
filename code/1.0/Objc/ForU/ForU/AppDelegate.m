@@ -11,6 +11,7 @@
 #import "FUAlertView.h"
 #import "SvGifView.h"
 #import "FUSoundPlay.h"
+#import "iRate.h"
 @interface AppDelegate ()
 {
     UIImageView *viewImg;
@@ -18,6 +19,15 @@
 @end
 
 @implementation AppDelegate
+
++(void)initialize
+{
+    [iRate sharedInstance].appStoreID = 958224362;
+    [iRate sharedInstance].applicationBundleID = @"com.teambition.ForU";
+    [iRate sharedInstance].daysUntilPrompt = 5;
+    [iRate sharedInstance].usesUntilPrompt = 7;
+    [iRate sharedInstance].rateButtonLabel = @"去App Store评分";
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [NSThread  sleepForTimeInterval:1];

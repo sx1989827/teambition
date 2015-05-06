@@ -122,6 +122,8 @@
 		B5CB84FC1A4011D300F3D9B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB84FA1A4010F900F3D9B1 /* main.m */; };
 		B5CB84FE1A40124C00F3D9B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB84FD1A40124C00F3D9B1 /* UIKit.framework */; };
 		B5CB85001A40126500F3D9B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CB84FF1A40126500F3D9B1 /* Foundation.framework */; };
+		B5D07FB31AF9AF1400EDD887 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5D07FB01AF9AF1400EDD887 /* iRate.bundle */; };
+		B5D07FB41AF9AF1400EDD887 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D07FB21AF9AF1400EDD887 /* iRate.m */; };
 		B5D0A1671A4198AC0059A685 /* FUAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D0A1661A4198AC0059A685 /* FUAlertView.m */; };
 		B5E2132D1A41BA11001735F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E2132C1A41BA11001735F7 /* QuartzCore.framework */; };
 		B5E213301A41C05B001735F7 /* FUListView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2132F1A41C05B001735F7 /* FUListView.m */; };
@@ -335,6 +337,9 @@
 		B5CB84FA1A4010F900F3D9B1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ForU/main.m; sourceTree = SOURCE_ROOT; };
 		B5CB84FD1A40124C00F3D9B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5CB84FF1A40126500F3D9B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5D07FB01AF9AF1400EDD887 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		B5D07FB11AF9AF1400EDD887 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		B5D07FB21AF9AF1400EDD887 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		B5D0A1651A4198AC0059A685 /* FUAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUAlertView.h; sourceTree = "<group>"; };
 		B5D0A1661A4198AC0059A685 /* FUAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUAlertView.m; sourceTree = "<group>"; };
 		B5E2132C1A41BA11001735F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -797,9 +802,20 @@
 			name = framework;
 			sourceTree = "<group>";
 		};
+		B5D07FAF1AF9AF1400EDD887 /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				B5D07FB01AF9AF1400EDD887 /* iRate.bundle */,
+				B5D07FB11AF9AF1400EDD887 /* iRate.h */,
+				B5D07FB21AF9AF1400EDD887 /* iRate.m */,
+			);
+			path = iRate;
+			sourceTree = "<group>";
+		};
 		B5D0A1641A41982E0059A685 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				B5D07FAF1AF9AF1400EDD887 /* iRate */,
 				B5D0A1651A4198AC0059A685 /* FUAlertView.h */,
 				B5D0A1661A4198AC0059A685 /* FUAlertView.m */,
 				B5E2132E1A41C05B001735F7 /* FUListView.h */,
@@ -957,6 +973,7 @@
 				B5A115891A8B008D002ABD7F /* leisure.gif in Resources */,
 				B5BADD5E1A89ABBA00238649 /* 伤心.png in Resources */,
 				B59C8F651A6D476C00B9E386 /* close.png in Resources */,
+				B5D07FB31AF9AF1400EDD887 /* iRate.bundle in Resources */,
 				B5A115931A8BAF95002ABD7F /* 烦躁.png in Resources */,
 				B5197BDE1A9F7D0900A598FA /* chooseback.jpg in Resources */,
 				B5A1158B1A8B008D002ABD7F /* work.gif in Resources */,
@@ -1052,6 +1069,7 @@
 				B5CB84E01A400DD800F3D9B1 /* WorkHelpNoLove.cpp in Sources */,
 				B5CB84E31A400DD800F3D9B1 /* WorkMeetNoLove.cpp in Sources */,
 				B5CB84DB1A400DD800F3D9B1 /* LeisureIOINoLove.cpp in Sources */,
+				B5D07FB41AF9AF1400EDD887 /* iRate.m in Sources */,
 				B5CB84E41A400DD800F3D9B1 /* WorkTalkLove.cpp in Sources */,
 				B5D0A1671A4198AC0059A685 /* FUAlertView.m in Sources */,
 				B59C8F5B1A6D256F00B9E386 /* SettingView.m in Sources */,
